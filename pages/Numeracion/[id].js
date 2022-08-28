@@ -47,7 +47,7 @@ export default function HomeNumeracion(){
         <div className="space-fondo">
             <DialogoPregunta
                 id={rutaActual}
-                tipoPregunta="VyF"
+                tipoPregunta="Preguntas"
                 img=""
                 Nivel="Nivel_1"
             />

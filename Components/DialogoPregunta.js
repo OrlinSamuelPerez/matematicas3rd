@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { db } from "../BD/Configuracion";
 export default function DialogoPregunta(props){
         const [counter, setCounter] = useState(0)
-        const [data, setData] =useState([]);
+        const [data, setData] =useState([{pregunta:""}]);
         const [encabezado, setEncabezado] =useState({encabezado:""});
 
         useEffect(()=>{
@@ -11,23 +11,32 @@ export default function DialogoPregunta(props){
             .then((querySnapshot)=>{
                 const dato = [];
                 querySnapshot.forEach((doc) => {
-                        console.log(doc.id, " => ", doc.data());
                         if(doc.id == "encabezado"){
                             setEncabezado(doc.data())
                         }
                         else{
                             dato.push({...doc.data()})
                         }
+                        if(props.tipoPregunta == "Problema"){
+                            setEncabezado({encabezado:doc.data().concepto})
+                        }
+                        console.log(doc.data())
 
                 });
                 setData(dato)
             })
         },[])
         const handleClick1 = () => {
+           if( data.length == counter +1){
+             console.log("LISTO")
+           }
+           else{
             setCounter(counter + 1)
+           }
         }
-        console.log(encabezado)
-    return(
+        console.log(data[counter])
+
+        return(
         <>
         <style>
         {`
@@ -44,19 +53,52 @@ export default function DialogoPregunta(props){
         `
         }
          </style>
-         
          {
             props.tipoPregunta=="VyF"?
                 <div>
                     <div className="dialogo-pregunta">
                         <div className="img-div"></div>
                         <h1>{encabezado.encabezado}</h1>
-                        <h2>{props.Pregunta}</h2>
-                        <button>VERDADERO</button>
+                        <h2>{data[counter].pregunta}?</h2>
+                        <button onClick={handleClick1} >VERDADERO</button>
                         <button>FALSO</button>
                     </div>
                 </div>
-            :<h1>treabajpo</h1>
+            :props.tipoPregunta=="Completa"?
+                <div className="dialogo-pregunta">
+                    <h1>{encabezado.encabezado}</h1>
+                    <h3>{data[counter].pregunta}</h3>
+                    <input type="text"/>
+                </div>
+            :props.tipoPregunta=="Razona"?
+                <div className="dialogo-pregunta">
+                    <h1>{encabezado.encabezado}</h1>
+                    <h3>{data[counter].pregunta}</h3>
+                    <input type="text"/>
+                </div>
+            :props.tipoPregunta=="Quizz"?
+            <div className="dialogo-pregunta">
+                <h1>QUIZZ</h1>
+                <h3>{data[counter].pregunta}</h3>
+                <input type="text"/>
+            </div>
+            :props.tipoPregunta=="Problema"?
+                <div className="dialogo-pregunta">
+                    <h1>{encabezado.encabezado}</h1>
+                    <h3>{data[counter].pregunta}</h3>
+                    <input type="text"/>
+                </div>
+            :props.tipoPregunta=="Preguntas"?
+                    <div className="dialogo-pregunta">
+                        <h1>{encabezado.encabezado}</h1>
+                        <h3>{data[counter].pregunta}</h3>
+                        {
+                            data[counter].opciones.map(e => 
+                                <button onClick={handleClick1} >{e.opcion}</button>
+                            )
+                        }
+                    </div>
+                :<h1>.</h1>
          
         }
         
