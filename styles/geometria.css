@@ -1,0 +1,43 @@
+.geometria-fondo{
+    background: #85ff8f;
+    background: url("/img/geometria.jpg");
+    width: 100%;
+
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.geometriatitulo{
+    font-family: "roboto";
+    font-size: 129px;
+    letter-spacing: -8px;
+    font-weight: 900;
+    color: #070055;
+    text-align: center;
+}
+.bosquedivertido{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.bosquedivertido p{
+    font-family: "roboto";
+    font-weight: 900;
+    height: 15px;
+    font-size: 20px;
+}
+.empezar-geomteria{
+    background-color: #E28B5B;
+    color: white;
+    font-weight: 900;
+    font-family: "roboto";
+    font-size: 39px;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+}

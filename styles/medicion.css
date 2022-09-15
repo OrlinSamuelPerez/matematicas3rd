@@ -1,0 +1,30 @@
+.medicion-fondo{
+    background: #85ff8f;
+    background: url("/img/medicion.jpg");
+    width: 100%;
+
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mediciontitulo{
+    font-family: "roboto";
+    font-size: 129px;
+    letter-spacing: -8px;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center; 
+}
+.empezar-medicion{
+    background-color: #6052FF;
+    color: white;
+    font-weight: 900;
+    font-family: "roboto";
+    font-size: 39px;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+}

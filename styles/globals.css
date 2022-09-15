@@ -11,6 +11,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+button{
+  cursor: pointer;
+}
+webkit-scrollbar{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
 
 * {
   box-sizing: border-box;
@@ -268,4 +276,94 @@ background-image: url('https://firebasestorage.googleapis.com/v0/b/glpsistema-31
 }
 .cardLevel p{
   font-size: 30px;
+}
+nav{
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  left: 0%;
+  padding: 4px 0px 2px 0px;
+  background-color: #14035da7;
+}
+nav p{
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  margin: 0;font-size: 26px;
+}
+nav button{
+  position: fixed;
+  top: 5px;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  left: 20px;
+  cursor: pointer;
+}
+
+.botton-hero img{
+  width: 90%;
+}
+.izquierdo{
+  position: fixed;
+  width: 110px;
+  border-radius: 50%;
+  transition: 3s;
+  cursor: pointer;
+  top: 43%;
+  left: 10px;
+
+}
+.izquierdo img:hover{
+  width: 100%;
+}
+.derecho{
+  transform: rotate(180deg);
+  position: fixed;
+  top: 43%;
+  right: 10px;
+  cursor: pointer;
+  width: 110px;
+  transition: 3s;
+  cursor: pointer;
+}
+.derecho img:hover{
+  width: 100%;
+}
+
+
+/* Tamaño del scroll */
+.grid-cardlevel::-webkit-scrollbar {
+  width: 8px;
+}
+
+ /* Estilos barra (thumb) de scroll */
+ .grid-cardlevel::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0DF0FF, #7A008E);
+  border-radius: 4px;
+}
+
+.grid-cardlevel::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+.grid-cardlevel::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+ /* Estilos track de scroll */
+ .grid-cardlevel::-webkit-scrollbar-track {
+  background: #e1e1e100;
+  border-radius: 4px;
+}
+
+.grid-cardlevel::-webkit-scrollbar-track:hover, 
+.grid-cardlevel::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
 }

@@ -51,11 +51,11 @@ export default function HomeNumeracion(){
     return(
         counter == 0?
         <div className="space-fondo">
-                <DialogoPersonaje
-                        titulo={"Bienvenido a la "+data.Nombre }
-                        dialogo={data.Definicion}
-                        img="/img/astronauta-pc.jpg"
-                />
+            <DialogoPersonaje
+                    titulo={"Bienvenido a la "+data.Nombre }
+                    dialogo={data.Definicion}
+                    img="/img/astronauta-pc.jpg"
+            />
             <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
             
         </div>:counter == 1?
@@ -99,7 +99,7 @@ export default function HomeNumeracion(){
         <div className="space-fondo">
                 <DialogoPregunta
                     id={rutaActual}
-                    tipoPregunta="Seleccionm"
+                    tipoPregunta="Preguntas"
                     img=""
                     Nivel="Nivel_1"
                     buttonSiguiente = {handleClick1}

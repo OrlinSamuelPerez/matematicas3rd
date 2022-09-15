@@ -64,7 +64,7 @@
     width: 40%;
 }
 .space-img img{
-    margin-top: 50px;
+    margin-top: 90px;
     width: 100%;
 }
 .centrar{
@@ -169,7 +169,7 @@
     width: 60%;
     min-height: 360px;
     max-height: auto;
-    background-color: #541b82d3;
+    background-color: #541b82f7;
     margin-right: auto;
     margin-left: auto;
     margin-top: 80px;
@@ -181,7 +181,6 @@
     
 }
 .dialogo p{
-    font-family: "nunito";
     font-size: 23px;
     color: white;
     font-weight: 400;
@@ -246,23 +245,75 @@
 }
 .dialogo-pregunta h1{
     font-size: 20px;
-    font-family: roboto;
+    font-family: "roboto";
 }
-.dialogo-pregunta h2{
-    font-size: 60px;
-    font-family: "fredoka one";
+.dialogo-pregunta h3{
+    font-familiy:"roboto";
+    font-size:24px;
+    font-weight: 200;
 }
 .dialogo-pregunta button{
-    margin: 10px;
-    font-family: roboto;
+    margin: 15px;
+    font-family: "roboto";
     font-weight: bold;
     font-size: 22px;
-    padding: 10px 20px;
-    width: 230px;
-    background: white;
-    color: #002aff;
-    border-radius: 19px;
-    border: none;
+    padding: 10px 12px;
+    width: 220px;
+    border-radius: 30px;
     cursor: pointer;
+    color: white;
+    border: none;
+    background-color:rgb(255, 106, 141);
 
+}
+.Modal{
+    background-color: rgb(35, 35, 35);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    display: none;
+    text-align: center;
+    padding-top: 120px;
+}
+.Modal div{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Modal h1{
+    font-family: "fredoka one";
+    font-size: 100px;
+    color: #57ffe0;
+}
+.Modal-Active{
+    display: block;
+}
+.Incorrecto h1{
+    color: #C40064;
+}
+.numeraciontitulo{
+    font-family: "roboto";
+    font-size: 129px;
+    letter-spacing: -8px;
+    font-weight: 900;
+    color: #4e0ce9;
+    text-align: center;
+}
+.dialogo-pregunta input{
+    width: 60%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+}
+.dialogo-pregunta input::placeholder{
+    font-size: 20px;
+    text-align: center;
+}
+.dialogo-pregunta input:placeholder-shown{
+    font-size: 20px;
+    text-align: center;
 }

@@ -17,8 +17,8 @@ export default function CardLevel(props) {
           background-image: url(/img/${props.img});
           background-position: center;
           background-size: cover;
-          width:60%;
-          height:60%;
+          width:40%;
+          height:40%;
           margin-bottom:40px;
         }
         .not-active { 
