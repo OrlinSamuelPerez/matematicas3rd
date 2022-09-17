@@ -27,4 +27,12 @@
     border: none;
     padding: 5px;
     border-radius: 20px;
+} 
+@media (max-width:890px){
+    .mediciontitulo{
+        font-size: 95px;
+    }
+    .empezar-medicion{
+        margin-top: 45px;
+    }
 }

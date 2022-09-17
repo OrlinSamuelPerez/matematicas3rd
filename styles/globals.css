@@ -18,8 +18,27 @@ webkit-scrollbar{
   width: 10px;
   background-color: #F5F5F5;
 }
-
-
+.ejemplo{
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 80px;
+  border-radius: 15px;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  border:5px solid #9c48e6;
+}
+.ejemplo img{
+  justify-content: center;
+  width: 100%;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin: auto;
+}
 * {
   box-sizing: border-box;
 }
@@ -278,20 +297,30 @@ background-image: url('https://firebasestorage.googleapis.com/v0/b/glpsistema-31
   font-size: 30px;
 }
 nav{
-  width: 100%;
+  width: 300px;
   height: 40px;
   position: fixed;
-  top: 0;
+  top: 7px;
   text-align: center;
-  left: 0%;
-  padding: 4px 0px 2px 0px;
-  background-color: #14035da7;
-}
-nav p{
-  color: #ffffff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  right: 7px;
+  border-radius: 30px;
+  padding: 9px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  background-color: #ffdba5;
+  transition: 0.1s;
+  box-shadow: 3px 3px 10px rgba(8, 0, 67, 0.314);
 
-  margin: 0;font-size: 26px;
+}
+
+nav p{
+  color: #3b3b3b;
+  font-weight: 900;
+  font-family: "roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  justify-content: center;
+  margin: 0;
+  font-size: 20px;
 }
 nav button{
   position: fixed;
@@ -305,7 +334,18 @@ nav button{
   left: 20px;
   cursor: pointer;
 }
+.nav img{
+}
+.img-nav{
+  border-radius: 50%;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  width: 30px;
+  border: 3px solid  #292929;
 
+  height: 30px;
+  background-color: #292b2c;
+}
 .botton-hero img{
   width: 90%;
 }
@@ -334,6 +374,18 @@ nav button{
 }
 .derecho img:hover{
   width: 100%;
+}
+@media (max-width:890px){
+  .derecho{
+    width: 85px;
+    right: 1px;
+
+  }
+  .izquierdo{
+    width: 85px;
+    left: 1px;
+    
+  }
 }
 
 
@@ -366,4 +418,87 @@ nav button{
 .grid-cardlevel::-webkit-scrollbar-track:hover, 
 .grid-cardlevel::-webkit-scrollbar-track:active {
   background: #d4d4d4;
+}
+@media (max-width:1100px){
+  .grid-cardlevel{
+    width: 90%;
+  }
+}
+@media (max-width:850px){
+  .grid-cardlevel{
+    width: 100%;
+  }
+}
+@media (max-width:830px){
+  .grid-cardlevel{
+    width: 100%;
+    gap: 1px;
+  }
+  .cardLevel{
+    width: 100%;
+    text-align: center;
+    height: 320px;
+    font-family: "fredoka one";
+    padding: 15px;
+    font-size: 60px;
+  }
+  .img-personaje{
+    width: 20%;
+    height: 20%;
+  }
+}
+@media (max-width:650px){
+  .grid-cardlevel{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width:470px){
+  .grid-cardlevel{
+    grid-template-columns: 1fr;
+    padding: 60px;
+  }
+}
+@media (max-width:410px){
+  .grid-cardlevel{
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+}
+@media (max-width:375px){
+  .grid-cardlevel{
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
+@media (max-width:310px){
+  .grid-cardlevel{
+    grid-template-columns: 1fr;
+    padding: 0px;
+  }
+}
+
+.progress-bar{
+  position: relative;
+  width: 300px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 2em;
+  overflow: hidden;
+  margin-top: 45%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.progress-bar::before{
+  content: "";
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(89, 100, 255);
+  transform: translateX(-100%);
+  animation: fill-bar 0.1s 0.1s ease-in-out forwards;
+}
+@keyframes fill-bar{
+  to{
+    transform: translateX(0%);
+  }
 }

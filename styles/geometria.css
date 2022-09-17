@@ -41,3 +41,11 @@
     padding: 5px;
     border-radius: 20px;
 }
+@media (max-width:890px){
+    .geometriatitulo{
+        font-size: 95px;
+    }
+    .empezar-geomteria{
+        margin-top: 47px;
+    }
+}

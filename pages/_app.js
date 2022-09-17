@@ -10,6 +10,8 @@ import { useState } from 'react';
 import { auth } from '../BD/Configuracion';
 import Navegacion from '../Components/Navegacion';
 import { googleAnalitycs } from '../Service/googleAnalitycs'
+import { tiempoDentrodeAplicacion } from '../Service/TiempoEnAplicacion'
+tiempoDentrodeAplicacion()
 googleAnalitycs()
 function MyApp({ Component, pageProps }) {
   const [userName, setuserName] = useState(null);
@@ -35,7 +37,7 @@ function MyApp({ Component, pageProps }) {
        
       })}
       {userName ? (
-         <Component {...pageProps} />
+         <Navegacion><Component {...pageProps} /></Navegacion>
         ) : (
         <Login />
       )}

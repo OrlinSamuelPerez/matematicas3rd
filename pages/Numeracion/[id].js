@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { auth, db } from '../../BD/Configuracion';
 import DialogoPersonaje from '../../Components/DialogoPersonaje';
 import DialogoPregunta from '../../Components/DialogoPregunta';
+import Ejemplo from '../../Components/Ejemplo';
 import Video from '../../Components/Video';
 export default function HomeNumeracion(){
     const [counter, setCounter] = useState(0)
@@ -48,6 +49,11 @@ export default function HomeNumeracion(){
                 }
         })
     },[])
+    const tiempoEspera = ()=>{
+        setTimeout(()=>{
+            handleClick1()
+        },1000)
+    }
     return(
         counter == 0?
         <div className="space-fondo">
@@ -58,7 +64,24 @@ export default function HomeNumeracion(){
                 />
             <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
             
-        </div>:counter == 1?
+        </div>:counter==1?
+             <div className="space-fondo">
+             <DialogoPersonaje
+                     titulo="Objetivos"
+                     dialogo={data.Objetivos[counter2].Objetivos}
+                     img="/img/astronauta-moto.jpg"
+             />
+             <div className="siguiente-espacial"><button onClick={handleClick2} >Continuar</button></div>
+             
+         </div>: counter ==2?
+         <div className="space-fondo">
+            <Video LinkVideo={data.Video}/>
+            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+        </div>:counter ==3?
+        <div className="space-fondo">
+            <Ejemplo datos={data.Presentacion} buttonSiguiente={handleClick1} />
+         </div>
+        :counter == 4?
             <div className="space-fondo">
                 <DialogoPregunta
                 id={rutaActual}
@@ -70,12 +93,9 @@ export default function HomeNumeracion(){
 
             />
             </div>
-        :counter == 2?
-        <div className="space-fondo">
-            <Video LinkVideo={data.Video}/>
-            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
-        </div>:counter == 3?
-        
+        :counter==5?<div className="space-fondo">
+            {tiempoEspera()}
+        </div>:counter ==6?
         <div className="space-fondo">
         <DialogoPregunta
             id={rutaActual}
@@ -83,9 +103,12 @@ export default function HomeNumeracion(){
             img=""
             Nivel="Nivel_1"
             buttonSiguiente = {handleClick1}
+                idDeSubTema={idPage}
         />
          </div>
-        :counter == 4?
+        :counter==7?<div className="space-fondo">
+        {tiempoEspera()}
+    </div>:counter == 8?
         <div className="space-fondo">
             <DialogoPregunta
                 id={rutaActual}
@@ -93,26 +116,23 @@ export default function HomeNumeracion(){
                 img=""
                 Nivel="Nivel_1"
                 buttonSiguiente = {handleClick1}
+                idDeSubTema={idPage}
+
 
             />
-        </div>:counter == 5?
+        </div>:counter==9?<div className="space-fondo">
+            {tiempoEspera()}
+        </div>:counter == 10?
         <div className="space-fondo">
                 <DialogoPregunta
                     id={rutaActual}
                     tipoPregunta="Seleccionm"
                     img=""
                     Nivel="Nivel_1"
+                idDeSubTema={idPage}
+
                     buttonSiguiente = {handleClick1}
                 />
-        </div>:counter == 6?
-        <div className="space-fondo">
-            <DialogoPersonaje
-                    titulo="Objetivos"
-                    dialogo={data.Objetivos[counter2].Objetivos}
-                    img="/img/astronauta-moto.jpg"
-            />
-            <div className="siguiente-espacial"><button onClick={handleClick2} >Continuar</button></div>
-            
         </div>:<h2>No deberian estar aqui</h2>
     )
 }

@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import { db } from "../BD/Configuracion";
 import { CorrectSound, IncorrectSound } from "../Music/CorrectSound";
 import Completa from "../Service/Completa";
+import seleccionAnalisis from "../Service/Seleccionm";
 import VerdaderoYFalsoAnalisis from "../Service/VerdaderoFalsos";
 
 export default function DialogoPregunta(props){
@@ -11,7 +12,6 @@ export default function DialogoPregunta(props){
         const [counter1, setCounter1] = useState(0)
         const [data, setData] =useState([{pregunta:"", respuesta:""}]);
         const [encabezado, setEncabezado] =useState({encabezado:""});
-      
         useEffect(()=>{
             getDocs(query(collection(db,  "11111", "Niveles",props.Nivel,props.id,props.tipoPregunta), orderBy("NumeroPregunta", "asc")))
             .then((querySnapshot)=>{
@@ -21,8 +21,8 @@ export default function DialogoPregunta(props){
                             setEncabezado(doc.data())
                         }
                         else{
-                            console.log(doc.data())
                             dato.push({...doc.data()})
+                            console.log(doc.data())
                         }
                         if(props.tipoPregunta == "Problema"){
                             setEncabezado({encabezado:doc.data().concepto})
@@ -32,6 +32,8 @@ export default function DialogoPregunta(props){
                 setData(dato)
             })
         },[])
+      console.log(data)
+
         const handleClick1 = () => {
            if( data.length == counter +1){
              props.buttonSiguiente()
@@ -64,10 +66,30 @@ export default function DialogoPregunta(props){
                 }, 1500)
             }
         }
-        const repuestaCorrectaCompleta = (valor1, numero)=>{
+        const repuestaCorrectaSeleccion = (opcion, validar, pregunta, numero)=>{
+            if("Correcta" == validar){
+                seleccionAnalisis(props.idDeSubTema, "correcta",pregunta, props.Nivel,data.length, numero )
+                document.getElementById("modal").classList.toggle("Modal-Active")
+                CorrectSound()
+                setTimeout(()=>{
+                    document.getElementById("modal").classList.toggle("Modal-Active")
+                    handleClick1()
+                }, 1500)
+            }
+            else{
+                IncorrectSound() 
+                seleccionAnalisis(props.idDeSubTema, "Incorrecta",pregunta, props.Nivel,data.length, numero )
+                document.getElementById("modal-incorrecto").classList.toggle("Modal-Active")
+                setTimeout(()=>{
+                    document.getElementById("modal-incorrecto").classList.toggle("Modal-Active")
+                }, 1500)
+            }
+        }
+        const repuestaCorrectaCompleta = (valor1, pregunta, numeroPregunta)=>{
             const completaRepuesta = document.getElementById("completa")
             if(valor1 == completaRepuesta.value){
                 completaRepuesta.innerHTML = "";
+                Completa(props.tipoPregunta,props.idDeSubTema,"correcta", pregunta, props.Nivel, data.length,numeroPregunta )
                 document.getElementById("modal").classList.toggle("Modal-Active")
                 CorrectSound()
                 setTimeout(()=>{
@@ -79,7 +101,7 @@ export default function DialogoPregunta(props){
                 if(counter1 <= 2){
                     completaRepuesta.innerHTML = "";
                     IncorrectSound()
-                    Completa(numero, )
+                    Completa(props.tipoPregunta,props.idDeSubTema,"Incorrecta", pregunta, props.Nivel, data.length,numeroPregunta )
                     document.getElementById("modal-incorrecto").classList.toggle("Modal-Active")
                     setTimeout(()=>{
                         document.getElementById("modal-incorrecto").classList.toggle("Modal-Active")
@@ -134,17 +156,17 @@ export default function DialogoPregunta(props){
                 </div>
             :props.tipoPregunta=="Completa"?
                 <div className="dialogo-pregunta">
-                    <h1>{encabezado.encabezado}</h1>
-                    <h3>{data[counter].pregunta}</h3>
+                    <h1>{encabezado.encabezado}</h1><br></br>
+                    <h3>{data[counter].pregunta}</h3><br></br>
                     <input id="completa" type="text"/>
-                    <button onClick={()=>repuestaCorrectaCompleta(data[counter].respuesta, data[counter].NumeroPregunta)} >CONTINUAR ✔</button>
+                    <button onClick={()=>repuestaCorrectaCompleta(data[counter].respuesta,data[counter].pregunta, data[counter].NumeroPregunta)} >CONTINUAR ✔</button>
                 </div>
             :props.tipoPregunta=="Razona"?
                 <div className="dialogo-pregunta">
-                    <h1>{encabezado.encabezado}</h1>
+                    <h1>{encabezado.encabezado}</h1><br></br>
                     <h3>{data[counter].pregunta}</h3><br></br>
                     <input id="completa" placeholder="Ingresa aqui tu repuesta" type="text"/><br></br>
-                    <button onClick={()=>repuestaCorrectaCompleta(data[counter].respuesta, data[counter].NumeroPregunta)} >CONTINUAR </button>
+                    <button onClick={()=>repuestaCorrectaCompleta(data[counter].respuesta,data[counter].pregunta, data[counter].NumeroPregunta)} >CONTINUAR </button>
 
                 </div>
             :props.tipoPregunta=="Seleccionm"?
@@ -152,9 +174,11 @@ export default function DialogoPregunta(props){
                         <h1>{encabezado.encabezado}</h1>
                         <h3>{data[counter].pregunta}</h3>
                         {
+                            data[counter].pregunta != ""
+                            ?
                             data[counter].opciones.map(e => 
-                                <button onClick={handleClick1} >{e.opcion}</button>
-                            )
+                                <button onClick={()=>repuestaCorrectaSeleccion(e.opcion,e.validar, data[counter].pregunta, data[counter].NumeroPregunta )} >{e.opcion}</button>
+                            ):<h1>.</h1>
                         }
                     </div>
                 :<h1>.</h1>

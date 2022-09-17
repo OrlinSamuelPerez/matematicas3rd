@@ -27,7 +27,7 @@ export default function Navegacion({children}){
         </main>
         <nav>
             <p>Hola {data.nombre_Estudiante + " " + data.apellido_Estudiante}</p>
-            <button onClick={cerrarSeccion} >Cerrar Seccion</button>
+            <div className="img-nav"><img src="/img/astronauta-dino.png"/></div>
         </nav>
         </>
     )

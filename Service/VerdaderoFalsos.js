@@ -74,9 +74,6 @@ export default async function  VerdaderoYFalsoAnalisis( idDeSubTema, repuesta, p
                                     "pregunta":pregunta,
                                     "numeroDeVecesIncorrectas":data[0][numero].numeroDeVecesIncorrectas,
                                     "intentoCorrecta":data[0][numero].numeroDeVecesIncorrectas + 1,
-
-                                    
-
                                 }
                             });
                         }

@@ -180,6 +180,30 @@
     gap: 7px;
     
 }
+@media (max-width:1120px){
+    .dialogo{
+        width: 70%;
+
+    }
+}
+@media (max-width:1030px){
+    .dialogo{
+        width: 80%;
+
+    }
+}
+@media (max-width:840px){
+    .dialogo{
+        width: 90%;
+
+    }
+}
+@media (max-width:730px){
+    .dialogo{
+        width: 98%;
+
+    }
+}
 .dialogo p{
     font-size: 23px;
     color: white;
@@ -303,6 +327,14 @@
     color: #4e0ce9;
     text-align: center;
 }
+@media (max-width:890px){
+    .numeraciontitulo{
+        font-size: 80px;
+    }
+    .empezar-medicion{
+        margin-top: 45px;
+    }
+}
 .dialogo-pregunta input{
     width: 60%;
     padding: 12px;
@@ -316,4 +348,14 @@
 .dialogo-pregunta input:placeholder-shown{
     font-size: 20px;
     text-align: center;
+}
+.dialogo-atras{
+   position: absolute; 
+   border: none;
+   font-weight: bold;
+   background-color: #00F0FF;
+   color: white;
+   font-size: 20px;
+   padding: 5px 15px;
+   border-radius:0px 0px 10px 0px ;
 }
