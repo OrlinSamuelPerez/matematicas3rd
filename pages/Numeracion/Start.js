@@ -5,7 +5,7 @@ import CardLevel from "../../Components/CardLevel"
 export default function Start(){
     const [data, setData] = useState({
         posicionActual:{
-            posicionNivel: "1"
+            nivel1:{posicionNivel:1}
         }
         })
     const [totalNivel, setTotalNivel] = useState([])
@@ -34,10 +34,8 @@ export default function Start(){
               setTotalNivel(Datos)
         })
     },[])
-    console.log(data.posicionActual.posicionNIvel)
-    const arrayMostrar = totalNivel.slice(0,data.posicionActual.posicionNIvel - 1)
-    const arrayDeshabilitado = totalNivel.slice(data.posicionActual.posicionNIvel - 1)
-    console.log(arrayDeshabilitado)
+    const arrayMostrar = totalNivel.slice(0,data.posicionActual.nivel1 - 1)
+    const arrayDeshabilitado = totalNivel.slice(data.posicionActual.nivel1 - 1)
     return(
         <div className="space-fondo">
             <div className="grid-cardlevel">

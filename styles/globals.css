@@ -39,6 +39,11 @@ webkit-scrollbar{
   display: block;
   margin: auto;
 }
+@media (max-width:900px){
+  .ejemplo{
+    width: 100%;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -500,5 +505,19 @@ nav button{
 @keyframes fill-bar{
   to{
     transform: translateX(0%);
+  }
+}
+.juego{
+  text-align: center;
+  color: white;
+  font-family: "roboto";
+  font-size: 20px;
+}
+.juego iframe{
+  width: 80%;
+}
+@media (max-width:700px){
+  .juego iframe{
+    width: 100%;
   }
 }

@@ -1,11 +1,15 @@
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { doc, getDoc, getDocs, updateDoc } from 'firebase/firestore';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { auth, db } from '../../BD/Configuracion';
+import CardJuegos from '../../Components/CardJuegos';
 import DialogoPersonaje from '../../Components/DialogoPersonaje';
 import DialogoPregunta from '../../Components/DialogoPregunta';
 import Ejemplo from '../../Components/Ejemplo';
+import Felicitaciones from '../../Components/Felicitaciones';
 import Video from '../../Components/Video';
+import { ActualizarNivel } from '../../Service/ActualizarNivel';
 export default function HomeNumeracion(){
     const [counter, setCounter] = useState(0)
     const [counter2, setCounter2] = useState(0)
@@ -54,6 +58,26 @@ export default function HomeNumeracion(){
             handleClick1()
         },1000)
     }
+    const atras = (valor)=>{
+        if(valor == "objetivos"){
+            if(counter2 == 0){
+                setCounter(counter -1)
+                console.log(counter2)
+            }
+            else{
+                setCounter2(counter2-1)
+                console.log(counter2)
+
+            }
+        }
+    else{
+        setCounter(counter-1)
+    }
+    }
+   const Actualiza = ()=>{ActualizarNivel(
+    data.position,"nivel1", "dd", true)
+    handleClick1()
+    }
     return(
         counter == 0?
         <div className="space-fondo">
@@ -62,7 +86,7 @@ export default function HomeNumeracion(){
                         dialogo={data.Definicion}
                         img="/img/astronauta-pc.jpg"
                 />
-            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+            <div className="siguiente-espacial"><Link href="/Numeracion/Start"><button  >Atrás</button></Link><button onClick={handleClick1} >Continuar</button></div>
             
         </div>:counter==1?
              <div className="space-fondo">
@@ -71,15 +95,16 @@ export default function HomeNumeracion(){
                      dialogo={data.Objetivos[counter2].Objetivos}
                      img="/img/astronauta-moto.jpg"
              />
-             <div className="siguiente-espacial"><button onClick={handleClick2} >Continuar</button></div>
+             <div className="siguiente-espacial"><button onClick={()=>atras("objetivos")} >Atrás</button><button onClick={handleClick2} >Continuar</button></div>
              
          </div>: counter ==2?
          <div className="space-fondo">
             <Video LinkVideo={data.Video}/>
-            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+            <div className="siguiente-espacial"><button onClick={()=>atras("oivos")} >Atrás</button><button onClick={handleClick2} >Continuar</button></div>
+
         </div>:counter ==3?
         <div className="space-fondo">
-            <Ejemplo datos={data.Presentacion} buttonSiguiente={handleClick1} />
+            <Ejemplo datos={data.Presentacion} atras={()=>atras("dd")} buttonSiguiente={handleClick1} />
          </div>
         :counter == 4?
             <div className="space-fondo">
@@ -133,6 +158,10 @@ export default function HomeNumeracion(){
 
                     buttonSiguiente = {handleClick1}
                 />
-        </div>:<h2>No deberian estar aqui</h2>
+        </div>:counter==11?
+            <div className='space-fondo'>
+                <CardJuegos Continuar={handleClick1} linkJuego="https://www.cokitos.com/juegos/chicomates/juego/" />
+            </div>
+        :counter==12?Actualiza():<div><Felicitaciones Link="/Numeracion/Start"/></div>
     )
 }

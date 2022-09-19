@@ -28,9 +28,10 @@ export default function Ejemplo(props){
             <div className='botton-hero izquierdo' onClick={handleClick2}  ><img src='/img/flecha-izquierda.png'/></div>
             <div className='botton-hero derecho' onClick={handleClick1}><img src='/img/flecha-izquierda.png'/></div>
         </div>
+        
         {activar == true?
-                <div className="siguiente-espacial"><button onClick={()=>props.buttonSiguiente()} >Continuar</button></div>
-                :<span></span>    
+                <div className="siguiente-espacial"><button onClick={props.atras} >Atrás</button><button onClick={()=>props.buttonSiguiente()} >Continuar</button></div>
+                :<div className="siguiente-espacial"><button onClick={props.atras} >Atrás</button></div>
             }
         </>
     )

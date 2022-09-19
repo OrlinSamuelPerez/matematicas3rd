@@ -3,6 +3,7 @@ import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import {auth, db} from "../../BD/Configuracion"
 import Video from "../../Components/Video";
+import { ActualizarNivel } from "../../Service/ActualizarNivel";
 
 export default function Presentacion(){
     const [data, setData] =useState({});
@@ -21,14 +22,14 @@ export default function Presentacion(){
                 }
         })
     },[])
-    const [datos, setDatos]=useState([])
+    const [datos, setDatos]=useState({nivel:0, posicionNIvel:0}
+    )
     useEffect(()=>{
         auth.onAuthStateChanged(async user=>{
             if(user!=null){
                 const docRef = doc(db, "11111", "Usuarios","Estudiantes",user.email)
                 const dor = await getDoc(docRef);
                 if (dor.exists()) {
-                    console.log("Document data:", dor.data().posicionActual);
                     setDatos( dor.data().posicionActual)
                   } else {
                     // doc.data() will be undefined in this case
@@ -39,20 +40,7 @@ export default function Presentacion(){
     })
     const handleClick2 = () => {
         if(data.Objetivos.length == counter2 + 1){
-            auth.onAuthStateChanged(async user=>{
-                if(user != null){
-                  const docSnap = doc(db, "11111", "Usuarios","Estudiantes",user.email)
-                  if(datos){
-                    await updateDoc(docSnap, {
-                        posicionActual:{
-                            posicionNIvel:2,
-                            nivel:1
-                        }
-                      });
-                      location.href=("/Numeracion/Start")
-                  }
-                }
-              })
+            ActualizarNivel(data.position, "nivel1",  "Start")
         }else{
             setCounter2(counter2 + 1)
 
