@@ -6,12 +6,15 @@ export default function DialogoPersonaje(props){
             .img-div{
                 width:100%;
                 height:100%;
-                background: #292349;
+                background: white;
                 background-image: url(${props.img});
                 background-position: center;
                 background-size: cover;
     border-radius: 20px;
 
+            }
+            .dialogo{
+                background:${props.color};
             }
        
         `

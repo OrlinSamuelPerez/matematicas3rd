@@ -61,6 +61,7 @@ export default function Presentacion(){
                 titulo={"Bienvenido a la "+data.Nombre }
                 dialogo={data.Definicion}
                 img="/img/astronauta-lapiz.png"
+                color="#6418a1f7"
             />
             <div className="siguiente-espacial"><button onClick={atras} className="e">Atras</button>    <button onClick={handleClick1} >Continuar</button></div>
             
@@ -76,6 +77,9 @@ export default function Presentacion(){
                     titulo="Objetivos"
                     dialogo={data.Objetivos[counter2].Objetivos}
                     img="/img/astronauta-marciano.jpg"
+                    color="#6418a1f7"
+
+
             />
             <div className="siguiente-espacial"><button onClick={atras} className="e">Atras</button> <button onClick={handleClick2} >Continuar</button></div>
             

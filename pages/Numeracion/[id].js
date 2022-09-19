@@ -85,6 +85,9 @@ export default function HomeNumeracion(){
                         titulo={"Bienvenido a la "+data.Nombre }
                         dialogo={data.Definicion}
                         img="/img/astronauta-pc.jpg"
+                        color="#6418a1f7"
+
+
                 />
             <div className="siguiente-espacial"><Link href="/Numeracion/Start"><button  >Atrás</button></Link><button onClick={handleClick1} >Continuar</button></div>
             
@@ -94,6 +97,9 @@ export default function HomeNumeracion(){
                      titulo="Objetivos"
                      dialogo={data.Objetivos[counter2].Objetivos}
                      img="/img/astronauta-moto.jpg"
+                     color="#6418a1f7"
+
+
              />
              <div className="siguiente-espacial"><button onClick={()=>atras("objetivos")} >Atrás</button><button onClick={handleClick2} >Continuar</button></div>
              
@@ -114,7 +120,8 @@ export default function HomeNumeracion(){
                 img=""
                 Nivel="Nivel_1"
                 buttonSiguiente = {handleClick1}
-                idDeSubTema={idPage}
+                    color="#541b82d3"
+                    idDeSubTema={idPage}
 
             />
             </div>
@@ -129,6 +136,8 @@ export default function HomeNumeracion(){
             Nivel="Nivel_1"
             buttonSiguiente = {handleClick1}
                 idDeSubTema={idPage}
+                color="#541b82d3"
+
         />
          </div>
         :counter==7?<div className="space-fondo">
@@ -142,6 +151,7 @@ export default function HomeNumeracion(){
                 Nivel="Nivel_1"
                 buttonSiguiente = {handleClick1}
                 idDeSubTema={idPage}
+                color="#541b82d3"
 
 
             />
@@ -155,6 +165,7 @@ export default function HomeNumeracion(){
                     img=""
                     Nivel="Nivel_1"
                 idDeSubTema={idPage}
+                    color="#541b82d3"
 
                     buttonSiguiente = {handleClick1}
                 />

@@ -139,6 +139,9 @@ export default function DialogoPregunta(props){
                 border-radius: 20px;
                 
             }
+            .dialogo-pregunta{
+                background-color:${props.color};
+            }
        
         `
         }

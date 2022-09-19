@@ -161,7 +161,7 @@
     background-color: #57fff1;
     position: absolute;
     left: 80%;
-    top: 50%;
+    top: 50%; 
 }
 .space-fondo{
     background: #292349;
@@ -218,7 +218,7 @@
     width: 60%;
     min-height: 360px;
     max-height: auto;
-    background-color: #541b82f7;
+    background-color: #6418a1f7;
     margin-right: auto;
     margin-left: auto;
     margin-top: 80px;
