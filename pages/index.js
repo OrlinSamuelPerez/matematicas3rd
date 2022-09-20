@@ -66,7 +66,7 @@ const handleClick2=()=>{
     </div>
       :<div className="estadistica-fondo">
       <div>
-        <h1 className='estadisticatitulo'>EStadistica Elemental</h1>
+        <h1 className='estadisticatitulo'>Estadistica Elemental</h1>
           <div className='centrar'>
           <Link href="/Geometria/Start">
               <a><button className='empezar-estadistica'>Empezar</button></a>

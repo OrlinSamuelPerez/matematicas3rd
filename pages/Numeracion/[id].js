@@ -8,6 +8,7 @@ import DialogoPersonaje from '../../Components/DialogoPersonaje';
 import DialogoPregunta from '../../Components/DialogoPregunta';
 import Ejemplo from '../../Components/Ejemplo';
 import Felicitaciones from '../../Components/Felicitaciones';
+import Secuencias from '../../Components/Practica/Secuencia';
 import Video from '../../Components/Video';
 import { ActualizarNivel } from '../../Service/ActualizarNivel';
 export default function HomeNumeracion(){
@@ -113,66 +114,13 @@ export default function HomeNumeracion(){
             <Ejemplo datos={data.Presentacion} atras={()=>atras("dd")} buttonSiguiente={handleClick1} />
          </div>
         :counter == 4?
-            <div className="space-fondo">
-                <DialogoPregunta
-                id={rutaActual}
-                tipoPregunta="VyF"
-                img=""
-                Nivel="Nivel_1"
-                buttonSiguiente = {handleClick1}
-                    color="#541b82d3"
-                    idDeSubTema={idPage}
-
-            />
-            </div>
-        :counter==5?<div className="space-fondo">
-            {tiempoEspera()}
-        </div>:counter ==6?
-        <div className="space-fondo">
-        <DialogoPregunta
-            id={rutaActual}
-            tipoPregunta="Razona"
-            img=""
-            Nivel="Nivel_1"
-            buttonSiguiente = {handleClick1}
-                idDeSubTema={idPage}
-                color="#541b82d3"
-
-        />
-         </div>
-        :counter==7?<div className="space-fondo">
-        {tiempoEspera()}
-    </div>:counter == 8?
-        <div className="space-fondo">
-            <DialogoPregunta
-                id={rutaActual}
-                tipoPregunta="Completa"
-                img=""
-                Nivel="Nivel_1"
-                buttonSiguiente = {handleClick1}
-                idDeSubTema={idPage}
-                color="#541b82d3"
-
-
-            />
-        </div>:counter==9?<div className="space-fondo">
-            {tiempoEspera()}
-        </div>:counter == 10?
-        <div className="space-fondo">
-                <DialogoPregunta
-                    id={rutaActual}
-                    tipoPregunta="Seleccionm"
-                    img=""
-                    Nivel="Nivel_1"
-                idDeSubTema={idPage}
-                    color="#541b82d3"
-
-                    buttonSiguiente = {handleClick1}
-                />
-        </div>:counter==11?
+            rutaActual == "Secuencias"?
             <div className='space-fondo'>
-                <CardJuegos Continuar={handleClick1} linkJuego="https://www.cokitos.com/juegos/chicomates/juego/" />
+                <div className='juegoFondoSpace'>
+                    <Secuencias/>
+                </div>
             </div>
-        :counter==12?Actualiza():<div><Felicitaciones Link="/Numeracion/Start"/></div>
+            :<h1>jjj</h1>
+        :counter==5?Actualiza():<div><Felicitaciones Link="/Numeracion/Start"/></div>
     )
 }
