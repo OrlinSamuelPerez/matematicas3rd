@@ -1,12 +1,11 @@
 import { useState } from "react";
 
-const estado = [true]
-function aleatorio(minimo,maximo){
-    return Math.floor(Math.random() * ((maximo+1)-minimo)+minimo);
-  }
 
 export default function Secuencias(){
     const [juegoActivo, setJuegoActivo] = useState(false)
+    const [juegoSiguienActivo, setSiguienteJuegoActivo] = useState(false)
+    const [juegoMensajeActivo, setMensajeJuegoActivo] = useState("")
+    const [counter, setCounter] =useState(0)
     let array = ["","","","","","", ""]
     const drag =(e)=>{
      //Aqui se obtiene el numero arratrado, el valor es el de id
@@ -23,14 +22,16 @@ export default function Secuencias(){
      }
      if(array[1] != "" && array[2] != "" && array[3] != "" && array[4] != "" && array[5] != "" && array[6] != ""){
          if(array[1] == "uno" && array[2] =="dos" && array[3] == "tres" && array[4] =="cuatro" && array[5] == "cinco" && array[6] =="seis" ){
-            setTimeout( setJuegoActivo(true), 2000)
-            console.log("lO HICISTE MUY BIEN")
+            setJuegoActivo(true)
+            setSiguienteJuegoActivo(true)
+            setMensajeJuegoActivo("FELICIDADES ")
              
          }
          else{
              array = ["","","","","","", ""]
              setJuegoActivo(true)
-             console.log("Fatality")
+             setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
 
 
              
@@ -66,12 +67,32 @@ export default function Secuencias(){
     )
     
    }
+   const handleClick1 = ()=>{
+    setCounter(counter+1)
+   }
+   const Tiempo =()=>{
+    setTimeout(()=>{setJuegoActivo(false)}, 2000)
+    return(
+        <h1>{juegoMensajeActivo}</h1>
+    )
+   }
    return(
         <div>
             {juegoActivo==false?
-                <Juego/>
+                <div>
+                   { counter==0?
+                   <div>
+                   <Juego/>
+                    {juegoSiguienActivo==true?  
+                       <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                    :<span>.</span>}
+                    </div>
+                    :counter==1?<h1>Hola mundo</h1>:<h1>Hola 2</h1>
+                    }
+                    
+                </div>
             
-                :setTimeout(setJuegoActivo(false), 5000)
+                :<Tiempo/>
              }
         </div>
     )
