@@ -8,7 +8,9 @@ import DialogoPersonaje from '../../Components/DialogoPersonaje';
 import DialogoPregunta from '../../Components/DialogoPregunta';
 import Ejemplo from '../../Components/Ejemplo';
 import Felicitaciones from '../../Components/Felicitaciones';
+import NumeroPares from '../../Components/Practica/NumeroPares';
 import Secuencias from '../../Components/Practica/Secuencia';
+import ValorPosicion from '../../Components/Practica/ValorPosicion';
 import Video from '../../Components/Video';
 import { ActualizarNivel } from '../../Service/ActualizarNivel';
 export default function HomeNumeracion(){
@@ -120,6 +122,18 @@ export default function HomeNumeracion(){
                     <Secuencias/>
                 </div>
             </div>
+            :rutaActual=="ValorPosicion"?
+                <div className='space-fondo'>
+                    <div className='juegoFondoSpace'>
+                        <ValorPosicion/>
+                    </div>
+                </div>
+            :rutaActual=="Numeros_pares_impares"?
+                <div className='space-fondo'>
+                    <div className='juegoFondoSpace'>
+                    <NumeroPares/>
+                    </div>
+                </div>
             :<h1>jjj</h1>
         :counter==5?Actualiza():<div><Felicitaciones Link="/Numeracion/Start"/></div>
     )
