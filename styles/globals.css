@@ -675,3 +675,57 @@ nav button{
     font-style: 23px;
     font-weight: 700;
   }
+ 
+  #bg {
+    position: relative;
+    margin: 0 auto;
+    width: 320px;
+    background: url("https://i.pinimg.com/564x/8f/75/af/8f75af4331a451a4bb2a693f569f7cf4.jpg") repeat-y;
+  }
+  .box, #mybox {
+    position: absolute;
+    width: 45px;
+    height: 60px;
+    background-color: #333;
+  }
+  #mybox {
+    background-color: red;
+  }
+  .numeroOrdinales{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .numeroOrdinales img{
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+  .numeroOrdinales h4{
+    width: 400px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #ffdba5;
+  }
+  .numeroOrdinales button{
+    background-color: rgb(0, 115, 255);
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    border: none;
+    border-radius: 20px;
+    font-size: 23px;
+    padding: 10px 60px;
+    width: 200px;
+    
+    margin:10px ;
+  }
+  .numeroOrdinales button:hover{
+    background-color: #ffdba5;
+    color: black;
+
+  }
+  .numeroOrdinales-repuesta{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  }
