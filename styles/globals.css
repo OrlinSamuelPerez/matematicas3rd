@@ -960,3 +960,43 @@ canvas {
   box-shadow: 0px 0px 15px 3px #ccc;
 }
 
+.juego21-suma{
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+}
+.juego21-suma img{
+  width: 80%;
+  height: 100%;
+  display: block;
+  
+}
+.juego21-suma h4{
+  width: 90%;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #ffdba5;
+  text-align: center;
+}
+.juego21-suma button{
+  background-color: rgb(0, 115, 255);
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  border: none;
+  border-radius: 20px;
+  font-size: 23px;
+  padding: 10px 60px;
+  width: 200px;
+  
+  margin:10px ;
+}
+.juego21-suma button:hover{
+  background-color: #ffdba5;
+  color: black;
+
+}
+.juego21-suma-repuesta{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+}

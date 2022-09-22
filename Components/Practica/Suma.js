@@ -1785,7 +1785,51 @@ export default function Suma() {
         )
 
     }
+    const arrayDato = [
+        { image: "/img/ejercicios22.png", pregunta: "¿Cuánto dinero necesito para comprar la mochila y la pelota?", repuesta: [{ valor: "$2,350", validar: false }, { valor: "$1,325", validar: true }, { valor: "$9,100", validar: false }, { valor: "$7,725", validar: false }, { valor: "$1,100", validar: false }, { valor: "$250", validar: false }] },
+        { image: "/img/ejercicios21.png", pregunta: "¿Cuántas frutas se han cosechado en total?", repuesta: [{ valor: "61", validar: false }, { valor: "60", validar: false }, { valor: "52", validar: false }, { valor: "62", validar: true }, { valor: "29", validar: false }, { valor: "42", validar: false }] },
+        { image: "/img/ejercicios22.png", pregunta: "¿Cuánto dinero necesito para comprar la bicicleta y la cámara?", repuesta: [{ valor: "$8,750", validar: true }, { valor: "$1,325", validar: false }, { valor: "$8,100", validar: false }, { valor: "$7,750", validar: false }, { valor: "$1,150", validar: false }, { valor: "$2,150", validar: false }] },
+        { image: "/img/ejercicios22.png", pregunta: "¿Cuánto dinero necesito para comprar los patines y la pelota?", repuesta: [{ valor: "$525", validar: false }, { valor: "$125", validar: false }, { valor: "$878", validar: false }, { valor: "$7,750", validar: false }, { valor: "$7,025", validar: false }, { valor: "$725", validar: true }] },
+        { image: "/img/ejercicios22.png", pregunta: "¿Cuánto dinero necesito para comprar los patines y el abanico?", repuesta: [{ valor: "$5,500", validar: false }, { valor: "$500", validar: false }, { valor: "$7,000", validar: false }, { valor: "$8,500", validar: true }, { valor: "$7,200", validar: false }, { valor: "$4,850", validar: false }] },
+        { image: "/img/ejercicios23.png", pregunta: "El león en una mañana se comió 50kg de carne y en la tarde se comió 75kg, ¿Cuántos kg de carne se comió el león en el día entero?", repuesta: [{ valor: "325 kg", validar: false }, { valor: "50 kg", validar: false }, { valor: "$125 kg", validar: true }, { valor: "70 kg", validar: false }, { valor: "175 kg", validar: false }, { valor: "275 kg", validar: false }] },
+        { image: "/img/ejercicios23.png", pregunta: "El león en una mañana se comió 100kg de carne y en la tarde se comió 275kg, ¿Cuántos kg de carne se comió el león en el día entero?", repuesta: [{ valor: "325 kg", validar: false }, { valor: "150 kg", validar: false }, { valor: "$125 kg", validar: false }, { valor: "375 kg", validar: true }, { valor: "325 kg", validar: false }, { valor: "275 kg", validar: false }] },
+        { image: "/img/ejercicios21.png", pregunta: "¿Cuántas frutas se han cosechado de fresa y mango?", repuesta: [{ valor: "39", validar: false }, { valor: "21", validar: false }, { valor: "12", validar: false }, { valor: "19", validar: true }, { valor: "29", validar: false }, { valor: "22", validar: false }] },
+        { image: "/img/ejercicios21.png", pregunta: "¿Cuántas frutas se han cosechado de manzana y mango?", repuesta: [{ valor: "39", validar: false }, { valor: "21", validar: true }, { valor: "12", validar: false }, { valor: "19", validar: false }, { valor: "29", validar: false }, { valor: "22", validar: false }] },
+        { image: "/img/ejercicios23.png", pregunta: "El león en una mañana se comió 523kg de carne y en la tarde se comió 268kg, ¿Cuántos kg de carne se comió el león en el día entero?", repuesta: [{ valor: "325 kg", validar: false }, { valor: "790 kg", validar: false }, { valor: "$155 kg", validar: false }, { valor: "791 kg", validar: true }, { valor: "725 kg", validar: false }, { valor: "275 kg", validar: false }] },
 
+    ]
+    const Juego21 = (props) => {
+
+        const validarPregunta = (validar) => {
+            if (validar == true) {
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                setCounter(counter + 1)
+            }
+            else {
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
+            }
+
+        }
+        return (
+            <div className="juego21-suma">
+                <div>
+                    <img src={props.data.image} />
+                </div>
+                <div>
+                    <h4>{props.data.pregunta}</h4>
+                    <div className="juego21-suma-repuesta">
+                        {props.data.repuesta.map(e =>
+                            <div><button onClick={() => validarPregunta(e.validar)}>{e.valor}</button></div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        )
+    }
     return (
         <div>
             {juegoActivo == false ?
@@ -1931,7 +1975,77 @@ export default function Suma() {
                                                                                                             <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
                                                                                                             : <span>.</span>}
                                                                                                     </div>
-                                                                                                    : <h1>Cargando...</h1>
+                                                                                                    : counter == 20 ?
+                                                                                                        <div>
+                                                                                                            <Juego21 data={arrayDato[0]} />
+                                                                                                            {juegoSiguienActivo == true ?
+                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                : <span>.</span>}
+                                                                                                        </div>
+                                                                                                        : counter == 21 ?
+                                                                                                            <div>
+                                                                                                                <Juego21 data={arrayDato[1]} />
+                                                                                                                {juegoSiguienActivo == true ?
+                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                    : <span>.</span>}
+                                                                                                            </div>
+                                                                                                            : counter == 22 ?
+                                                                                                                <div>
+                                                                                                                    <Juego21 data={arrayDato[2]} />
+                                                                                                                    {juegoSiguienActivo == true ?
+                                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                        : <span>.</span>}
+                                                                                                                </div>
+                                                                                                                : counter == 23 ?
+                                                                                                                    <div>
+                                                                                                                        <Juego21 data={arrayDato[3]} />
+                                                                                                                        {juegoSiguienActivo == true ?
+                                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                            : <span>.</span>}
+                                                                                                                    </div>
+                                                                                                                    : counter == 24 ?
+                                                                                                                        <div>
+                                                                                                                            <Juego21 data={arrayDato[4]} />
+                                                                                                                            {juegoSiguienActivo == true ?
+                                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                : <span>.</span>}
+                                                                                                                        </div>
+                                                                                                                        : counter == 25 ?
+                                                                                                                            <div>
+                                                                                                                                <Juego21 data={arrayDato[5]} />
+                                                                                                                                {juegoSiguienActivo == true ?
+                                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                    : <span>.</span>}
+                                                                                                                            </div>
+                                                                                                                            : counter == 26 ?
+                                                                                                                                <div>
+                                                                                                                                    <Juego21 data={arrayDato[6]} />
+                                                                                                                                    {juegoSiguienActivo == true ?
+                                                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                        : <span>.</span>}
+                                                                                                                                </div>
+                                                                                                                                : counter == 27 ?
+                                                                                                                                    <div>
+                                                                                                                                        <Juego21 data={arrayDato[7]} />
+                                                                                                                                        {juegoSiguienActivo == true ?
+                                                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                            : <span>.</span>}
+                                                                                                                                    </div>
+                                                                                                                                    : counter == 28 ?
+                                                                                                                                        <div>
+                                                                                                                                            <Juego21 data={arrayDato[8]} />
+                                                                                                                                            {juegoSiguienActivo == true ?
+                                                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                                : <span>.</span>}
+                                                                                                                                        </div>
+                                                                                                                                        : counter == 29 ?
+                                                                                                                                            <div>
+                                                                                                                                                <Juego21 data={arrayDato[9]} />
+                                                                                                                                                {juegoSiguienActivo == true ?
+                                                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                                    : <span>.</span>}
+                                                                                                                                            </div>
+                                                                                                                                            : <h1>Fin</h1>
                     }
 
                 </div>
