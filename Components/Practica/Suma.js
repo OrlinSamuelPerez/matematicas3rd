@@ -825,438 +825,967 @@ export default function Suma() {
         )
 
     }
-      // numero 11
-      let array11 = ["", "", "", ""]
-      const drag11 = (e) => {
-          //Aqui se obtiene el numero arratrado, el valor es el de id
-          e.dataTransfer.setData("text", e.target.id)
-      }
-      const drop11 = (e) => {
-          //Para btener el id arrastrado
-          if (array11[parseInt(e.target.id)] == "") {
-              let data = e.dataTransfer.getData("text")
-              //agrego el arreglo del elemento al elmento soltado
-              array11[parseInt(e.target.id)] = data;
-              //que se agregue al cuadro sleccioonad
-              e.target.appendChild(document.getElementById(data))
-          }
-          if (array11[1] != "" && array11[2] != "" && array11[3] != "") {
-              if (array11[1] == "siete" && array11[2] == "uno" && array11[3] == "dos") {
-  
-                  setJuegoActivo(true)
-                  setSiguienteJuegoActivo(true)
-                  setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-  
-              }
-              else {
-  
-                  array11 = ["", "", "", ""]
-  
-                  setJuegoActivo(true)
-                  setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-  
-  
-  
-  
-              }
-          }
-      }
-      const allowdrop11 = (e) => {
-          e.preventDefault()
-      }
-      const Juego11 = () => {
-          return (
-              <div>
-                  <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
-                  <div className="grid">
-                      <div>
-                          <div className="drop-suma">
-                              <div className="box-drop-suma" >4</div>
-                              <div className="box-drop-suma" >6</div>
-                              <div className="box-drop-suma" >4</div>
+    // numero 11
+    let array11 = ["", "", "", ""]
+    const drag11 = (e) => {
+        //Aqui se obtiene el numero arratrado, el valor es el de id
+        e.dataTransfer.setData("text", e.target.id)
+    }
+    const drop11 = (e) => {
+        //Para btener el id arrastrado
+        if (array11[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array11[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.appendChild(document.getElementById(data))
+        }
+        if (array11[1] != "" && array11[2] != "" && array11[3] != "") {
+            if (array11[1] == "siete" && array11[2] == "uno" && array11[3] == "dos") {
 
-                          </div>
-                          <div className="drop-suma-1">
-                              <div className="box-drop-suma" >+</div>
-                              <div className="box-drop-suma" >2</div>
-                              <div className="box-drop-suma" >4</div>
-                              <div className="box-drop-suma" >8</div>
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
 
-                          </div>
-                          <hr className="raya1"></hr>
-                          <div className="drop-suma">
-                              <div className="box-drop-suma" id="1" onDragOver={allowdrop11} onDrop={drop11}></div>
-                              <div className="box-drop-suma" id="2" onDragOver={allowdrop11} onDrop={drop11}></div>
-                              <div className="box-drop-suma" id="3" onDragOver={allowdrop11} onDrop={drop11}></div>
-  
-                          </div>
-                      </div>
-                      <div>
-                          <div className="drag-suma">
-                              <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag11}>2</div>
-                              <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag11}>1</div>
-                              <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag11}>3</div>
-                              <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag11}>6</div>
-                              <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag11}>5</div>
-                              <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag11}>4</div>
-                              <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag11}>8</div>
-                              <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag11}>9</div>
-                              <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag11}>7</div>
-                              <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag11}>0</div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
-          )
-  
-      }
-       // numero 12
-       let array12 = ["", "", "", ""]
-       const drag12 = (e) => {
-           //Aqui se obtiene el numero arratrado, el valor es el de id
-           e.dataTransfer.setData("text", e.target.id)
-       }
-       const drop12 = (e) => {
-           //Para btener el id arrastrado
-           if (array12[parseInt(e.target.id)] == "") {
-               let data = e.dataTransfer.getData("text")
-               //agrego el arreglo del elemento al elmento soltado
-               array12[parseInt(e.target.id)] = data;
-               //que se agregue al cuadro sleccioonad
-               e.target.appendChild(document.getElementById(data))
-           }
-           if (array12[1] != "" && array12[2] != "" && array12[3] != "") {
-               if (array12[1] == "cuatro" && array12[2] == "cinco" && array12[3] == "ocho") {
-   
-                   setJuegoActivo(true)
-                   setSiguienteJuegoActivo(true)
-                   setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-   
-               }
-               else {
-   
-                   array12 = ["", "", "", ""]
-   
-                   setJuegoActivo(true)
-                   setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-   
-   
-   
-   
-               }
-           }
-       }
-       const allowdrop12 = (e) => {
-           e.preventDefault()
-       }
-       const Juego12 = () => {
-           return (
-               <div>
-                   <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
-                   <div className="grid">
-                       <div>
-                           <div className="drop-suma">
-                               <div className="box-drop-suma" >3</div>
-                               <div className="box-drop-suma" >4</div>
-                               <div className="box-drop-suma" >1</div>
- 
-                           </div>
-                           <div className="drop-suma-1">
-                               <div className="box-drop-suma" >+</div>
-                               <div className="box-drop-suma" >1</div>
-                               <div className="box-drop-suma" >1</div>
-                               <div className="box-drop-suma" >7</div>
- 
-                           </div>
-                           <hr className="raya1"></hr>
-                           <div className="drop-suma">
-                               <div className="box-drop-suma" id="1" onDragOver={allowdrop12} onDrop={drop12}></div>
-                               <div className="box-drop-suma" id="2" onDragOver={allowdrop12} onDrop={drop12}></div>
-                               <div className="box-drop-suma" id="3" onDragOver={allowdrop12} onDrop={drop12}></div>
-   
-                           </div>
-                       </div>
-                       <div>
-                           <div className="drag-suma">
-                               <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag12}>2</div>
-                               <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag12}>1</div>
-                               <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag12}>3</div>
-                               <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag12}>6</div>
-                               <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag12}>5</div>
-                               <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag12}>4</div>
-                               <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag12}>8</div>
-                               <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag12}>9</div>
-                               <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag12}>7</div>
-                               <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag12}>0</div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-   
-           )
-   
-       }
-        // numero 13
-      let array13 = ["", "", "", ""]
-      const drag13 = (e) => {
-          //Aqui se obtiene el numero arratrado, el valor es el de id
-          e.dataTransfer.setData("text", e.target.id)
-      }
-      const drop13 = (e) => {
-          //Para btener el id arrastrado
-          if (array13[parseInt(e.target.id)] == "") {
-              let data = e.dataTransfer.getData("text")
-              //agrego el arreglo del elemento al elmento soltado
-              array13[parseInt(e.target.id)] = data;
-              //que se agregue al cuadro sleccioonad
-              e.target.appendChild(document.getElementById(data))
-          }
-          if (array13[1] != "" && array13[2] != "" && array13[3] != "") {
-              if (array13[1] == "nueve" && array13[2] == "seis" && array13[3] == "siete") {
-  
-                  setJuegoActivo(true)
-                  setSiguienteJuegoActivo(true)
-                  setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-  
-              }
-              else {
-  
-                  array13 = ["", "", "", ""]
-  
-                  setJuegoActivo(true)
-                  setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-  
-  
-  
-  
-              }
-          }
-      }
-      const allowdrop13 = (e) => {
-          e.preventDefault()
-      }
-      const Juego13 = () => {
-          return (
-              <div>
-                  <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
-                  <div className="grid">
-                      <div>
-                          <div className="drop-suma">
-                              <div className="box-drop-suma" >4</div>
-                              <div className="box-drop-suma" >1</div>
-                              <div className="box-drop-suma" >2</div>
+            }
+            else {
 
-                          </div>
-                          <div className="drop-suma-1">
-                              <div className="box-drop-suma" >+</div>
-                              <div className="box-drop-suma" >5</div>
-                              <div className="box-drop-suma" >5</div>
-                              <div className="box-drop-suma" >5</div>
+                array11 = ["", "", "", ""]
 
-                          </div>
-                          <hr className="raya1"></hr>
-                          <div className="drop-suma">
-                              <div className="box-drop-suma" id="1" onDragOver={allowdrop13} onDrop={drop13}></div>
-                              <div className="box-drop-suma" id="2" onDragOver={allowdrop13} onDrop={drop13}></div>
-                              <div className="box-drop-suma" id="3" onDragOver={allowdrop13} onDrop={drop13}></div>
-  
-                          </div>
-                      </div>
-                      <div>
-                          <div className="drag-suma">
-                              <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag13}>2</div>
-                              <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag13}>1</div>
-                              <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag13}>3</div>
-                              <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag13}>6</div>
-                              <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag13}>5</div>
-                              <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag13}>4</div>
-                              <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag13}>8</div>
-                              <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag13}>9</div>
-                              <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag13}>7</div>
-                              <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag13}>0</div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
-          )
-  
-      }
-       // numero 14
-       let array14 = ["", "", "", ""]
-       const drag14 = (e) => {
-           //Aqui se obtiene el numero arratrado, el valor es el de id
-           e.dataTransfer.setData("text", e.target.id)
-       }
-       const drop14 = (e) => {
-           //Para btener el id arrastrado
-           if (array14[parseInt(e.target.id)] == "") {
-               let data = e.dataTransfer.getData("text")
-               //agrego el arreglo del elemento al elmento soltado
-               array14[parseInt(e.target.id)] = data;
-               //que se agregue al cuadro sleccioonad
-               e.target.appendChild(document.getElementById(data))
-           }
-           if (array14[1] != "" && array14[2] != "" && array14[3] != "") {
-               if (array14[1] == "siete" && array14[2] == "nueve" && array14[3] == "ocho") {
-   
-                   setJuegoActivo(true)
-                   setSiguienteJuegoActivo(true)
-                   setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-   
-               }
-               else {
-   
-                   array14 = ["", "", "", ""]
-   
-                   setJuegoActivo(true)
-                   setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-   
-   
-   
-   
-               }
-           }
-       }
-       const allowdrop14 = (e) => {
-           e.preventDefault()
-       }
-       const Juego14 = () => {
-           return (
-               <div>
-                   <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
-                   <div className="grid">
-                       <div>
-                           <div className="drop-suma">
-                               <div className="box-drop-suma" >6</div>
-                               <div className="box-drop-suma" >0</div>
-                               <div className="box-drop-suma" >0</div>
- 
-                           </div>
-                           <div className="drop-suma-1">
-                               <div className="box-drop-suma" >+</div>
-                               <div className="box-drop-suma" >1</div>
-                               <div className="box-drop-suma" >9</div>
-                               <div className="box-drop-suma" >8</div>
- 
-                           </div>
-                           <hr className="raya1"></hr>
-                           <div className="drop-suma">
-                               <div className="box-drop-suma" id="1" onDragOver={allowdrop14} onDrop={drop14}></div>
-                               <div className="box-drop-suma" id="2" onDragOver={allowdrop14} onDrop={drop14}></div>
-                               <div className="box-drop-suma" id="3" onDragOver={allowdrop14} onDrop={drop14}></div>
-   
-                           </div>
-                       </div>
-                       <div>
-                           <div className="drag-suma">
-                               <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag14}>2</div>
-                               <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag14}>1</div>
-                               <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag14}>3</div>
-                               <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag14}>6</div>
-                               <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag14}>5</div>
-                               <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag14}>4</div>
-                               <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag14}>8</div>
-                               <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag14}>9</div>
-                               <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag14}>7</div>
-                               <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag14}>0</div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-   
-           )
-   
-       }
-        // numero 15
-      let array15 = ["", "", "", "",""]
-      const drag15 = (e) => {
-          //Aqui se obtiene el numero arratrado, el valor es el de id
-          e.dataTransfer.setData("text", e.target.id)
-      }
-      const drop15 = (e) => {
-          //Para btener el id arrastrado
-          if (array15[parseInt(e.target.id)] == "") {
-              let data = e.dataTransfer.getData("text")
-              //agrego el arreglo del elemento al elmento soltado
-              array15[parseInt(e.target.id)] = data;
-              //que se agregue al cuadro sleccioonad
-              e.target.appendChild(document.getElementById(data))
-          }
-          if (array15[1] != "" && array15[2] != "" && array15[3] != "" && array15[4] != "") {
-              if (array15[1] == "uno" && array15[2] == "tres" && array15[3] == "siete" && array15[4] == "cero") {
-  
-                  setJuegoActivo(true)
-                  setSiguienteJuegoActivo(true)
-                  setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-  
-              }
-              else {
-  
-                  array15 = ["", "", "", "",""]
-  
-                  setJuegoActivo(true)
-                  setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-  
-  
-  
-  
-              }
-          }
-      }
-      const allowdrop15 = (e) => {
-          e.preventDefault()
-      }
-      const Juego15 = () => {
-          return (
-              <div>
-                  <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
-                  <div className="grid">
-                      <div>
-                          <div className="drop-suma">
-                              <div className="box-drop-suma" >7</div>
-                              <div className="box-drop-suma" >2</div>
-                              <div className="box-drop-suma" >8</div>
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
 
-                          </div>
-                          <div className="drop-suma-1">
-                              <div className="box-drop-suma" >+</div>
-                              <div className="box-drop-suma" >6</div>
-                              <div className="box-drop-suma" >4</div>
-                              <div className="box-drop-suma" >2</div>
 
-                          </div>
-                          <hr className="raya1"></hr>
-                          <div className="drop-suma-1">
-                              <div className="box-drop-suma" id="1" onDragOver={allowdrop15} onDrop={drop15}></div>
-                              <div className="box-drop-suma" id="2" onDragOver={allowdrop15} onDrop={drop15}></div>
-                              <div className="box-drop-suma" id="3" onDragOver={allowdrop15} onDrop={drop15}></div>
-                              <div className="box-drop-suma" id="4" onDragOver={allowdrop15} onDrop={drop15}></div>
 
-  
-                          </div>
-                      </div>
-                      <div>
-                          <div className="drag-suma">
-                              <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag15}>2</div>
-                              <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag15}>1</div>
-                              <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag15}>3</div>
-                              <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag15}>6</div>
-                              <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag15}>5</div>
-                              <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag15}>4</div>
-                              <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag15}>8</div>
-                              <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag15}>9</div>
-                              <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag15}>7</div>
-                              <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag15}>0</div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
-          )
-  
-      }
+
+            }
+        }
+    }
+    const allowdrop11 = (e) => {
+        e.preventDefault()
+    }
+    const Juego11 = () => {
+        return (
+            <div>
+                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+                <div className="grid">
+                    <div>
+                        <div className="drop-suma">
+                            <div className="box-drop-suma" >4</div>
+                            <div className="box-drop-suma" >6</div>
+                            <div className="box-drop-suma" >4</div>
+
+                        </div>
+                        <div className="drop-suma-1">
+                            <div className="box-drop-suma" >+</div>
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >4</div>
+                            <div className="box-drop-suma" >8</div>
+
+                        </div>
+                        <hr className="raya1"></hr>
+                        <div className="drop-suma">
+                            <div className="box-drop-suma" id="1" onDragOver={allowdrop11} onDrop={drop11}></div>
+                            <div className="box-drop-suma" id="2" onDragOver={allowdrop11} onDrop={drop11}></div>
+                            <div className="box-drop-suma" id="3" onDragOver={allowdrop11} onDrop={drop11}></div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div className="drag-suma">
+                            <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag11}>2</div>
+                            <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag11}>1</div>
+                            <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag11}>3</div>
+                            <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag11}>6</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag11}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag11}>4</div>
+                            <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag11}>8</div>
+                            <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag11}>9</div>
+                            <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag11}>7</div>
+                            <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag11}>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+    // numero 12
+    let array12 = ["", "", "", ""]
+    const drag12 = (e) => {
+        //Aqui se obtiene el numero arratrado, el valor es el de id
+        e.dataTransfer.setData("text", e.target.id)
+    }
+    const drop12 = (e) => {
+        //Para btener el id arrastrado
+        if (array12[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array12[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.appendChild(document.getElementById(data))
+        }
+        if (array12[1] != "" && array12[2] != "" && array12[3] != "") {
+            if (array12[1] == "cuatro" && array12[2] == "cinco" && array12[3] == "ocho") {
+
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+
+            }
+            else {
+
+                array12 = ["", "", "", ""]
+
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
+
+
+
+            }
+        }
+    }
+    const allowdrop12 = (e) => {
+        e.preventDefault()
+    }
+    const Juego12 = () => {
+        return (
+            <div>
+                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+                <div className="grid">
+                    <div>
+                        <div className="drop-suma">
+                            <div className="box-drop-suma" >3</div>
+                            <div className="box-drop-suma" >4</div>
+                            <div className="box-drop-suma" >1</div>
+
+                        </div>
+                        <div className="drop-suma-1">
+                            <div className="box-drop-suma" >+</div>
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >7</div>
+
+                        </div>
+                        <hr className="raya1"></hr>
+                        <div className="drop-suma">
+                            <div className="box-drop-suma" id="1" onDragOver={allowdrop12} onDrop={drop12}></div>
+                            <div className="box-drop-suma" id="2" onDragOver={allowdrop12} onDrop={drop12}></div>
+                            <div className="box-drop-suma" id="3" onDragOver={allowdrop12} onDrop={drop12}></div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div className="drag-suma">
+                            <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag12}>2</div>
+                            <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag12}>1</div>
+                            <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag12}>3</div>
+                            <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag12}>6</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag12}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag12}>4</div>
+                            <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag12}>8</div>
+                            <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag12}>9</div>
+                            <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag12}>7</div>
+                            <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag12}>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+    // numero 13
+    let array13 = ["", "", "", ""]
+    const drag13 = (e) => {
+        //Aqui se obtiene el numero arratrado, el valor es el de id
+        e.dataTransfer.setData("text", e.target.id)
+    }
+    const drop13 = (e) => {
+        //Para btener el id arrastrado
+        if (array13[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array13[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.appendChild(document.getElementById(data))
+        }
+        if (array13[1] != "" && array13[2] != "" && array13[3] != "") {
+            if (array13[1] == "nueve" && array13[2] == "seis" && array13[3] == "siete") {
+
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+
+            }
+            else {
+
+                array13 = ["", "", "", ""]
+
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
+
+
+
+            }
+        }
+    }
+    const allowdrop13 = (e) => {
+        e.preventDefault()
+    }
+    const Juego13 = () => {
+        return (
+            <div>
+                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+                <div className="grid">
+                    <div>
+                        <div className="drop-suma">
+                            <div className="box-drop-suma" >4</div>
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >2</div>
+
+                        </div>
+                        <div className="drop-suma-1">
+                            <div className="box-drop-suma" >+</div>
+                            <div className="box-drop-suma" >5</div>
+                            <div className="box-drop-suma" >5</div>
+                            <div className="box-drop-suma" >5</div>
+
+                        </div>
+                        <hr className="raya1"></hr>
+                        <div className="drop-suma">
+                            <div className="box-drop-suma" id="1" onDragOver={allowdrop13} onDrop={drop13}></div>
+                            <div className="box-drop-suma" id="2" onDragOver={allowdrop13} onDrop={drop13}></div>
+                            <div className="box-drop-suma" id="3" onDragOver={allowdrop13} onDrop={drop13}></div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div className="drag-suma">
+                            <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag13}>2</div>
+                            <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag13}>1</div>
+                            <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag13}>3</div>
+                            <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag13}>6</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag13}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag13}>4</div>
+                            <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag13}>8</div>
+                            <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag13}>9</div>
+                            <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag13}>7</div>
+                            <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag13}>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+    // numero 14
+    let array14 = ["", "", "", ""]
+    const drag14 = (e) => {
+        //Aqui se obtiene el numero arratrado, el valor es el de id
+        e.dataTransfer.setData("text", e.target.id)
+    }
+    const drop14 = (e) => {
+        //Para btener el id arrastrado
+        if (array14[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array14[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.appendChild(document.getElementById(data))
+        }
+        if (array14[1] != "" && array14[2] != "" && array14[3] != "") {
+            if (array14[1] == "siete" && array14[2] == "nueve" && array14[3] == "ocho") {
+
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+
+            }
+            else {
+
+                array14 = ["", "", "", ""]
+
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
+
+
+
+            }
+        }
+    }
+    const allowdrop14 = (e) => {
+        e.preventDefault()
+    }
+    const Juego14 = () => {
+        return (
+            <div>
+                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+                <div className="grid">
+                    <div>
+                        <div className="drop-suma">
+                            <div className="box-drop-suma" >6</div>
+                            <div className="box-drop-suma" >0</div>
+                            <div className="box-drop-suma" >0</div>
+
+                        </div>
+                        <div className="drop-suma-1">
+                            <div className="box-drop-suma" >+</div>
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >9</div>
+                            <div className="box-drop-suma" >8</div>
+
+                        </div>
+                        <hr className="raya1"></hr>
+                        <div className="drop-suma">
+                            <div className="box-drop-suma" id="1" onDragOver={allowdrop14} onDrop={drop14}></div>
+                            <div className="box-drop-suma" id="2" onDragOver={allowdrop14} onDrop={drop14}></div>
+                            <div className="box-drop-suma" id="3" onDragOver={allowdrop14} onDrop={drop14}></div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div className="drag-suma">
+                            <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag14}>2</div>
+                            <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag14}>1</div>
+                            <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag14}>3</div>
+                            <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag14}>6</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag14}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag14}>4</div>
+                            <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag14}>8</div>
+                            <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag14}>9</div>
+                            <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag14}>7</div>
+                            <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag14}>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+    // numero 15
+    let array15 = ["", "", "", "", ""]
+    const drag15 = (e) => {
+        //Aqui se obtiene el numero arratrado, el valor es el de id
+        e.dataTransfer.setData("text", e.target.id)
+    }
+    const drop15 = (e) => {
+        //Para btener el id arrastrado
+        if (array15[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array15[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.appendChild(document.getElementById(data))
+        }
+        if (array15[1] != "" && array15[2] != "" && array15[3] != "" && array15[4] != "") {
+            if (array15[1] == "uno" && array15[2] == "tres" && array15[3] == "siete" && array15[4] == "cero") {
+
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+
+            }
+            else {
+
+                array15 = ["", "", "", "", ""]
+
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
+
+
+
+            }
+        }
+    }
+    const allowdrop15 = (e) => {
+        e.preventDefault()
+    }
+    const Juego15 = () => {
+        return (
+            <div>
+                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+                <div className="grid">
+                    <div>
+                        <div className="drop-suma">
+                            <div className="box-drop-suma" >7</div>
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >8</div>
+
+                        </div>
+                        <div className="drop-suma-1">
+                            <div className="box-drop-suma" >+</div>
+                            <div className="box-drop-suma" >6</div>
+                            <div className="box-drop-suma" >4</div>
+                            <div className="box-drop-suma" >2</div>
+
+                        </div>
+                        <hr className="raya1"></hr>
+                        <div className="drop-suma-1">
+                            <div className="box-drop-suma" id="1" onDragOver={allowdrop15} onDrop={drop15}></div>
+                            <div className="box-drop-suma" id="2" onDragOver={allowdrop15} onDrop={drop15}></div>
+                            <div className="box-drop-suma" id="3" onDragOver={allowdrop15} onDrop={drop15}></div>
+                            <div className="box-drop-suma" id="4" onDragOver={allowdrop15} onDrop={drop15}></div>
+
+
+                        </div>
+                    </div>
+                    <div>
+                        <div className="drag-suma">
+                            <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag15}>2</div>
+                            <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag15}>1</div>
+                            <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag15}>3</div>
+                            <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag15}>6</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag15}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag15}>4</div>
+                            <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag15}>8</div>
+                            <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag15}>9</div>
+                            <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag15}>7</div>
+                            <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag15}>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+    // numero 16
+    let array16 = ["", "", "", "", "", ""]
+    const drag16 = (e) => {
+        //Aqui se obtiene el numero arratrado, el valor es el de id
+        e.dataTransfer.setData("text", e.target.id)
+    }
+    const drop16 = (e) => {
+        //Para btener el id arrastrado
+        if (array16[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array16[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.appendChild(document.getElementById(data))
+        }
+        if (array16[1] != "" && array16[2] != "" && array16[3] != "" && array16[4] != "" && array16[5] != "") {
+            if (array16[1] == "uno" && array16[2] == "seis" && array16[3] == "dos" && array16[4] == "cinco" && array16[5] == "nueve") {
+
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+
+            }
+            else {
+
+                array16 = ["", "", "", "", "", ""]
+
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
+
+
+
+            }
+        }
+    }
+    const allowdrop16 = (e) => {
+        e.preventDefault()
+    }
+    const Juego16 = () => {
+        return (
+            <div>
+                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+                <div className="grid">
+                    <div>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >3</div>
+                            <div className="box-drop-suma" >6</div>
+                            <div className="box-drop-suma" >8</div>
+                            <div className="box-drop-suma" >9</div>
+
+                        </div>
+                        <div className="drop-suma-3">
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >6</div>
+                            <div className="box-drop-suma" >0</div>
+
+                        </div>
+                        <div>
+                            <div className="box-drop-suma-s" >+</div>
+                        </div>
+                        <div className="drop-suma-4">
+
+                            <div className="box-drop-suma" >3</div>
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >0</div>
+
+                        </div>
+                        <hr className="raya2"></hr>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" id="1" onDragOver={allowdrop16} onDrop={drop16}></div>
+                            <div className="box-drop-suma" id="2" onDragOver={allowdrop16} onDrop={drop16}></div>
+                            <div className="box-drop-suma" id="3" onDragOver={allowdrop16} onDrop={drop16}></div>
+                            <div className="box-drop-suma" id="4" onDragOver={allowdrop16} onDrop={drop16}></div>
+                            <div className="box-drop-suma" id="5" onDragOver={allowdrop16} onDrop={drop16}></div>
+
+
+
+                        </div>
+                    </div>
+                    <div>
+                        <div className="drag-suma">
+                            <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag16}>2</div>
+                            <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag16}>1</div>
+                            <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag16}>3</div>
+                            <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag16}>6</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag16}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag16}>4</div>
+                            <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag16}>8</div>
+                            <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag16}>9</div>
+                            <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag16}>7</div>
+                            <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag16}>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+    // numero 17
+    let array17 = ["", "", "", "", "", ""]
+    const drag17 = (e) => {
+        //Aqui se obtiene el numero arratrado, el valor es el de id
+        e.dataTransfer.setData("text", e.target.id)
+    }
+    const drop17 = (e) => {
+        //Para btener el id arrastrado
+        if (array17[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array17[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.appendChild(document.getElementById(data))
+        }
+        if (array17[1] != "" && array17[2] != "" && array17[3] != "" && array17[4] != "" && array17[5] != "") {
+            if (array17[1] == "uno" && array17[2] == "ocho" && array17[3] == "dos" && array17[4] == "tres" && array17[5] == "seis") {
+
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+
+            }
+            else {
+
+                array17 = ["", "", "", "", "", ""]
+
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
+
+
+
+            }
+        }
+    }
+    const allowdrop17 = (e) => {
+        e.preventDefault()
+    }
+    const Juego17 = () => {
+        return (
+            <div>
+                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+                <div className="grid">
+                    <div>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >4</div>
+                            <div className="box-drop-suma" >6</div>
+                            <div className="box-drop-suma" >5</div>
+                            <div className="box-drop-suma" >2</div>
+
+                        </div>
+                        <div className="drop-suma-3">
+                            <div className="box-drop-suma" >3</div>
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >6</div>
+                            <div className="box-drop-suma" >1</div>
+
+                        </div>
+                        <div>
+                            <div className="box-drop-suma-s" >+</div>
+                        </div>
+                        <div className="drop-suma-4">
+
+                            <div className="box-drop-suma" >3</div>
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >3</div>
+
+                        </div>
+                        <hr className="raya2"></hr>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" id="1" onDragOver={allowdrop17} onDrop={drop17}></div>
+                            <div className="box-drop-suma" id="2" onDragOver={allowdrop17} onDrop={drop17}></div>
+                            <div className="box-drop-suma" id="3" onDragOver={allowdrop17} onDrop={drop17}></div>
+                            <div className="box-drop-suma" id="4" onDragOver={allowdrop17} onDrop={drop17}></div>
+                            <div className="box-drop-suma" id="5" onDragOver={allowdrop17} onDrop={drop17}></div>
+
+
+
+                        </div>
+                    </div>
+                    <div>
+                        <div className="drag-suma">
+                            <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag17}>2</div>
+                            <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag17}>1</div>
+                            <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag17}>3</div>
+                            <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag17}>6</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag17}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag17}>4</div>
+                            <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag17}>8</div>
+                            <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag17}>9</div>
+                            <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag17}>7</div>
+                            <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag17}>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+    // numero 18
+    let array18 = ["", "", "", "", "", ""]
+    const drag18 = (e) => {
+        //Aqui se obtiene el numero arratrado, el valor es el de id
+        e.dataTransfer.setData("text", e.target.id)
+    }
+    const drop18 = (e) => {
+        //Para btener el id arrastrado
+        if (array18[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array18[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.appendChild(document.getElementById(data))
+        }
+        if (array18[1] != "" && array18[2] != "" && array18[3] != "" && array18[4] != "" && array18[5] != "") {
+            if (array18[1] == "seis" && array18[2] == "uno" && array18[3] == "cinco" && array18[4] == "cero" && array18[5] == "tres") {
+
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+
+            }
+            else {
+
+                array18 = ["", "", "", "", "", ""]
+
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
+
+
+
+            }
+        }
+    }
+    const allowdrop18 = (e) => {
+        e.preventDefault()
+    }
+    const Juego18 = () => {
+        return (
+            <div>
+                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+                <div className="grid">
+                    <div>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >3</div>
+                            <div className="box-drop-suma" >5</div>
+                            <div className="box-drop-suma" >7</div>
+                            <div className="box-drop-suma" >0</div>
+
+                        </div>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >0</div>
+                            <div className="box-drop-suma" >6</div>
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >0</div>
+
+
+                        </div>
+                        <div>
+                            <div className="box-drop-suma-s" >+</div>
+                        </div>
+                        <div className="drop-suma-2">
+
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >7</div>
+                            <div className="box-drop-suma" >3</div>
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >3</div>
+
+
+
+                        </div>
+                        <hr className="raya2"></hr>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" id="1" onDragOver={allowdrop18} onDrop={drop18}></div>
+                            <div className="box-drop-suma" id="2" onDragOver={allowdrop18} onDrop={drop18}></div>
+                            <div className="box-drop-suma" id="3" onDragOver={allowdrop18} onDrop={drop18}></div>
+                            <div className="box-drop-suma" id="4" onDragOver={allowdrop18} onDrop={drop18}></div>
+                            <div className="box-drop-suma" id="5" onDragOver={allowdrop18} onDrop={drop18}></div>
+
+
+
+                        </div>
+                    </div>
+                    <div>
+                        <div className="drag-suma">
+                            <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag18}>2</div>
+                            <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag18}>1</div>
+                            <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag18}>3</div>
+                            <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag18}>6</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag18}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag18}>4</div>
+                            <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag18}>8</div>
+                            <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag18}>9</div>
+                            <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag18}>7</div>
+                            <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag18}>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+    // numero 19
+    let array19 = ["", "", "", "", "", ""]
+    const drag19 = (e) => {
+        //Aqui se obtiene el numero arratrado, el valor es el de id
+        e.dataTransfer.setData("text", e.target.id)
+    }
+    const drop19 = (e) => {
+        //Para btener el id arrastrado
+        if (array19[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array19[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.appendChild(document.getElementById(data))
+        }
+        if (array19[1] != "" && array19[2] != "" && array19[3] != "" && array19[4] != "" && array19[5] != "") {
+            if (array19[1] == "cinco" && array19[2] == "siete" && array19[3] == "nueve" && array19[4] == "ocho" && array19[5] == "seis") {
+
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+
+            }
+            else {
+
+                array19 = ["", "", "", "", "", ""]
+
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
+
+
+
+            }
+        }
+    }
+    const allowdrop19 = (e) => {
+        e.preventDefault()
+    }
+    const Juego19 = () => {
+        return (
+            <div>
+                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+                <div className="grid">
+                    <div>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >0</div>
+                            <div className="box-drop-suma" >5</div>
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >2</div>
+
+                        </div>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >3</div>
+                            <div className="box-drop-suma" >3</div>
+                            <div className="box-drop-suma" >0</div>
+                            <div className="box-drop-suma" >1</div>
+
+
+                        </div>
+                        <div>
+                            <div className="box-drop-suma-s" >+</div>
+                        </div>
+                        <div className="drop-suma-2">
+
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >4</div>
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >6</div>
+                            <div className="box-drop-suma" >3</div>
+
+
+
+                        </div>
+                        <hr className="raya2"></hr>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" id="1" onDragOver={allowdrop19} onDrop={drop19}></div>
+                            <div className="box-drop-suma" id="2" onDragOver={allowdrop19} onDrop={drop19}></div>
+                            <div className="box-drop-suma" id="3" onDragOver={allowdrop19} onDrop={drop19}></div>
+                            <div className="box-drop-suma" id="4" onDragOver={allowdrop19} onDrop={drop19}></div>
+                            <div className="box-drop-suma" id="5" onDragOver={allowdrop19} onDrop={drop19}></div>
+
+
+
+                        </div>
+                    </div>
+                    <div>
+                        <div className="drag-suma">
+                            <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag19}>2</div>
+                            <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag19}>1</div>
+                            <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag19}>3</div>
+                            <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag19}>6</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag19}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag19}>4</div>
+                            <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag19}>8</div>
+                            <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag19}>9</div>
+                            <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag19}>7</div>
+                            <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag19}>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+    // numero 20
+    let array20 = ["", "", "", "", "", ""]
+    const drag20 = (e) => {
+        //Aqui se obtiene el numero arratrado, el valor es el de id
+        e.dataTransfer.setData("text", e.target.id)
+    }
+    const drop20 = (e) => {
+        //Para btener el id arrastrado
+        if (array20[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array20[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.appendChild(document.getElementById(data))
+        }
+        if (array20[1] != "" && array20[2] != "" && array20[3] != "" && array20[4] != "" && array20[5] != "") {
+            if (array20[1] == "nueve" && array20[2] == "cero" && array20[3] == "cinco" && array20[4] == "tres" && array20[5] == "cuatro") {
+
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+
+            }
+            else {
+
+                array20 = ["", "", "", "", "", ""]
+
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+
+
+
+
+            }
+        }
+    }
+    const allowdrop20 = (e) => {
+        e.preventDefault()
+    }
+    const Juego20 = () => {
+        return (
+            <div>
+                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+                <div className="grid">
+                    <div>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >5</div>
+                            <div className="box-drop-suma" >4</div>
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >1</div>
+
+                        </div>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" >5</div>
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >0</div>
+                            <div className="box-drop-suma" >0</div>
+
+
+                        </div>
+                        <div>
+                            <div className="box-drop-suma-s" >+</div>
+                        </div>
+                        <div className="drop-suma-2">
+
+                            <div className="box-drop-suma" >2</div>
+                            <div className="box-drop-suma" >3</div>
+                            <div className="box-drop-suma" >0</div>
+                            <div className="box-drop-suma" >1</div>
+                            <div className="box-drop-suma" >3</div>
+
+
+
+                        </div>
+                        <hr className="raya2"></hr>
+                        <div className="drop-suma-2">
+                            <div className="box-drop-suma" id="1" onDragOver={allowdrop20} onDrop={drop20}></div>
+                            <div className="box-drop-suma" id="2" onDragOver={allowdrop20} onDrop={drop20}></div>
+                            <div className="box-drop-suma" id="3" onDragOver={allowdrop20} onDrop={drop20}></div>
+                            <div className="box-drop-suma" id="4" onDragOver={allowdrop20} onDrop={drop20}></div>
+                            <div className="box-drop-suma" id="5" onDragOver={allowdrop20} onDrop={drop20}></div>
+
+
+
+                        </div>
+                    </div>
+                    <div>
+                        <div className="drag-suma">
+                            <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag20}>2</div>
+                            <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag20}>1</div>
+                            <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag20}>3</div>
+                            <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag20}>6</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag20}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag20}>4</div>
+                            <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag20}>8</div>
+                            <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag20}>9</div>
+                            <div className="drag-d-suma" draggable="true" id="siete" onDragStart={drag20}>7</div>
+                            <div className="drag-d-suma" draggable="true" id="cero" onDragStart={drag20}>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+
     return (
         <div>
             {juegoActivo == false ?
@@ -1332,41 +1861,77 @@ export default function Suma() {
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 10 ?
-                                                            <div>
-                                                                <Juego11 />
-                                                                {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
-                                                                    : <span>.</span>}
-                                                            </div>
-                                                            : counter == 11 ?
-                                                            <div>
-                                                                <Juego12 />
-                                                                {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
-                                                                    : <span>.</span>}
-                                                            </div>
-                                                            : counter == 12 ?
-                                                            <div>
-                                                                <Juego13 />
-                                                                {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
-                                                                    : <span>.</span>}
-                                                            </div>
-                                                            : counter == 13 ?
-                                                            <div>
-                                                                <Juego14 />
-                                                                {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
-                                                                    : <span>.</span>}
-                                                            </div>
-                                                            : counter == 14 ?
-                                                            <div>
-                                                                <Juego15 />
-                                                                {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
-                                                                    : <span>.</span>}
-                                                            </div>
-                                                            : <h1>Cargando...</h1>
+                                                                <div>
+                                                                    <Juego11 />
+                                                                    {juegoSiguienActivo == true ?
+                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                        : <span>.</span>}
+                                                                </div>
+                                                                : counter == 11 ?
+                                                                    <div>
+                                                                        <Juego12 />
+                                                                        {juegoSiguienActivo == true ?
+                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                            : <span>.</span>}
+                                                                    </div>
+                                                                    : counter == 12 ?
+                                                                        <div>
+                                                                            <Juego13 />
+                                                                            {juegoSiguienActivo == true ?
+                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                : <span>.</span>}
+                                                                        </div>
+                                                                        : counter == 13 ?
+                                                                            <div>
+                                                                                <Juego14 />
+                                                                                {juegoSiguienActivo == true ?
+                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                    : <span>.</span>}
+                                                                            </div>
+                                                                            : counter == 14 ?
+                                                                                <div>
+                                                                                    <Juego15 />
+                                                                                    {juegoSiguienActivo == true ?
+                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                        : <span>.</span>}
+                                                                                </div>
+                                                                                : counter == 15 ?
+                                                                                    <div>
+                                                                                        <Juego16 />
+                                                                                        {juegoSiguienActivo == true ?
+                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                            : <span>.</span>}
+                                                                                    </div>
+                                                                                    : counter == 16 ?
+                                                                                        <div>
+                                                                                            <Juego17 />
+                                                                                            {juegoSiguienActivo == true ?
+                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                : <span>.</span>}
+                                                                                        </div>
+
+                                                                                        : counter == 17 ?
+                                                                                            <div>
+                                                                                                <Juego18 />
+                                                                                                {juegoSiguienActivo == true ?
+                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                    : <span>.</span>}
+                                                                                            </div>
+                                                                                            : counter == 18 ?
+                                                                                                <div>
+                                                                                                    <Juego19 />
+                                                                                                    {juegoSiguienActivo == true ?
+                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                        : <span>.</span>}
+                                                                                                </div>
+                                                                                                : counter == 19 ?
+                                                                                                    <div>
+                                                                                                        <Juego20 />
+                                                                                                        {juegoSiguienActivo == true ?
+                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                            : <span>.</span>}
+                                                                                                    </div>
+                                                                                                    : <h1>Cargando...</h1>
                     }
 
                 </div>
