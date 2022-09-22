@@ -729,3 +729,41 @@ nav button{
     display: grid;
     grid-template-columns: 1fr 1fr ;
   }
+  .division-datos{
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-family: "roboto";
+    font-size: 46px;
+  }
+  .division-boton{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+  }
+  .division-boton  button{
+    font-weight: 900;
+    background-color: #ffdba5;
+    border-radius: 25px;
+    border: none;
+    padding: 12px;
+    font-size: 25px;
+    margin: 3px;
+  }
+.division-boton button:hover{
+  background-color: rgb(0, 115, 255);
+  color: rgb(255, 255, 255);
+}
+.division-juego{
+  text-align: center;
+  color: white;
+}
+canvas {
+  display: block;
+  margin: 0 auto;
+  margin: calc(50vh - 250px) auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 3px #ccc;
+}

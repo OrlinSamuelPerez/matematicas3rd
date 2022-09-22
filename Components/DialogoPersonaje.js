@@ -10,7 +10,7 @@ export default function DialogoPersonaje(props){
                 background-image: url(${props.img});
                 background-position: center;
                 background-size: cover;
-    border-radius: 20px;
+                border-radius: 20px;
 
             }
             .dialogo{
