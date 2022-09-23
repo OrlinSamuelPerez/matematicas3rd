@@ -11,6 +11,7 @@ import Felicitaciones from '../../Components/Felicitaciones';
 import Division from '../../Components/Practica/Division';
 import NumeroPares from '../../Components/Practica/NumeroPares';
 import NumerosOrdinales from '../../Components/Practica/NumerosOrdinales';
+import Resta from '../../Components/Practica/Resta';
 import Secuencias from '../../Components/Practica/Secuencia';
 
 import SignosComparacion from '../../Components/Practica/SignosComparacion';
@@ -169,7 +170,13 @@ export default function HomeNumeracion() {
                                                                 
                                                             </div>
                                                         </div>
-                                                        :<h1></h1>
+                                                         : rutaActual == "Sustraccion" ?
+                                                         <div className='space-fondo'>
+                                                             <div className='juegoFondoSpace'>
+                                                                 <Resta/>
+                                                             </div>
+                                                         </div>
+                                                         :<h1></h1>
 
 
                                                         : counter == 5 ? Actualiza() : <div><Felicitaciones Link="/Numeracion/Start" /></div>

@@ -1000,3 +1000,161 @@ canvas {
   display: grid;
   grid-template-columns: 1fr 1fr ;
 }
+
+
+.drop-resta {
+  display: grid;
+  gap: 10px;
+  width: auto;
+  padding-left: 26%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+.drop-resta-1 {
+  display: grid;
+  gap: 10px;
+  width: auto;
+  padding-left: 15%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+.drop-resta-2 {
+  display: grid;
+  gap: 10px;
+  width: auto;
+  padding-left: 10%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+.box-drop-resta-s{
+  display: grid;
+  gap: 10px;
+  width: auto;
+  padding-left: 21.4%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+.drop-resta-3 {
+  display: grid;
+  gap: 10px;
+  width: auto;
+  padding-left: 21.4%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+.drop-resta-4 {
+  display: grid;
+  gap: 10px;
+  width: auto;
+  padding-left: 33%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+.box-drop-resta {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 10px;
+  border: 4px solid #161616;
+  border-radius: 10px;
+  font-size: 50px;
+  text-align: center;
+  font-family: "roboto";
+  font-weight: 900;
+  color: black;
+}
+.box-drop-resta-s {
+  width: 1px;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 80px;
+  position: fixed;
+  background-color: white;
+  border-radius: 10px;
+  border: 4px solid #161616;
+  border-radius: 10px;
+  font-size: 50px;
+  text-align: center;
+  font-family: "roboto";
+  font-weight: 900;
+  color: black;
+}
+.drag-resta {
+  display: grid;
+  gap: 10px;
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+}
+.drag-d-resta {
+  width: 80px;
+  border-color: #9c48e6;
+  border: 4px solid #161616;
+  border-radius: 10px;
+  font-size: 50px;
+  text-align: center;
+  font-family: "roboto";
+  font-weight: 900;
+  color: #ffffff;
+  background-color: #005f7b;
+  height: 80px;
+  cursor: pointer;
+}
+.drag-d-resta :hover {
+  background-color: #0df0ff;
+}
+.juego21-resta{
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+}
+.juego21-resta img{
+  width: 80%;
+  height: 100%;
+  display: block;
+  
+}
+.juego21-resta h4{
+  width: 90%;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #ffdba5;
+  text-align: center;
+}
+.juego21-resta button{
+  background-color: rgb(0, 115, 255);
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  border: none;
+  border-radius: 20px;
+  font-size: 23px;
+  padding: 10px 60px;
+  width: 200px;
+  
+  margin:10px ;
+}
+.juego21-resta button:hover{
+  background-color: #ffdba5;
+  color: black;
+
+}
+.juego21-resta-repuesta{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+}
