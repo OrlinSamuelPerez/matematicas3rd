@@ -58,3 +58,240 @@
     grid-template-columns: 50% 15% 15% 15%
   }
   
+  
+
+  .drop-mult{
+    display: grid;
+    
+    width: auto;
+    padding-left: 26%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-1 {
+    display: grid;
+    gap: 10px;
+    width: auto;
+    padding-left: 36.7%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-2 {
+    display: grid;
+    gap: 10px;
+    width: auto;
+    padding-left: 10%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .box-drop-mult-s{
+    display: grid;
+    gap: 10px;
+    width: auto;
+    padding-left: 21.4%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-3 {
+    display: grid;
+    gap: 10px;
+    width: auto;
+    padding-left: 21.4%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-f1 {
+    display: grid;
+    gap: 10px;
+    width: auto;
+    padding-left: 13.5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-f2 {
+    display: grid;
+    gap: 10px;
+    width: auto;
+    padding-left: 0.5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-f12 {
+    display: grid;
+   
+    width: auto;
+    padding-left: 1.2%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-f111{
+    display: grid;
+   
+    width: auto;
+    padding-left: 17.5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-f112{
+    display: grid;
+   
+    width: auto;
+    padding-left: 9%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-11 {
+    display: grid;
+    gap: 10px;
+    width: auto;
+    padding-left: 15.3%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-4 {
+    display: grid;
+    gap: 10px;
+    width: auto;
+    padding-left: 33%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .box-drop-mult {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 10px;
+    border: 4px solid #161616;
+    border-radius: 10px;
+    font-size: 50px;
+    text-align: center;
+    font-family: "roboto";
+    font-weight: 900;
+    color: black;
+  }
+  .box-drop-mult-s {
+    width: 1px;
+    left: 8%;
+    height: 80px;
+    position: fixed;
+    background-color: white;
+    border-radius: 10px;
+    border: 4px solid #161616;
+    border-radius: 10px;
+    font-size: 50px;
+    text-align: center;
+    font-family: "roboto";
+    font-weight: 900;
+    color: black;
+  }
+  .box-drop-mult-x {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 10px;
+    border: 4px solid #161616;
+    border-radius: 10px;
+    font-size: 50px;
+    text-align: center;
+    font-family: "roboto";
+    font-weight: 900;
+    color: black;
+    margin-right: 0%;
+  }
+  .raya-mult {
+    height: 10px;
+    background-color: black;
+    border: none;
+    width: 52%;
+    margin-right: 45%;
+  }
+  .az{
+    background-color: rgb(45, 224, 248);
+
+  }
+  .box-drop-mult-s {
+    width: 1px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 80px;
+    position: fixed;
+    background-color: rgb(45, 224, 248);
+    border-radius: 10px;
+    border: 4px solid #161616;
+    border-radius: 10px;
+    font-size: 50px;
+    text-align: center;
+    font-family: "roboto";
+    font-weight: 900;
+    color: black;
+  }
+  .drag-mult {
+    display: grid;
+    gap: 10px;
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+  .grid-m{
+    display: grid;
+    grid-template-columns: 56% 44%;
+  }
+  .grid-mu{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 75% 25%;
+  }
+  .drag-mult-1 {
+    display: grid;
+    
+    width: 65px;
+  
+  
+    grid-template-columns: repeat(5, minmax(65px, 2fr));
+  }
+  .drag-d-mult {
+    width: 65px;
+    border-color: #9c48e6;
+    border: 4px solid #161616;
+    border-radius: 10px;
+    font-size: 50px;
+    text-align: center;
+    font-family: "roboto";
+    font-weight: 900;
+    color: #ffffff;
+    background-color: #005f7b;
+    height: 65px;
+    cursor: pointer;
+  }
+  .drag-d-mult :hover {
+    background-color: #0df0ff;
+    width: 65px;
+  }
