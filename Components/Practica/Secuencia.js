@@ -43,28 +43,28 @@ export default function Secuencias() {
     }
     const Juego = () => {
         return (
-            <div>
+            <div className="secuencia">
                 <h3>Ordena los siguientes números siguiendo una secuencia en ritmo ascendente tomando como patrón el número 4.</h3>
 
-                <div className="drop">
-                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop}></div>
-                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop}></div>
-                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop}></div>
-                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop}></div>
-                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop}></div>
-                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop}></div>
-                    <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop}></div>
+                    <div className="drop">
+                        <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop}></div>
+                        <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop}></div>
+                        <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop}></div>
+                        <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop}></div>
+                        <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop}></div>
+                        <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop}></div>
+                        <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop}></div>
 
 
-                </div>
-                <div className="drag">
-                    <div className="drag-d" draggable="true" id="veinte" onDragStart={drag}>20</div>
-                    <div className="drag-d" draggable="true" id="ocho" onDragStart={drag}>8</div>
-                    <div className="drag-d" draggable="true" id="dieciseis" onDragStart={drag}>16</div>
-                    <div className="drag-d" draggable="true" id="veinticuatro" onDragStart={drag}>24</div>
-                    <div className="drag-d" draggable="true" id="doce" onDragStart={drag}>12</div>
-                    <div className="drag-d" draggable="true" id="cuatro" onDragStart={drag}>4</div>
-                    <div className="drag-d" draggable="true" id="veintiocho" onDragStart={drag}>28</div>
+                    </div>
+                    <div className="drag">
+                        <div className="drag-d" draggable="true" id="veinte" onDragStart={drag}>20</div>
+                        <div className="drag-d" draggable="true" id="ocho" onDragStart={drag}>8</div>
+                        <div className="drag-d" draggable="true" id="dieciseis" onDragStart={drag}>16</div>
+                        <div className="drag-d" draggable="true" id="veinticuatro" onDragStart={drag}>24</div>
+                        <div className="drag-d" draggable="true" id="doce" onDragStart={drag}>12</div>
+                        <div className="drag-d" draggable="true" id="cuatro" onDragStart={drag}>4</div>
+                        <div className="drag-d" draggable="true" id="veintiocho" onDragStart={drag}>28</div>
 
                 </div>
 
@@ -79,7 +79,7 @@ export default function Secuencias() {
     const Tiempo = () => {
         setTimeout(() => { setJuegoActivo(false) }, 2000)
         return (
-            <h1>{juegoMensajeActivo}</h1>
+            <div>{juegoMensajeActivo}</div>
         )
     }
     // numero 2
@@ -119,7 +119,7 @@ export default function Secuencias() {
     }
     const Juego2 = () => {
         return (
-            <div>
+            <div className="secuencia">
                 <h3>Ordena los siguientes números siguiendo una secuencia en ritmo descendente tomando como patrón el número 20.</h3>
                 <div className="drop">
                     <div className="box-drop" id="1" onDragOver={allowdrop2} onDrop={drop2}></div>
@@ -187,7 +187,7 @@ export default function Secuencias() {
     }
     const Juego3 = () => {
         return (
-            <div>
+            <div className="secuencia">
                 <h3>Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.</h3>
 
                 <div className="drop">
@@ -255,7 +255,7 @@ export default function Secuencias() {
     }
     const Juego4 = () => {
         return (
-            <div>
+            <div className="secuencia">
                 <h3>Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.</h3>
 
                 <div className="drop">
@@ -322,7 +322,7 @@ export default function Secuencias() {
     }
     const Juego5 = () => {
         return (
-            <div>
+            <div className="secuencia">
                 <h3>Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.</h3>
 
                 <div className="drop">
@@ -390,7 +390,7 @@ export default function Secuencias() {
     }
     const Juego6 = () => {
         return (
-            <div>
+            <div className="secuencia">
                 <h3>Utilice los números necesarios para contar de menor a mayor de 10 en 10 hasta el 100. Nota: Inicie en 10.</h3>
 
                 <div className="drop">
@@ -471,7 +471,7 @@ export default function Secuencias() {
     }
     const Juego7 = () => {
         return (
-            <div>
+            <div className="secuencia">
                 <h3>Utilice los números necesarios para contar de menor a mayor de 1,000 en 1,000 hasta el 10,000. Nota: Inicie en 1,000.</h3>
 
                 <div className="drop">
@@ -552,7 +552,7 @@ export default function Secuencias() {
     }
     const Juego8 = () => {
         return (
-            <div>
+            <div className="secuencia">
                 <h3>Utilice los números necesarios para contar de mayor a menor de 500 en 500 hasta el 1,000. Nota: Inicie en 5,000.</h3>
 
                 <div className="drop">
@@ -633,7 +633,7 @@ export default function Secuencias() {
     }
     const Juego9 = () => {
         return (
-            <div>
+            <div className="secuencia">
                 <h3>Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.</h3>
 
                 <div className="drop">
@@ -701,7 +701,7 @@ export default function Secuencias() {
     }
     const Juego10 = () => {
         return (
-            <div>
+            <div className="secuencia">
                 <h3>Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.</h3>
 
                 <div className="drop">
