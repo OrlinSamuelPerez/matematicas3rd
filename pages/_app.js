@@ -5,6 +5,7 @@ import '../styles/geometria.css'
 import '../styles/medicion.css'
 import '../styles/multiplicacion.css'
 import '../styles/estadisticaelemental.css'
+import '../styles/AnimacionEmoji.css'
 import Head from 'next/head';
 import Login from './Login';
 import { useState } from 'react';
