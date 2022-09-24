@@ -3,6 +3,7 @@ import '../styles/Login.css'
 import '../styles/Home.css'
 import '../styles/geometria.css'
 import '../styles/medicion.css'
+import '../styles/multiplicacion.css'
 import '../styles/estadisticaelemental.css'
 import Head from 'next/head';
 import Login from './Login';
