@@ -9,6 +9,7 @@ import DialogoPregunta from '../../Components/DialogoPregunta';
 import Ejemplo from '../../Components/Ejemplo';
 import Felicitaciones from '../../Components/Felicitaciones';
 import Division from '../../Components/Practica/Division';
+import Mulpiplicacion from '../../Components/Practica/Multiplicacion';
 import NumeroPares from '../../Components/Practica/NumeroPares';
 import NumerosOrdinales from '../../Components/Practica/NumerosOrdinales';
 import Resta from '../../Components/Practica/Resta';
@@ -176,6 +177,12 @@ export default function HomeNumeracion() {
                                                          <div className='space-fondo'>
                                                              <div className='juegoFondoSpace'>
                                                                  <Resta/>
+                                                             </div>
+                                                         </div>
+                                                         : rutaActual == "Multiplicacion" ?
+                                                         <div className='space-fondo'>
+                                                             <div className='juegoFondoSpace'>
+                                                                 <Mulpiplicacion/>
                                                              </div>
                                                          </div>
                                                          :<h1></h1>
