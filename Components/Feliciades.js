@@ -1,14 +1,14 @@
-export default function IntentaloDeNuevo(){
+export default function Feliciades(){
     return(
-        <div className="Intentalodenuveo">
-            <div class="emoji  emoji--sad">
+        <div className="felicidades">
+            <div class="emoji  emoji--wow">
             <div class="emoji__face">
                 <div class="emoji__eyebrows"></div>
                 <div class="emoji__eyes"></div>
                 <div class="emoji__mouth"></div>
             </div>
             </div>
-            <h1>Intentalo de nuevo se que tu puedes</h1>
+            <h1>Felicidades eres el mejor.</h1>
         </div>
     )
 }

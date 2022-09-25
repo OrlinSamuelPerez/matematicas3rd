@@ -518,12 +518,12 @@ nav button {
 }
 .juegoFondoSpace {
   width: 95%;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 20px;
   height: 500px;
-  background-color: #30029b8c;
+  background-color: #230349;
   
 }
 .Odenar {
@@ -1114,13 +1114,14 @@ canvas {
   height: 100%;
 }
 .secuencia h3{
-  background-color: #ffdba5;
-  color: rgb(0, 28, 42);
+  background-color: #f20875;
+  color: rgb(41, 42, 42);
   border-radius: 19px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 22px;
-  font-family: "roboto";
+  font-family: "fredoka one";
+  color: white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.129);
   padding: 10px;
 
@@ -1195,4 +1196,55 @@ canvas {
 .juegoFondoSpace::-webkit-scrollbar-track:hover,
 .juegoFondoSpace::-webkit-scrollbar-track:active {
   background: #d4d4d4;
+}
+.Contador-secuencia{
+ background-color: #f20875;
+ color: white;
+ font-weight: 900;
+ font-family: "fredoka one";
+ font-size: 50px;
+ text-align: center;
+ border-radius: 20px;
+ width: 130px;
+ position: absolute;
+ top: 500px;
+ 
+}
+.house-start{
+ display: flex; 
+ position: absolute;
+ top: 6px;
+ left:6px;
+ gap: 20px;
+}
+.house-start div{
+  background-color: #ffdba5;
+  width: 65px;
+ border-radius: 30px;
+  height: 65px;
+  padding: 10px;
+  cursor: pointer;
+
+}
+.house-start img{
+  width: 100%;
+}
+.atras-practica{
+  background-color: #ffdba5;
+  border-radius: 50px;
+  width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 140px;
+}
+.atras-practica button{
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+.atras-practica img{
+  width: 100%;
+}
+.atras-practica:hover{
+  background-color: #f20875;
 }

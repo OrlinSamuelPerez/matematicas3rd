@@ -129,6 +129,8 @@ export default function HomeNumeracion() {
                                 <div className='space-fondo'>
                                     <div className='juegoFondoSpace'>
                                         <Secuencias />
+                                        <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
+
                                     </div>
                                 </div>
 
