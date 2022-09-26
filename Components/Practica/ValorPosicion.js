@@ -225,7 +225,7 @@ export default function ValorPosicion() {
         }
         return (
             <div className="unidad">
-                <div>
+                <div className="title">
                     <h4>Elige la imagenes que tiene UNIDAD DE MILLAR</h4>
                 </div>
                 <div className="grid-unidad">

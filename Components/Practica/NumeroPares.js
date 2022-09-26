@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function NumeroPares(){
     const [estadoJuego, setEstadoJuego] =useState(false)
     const [juegoMensajeActivo, setMensajeJuegoActivo] = useState("")
+    const [counter, setCounter] = useState(0)
 
    const ImagenesDinamica = ()=>{
         const imagen = [
@@ -15,6 +16,7 @@ export default function NumeroPares(){
         function random(min, max) {
             return Math.floor((Math.random() * (max - min + 1)) + min);
         }
+        
         const imagenPosicion = imagen[random(0,4)]
         const cantidadDeImagenesPantalla =random(2, 12)
         const array = []
@@ -25,9 +27,12 @@ export default function NumeroPares(){
             if(array.length%2==0 && valor == "par"){
                 setEstadoJuego(true)
                 setMensajeJuegoActivo("FELICIDADES EL NUMERO ERA PAR")
+                setCounter(counter + 1)
             }else if(array.length%2!=0 && valor == "impar"){
                 setEstadoJuego(true)
                 setMensajeJuegoActivo("FELICIDADES EL NUMERO ERA IMPAR")
+                setCounter(counter + 1)
+
             }
             else{
                 if(array.length%2==0 ){
@@ -63,8 +68,10 @@ export default function NumeroPares(){
     return(
         <div>
             {
-                estadoJuego ==false?
-                <ImagenesDinamica/>
+                counter==10?
+                <h1>Pon lo que tu vaya a poner, o sea huevo</h1>
+                :estadoJuego ==false?
+                    <ImagenesDinamica/>
                 :<Tiempo/>
 
             }

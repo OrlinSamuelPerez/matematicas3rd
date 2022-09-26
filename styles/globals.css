@@ -1235,7 +1235,9 @@ canvas {
   width: 90px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 140px;
+  position: absolute;
+  bottom: 60px;
+  left: 47%;
 }
 .atras-practica button{
   background-color: transparent;
