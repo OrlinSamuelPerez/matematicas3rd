@@ -168,7 +168,7 @@ export default function HomeNumeracion() {
                                                     : rutaActual == "Division" ?
                                                         <div className='space-fondo'>
                                                             <div className='juegoFondoSpace'>
-                                                                
+                                                                <Division/>
                                                             </div>
                                                         </div>
                                                          : rutaActual == "Sustraccion" ?
