@@ -3,8 +3,8 @@ import { useState } from "react"
 export default function ValorPosicion() {
     const [counter, setCounter] = useState(0)
 
-    const Unidad = () => {
-        const img = [{ img: "https://i.pinimg.com/564x/09/c8/5c/09c85c7611054e1ca6043e1c21442ff4.jpg", validar: true }, { img: "https://i.pinimg.com/564x/e2/09/48/e2094847382a7e8329cfac4d42cc04bd.jpg", validar: false }, { img: "https://i.pinimg.com/564x/fc/57/58/fc5758c8caf703d795f67a3679bd8f10.jpg", validar: false }]
+    const Ejercicio1 = () => {
+        const img = [{ img: "/img/1.png", validar: true }, { img: "/img/2.png", validar: false }, { img: "/img/3.png", validar: false }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -15,9 +15,9 @@ export default function ValorPosicion() {
         }
         return (
             <div className="unidad">
-                <p>La unidad es el elemento entero más pequeño que se utiliza para contar y para representar cifras. Por ejemplo: 1 manzana. 5 lápices.4</p>
+                <p>La unidad es el elemento entero más pequeño que se utiliza para contar y para representar cifras.</p>
                 <div>
-                    <h4>Elige la imagenes que solo tienen una unidad</h4>
+                    <h4>Elige la imagen que tiene 1 unidad.</h4>
                 </div>
                 <div className="grid-unidad">
                     {img.map(e =>
@@ -27,8 +27,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad1 = () => {
-        const img = [{ img: "https://i.pinimg.com/564x/9c/f9/a6/9cf9a649f26f20d88866496ab2b3c1c4.jpg", validar: false }, { img: "https://i.pinimg.com/564x/09/c8/5c/09c85c7611054e1ca6043e1c21442ff4.jpg", validar: true }, { img: "https://i.pinimg.com/564x/01/c9/6e/01c96e40cd0e4f775d3a8ae61f85efd9.jpg", validar: false }]
+    const Ejercicio2 = () => {
+        const img = [{ img: "/img/1.png", validar: false }, { img: "/img/2.png", validar: true }, { img: "/img/3.png", validar: false }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -39,9 +39,8 @@ export default function ValorPosicion() {
         }
         return (
             <div className="unidad">
-                <p>La unidad es el elemento entero más pequeño que se utiliza para contar y para representar cifras. Por ejemplo: 1 manzana. 5 lápices.4</p>
                 <div>
-                    <h4>Elige la imagenes que solo tienen una unidad</h4>
+                    <h4>Elige la imagen que tiene 4 unidades</h4>
                 </div>
                 <div className="grid-unidad">
                     {img.map(e =>
@@ -51,8 +50,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad2 = () => {
-        const img = [{ numero: "300", validar: false }, { numero: "10", validar: true }, { numero: "150", validar: false }]
+    const Ejercicio3 = () => {
+        const img = [{ numero: "Centena", validar: true }, { numero: "Decena", validar: false }, { numero: "Unidad ", validar: false },]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -64,7 +63,7 @@ export default function ValorPosicion() {
         return (
             <div className="unidad">
                 <div>
-                    <h4>Elige la imagenes que tiene una decena</h4>
+                    <h4>En el número 5,782; ¿Qué valor posicional ocupa el dígito 7?</h4>
                 </div>
                 <div className="grid-unidad">
                     {img.map(e =>
@@ -74,8 +73,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad3 = () => {
-        const img = [{ numero: "600", validar: false }, { numero: "1000", validar: false }, { numero: "30", validar: true }]
+    const Ejercicio4 = () => {
+        const img = [{ numero: "Centena", validar: false }, { numero: "Decena de Millar", validar: false }, { numero: "Unidad de Millar", validar: true }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -87,7 +86,7 @@ export default function ValorPosicion() {
         return (
             <div className="unidad">
                 <div>
-                    <h4>Elige la imagenes que tiene una decena</h4>
+                    <h4>En el número 15,783; el dígito 5 ocupa el lugar posicional de la: </h4>
                 </div>
                 <div className="grid-unidad">
                     {img.map(e =>
@@ -97,32 +96,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad4 = () => {
-        const img = [{ img: "https://i.pinimg.com/564x/9c/f9/a6/9cf9a649f26f20d88866496ab2b3c1c4.jpg", validar: false }, { img: "https://i.pinimg.com/564x/09/c8/5c/09c85c7611054e1ca6043e1c21442ff4.jpg", validar: true }, { img: "https://i.pinimg.com/564x/01/c9/6e/01c96e40cd0e4f775d3a8ae61f85efd9.jpg", validar: false }]
-        const validar = (validar) => {
-            if (validar == true) {
-                console.log("verdadero")
-                setCounter(counter + 1)
-            } else {
-                console.log("Falso")
-            }
-        }
-        return (
-            <div className="unidad">
-                <p>La unidad es el elemento entero más pequeño que se utiliza para contar y para representar cifras. Por ejemplo: 1 manzana. 5 lápices.4</p>
-                <div>
-                    <h4>Elige la imagenes que solo tienen una unidad</h4>
-                </div>
-                <div className="grid-unidad">
-                    {img.map(e =>
-                        <div ><img onClick={() => validar(e.validar)} src={e.img} /></div>
-                    )}
-                </div>
-            </div>
-        )
-    }
-    const Unidad5 = () => {
-        const img = [{ numero: "600", validar: true }, { numero: "10,000", validar: false }, { numero: "50", validar: false }]
+    const Ejercicio5 = () => {
+        const img = [{ numero: "4", validar: true }, { numero: "5", validar: false }, { numero: "2", validar: false }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -134,7 +109,7 @@ export default function ValorPosicion() {
         return (
             <div className="unidad">
                 <div>
-                    <h4>Elige la imagenes que tiene una centena</h4>
+                    <h4>¿Cuántos dígitos posee el número 3,525?</h4>
                 </div>
                 <div className="grid-unidad">
                     {img.map(e =>
@@ -144,8 +119,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad6 = () => {
-        const img = [{ numero: "3,000", validar: false }, { numero: "800", validar: true }, { numero: "90", validar: false }]
+    const Ejercicio6 = () => {
+        const img = [{ numero: "5", validar: false }, { numero: "1", validar: true }, { numero: "8", validar: false }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -157,7 +132,7 @@ export default function ValorPosicion() {
         return (
             <div className="unidad">
                 <div>
-                    <h4>Elige la imagenes que tiene una centena</h4>
+                    <h4>En el número 15,783; ¿Cuál dígito ocupa el lugar posicional de la decena de millar? </h4>
                 </div>
                 <div className="grid-unidad">
                     {img.map(e =>
@@ -167,8 +142,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad7 = () => {
-        const img = [{ numero: "60", validar: true }, { numero: "1000", validar: false }, { numero: "1", validar: false }]
+    const Ejercicio7 = () => {
+        const img = [{ numero: "5", validar: true }, { numero: "3", validar: false }, { numero: "4", validar: false }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -180,7 +155,7 @@ export default function ValorPosicion() {
         return (
             <div className="unidad">
                 <div>
-                    <h4>Elige la imagenes que tiene una decena</h4>
+                    <h4>¿Cuántos dígitos posee el número 15,875?</h4>
                 </div>
                 <div className="grid-unidad">
                     {img.map(e =>
@@ -190,8 +165,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad8 = () => {
-        const img = [{ numero: "700", validar: true }, { numero: "1000", validar: false }, { numero: "1200", validar: false }]
+    const Ejercicio8 = () => {
+        const img = [{ numero: "230", validar: true }, { numero: "340", validar: false }, { numero: "220", validar: false }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -203,7 +178,7 @@ export default function ValorPosicion() {
         return (
             <div className="unidad">
                 <div>
-                    <h4>Elige la imagenes que tiene una centena</h4>
+                    <h4>Elige el número que está formado por 2 centenas y 3 decenas.</h4>
                 </div>
                 <div className="grid-unidad">
                     {img.map(e =>
@@ -213,8 +188,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad9 = () => {
-        const img = [{ numero: "600", validar: false }, { numero: "10,000", validar: false }, { numero: "1000", validar: true }]
+    const Ejercicio9 = () => {
+        const img = [{ numero: "1,750", validar: false }, { numero: "750", validar: true }, { numero: "33", validar: false }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -226,7 +201,7 @@ export default function ValorPosicion() {
         return (
             <div className="unidad">
                 <div>
-                    <h4>Elige la imagenes que tiene UNIDAD DE MILLAR</h4>
+                    <h4>Elige el número que tiene 3 dígitos.</h4>
                 </div>
                 <div className="grid-unidad">
                     {img.map(e =>
@@ -236,8 +211,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad10 = () => {
-        const img = [{ numero: "10,000", validar: true }, { numero: "800", validar: false }, { numero: "980", validar: false }]
+    const Ejercicio10 = () => {
+        const img = [{ numero: "6", validar: false }, { numero: "2", validar: false }, { numero: "3", validar: true }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -249,7 +224,30 @@ export default function ValorPosicion() {
         return (
             <div className="unidad">
                 <div>
-                    <h4>Elige la imagenes que tiene DECENA DE MILLAR</h4>
+                    <h4>En el número 326, ¿Cuál dígito ocupa el valor posicional de la centena?</h4>
+                </div>
+                <div className="grid-unidad">
+                    {img.map(e =>
+                        <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                    )}
+                </div>
+            </div>
+        )
+    }
+    const Ejercicio11 = () => {
+        const img = [{ numero: "Centena", validar: true }, { numero: "Decena", validar: false }, { numero: "Unidad", validar: false }]
+        const validar = (validar) => {
+            if (validar == true) {
+                console.log("verdadero")
+                setCounter(counter + 1)
+            } else {
+                console.log("Falso")
+            }
+        }
+        return (
+            <div className="unidad">
+                <div>
+                    <h4>En el número 78,524; el dígito 5 ocupa el valor posicional de la: </h4>
 
 
                 </div>
@@ -261,8 +259,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad11 = () => {
-        const img = [{ numero: "600", validar: false }, { numero: "60,000", validar: true }, { numero: "1000", validar: false }]
+    const Ejercicio12 = () => {
+        const img = [{ numero: "25,200", validar: false }, { numero: "25,020", validar: true }, { numero: "25,002", validar: false }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -274,7 +272,7 @@ export default function ValorPosicion() {
         return (
             <div className="unidad">
                 <div>
-                    <h4>Elige la imagenes que tiene DECENA DE MILLAR</h4>
+                    <h4>Elige el número formado por 2 decenas de millar, 5 unidades de millar y 2 decenas.</h4>
                 </div>
                 <div className="grid-unidad">
                     {img.map(e =>
@@ -284,8 +282,8 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const Unidad12 = () => {
-        const img = [{ numero: "3,000", validar: true }, { numero: "800", validar: false }, { numero: "90", validar: false }]
+    const Ejercicio13 = () => {
+        const img = [{ numero: "302", validar: true }, { numero: "320", validar: false }, { numero: "203", validar: false }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -297,7 +295,7 @@ export default function ValorPosicion() {
         return (
             <div className="unidad">
                 <div>
-                    <h4>Elige la imagenes que tiene UNIDAD DE MILLAR</h4>
+                    <h4>Elige el número formado por 3 centenas y 2 unidades.</h4>
 
                 </div>
                 <div className="grid-unidad">
@@ -308,97 +306,216 @@ export default function ValorPosicion() {
             </div>
         )
     }
-    const EligirNumero = () => {
-        function random(min, max) {
-            return Math.floor((Math.random() * (max - min + 1)) + min);
-        }
-        let numeroAleatorio = random(0, 15000)
-        const comprobar = (valor) => {
-            if (numeroAleatorio > 0 && numeroAleatorio < 10 && valor == "unidad") {
-                console.log("Correcto")
+    const Ejercicio14 = () => {
+        const validar = (validar) => {
+            if (validar == true) {
+                console.log("verdadero")
+                setCounter(counter + 1)
+            } else {
+                console.log("Falso")
             }
-            else if (numeroAleatorio > 10 && numeroAleatorio < 100 && valor == "decena") {
-                console.log("Correcto")
-            }
-            else if (numeroAleatorio >= 100 && numeroAleatorio < 1000 && valor == "centena") {
-                console.log("Correcto")
-            }
-            else if (numeroAleatorio >= 1000 && numeroAleatorio < 10000 && valor == "unidadmillar") {
-                console.log("Correcto")
-            } else if (numeroAleatorio >= 10000 && valor == "decenamillar") {
-                console.log("Correcto")
-            }
-            else {
-                console.log("Incorrecto")
-            }
-
         }
         return (
-            <div>
-                <h1>Este numero {numeroAleatorio} corresponde a:</h1>
-                <div><button onClick={() => comprobar("unidad")}>Unidad</button></div>
-                <div><button onClick={() => comprobar("decena")}>Decena</button></div>
-                <div><button onClick={() => comprobar("centena")}>Centena</button></div>
-                <div><button onClick={() => comprobar("unidadmillar")}>Unidad Millar</button></div>
-                <div><button onClick={() => comprobar("decenamillar")}>Decena Millar</button></div>
+            <div className="unidad">
+                <div>
+                    <h4>Escribe el número representado y su composición</h4>
+                </div>
+                <div className="grid-unidad">
+
+                    <div ><img onClick={() => validar(e.validar)} src="/img/img1.png" /></div>
+
+                </div>
+                <input type="number" max={9} min={0} />C + <input type="number" max={9} min={0} />D + <input type="number" max={9} min={0} />U <br></br>
+                <input type="number" min={0} />
+
+            </div>
+        )
+    }
+    const Ejercicio15 = () => {
+        const validar = (validar) => {
+            if (validar == true) {
+                console.log("verdadero")
+                setCounter(counter + 1)
+            } else {
+                console.log("Falso")
+            }
+        }
+        return (
+            <div className="unidad">
+                <div>
+                    <h4>Escribe el número representado y su composición</h4>
+                </div>
+                <div className="grid-unidad">
+
+                    <div ><img onClick={() => validar(e.validar)} src="/img/img2.png" /></div>
+
+                </div>
+                <input type="number" max={9} min={0} />UM +<input type="number" max={9} min={0} />C + <input type="number" max={9} min={0} />D + <input type="number" max={9} min={0} />U <br></br>
+                <input type="number" min={0} />
+
+            </div>
+        )
+    }
+    const Ejercicio16 = () => {
+        const validar = (validar) => {
+            if (validar == true) {
+                console.log("verdadero")
+                setCounter(counter + 1)
+            } else {
+                console.log("Falso")
+            }
+        }
+        return (
+            <div className="unidad">
+                <div>
+                    <h4>Escribe el número representado y su composición</h4>
+                </div>
+                <div className="grid-unidad">
+
+                    <div ><img onClick={() => validar(e.validar)} src="/img/img3.png" /></div>
+
+                </div>
+                <input type="number" max={9} min={0} />UM +<input type="number" max={9} min={0} />C + <input type="number" max={9} min={0} />D  <br></br>
+                <input type="number" min={0} />
+
+            </div>
+        )
+    }
+    const Ejercicio17 = () => {
+        const img = [{ numero: "5,000 + 300 + 2", validar: false }, { numero: "500 + 30 + 2", validar: true }, { numero: "5,000 + 30 + 2", validar: false }]
+        const validar = (validar) => {
+            if (validar == true) {
+                console.log("verdadero")
+                setCounter(counter + 1)
+            } else {
+                console.log("Falso")
+            }
+        }
+        return (
+            <div className="unidad">
+                <div>
+                    <h4>La descomposición del número 532 es:</h4>
+                </div>
+                <div className="grid-unidad">
+                    {img.map(e =>
+                        <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                    )}
+                </div>
+            </div>
+        )
+    }
+    const Ejercicio18 = () => {
+        const img = [{ numero: "5,000 + 300 + 2", validar: false }, { numero: "500 + 30 + 2", validar: false }, { numero: "5,000 + 30 + 2", validar: true }]
+        const validar = (validar) => {
+            if (validar == true) {
+                console.log("verdadero")
+                setCounter(counter + 1)
+            } else {
+                console.log("Falso")
+            }
+        }
+        return (
+            <div className="unidad">
+                <div>
+                    <h4>La descomposición del número 5,032 es:</h4>
+                </div>
+                <div className="grid-unidad">
+                    {img.map(e =>
+                        <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                    )}
+                </div>
+            </div>
+        )
+    }
+    const Ejercicio19 = () => {
+        const img = [{ numero: "5,000 + 300 + 2", validar: true }, { numero: "500 + 30 + 2", validar: false }, { numero: "5,000 + 30 + 2", validar: false }]
+        const validar = (validar) => {
+            if (validar == true) {
+                console.log("verdadero")
+                setCounter(counter + 1)
+            } else {
+                console.log("Falso")
+            }
+        }
+        return (
+            <div className="unidad">
+                <div>
+                    <h4>La descomposición del número 5,302 es:</h4>
+                </div>
+                <div className="grid-unidad">
+                    {img.map(e =>
+                        <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                    )}
+                </div>
+            </div>
+        )
+    }
+    const Ejercicio20 = () => {
+        const img = [{ numero: "70,000 + 5,000 + 500 + 20 +8", validar: true }, { numero: "70,000 + 500 + 20 +8", validar: false }, { numero: "70,000 + 5,000 + 20 +8", validar: false }]
+        const validar = (validar) => {
+            if (validar == true) {
+                console.log("verdadero")
+                setCounter(counter + 1)
+            } else {
+                console.log("Falso")
+            }
+        }
+        return (
+            <div className="unidad">
+                <div>
+                    <h4>La descomposición del número 75,528 es:</h4>
+                </div>
+                <div className="grid-unidad">
+                    {img.map(e =>
+                        <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                    )}
+                </div>
             </div>
         )
     }
     return (
         <div className="valorposicion">
             {counter == 0 ?
-                <Unidad />
+                <Ejercicio1 />
                 : counter == 1 ?
-                    <Unidad1 />
+                    <Ejercicio2 />
                     : counter == 2 ?
-                        <Unidad2 />
+                        <Ejercicio3 />
                         : counter == 3 ?
-                            <Unidad3 />
+                            <Ejercicio4 />
                             : counter == 4 ?
-                                <Unidad4 />
+                                <Ejercicio5 />
                                 : counter == 5 ?
-                                    <Unidad5 />
+                                    <Ejercicio6 />
                                     : counter == 6 ?
-                                        <Unidad6 />
+                                        <Ejercicio7 />
                                         : counter == 7 ?
-                                            <Unidad7 />
+                                            <Ejercicio8 />
                                             : counter == 8 ?
-                                                <Unidad8 />
+                                                <Ejercicio9 />
                                                 : counter == 9 ?
-                                                    <Unidad9 />
+                                                    <Ejercicio10 />
                                                     : counter == 10 ?
-                                                        <Unidad10 />
+                                                        <Ejercicio11 />
                                                         : counter == 11 ?
-                                                            <Unidad11 />
+                                                            <Ejercicio12 />
                                                             : counter == 12 ?
-                                                                <Unidad12 />
+                                                                <Ejercicio13 />
                                                                 : counter == 13 ?
-                                                                    <Unidad9 />
+                                                                    <Ejercicio14 />
                                                                     : counter == 14 ?
-                                                                        <Unidad6 />
+                                                                        <Ejercicio15 />
                                                                         : counter == 15 ?
-                                                                            <Unidad12 />
+                                                                            <Ejercicio16 />
                                                                             : counter == 16 ?
-                                                                                <Unidad3 />
+                                                                                <Ejercicio17 />
                                                                                 : counter == 17 ?
-                                                                                    <Unidad10 />
+                                                                                    <Ejercicio18 />
                                                                                     : counter == 18 ?
-                                                                                        <Unidad8 />
+                                                                                        <Ejercicio19 />
                                                                                         : counter == 19 ?
-                                                                                            <Unidad1 />
-                                                                                            : counter == 20 ?
-                                                                                                <Unidad7 />
-                                                                                                : counter == 21 ?
-                                                                                                    <Unidad4 />
-                                                                                                    : counter == 22 ?
-                                                                                                        <Unidad />
-                                                                                                        : counter == 23 ?
-                                                                                                            <Unidad5 />
-                                                                                                            : counter == 24 ?
-                                                                                                                <Unidad11 />
-                                                                                                                : counter == 25 ?
-                                                                                                                    <Unidad2 />
-                                                                                                                    : <h1>Fin</h1>
+                                                                                            <Ejercicio20 />
+                                                                                            : <h1>Fin</h1>
             }
         </div>
     )
