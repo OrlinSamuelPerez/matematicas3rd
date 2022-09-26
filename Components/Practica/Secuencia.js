@@ -1,4 +1,8 @@
+import { useRouter } from "next/router";
 import { useState } from "react";
+import {PreguntasAnalisis} from "../../Service/PreguntasAnalisis";
+import Feliciades from "../Feliciades";
+import IntentaloDeNuevo from "../IntentaloDeNuevo";
 
 
 export default function Secuencias() {
@@ -6,6 +10,7 @@ export default function Secuencias() {
     const [juegoSiguienActivo, setSiguienteJuegoActivo] = useState(false)
     const [juegoMensajeActivo, setMensajeJuegoActivo] = useState("")
     const [counter, setCounter] = useState(0)
+    const router = useRouter()
     let array = ["", "", "", "", "", "", "", ""]
     const drag = (e) => {
         //Aqui se obtiene el numero arratrado, el valor es el de id
@@ -25,13 +30,28 @@ export default function Secuencias() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Ordena los siguientes números siguiendo una secuencia en ritmo ascendente tomando como patrón el número 4.",
+                    0,
+                    0
+            
+                    )
 
             }
             else {
                 array = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Ordena los siguientes números siguiendo una secuencia en ritmo ascendente tomando como patrón el número 4.",
+                    0,
+                    0
+            
+                    )
 
 
 
@@ -75,11 +95,15 @@ export default function Secuencias() {
     }
     const handleClick1 = () => {
         setCounter(counter + 1)
+        setSiguienteJuegoActivo(false)
     }
     const Tiempo = () => {
-        setTimeout(() => { setJuegoActivo(false) }, 2000)
+        setTimeout(() => { setJuegoActivo(false) }, 3000)
         return (
-            <div>{juegoMensajeActivo}</div>
+            <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+            <Feliciades/>
+            :<IntentaloDeNuevo/>
+        }</div>
         )
     }
     // numero 2
@@ -732,6 +756,7 @@ export default function Secuencias() {
     }
     return (
         <div>
+            <div className="Contador-secuencia">{counter + 1}/10</div>
             {juegoActivo == false ?
                 <div>
                     {counter == 0 ?

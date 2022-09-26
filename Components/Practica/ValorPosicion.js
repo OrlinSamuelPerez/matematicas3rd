@@ -200,9 +200,7 @@ export default function ValorPosicion() {
         }
         return (
             <div className="unidad">
-                <div>
-                    <h4>Elige el número que tiene 3 dígitos.</h4>
-                </div>
+
                 <div className="grid-unidad">
                     {img.map(e =>
                         <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
