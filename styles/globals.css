@@ -1250,3 +1250,8 @@ canvas {
 .atras-practica:hover{
   background-color: #f20875;
 }
+.img-orden{
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+}

@@ -65,11 +65,161 @@ export default function NumeroPares(){
         <h1 className="juegomensaje">{juegoMensajeActivo}</h1>
     )
    }
+   const Ejercicio11 = () => {
+    const img = [{ numero: "8,627", validar: true }, { numero: "3,522", validar: false }, { numero: "6,222 ", validar: false },]
+    const validar = (validar) => {
+        if (validar == true) {
+            console.log("verdadero")
+            setCounter(counter + 1)
+        } else {
+            console.log("Falso")
+        }
+    }
+    return (
+        <div className="unidad">
+            <div>
+                <h4>Selecciona el número impar.</h4>
+            </div>
+            <div className="grid-unidad">
+                {img.map(e =>
+                    <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                )}
+            </div>
+        </div>
+    )
+}
+const Ejercicio12 = () => {
+    const img = [{ numero: "5,627", validar: false }, { numero: "3,545", validar: false }, { numero: "6,222 ", validar: true },]
+    const validar = (validar) => {
+        if (validar == true) {
+            console.log("verdadero")
+            setCounter(counter + 1)
+        } else {
+            console.log("Falso")
+        }
+    }
+    return (
+        <div className="unidad">
+            <div>
+                <h4>Selecciona el número par.</h4>
+            </div>
+            <div className="grid-unidad">
+                {img.map(e =>
+                    <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                )}
+            </div>
+        </div>
+    )
+}
+const Ejercicio13 = () => {
+    const img = [{ numero: "359", validar: false }, { numero: "578", validar: true }, { numero: "325 ", validar: false },]
+    const validar = (validar) => {
+        if (validar == true) {
+            console.log("verdadero")
+            setCounter(counter + 1)
+        } else {
+            console.log("Falso")
+        }
+    }
+    return (
+        <div className="unidad">
+            <div>
+                <h4>Selecciona el número par.</h4>
+            </div>
+            <div className="grid-unidad">
+                {img.map(e =>
+                    <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                )}
+            </div>
+        </div>
+    )
+}
+const Ejercicio14 = () => {
+    const img = [{ numero: "788", validar: false }, { numero: "247", validar: true }, { numero: "526 ", validar: false },]
+    const validar = (validar) => {
+        if (validar == true) {
+            console.log("verdadero")
+            setCounter(counter + 1)
+        } else {
+            console.log("Falso")
+        }
+    }
+    return (
+        <div className="unidad">
+            <div>
+                <h4>Selecciona el número impar.</h4>
+            </div>
+            <div className="grid-unidad">
+                {img.map(e =>
+                    <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                )}
+            </div>
+        </div>
+    )
+}
+const Ejercicio15 = () => {
+    const img = [{ numero: "788", validar: true }, { numero: "247", validar: false }, { numero: "529 ", validar: false },]
+    const validar = (validar) => {
+        if (validar == true) {
+            console.log("verdadero")
+            setCounter(counter + 1)
+        } else {
+            console.log("Falso")
+        }
+    }
+    return (
+        <div className="unidad">
+            <div>
+                <h4>Selecciona el número par.</h4>
+            </div>
+            <div className="grid-unidad">
+                {img.map(e =>
+                    <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                )}
+            </div>
+        </div>
+    )
+}
+const Ejercicio16 = () => {
+    const img = [{ numero: "58,786", validar: false }, { numero: "24,852", validar: false }, { numero: "52,997 ", validar: true },]
+    const validar = (validar) => {
+        if (validar == true) {
+            console.log("verdadero")
+            setCounter(counter + 1)
+        } else {
+            console.log("Falso")
+        }
+    }
+    return (
+        <div className="unidad">
+            <div>
+                <h4>Selecciona el número impar.</h4>
+            </div>
+            <div className="grid-unidad">
+                {img.map(e =>
+                    <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>
+                )}
+            </div>
+        </div>
+    )
+}
     return(
-        <div>
+        <div >
             {
-                counter==10?
-                <h1>Pon lo que tu vaya a poner, o sea huevo</h1>
+                counter==2?
+                <Ejercicio11/>:
+                counter==5?
+                <Ejercicio12/>
+                :counter==9?
+                <Ejercicio13/>
+                :counter==11?
+                <Ejercicio14/>
+                :counter==13?
+                <Ejercicio15/>
+                :counter==15?
+                <Ejercicio16/>
+                :counter==16?
+                <h1>Fin</h1>
                 :estadoJuego ==false?
                     <ImagenesDinamica/>
                 :<Tiempo/>
