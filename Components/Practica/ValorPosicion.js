@@ -211,7 +211,7 @@ export default function ValorPosicion() {
         )
     }
     const Ejercicio9 = () => {
-        const img = [{ numero: "1,750", validar: false }, { numero: "750", validar: true }, { numero: "33", validar: false }]
+        const img = [{ numero: "1,750", validar: false }, { numero: "750", validar: true }, { numero: "75", validar: false }]
         const validar = (validar) => {
             if (validar == true) {
                 console.log("verdadero")
@@ -222,7 +222,9 @@ export default function ValorPosicion() {
         }
         return (
             <div className="unidad">
-
+ <div>
+                    <h4>Elige el número que está formado por 7 centenas y 5 decenas.</h4>
+                </div>
                 <div className="grid-unidad">
                     {img.map(e =>
                         <div ><h1 onClick={() => validar(e.validar)} >{e.numero}</h1></div>

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-import {PreguntasAnalisis} from "../../Service/PreguntasAnalisis";
+import { PreguntasAnalisis } from "../../Service/PreguntasAnalisis";
 import Feliciades from "../Feliciades";
 import IntentaloDeNuevo from "../IntentaloDeNuevo";
 
@@ -36,8 +36,8 @@ export default function Secuencias() {
                     "Ordena los siguientes números siguiendo una secuencia en ritmo ascendente tomando como patrón el número 4.",
                     0,
                     0
-            
-                    )
+
+                )
 
             }
             else {
@@ -50,8 +50,8 @@ export default function Secuencias() {
                     "Ordena los siguientes números siguiendo una secuencia en ritmo ascendente tomando como patrón el número 4.",
                     0,
                     0
-            
-                    )
+
+                )
 
 
 
@@ -66,25 +66,25 @@ export default function Secuencias() {
             <div className="secuencia">
                 <h3>Ordena los siguientes números siguiendo una secuencia en ritmo ascendente tomando como patrón el número 4.</h3>
 
-                    <div className="drop">
-                        <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop}></div>
-                        <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop}></div>
-                        <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop}></div>
-                        <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop}></div>
-                        <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop}></div>
-                        <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop}></div>
-                        <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop}></div>
+                <div className="drop">
+                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop}></div>
+                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop}></div>
+                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop}></div>
+                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop}></div>
+                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop}></div>
+                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop}></div>
+                    <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop}></div>
 
 
-                    </div>
-                    <div className="drag">
-                        <div className="drag-d" draggable="true" id="veinte" onDragStart={drag}>20</div>
-                        <div className="drag-d" draggable="true" id="ocho" onDragStart={drag}>8</div>
-                        <div className="drag-d" draggable="true" id="dieciseis" onDragStart={drag}>16</div>
-                        <div className="drag-d" draggable="true" id="veinticuatro" onDragStart={drag}>24</div>
-                        <div className="drag-d" draggable="true" id="doce" onDragStart={drag}>12</div>
-                        <div className="drag-d" draggable="true" id="cuatro" onDragStart={drag}>4</div>
-                        <div className="drag-d" draggable="true" id="veintiocho" onDragStart={drag}>28</div>
+                </div>
+                <div className="drag">
+                    <div className="drag-d" draggable="true" id="veinte" onDragStart={drag}>20</div>
+                    <div className="drag-d" draggable="true" id="ocho" onDragStart={drag}>8</div>
+                    <div className="drag-d" draggable="true" id="dieciseis" onDragStart={drag}>16</div>
+                    <div className="drag-d" draggable="true" id="veinticuatro" onDragStart={drag}>24</div>
+                    <div className="drag-d" draggable="true" id="doce" onDragStart={drag}>12</div>
+                    <div className="drag-d" draggable="true" id="cuatro" onDragStart={drag}>4</div>
+                    <div className="drag-d" draggable="true" id="veintiocho" onDragStart={drag}>28</div>
 
                 </div>
 
@@ -100,10 +100,10 @@ export default function Secuencias() {
     const Tiempo = () => {
         setTimeout(() => { setJuegoActivo(false) }, 3000)
         return (
-            <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
-            <Feliciades/>
-            :<IntentaloDeNuevo/>
-        }</div>
+            <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
+                <Feliciades />
+                : <IntentaloDeNuevo />
+            }</div>
         )
     }
     // numero 2
@@ -126,14 +126,28 @@ export default function Secuencias() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Ordena los siguientes números siguiendo una secuencia en ritmo descendente tomando como patrón el número 20.",
+                    0,
+                    1
 
+                )
 
             }
             else {
                 array = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Ordena los siguientes números siguiendo una secuencia en ritmo descendente tomando como patrón el número 20.",
+                    0,
+                    1
 
+                )
 
             }
         }
@@ -193,13 +207,27 @@ export default function Secuencias() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.",
+                    1,
+                    2
 
+                )
             }
             else {
                 array3 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.",
+                    1,
+                    2
 
+                )
 
 
 
@@ -261,13 +289,27 @@ export default function Secuencias() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.",
+                    1,
+                    3
 
+                )
             }
             else {
                 array4 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.",
+                    1,
+                    3
 
+                )
 
 
 
@@ -328,13 +370,27 @@ export default function Secuencias() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.",
+                    1,
+                    4
 
+                )
             }
             else {
                 array5 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.",
+                    1,
+                    4
 
+                )
 
 
 
@@ -396,13 +452,27 @@ export default function Secuencias() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Utilice los números necesarios para contar de menor a mayor de 10 en 10 hasta el 100. Nota: Inicie en 10.",
+                    0,
+                    5
 
+                )
             }
             else {
                 array6 = ["", "", "", "", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Utilice los números necesarios para contar de menor a mayor de 10 en 10 hasta el 100. Nota: Inicie en 10.",
+                    0,
+                    5
 
+                )
 
 
 
@@ -477,13 +547,27 @@ export default function Secuencias() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Utilice los números necesarios para contar de menor a mayor de 1,000 en 1,000 hasta el 10,000. Nota: Inicie en 1,000.",
+                    0,
+                    6
 
+                )
             }
             else {
                 array7 = ["", "", "", "", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Utilice los números necesarios para contar de menor a mayor de 1,000 en 1,000 hasta el 10,000. Nota: Inicie en 1,000.",
+                    0,
+                    6
 
+                )
 
 
 
@@ -558,13 +642,27 @@ export default function Secuencias() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Utilice los números necesarios para contar de mayor a menor de 500 en 500 hasta el 1,000. Nota: Inicie en 5,000.",
+                    0,
+                    7
 
+                )
             }
             else {
                 array8 = ["", "", "", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Utilice los números necesarios para contar de mayor a menor de 500 en 500 hasta el 1,000. Nota: Inicie en 5,000.",
+                    0,
+                    7
 
+                )
 
 
 
@@ -639,13 +737,27 @@ export default function Secuencias() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.",
+                    1,
+                    8
 
+                )
             }
             else {
                 array9 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.",
+                    1,
+                    8
 
+                )
 
 
 
@@ -707,13 +819,27 @@ export default function Secuencias() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.",
+                    1,
+                    9
 
+                )
             }
             else {
                 array10 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Identifica el patrón que sigue la siguiente secuencia y completa los espacios en blanco.",
+                    1,
+                    9
 
+                )
 
 
 
