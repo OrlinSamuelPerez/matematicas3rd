@@ -2,7 +2,29 @@ import { useState } from "react"
 
 export default function ValorPosicion() {
     const [counter, setCounter] = useState(0)
-
+    const comprobar = ()=>{
+        const centena = document.getElementById("centena").value
+        const  decena = document.getElementById("decena").value
+        const unidad = document.getElementById("unidad").value
+        const suma = document.getElementById("suma").value
+        if(centena == 1){
+            if(decena == 2){
+                if(unidad == 6){
+                    if(suma==  centena+decena+unidad ){
+                        console.log("Lo hiciste bien")
+                    }else{
+                        console.log("loquito")
+                    }
+                }else{
+                    console.log("loquito")
+                }
+            }else{
+                console.log("loquito")
+            }
+        }else{
+            console.log("loquito")
+        }
+    }
     const Ejercicio1 = () => {
         const img = [{ img: "/img/1.png", validar: true }, { img: "/img/2.png", validar: false }, { img: "/img/3.png", validar: false }]
         const validar = (validar) => {
@@ -318,13 +340,19 @@ export default function ValorPosicion() {
                 <div>
                     <h4>Escribe el número representado y su composición</h4>
                 </div>
-                <div className="grid-unidad">
+                <div className="grid-valorposicion">
 
-                    <div ><img onClick={() => validar(e.validar)} src="/img/img1.png" /></div>
-
+                    <div ><img src="/img/img1.png" /></div>
+                    <div>
+                        <input type="number" id="centena" max={9} min={0} />C +
+                         <input type="number" id="decena" max={9} min={0} />D +
+                          <input type="number" id="unidad" max={9} min={0} />U <br></br>
+                        <input type="number" id="suma" min={0} /><br></br>
+                        <button onClick={comprobar} >Comprobar</button>
+                    </div>
                 </div>
-                <input type="number" max={9} min={0} />C + <input type="number" max={9} min={0} />D + <input type="number" max={9} min={0} />U <br></br>
-                <input type="number" min={0} />
+                
+                
 
             </div>
         )

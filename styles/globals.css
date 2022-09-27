@@ -1167,6 +1167,7 @@ canvas {
   text-size-adjust: 90%;
   
 }
+
 /* Tamaño del scroll */
 .juegoFondoSpace::-webkit-scrollbar {
   width: 8px;
@@ -1249,4 +1250,36 @@ canvas {
 }
 .atras-practica:hover{
   background-color: #f20875;
+}
+.grid-valorposicion{
+  display: grid;
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-valorposicion input{
+  font-size: 35px;
+  border-radius: 15px;
+  margin: 4px;
+  margin-bottom: 40px;
+
+}
+.grid-valorposicion img{
+  width: 500px;
+  height: 500px;
+  clip-path: inset(0px 0px 130px 0px);
+  background-position: center;
+  border-radius: 30px;
+}
+.grid-valorposicion button{
+  border: none;
+  font-weight: 700;
+  background-color: #f20875;
+  color: white;
+  font-family: "fredoka one";
+  font-size: 30px;
+  padding: 5px 10px;
+  border-radius: 15px;
+
 }
