@@ -50,7 +50,7 @@ export  function PreguntasAnalisis(subTema,validar, pregunta,idobjetivo, numero)
                            [numero]:{
                             pregunta, 
                             numeroDeVecesIncorrectas:0,
-                            intentoCorrecta:0,idobjetivo
+                            intentoCorrecta:1,idobjetivo
                            },
                         })
                         }
