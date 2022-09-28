@@ -5,7 +5,7 @@ import Feliciades from "../Feliciades";
 import Fin from "../Fin";
 import IntentaloDeNuevo from "../IntentaloDeNuevo";
 
-
+ 
 export default function Secuencias() {
     const [juegoActivo, setJuegoActivo] = useState(false)
     const [juegoSiguienActivo, setSiguienteJuegoActivo] = useState(false)
@@ -61,7 +61,7 @@ export default function Secuencias() {
     }
     const allowdrop = (e) => {
         e.preventDefault()
-    }
+    } 
     const Juego = () => {
         return (
             <div className="secuencia">

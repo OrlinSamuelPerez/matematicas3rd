@@ -766,6 +766,7 @@ nav button {
     color: black;
     background-color: white;
     cursor: pointer;
+    text-align: center;
     padding: 60px 5px;
     border-radius: 30px;
     border: 10px solid rgb(246, 10, 250);

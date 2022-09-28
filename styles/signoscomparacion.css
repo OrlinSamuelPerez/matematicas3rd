@@ -1,0 +1,66 @@
+.SignosComp {
+  width: 100%;
+  height: 100%;
+}
+.SignosComp h3 {
+  background-color: #f20875;
+  color: rgb(41, 42, 42);
+  border-radius: 19px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: "fredoka one";
+  color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.129);
+  padding: 10px;
+}
+.SignosComp button {
+  margin: 50px 50px 0px 350px;
+  background-color: #0df0ff;
+  border: 2px solid#f20875;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: "fredoka one";
+  border-radius: 5px;
+  width: 100px;
+  height: 60px;
+}
+.SignosComp button:hover {
+  margin: 50px 50px 0px 350px;
+  background-color: #f20875;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: "fredoka one";
+  border-radius: 5px;
+  width: 100px;
+  height: 60px;
+}
+.SignosComp table,th,td {
+  
+  padding: 5px;
+  border: 1px solid #f20875;
+  border-collapse: collapse;
+  border-radius: 10px
+}
+.SignosComp table{
+  width: 100%;
+  padding-bottom: 5%;
+}
+.table-signcomp th,
+td {
+  padding: 5px;
+  font-family: "fredoka one";
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  border-radius: 2px;
+}
+.table-signcomp th{
+  background-color: aqua;
+  color: black;
+}

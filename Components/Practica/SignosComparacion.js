@@ -1,20 +1,36 @@
+import { useRouter } from "next/router"
 import { useState } from "react"
+import { PreguntasAnalisis } from "../../Service/PreguntasAnalisis"
+import Feliciades from "../Feliciades"
+import IntentaloDeNuevo from "../IntentaloDeNuevo"
 
 export default function SignosComparacion() {
     const [juegoActivo, setJuegoActivo] = useState(false)
     const [juegoSiguienActivo, setSiguienteJuegoActivo] = useState(false)
     const [juegoMensajeActivo, setMensajeJuegoActivo] = useState("")
     const [counter, setCounter] = useState(0)
+    const router = useRouter()
 
     const handleClick1 = () => {
         setCounter(counter + 1)
     }
     const Tiempo = () => {
-        setTimeout(() => { setJuegoActivo(false) }, 2000)
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
+            setTimeout(() => {
+                setJuegoActivo(false)
+                setCounter(counter + 1)
+            }, 3000)
+            : setTimeout(() => {
+                setJuegoActivo(false)
+            }, 3000)
         return (
-            <h1>{juegoMensajeActivo}</h1>
+            <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
+                <Feliciades />
+                : <IntentaloDeNuevo />
+            }</div>
         )
     }
+
     //numero 1
     let array = ["", "", "", ""]
     const drag = (e) => {
@@ -35,13 +51,28 @@ export default function SignosComparacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Observa y completa las casillas con el signo correspondiente.",
+                    0,
+                    counter
+
+                )
 
             }
             else {
                 array = ["", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Observa y completa las casillas con el signo correspondiente.",
+                    0,
+                    counter
 
+                )
 
 
 
@@ -53,7 +84,7 @@ export default function SignosComparacion() {
     }
     const Juego = () => {
         return (
-            <div>
+            <div className="SignosComp">
                 <h3>Observa y completa las casillas con el signo correspondiente.</h3>
 
                 <div className="drop">
@@ -98,13 +129,27 @@ export default function SignosComparacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Observa y completa las casillas con el signo correspondiente.",
+                    0,
+                    counter
 
+                )
             }
             else {
                 array2 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Observa y completa las casillas con el signo correspondiente.",
+                    0,
+                    counter
 
+                )
 
 
 
@@ -116,7 +161,7 @@ export default function SignosComparacion() {
     }
     const Juego2 = () => {
         return (
-            <div>
+            <div className="SignosComp">
                 <h3>Observa y completa las casillas con el signo correspondiente.</h3>
 
                 <div className="drop">
@@ -169,13 +214,27 @@ export default function SignosComparacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Observa y completa las casillas con el signo correspondiente.",
+                    0,
+                    counter
 
+                )
             }
             else {
                 array3 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Observa y completa las casillas con el signo correspondiente.",
+                    0,
+                    counter
 
+                )
 
 
 
@@ -187,7 +246,7 @@ export default function SignosComparacion() {
     }
     const Juego3 = () => {
         return (
-            <div>
+            <div className="SignosComp">
                 <h3>Observa y completa las casillas con el signo correspondiente.</h3>
 
                 <div className="drop">
@@ -240,13 +299,27 @@ export default function SignosComparacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Observa las siguientes monedas y billetes, luego completa las casillas con el signo correspondiente.",
+                    1,
+                    counter
 
+                )
             }
             else {
                 array4 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Observa las siguientes monedas y billetes, luego completa las casillas con el signo correspondiente.",
+                    1,
+                    counter
 
+                )
 
 
 
@@ -258,7 +331,7 @@ export default function SignosComparacion() {
     }
     const Juego4 = () => {
         return (
-            <div>
+            <div className="SignosComp">
                 <h3>Observa las siguientes monedas y billetes, luego completa las casillas con el signo correspondiente.</h3>
 
                 <div className="drop">
@@ -311,13 +384,27 @@ export default function SignosComparacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Observa las siguientes monedas y billetes, luego completa las casillas con el signo correspondiente.",
+                    1,
+                    counter
 
+                )
             }
             else {
                 array5 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Observa las siguientes monedas y billetes, luego completa las casillas con el signo correspondiente.",
+                    1,
+                    counter
 
+                )
 
 
 
@@ -329,7 +416,7 @@ export default function SignosComparacion() {
     }
     const Juego5 = () => {
         return (
-            <div>
+            <div className="SignosComp">
                 <h3>Observa las siguientes monedas y billetes, luego completa las casillas con el signo correspondiente.</h3>
 
                 <div className="drop">
@@ -382,13 +469,27 @@ export default function SignosComparacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Observa las siguientes imágenes e identifica la cantidad de frutas que hay en cada una, luego completa las casillas con el signo correspondiente.",
+                    1,
+                    counter
 
+                )
             }
             else {
                 array6 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Observa las siguientes imágenes e identifica la cantidad de frutas que hay en cada una, luego completa las casillas con el signo correspondiente.",
+                    1,
+                    counter
 
+                )
 
 
 
@@ -400,7 +501,7 @@ export default function SignosComparacion() {
     }
     const Juego6 = () => {
         return (
-            <div>
+            <div className="SignosComp">
                 <h3>Observa las siguientes imágenes e identifica la cantidad de frutas que hay en cada una, luego completa las casillas con el signo correspondiente.</h3>
 
                 <div className="drop">
@@ -453,13 +554,27 @@ export default function SignosComparacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "En la siguiente tabla se muestran las edades de los estudiantes de arte de la escuela El Paraíso. Observa la tabla y luego completa con el signo correspondiente.",
+                    1,
+                    counter
 
+                )
             }
             else {
                 array7 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "En la siguiente tabla se muestran las edades de los estudiantes de arte de la escuela El Paraíso. Observa la tabla y luego completa con el signo correspondiente.",
+                    1,
+                    counter
 
+                )
 
 
 
@@ -471,60 +586,52 @@ export default function SignosComparacion() {
     }
     const Juego7 = () => {
         return (
-            <div>
+            <div className="SignosComp">
                 <h3>En la siguiente tabla se muestran las edades de los estudiantes de arte de la escuela El Paraíso. Observa la tabla y luego completa con el signo correspondiente.</h3>
-                <table>
+                <table className="table-signcomp">
                     <tr>
                         <th>
                             Nombre
                         </th>
-                        <th>
-                            Edad {"(Años)"}
-                        </th>
-                    </tr>
-                    <tr>
                         <td>
                             Juana
                         </td>
                         <td>
-                            14
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             Miguel
                         </td>
-                        <td>
-                            13
-                        </td>
-                    </tr>
-                    <tr>
                         <td>
                             Ángel
                         </td>
                         <td>
-                            14
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             Pedro
                         </td>
-                        <td>
-                            11
-                        </td>
-                    </tr>
-                    <tr>
                         <td>
                             Carla
                         </td>
                         <td>
-                            10
+                            Keila
                         </td>
                     </tr>
                     <tr>
+
+                        <th>
+                            Edad {"(Años)"}
+                        </th>
+
                         <td>
-                            Keila
+                            14
+                        </td>
+                        <td>
+                            13
+                        </td>
+                        <td>
+                            14
+                        </td>
+                        <td>
+                            11
+                        </td>
+                        <td>
+                            10
                         </td>
                         <td>
                             12
@@ -581,13 +688,27 @@ export default function SignosComparacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "En la siguiente tabla se muestran las edades de los jugadores de béisbol de la escuela La Tronera. Observa la tabla y luego completa con el signo correspondiente.",
+                    1,
+                    counter
 
+                )
             }
             else {
                 array8 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "En la siguiente tabla se muestran las edades de los jugadores de béisbol de la escuela La Tronera. Observa la tabla y luego completa con el signo correspondiente.",
+                    1,
+                    counter
 
+                )
 
 
 
@@ -599,60 +720,50 @@ export default function SignosComparacion() {
     }
     const Juego8 = () => {
         return (
-            <div>
+            <div className="SignosComp">
                 <h3>En la siguiente tabla se muestran las edades de los jugadores de béisbol de la escuela La Tronera. Observa la tabla y luego completa con el signo correspondiente.</h3>
-                <table>
+                <table className="table-signcomp">
                     <tr>
                         <th>
                             Nombre
                         </th>
-                        <th>
-                            Edad {"(Años)"}
-                        </th>
-                    </tr>
-                    <tr>
                         <td>
                             Juan
                         </td>
                         <td>
-                            18
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             Marcos
                         </td>
-                        <td>
-                            16
-                        </td>
-                    </tr>
-                    <tr>
                         <td>
                             Antonio
                         </td>
                         <td>
-                            18
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             Polo
                         </td>
-                        <td>
-                            16
-                        </td>
-                    </tr>
-                    <tr>
                         <td>
                             Carlos
                         </td>
                         <td>
-                            18
+                            Eliezer
                         </td>
                     </tr>
                     <tr>
+                    <th>
+                            Edad {"(Años)"}
+                        </th>
                         <td>
-                            Eliezer
+                            18
+                        </td>
+                        <td>
+                            16
+                        </td>
+                        <td>
+                            18
+                        </td>
+                        <td>
+                            16
+                        </td>
+                        <td>
+                            18
                         </td>
                         <td>
                             17
@@ -709,13 +820,27 @@ export default function SignosComparacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Arrastra a las casillas en blanco los números que sean mayores a 525.",
+                    1,
+                    counter
 
+                )
             }
             else {
                 array9 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Arrastra a las casillas en blanco los números que sean mayores a 525.",
+                    1,
+                    counter
 
+                )
 
 
 
@@ -727,7 +852,7 @@ export default function SignosComparacion() {
     }
     const Juego9 = () => {
         return (
-            <div>
+            <div className="SignosComp">
                 <h3>Arrastra a las casillas en blanco los números que sean mayores a 525.</h3>
 
                 <div className="drop">
@@ -788,13 +913,27 @@ export default function SignosComparacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Arrastra a las casillas en blanco los números que sean menores a 15,105.",
+                    1,
+                    counter
 
+                )
             }
             else {
                 array10 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Arrastra a las casillas en blanco los números que sean menores a 15,105.",
+                    1,
+                    counter
 
+                )
 
 
 
@@ -806,7 +945,7 @@ export default function SignosComparacion() {
     }
     const Juego10 = () => {
         return (
-            <div>
+            <div className="SignosComp">
                 <h3>Arrastra a las casillas en blanco los números que sean menores a 15,105.</h3>
 
                 <div className="drop">
@@ -849,6 +988,8 @@ export default function SignosComparacion() {
     }
     return (
         <div>
+            <div className="Contador-secuencia">{counter + 1}/10</div>
+
             {juegoActivo == false ?
                 <div>
                     {counter == 0 ?
