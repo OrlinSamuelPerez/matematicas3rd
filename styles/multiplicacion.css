@@ -10,9 +10,9 @@
  
   
   .box-drop-multiplicacion {
-   margin: 10px;
-    width: 150px;
-    height: 80px;
+   margin: 1px;
+    width: 140px;
+    height: 70px;
     background-color: white;
     border-radius: 10px;
     border: 4px solid #161616;
@@ -30,11 +30,11 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 5px;
   }
   .drag-d-multiplicacion {
    
-    width: 150px;
+    width: 140px;
     border-color: #9c48e6;
     border: 4px solid #161616;
     border-radius: 10px;
@@ -44,7 +44,7 @@
     font-weight: 900;
     color: #ffffff;
     background-color: #005f7b;
-    height: 80px;
+    height: 70px;
     cursor: pointer;
   }
   .drag-d-multiplicacion :hover {
@@ -251,7 +251,7 @@
   }
   .drag-mult {
     display: grid;
-    gap: 10px;
+    gap: 2px;
     width: auto;
     text-align: center;
     justify-content: center;
@@ -272,7 +272,7 @@
   .drag-mult-1 {
     display: grid;
     
-    width: 65px;
+    width: 50px;
   
   
     grid-template-columns: repeat(5, minmax(65px, 2fr));

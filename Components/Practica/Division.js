@@ -1,12 +1,16 @@
-import { useState } from "react"
-
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { PreguntasAnalisis } from "../../Service/PreguntasAnalisis";
+import Feliciades from "../Feliciades";
+import Fin from "../Fin";
+import IntentaloDeNuevo from "../IntentaloDeNuevo";
 export default function Division() {
 
     const [juegoActivo, setJuegoActivo] = useState(false)
     const [juegoSiguienActivo, setSiguienteJuegoActivo] = useState(false)
     const [juegoMensajeActivo, setMensajeJuegoActivo] = useState("")
     const [counter, setCounter] = useState(0)
-
+    const router = useRouter()
     const numeros = () => {
         return (
             <div className="drag-mult-1">
@@ -128,9 +132,19 @@ export default function Division() {
         setCounter(counter + 1)
     }
     const Tiempo = () => {
-        setTimeout(() => { setJuegoActivo(false) }, 2000)
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+            setTimeout(() => {
+                setJuegoActivo(false)
+                setCounter(counter + 1)
+                }, 3000)
+            :setTimeout(() => {
+                setJuegoActivo(false)
+                }, 3000)
         return (
-            <h1>{juegoMensajeActivo}</h1>
+            <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
+                <Feliciades />
+                : <IntentaloDeNuevo />
+            }</div>
         )
     }
     const allowdrop = (e) => {
@@ -158,7 +172,14 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
             else {
 
@@ -166,7 +187,14 @@ export default function Division() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
 
 
 
@@ -175,7 +203,7 @@ export default function Division() {
     }
     const Juego = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
@@ -244,7 +272,14 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
             else {
 
@@ -252,7 +287,14 @@ export default function Division() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
 
 
 
@@ -261,7 +303,7 @@ export default function Division() {
     }
     const Juego2 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
@@ -330,7 +372,14 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
             else {
 
@@ -338,13 +387,20 @@ export default function Division() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
         }
     }
     const Juego3 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
@@ -413,7 +469,14 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
             else {
 
@@ -421,13 +484,20 @@ export default function Division() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
         }
     }
     const Juego4 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
@@ -496,7 +566,14 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
             else {
 
@@ -504,13 +581,20 @@ export default function Division() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
         }
     }
     const Juego5 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
@@ -579,7 +663,14 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
             else {
 
@@ -587,13 +678,20 @@ export default function Division() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
         }
     }
     const Juego6 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
@@ -663,7 +761,14 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
             else {
 
@@ -671,13 +776,20 @@ export default function Division() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
         }
     }
     const Juego7 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
@@ -747,7 +859,14 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
             else {
 
@@ -755,13 +874,20 @@ export default function Division() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
         }
     }
     const Juego8 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
@@ -831,7 +957,14 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
             else {
 
@@ -839,13 +972,20 @@ export default function Division() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
         }
     }
     const Juego9 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
@@ -918,7 +1058,14 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
             else {
 
@@ -926,13 +1073,20 @@ export default function Division() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve correctamente la división.",
+                    0,
+                    counter
 
+                )
             }
         }
     }
     const Juego10 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
@@ -994,7 +1148,7 @@ export default function Division() {
         { image: "/img/problema8.png", pregunta: "¿Cuántas barquillas toca cada niño?", repuesta: [{ valor: "12", validar: true }, { valor: "15", validar: false }, { valor: "4", validar: false }, { valor: "6", validar: false }, { valor: "8", validar: false }, { valor: "14", validar: false }] },
         { image: "/img/problema9.png", pregunta: "¿Cuántas pelotas toca cada niño?", repuesta: [{ valor: "2", validar: false }, { valor: "7", validar: true }, { valor: "8", validar: false }, { valor: "6", validar: false }, { valor: "5", validar: false }, { valor: "12", validar: false }] },
         { image: "/img/problema10.png", pregunta: "¿Cuántas mochilas toca cada niño?", repuesta: [{ valor: "7", validar: false }, { valor: "12", validar: false }, { valor: "6", validar: false }, { valor: "5", validar: true }, { valor: "10", validar: false }, { valor: "8", validar: false }] },
-        { image: "/img/problema11.png", pregunta: "Rosa tiene 325 zanahorias y quiere guardarlas en cajas, colocando 13 zanahorias en cada una. ¿Cuántas cajas necesitará?", repuesta: [{ valor: "28", validar: false }, { valor: "25", validar: true }, { valor: "13", validar: false }, { valor: "12", validar: false }, { valor: "20", validar: false }, { valor: "25", validar: false }] },
+        { image: "/img/problema11.png", pregunta: "Rosa tiene 325 zanahorias y quiere guardarlas en cajas, colocando 13 zanahorias en cada una. ¿Cuántas cajas necesitará?", repuesta: [{ valor: "28", validar: false }, { valor: "25", validar: true }, { valor: "13", validar: false }, { valor: "12", validar: false }, { valor: "20", validar: false }, { valor: "15", validar: false }] },
         { image: "/img/problema12.png", pregunta: "Debemos repartir 840 niños en 7 botes. ¿Cuántos niños van en cada bote?", repuesta: [{ valor: "75", validar: false }, { valor: "60", validar: false }, { valor: "220", validar: false }, { valor: "120", validar: true }, { valor: "140", validar: false }, { valor: "125", validar: false }] },
         { image: "/img/problema13.png", pregunta: "Se colocaron en 10 fruteros y 550 manzanas. ¿Cuántas manzanas hay en cada frutero?", repuesta: [{ valor: "55", validar: true }, { valor: "25", validar: false }, { valor: "45", validar: false }, { valor: "65", validar: false }, { valor: "35", validar: false }, { valor: "30", validar: false }] },
         { image: "/img/problema14.png", pregunta: "Yo tengo 15 cajas de regalo para obsequiar 5 niños ¿Cuántas cajas de regalo toca cada niño?", repuesta: [{ valor: "5", validar: false }, { valor: "3", validar: true }, { valor: "2", validar: false }, { valor: "8", validar: false }, { valor: "9", validar: false }, { valor: "7", validar: false }] },
@@ -1008,12 +1162,26 @@ export default function Division() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-                setCounter(counter + 1)
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve problemas usando la división.",
+                    0,
+                    counter
+
+                )
             }
             else {
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve problemas usando la división.",
+                    0,
+                    counter
 
+                )
             }
 
         }
@@ -1032,149 +1200,156 @@ export default function Division() {
                 </div>
             </div>
         )
-    }
+    } 
     return (
         <div>
+            <div className="Contador-secuencia">{counter + 1}/20</div>
+
             {juegoActivo == false ?
                 <div>
                     {counter == 0 ?
                         <div>
                             <Juego />
                             {juegoSiguienActivo == true ?
-                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                <div className="siguiente-espacial"></div>
                                 : <span>.</span>}
                         </div>
                         : counter == 1 ?
                             <div>
-                                <Juego2 />
+                                <Juego11 data={arrayDato[9]} />
+                               
                                 {juegoSiguienActivo == true ?
-                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                    <div className="siguiente-espacial"></div>
                                     : <span>.</span>}
                             </div>
                             : counter == 2 ?
                                 <div>
                                     <Juego3 />
                                     {juegoSiguienActivo == true ?
-                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                        <div className="siguiente-espacial"></div>
                                         : <span>.</span>}
                                 </div>
                                 : counter == 3 ?
                                     <div>
-                                        <Juego4 />
+                                          <Juego11 data={arrayDato[7]} />
+                                       
                                         {juegoSiguienActivo == true ?
-                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                            <div className="siguiente-espacial"></div>
                                             : <span>.</span>}
                                     </div>
                                     : counter == 4 ?
                                         <div>
                                             <Juego5 />
                                             {juegoSiguienActivo == true ?
-                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                <div className="siguiente-espacial"></div>
                                                 : <span>.</span>}
                                         </div>
                                         : counter == 5 ?
                                             <div>
-                                                <Juego6 />
+                                                <Juego11 data={arrayDato[5]} />
+                                              
                                                 {juegoSiguienActivo == true ?
-                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                    <div className="siguiente-espacial"></div>
                                                     : <span>.</span>}
                                             </div>
                                             : counter == 6 ?
                                                 <div>
                                                     <Juego7 />
                                                     {juegoSiguienActivo == true ?
-                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                        <div className="siguiente-espacial"></div>
                                                         : <span>.</span>}
                                                 </div>
                                                 : counter == 7 ?
                                                     <div>
-                                                        <Juego8 />
+                                                          <Juego11 data={arrayDato[3]} />
+                                                        
                                                         {juegoSiguienActivo == true ?
-                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                            <div className="siguiente-espacial"></div>
                                                             : <span>.</span>}
                                                     </div>
                                                     : counter == 8 ?
                                                         <div>
                                                             <Juego9 />
                                                             {juegoSiguienActivo == true ?
-                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                <div className="siguiente-espacial"></div>
                                                                 : <span>.</span>}
                                                         </div>
                                                         : counter == 9 ?
                                                             <div>
-                                                                <Juego10 />
+                                                                 <Juego11 data={arrayDato[1]} />
+                                                                
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 10 ?
                                                             <div>
                                                                 <Juego11 data={arrayDato[0]} />
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 11 ?
                                                             <div>
-                                                                <Juego11 data={arrayDato[1]} />
+                                                               <Juego10 />
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 12 ?
                                                             <div>
                                                                 <Juego11 data={arrayDato[2]} />
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 13 ?
                                                             <div>
-                                                                <Juego11 data={arrayDato[3]} />
+                                                              <Juego8 />
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 14 ?
                                                             <div>
                                                                 <Juego11 data={arrayDato[4]} />
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                              : counter == 15 ?
                                                              <div>
-                                                                 <Juego11 data={arrayDato[5]} />
+                                                                   <Juego6 />
                                                                  {juegoSiguienActivo == true ?
-                                                                     <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                     <div className="siguiente-espacial"></div>
                                                                      : <span>.</span>}
                                                              </div>
                                                               : counter == 16 ?
                                                               <div>
-                                                                  <Juego11 data={arrayDato[6]} />
+                                                                  <Juego11 data={arrayDato[8]} />
                                                                   {juegoSiguienActivo == true ?
-                                                                      <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                      <div className="siguiente-espacial"></div>
                                                                       : <span>.</span>}
                                                               </div>
                                                                : counter == 17 ?
                                                                <div>
-                                                                   <Juego11 data={arrayDato[7]} />
+                                                                  <Juego4 />
                                                                    {juegoSiguienActivo == true ?
-                                                                       <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                       <div className="siguiente-espacial"></div>
                                                                        : <span>.</span>}
                                                                </div>
                                                                 : counter == 18 ?
                                                                 <div>
-                                                                    <Juego11 data={arrayDato[8]} />
+                                                                    <Juego11 data={arrayDato[6]} />
                                                                     {juegoSiguienActivo == true ?
-                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                        <div className="siguiente-espacial"></div>
                                                                         : <span>.</span>}
                                                                 </div>
                                                                  : counter == 19 ?
                                                                  <div>
-                                                                     <Juego11 data={arrayDato[9]} />
+                                                                      <Juego2 />
                                                                      {juegoSiguienActivo == true ?
-                                                                         <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                         <div className="siguiente-espacial"></div>
                                                                          : <span>.</span>}
                                                                  </div>
                                                                  : <h1>Fin</h1>

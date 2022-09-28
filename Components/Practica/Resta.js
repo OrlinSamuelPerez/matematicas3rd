@@ -1,18 +1,33 @@
-import { useState } from "react"
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { PreguntasAnalisis } from "../../Service/PreguntasAnalisis";
+import Feliciades from "../Feliciades";
+import Fin from "../Fin";
+import IntentaloDeNuevo from "../IntentaloDeNuevo";
 
 export default function Resta() {
     const [juegoActivo, setJuegoActivo] = useState(false)
     const [juegoSiguienActivo, setSiguienteJuegoActivo] = useState(false)
     const [juegoMensajeActivo, setMensajeJuegoActivo] = useState("")
     const [counter, setCounter] = useState(0)
-
+    const router = useRouter()
     const handleClick1 = () => {
         setCounter(counter + 1)
     }
     const Tiempo = () => {
-        setTimeout(() => { setJuegoActivo(false) }, 2000)
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+            setTimeout(() => {
+                setJuegoActivo(false)
+                setCounter(counter + 1)
+                }, 3000)
+            :setTimeout(() => {
+                setJuegoActivo(false)
+                }, 3000)
         return (
-            <h1>{juegoMensajeActivo}</h1>
+            <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
+                <Feliciades />
+                : <IntentaloDeNuevo />
+            }</div>
         )
     }
     // numero 1
@@ -36,7 +51,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -44,7 +66,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -56,7 +85,7 @@ export default function Resta() {
     }
     const Juego = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta.</h3>
                 <div className="grid">
                     <div>
@@ -116,7 +145,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -124,7 +160,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -136,7 +179,7 @@ export default function Resta() {
     }
     const Juego2 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta.</h3>
                 <div className="grid">
                     <div>
@@ -196,7 +239,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -204,7 +254,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -216,7 +273,7 @@ export default function Resta() {
     }
     const Juego3 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta.</h3>
                 <div className="grid">
                     <div>
@@ -276,7 +333,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -284,7 +348,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -296,7 +367,7 @@ export default function Resta() {
     }
     const Juego4 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta.</h3>
                 <div className="grid">
                     <div>
@@ -356,7 +427,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -364,7 +442,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -376,7 +461,7 @@ export default function Resta() {
     }
     const Juego5 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta.</h3>
                 <div className="grid">
                     <div>
@@ -436,7 +521,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -444,7 +536,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -456,7 +555,7 @@ export default function Resta() {
     }
     const Juego6 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
                 <div className="grid">
                     <div>
@@ -517,7 +616,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -525,7 +631,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -537,7 +650,7 @@ export default function Resta() {
     }
     const Juego7 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
                 <div className="grid">
                     <div>
@@ -598,7 +711,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -606,7 +726,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -618,7 +745,7 @@ export default function Resta() {
     }
     const Juego8 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
                 <div className="grid">
                     <div>
@@ -679,7 +806,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -687,7 +821,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -699,7 +840,7 @@ export default function Resta() {
     }
     const Juego9 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
                 <div className="grid">
                     <div>
@@ -760,7 +901,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -768,7 +916,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -780,7 +935,7 @@ export default function Resta() {
     }
     const Juego10 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
                 <div className="grid">
                     <div>
@@ -841,7 +996,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -849,7 +1011,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -861,7 +1030,7 @@ export default function Resta() {
     }
     const Juego11 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
                 <div className="grid">
                     <div>
@@ -927,7 +1096,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -935,7 +1111,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -947,7 +1130,7 @@ export default function Resta() {
     }
     const Juego12 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
                 <div className="grid">
                     <div>
@@ -1013,7 +1196,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1021,7 +1211,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1033,7 +1230,7 @@ export default function Resta() {
     }
     const Juego13 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
                 <div className="grid">
                     <div>
@@ -1099,7 +1296,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1107,7 +1311,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1119,7 +1330,7 @@ export default function Resta() {
     }
     const Juego14 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
                 <div className="grid">
                     <div>
@@ -1185,7 +1396,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1193,7 +1411,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta tomando prestado.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1205,7 +1430,7 @@ export default function Resta() {
     }
     const Juego15 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
                 <div className="grid">
                     <div>
@@ -1272,15 +1497,29 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
             }
             else {
-
+ 
                 array16 = ["", "", "", "", "", ""]
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1292,8 +1531,8 @@ export default function Resta() {
     }
     const Juego16 = () => {
         return (
-            <div>
-                <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
+            <div className="Numerospi">
+                <h3>Completa correctamente la siguiente resta. </h3>
                 <div className="grid">
                     <div>
                         <div className="drop-resta-2">
@@ -1374,7 +1613,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1382,7 +1628,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1394,8 +1647,8 @@ export default function Resta() {
     }
     const Juego17 = () => {
         return (
-            <div>
-                <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
+            <div className="Numerospi">
+                <h3>Completa correctamente la siguiente resta.</h3>
                 <div className="grid">
                     <div>
                         <div className="drop-resta-2">
@@ -1480,7 +1733,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1488,7 +1748,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1500,8 +1767,8 @@ export default function Resta() {
     }
     const Juego18 = () => {
         return (
-            <div>
-                <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
+            <div className="Numerospi">
+                <h3>Completa correctamente la siguiente resta.</h3>
                 <div className="grid">
                     <div>
                         <div className="drop-resta-2">
@@ -1588,7 +1855,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1596,7 +1870,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1608,8 +1889,8 @@ export default function Resta() {
     }
     const Juego19 = () => {
         return (
-            <div>
-                <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
+            <div className="Numerospi">
+                <h3>Completa correctamente la siguiente resta. </h3>
                 <div className="grid">
                     <div>
                         <div className="drop-resta-2">
@@ -1696,7 +1977,14 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1704,7 +1992,14 @@ export default function Resta() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente resta.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1716,8 +2011,8 @@ export default function Resta() {
     }
     const Juego20 = () => {
         return (
-            <div>
-                <h3>Completa correctamente la siguiente resta. Nota: Esta resta es tomando prestado.</h3>
+            <div className="Numerospi">
+                <h3>Completa correctamente la siguiente resta.</h3>
                 <div className="grid">
                     <div>
                         <div className="drop-resta-2">
@@ -1803,12 +2098,26 @@ export default function Resta() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-                setCounter(counter + 1)
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve problemas a partir de la imagen..",
+                    3,
+                    counter
+
+                )
             }
             else {
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve problemas a partir de la imagen..",
+                    3,
+                    counter
 
+                )
             }
 
         }
@@ -1830,217 +2139,224 @@ export default function Resta() {
     }
     return (
         <div>
+            <div className="Contador-secuencia">{counter + 1}/30</div>
             {juegoActivo == false ?
                 <div>
                     {counter == 0 ?
                         <div>
                             <Juego />
                             {juegoSiguienActivo == true ?
-                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                <div className="siguiente-espacial"></div>
                                 : <span>.</span>}
                         </div>
                         : counter == 1 ?
                             <div>
                                 <Juego2 />
                                 {juegoSiguienActivo == true ?
-                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                    <div className="siguiente-espacial"></div>
                                     : <span>.</span>}
                             </div>
                             : counter == 2 ?
                                 <div>
-                                    <Juego3 />
+                                      <Juego21 data={arrayDato[9]} />
+                                    
                                     {juegoSiguienActivo == true ?
-                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                        <div className="siguiente-espacial"></div>
                                         : <span>.</span>}
                                 </div>
                                 : counter == 3 ?
                                     <div>
                                         <Juego4 />
                                         {juegoSiguienActivo == true ?
-                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                            <div className="siguiente-espacial"></div>
                                             : <span>.</span>}
                                     </div>
                                     : counter == 4 ?
                                         <div>
-                                            <Juego5 />
+                                            <Juego7 />
                                             {juegoSiguienActivo == true ?
-                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                <div className="siguiente-espacial"></div>
                                                 : <span>.</span>}
                                         </div>
                                         : counter == 5 ?
                                             <div>
-                                                <Juego6 />
+                                                <Juego21 data={arrayDato[7]} />
+                                                
                                                 {juegoSiguienActivo == true ?
-                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                    <div className="siguiente-espacial"></div>
                                                     : <span>.</span>}
                                             </div>
                                             : counter == 6 ?
                                                 <div>
-                                                    <Juego7 />
+                                                    <Juego5 />
                                                     {juegoSiguienActivo == true ?
-                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                        <div className="siguiente-espacial"></div>
                                                         : <span>.</span>}
                                                 </div>
                                                 : counter == 7 ?
                                                     <div>
                                                         <Juego8 />
                                                         {juegoSiguienActivo == true ?
-                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                            <div className="siguiente-espacial"></div>
                                                             : <span>.</span>}
                                                     </div>
                                                     : counter == 8 ?
                                                         <div>
-                                                            <Juego9 />
+                                                            <Juego21 data={arrayDato[5]} />
                                                             {juegoSiguienActivo == true ?
-                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                <div className="siguiente-espacial"></div>
                                                                 : <span>.</span>}
                                                         </div>
                                                         : counter == 9 ?
                                                             <div>
                                                                 <Juego10 />
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 10 ?
                                                                 <div>
-                                                                    <Juego11 />
+                                                                    <Juego15 />
                                                                     {juegoSiguienActivo == true ?
-                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                        <div className="siguiente-espacial"></div>
                                                                         : <span>.</span>}
                                                                 </div>
                                                                 : counter == 11 ?
                                                                     <div>
-                                                                        <Juego12 />
+                                                                      <Juego21 data={arrayDato[3]} />
                                                                         {juegoSiguienActivo == true ?
-                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                            <div className="siguiente-espacial"></div>
                                                                             : <span>.</span>}
                                                                     </div>
                                                                     : counter == 12 ?
                                                                         <div>
-                                                                            <Juego13 />
+                                                                            <Juego16 />
                                                                             {juegoSiguienActivo == true ?
-                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                <div className="siguiente-espacial"></div>
                                                                                 : <span>.</span>}
                                                                         </div>
                                                                         : counter == 13 ?
                                                                             <div>
                                                                                 <Juego14 />
                                                                                 {juegoSiguienActivo == true ?
-                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                    <div className="siguiente-espacial"></div>
                                                                                     : <span>.</span>}
                                                                             </div>
                                                                             : counter == 14 ?
                                                                                 <div>
-                                                                                    <Juego15 />
+                                                                                      <Juego21 data={arrayDato[1]} />
                                                                                     {juegoSiguienActivo == true ?
-                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                        <div className="siguiente-espacial"></div>
                                                                                         : <span>.</span>}
                                                                                 </div>
                                                                                 : counter == 15 ?
                                                                                     <div>
-                                                                                        <Juego16 />
+                                                                                        <Juego13 />
                                                                                         {juegoSiguienActivo == true ?
-                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                            <div className="siguiente-espacial"></div>
                                                                                             : <span>.</span>}
                                                                                     </div>
                                                                                     : counter == 16 ?
                                                                                         <div>
                                                                                             <Juego17 />
                                                                                             {juegoSiguienActivo == true ?
-                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                <div className="siguiente-espacial"></div>
                                                                                                 : <span>.</span>}
                                                                                         </div>
 
                                                                                         : counter == 17 ?
                                                                                             <div>
-                                                                                                <Juego18 />
+                                                                                                  <Juego21 data={arrayDato[0]} />
                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                     : <span>.</span>}
                                                                                             </div>
                                                                                             : counter == 18 ?
                                                                                                 <div>
                                                                                                     <Juego19 />
                                                                                                     {juegoSiguienActivo == true ?
-                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                        <div className="siguiente-espacial"></div>
                                                                                                         : <span>.</span>}
                                                                                                 </div>
                                                                                                 : counter == 19 ?
                                                                                                     <div>
                                                                                                         <Juego20 />
                                                                                                         {juegoSiguienActivo == true ?
-                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                            <div className="siguiente-espacial"></div>
                                                                                                             : <span>.</span>}
                                                                                                     </div>
                                                                                                     : counter == 20 ?
                                                                                                         <div>
-                                                                                                            <Juego21 data={arrayDato[0]} />
+                                                                                                            <Juego18 />
+                                                                                                          
                                                                                                             {juegoSiguienActivo == true ?
-                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                <div className="siguiente-espacial"></div>
                                                                                                                 : <span>.</span>}
                                                                                                         </div>
                                                                                                         : counter == 21 ?
                                                                                                             <div>
-                                                                                                                <Juego21 data={arrayDato[1]} />
+                                                                                                                <Juego11 />
+                                                                                                              
                                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                                     : <span>.</span>}
                                                                                                             </div>
                                                                                                             : counter == 22 ?
                                                                                                                 <div>
                                                                                                                     <Juego21 data={arrayDato[2]} />
                                                                                                                     {juegoSiguienActivo == true ?
-                                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                        <div className="siguiente-espacial"></div>
                                                                                                                         : <span>.</span>}
                                                                                                                 </div>
                                                                                                                 : counter == 23 ?
                                                                                                                     <div>
-                                                                                                                        <Juego21 data={arrayDato[3]} />
+                                                                                                                           <Juego12 />
+                                                                                                                       
                                                                                                                         {juegoSiguienActivo == true ?
-                                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                            <div className="siguiente-espacial"></div>
                                                                                                                             : <span>.</span>}
                                                                                                                     </div>
                                                                                                                     : counter == 24 ?
                                                                                                                         <div>
                                                                                                                             <Juego21 data={arrayDato[4]} />
                                                                                                                             {juegoSiguienActivo == true ?
-                                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                <div className="siguiente-espacial"></div>
                                                                                                                                 : <span>.</span>}
                                                                                                                         </div>
                                                                                                                         : counter == 25 ?
                                                                                                                             <div>
-                                                                                                                                <Juego21 data={arrayDato[5]} />
+                                                                                                                                  <Juego9 />
+                                                                                                                              
                                                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                                                     : <span>.</span>}
                                                                                                                             </div>
                                                                                                                             : counter == 26 ?
                                                                                                                                 <div>
                                                                                                                                     <Juego21 data={arrayDato[6]} />
                                                                                                                                     {juegoSiguienActivo == true ?
-                                                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                        <div className="siguiente-espacial"></div>
                                                                                                                                         : <span>.</span>}
                                                                                                                                 </div>
                                                                                                                                 : counter == 27 ?
                                                                                                                                     <div>
-                                                                                                                                        <Juego21 data={arrayDato[7]} />
+                                                                                                                                        <Juego6 />
                                                                                                                                         {juegoSiguienActivo == true ?
-                                                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                            <div className="siguiente-espacial"></div>
                                                                                                                                             : <span>.</span>}
                                                                                                                                     </div>
                                                                                                                                     : counter == 28 ?
                                                                                                                                         <div>
                                                                                                                                             <Juego21 data={arrayDato[8]} />
                                                                                                                                             {juegoSiguienActivo == true ?
-                                                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                                <div className="siguiente-espacial"></div>
                                                                                                                                                 : <span>.</span>}
                                                                                                                                         </div>
                                                                                                                                         : counter == 29 ?
                                                                                                                                             <div>
-                                                                                                                                                <Juego21 data={arrayDato[9]} />
+                                                                                                                                              <Juego3 />
                                                                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                                                                     : <span>.</span>}
                                                                                                                                             </div>
                                                                                                                                             : <h1>Fin</h1>

@@ -1,18 +1,34 @@
-import { useState } from "react"
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { PreguntasAnalisis } from "../../Service/PreguntasAnalisis";
+import Feliciades from "../Feliciades";
+import Fin from "../Fin";
+import IntentaloDeNuevo from "../IntentaloDeNuevo";
 
 export default function Suma() {
     const [juegoActivo, setJuegoActivo] = useState(false)
     const [juegoSiguienActivo, setSiguienteJuegoActivo] = useState(false)
     const [juegoMensajeActivo, setMensajeJuegoActivo] = useState("")
     const [counter, setCounter] = useState(0)
+    const router = useRouter()
 
     const handleClick1 = () => {
         setCounter(counter + 1)
     }
     const Tiempo = () => {
-        setTimeout(() => { setJuegoActivo(false) }, 2000)
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+            setTimeout(() => {
+                setJuegoActivo(false)
+                setCounter(counter + 1)
+                }, 3000)
+            :setTimeout(() => {
+                setJuegoActivo(false)
+                }, 3000)
         return (
-            <h1>{juegoMensajeActivo}</h1>
+            <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
+                <Feliciades />
+                : <IntentaloDeNuevo />
+            }</div>
         )
     }
     // numero 1
@@ -36,7 +52,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -44,7 +67,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -56,7 +86,7 @@ export default function Suma() {
     }
     const Juego = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma.</h3>
                 <div className="grid">
                     <div>
@@ -116,7 +146,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -124,7 +161,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -136,7 +180,7 @@ export default function Suma() {
     }
     const Juego2 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma.</h3>
                 <div className="grid">
                     <div>
@@ -196,7 +240,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -204,7 +255,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -216,7 +274,7 @@ export default function Suma() {
     }
     const Juego3 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma.</h3>
                 <div className="grid">
                     <div>
@@ -276,7 +334,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -284,7 +349,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -296,7 +368,7 @@ export default function Suma() {
     }
     const Juego4 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma.</h3>
                 <div className="grid">
                     <div>
@@ -356,7 +428,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -364,7 +443,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -376,7 +462,7 @@ export default function Suma() {
     }
     const Juego5 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma.</h3>
                 <div className="grid">
                     <div>
@@ -436,7 +522,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -444,7 +537,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -456,7 +556,7 @@ export default function Suma() {
     }
     const Juego6 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -518,7 +618,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -526,7 +633,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -538,7 +652,7 @@ export default function Suma() {
     }
     const Juego7 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -600,7 +714,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -608,7 +729,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -620,7 +748,7 @@ export default function Suma() {
     }
     const Juego8 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -682,7 +810,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -690,7 +825,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -702,7 +844,7 @@ export default function Suma() {
     }
     const Juego9 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -764,7 +906,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -772,7 +921,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -784,7 +940,7 @@ export default function Suma() {
     }
     const Juego10 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -846,7 +1002,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -854,7 +1017,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -866,7 +1036,7 @@ export default function Suma() {
     }
     const Juego11 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -932,7 +1102,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -940,7 +1117,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -952,8 +1136,8 @@ export default function Suma() {
     }
     const Juego12 = () => {
         return (
-            <div>
-                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+            <div className="Numerospi">
+                <h3>Completa correctamente la siguiente suma.</h3>
                 <div className="grid">
                     <div>
                         <div className="drop-suma">
@@ -1018,7 +1202,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1026,7 +1217,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1038,8 +1236,8 @@ export default function Suma() {
     }
     const Juego13 = () => {
         return (
-            <div>
-                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+            <div className="Numerospi">
+                <h3>Completa correctamente la siguiente suma.</h3>
                 <div className="grid">
                     <div>
                         <div className="drop-suma">
@@ -1104,7 +1302,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1112,7 +1317,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1124,8 +1336,8 @@ export default function Suma() {
     }
     const Juego14 = () => {
         return (
-            <div>
-                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+            <div className="Numerospi">
+                <h3>Completa correctamente la siguiente suma.</h3>
                 <div className="grid">
                     <div>
                         <div className="drop-suma">
@@ -1190,7 +1402,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1198,7 +1417,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1210,7 +1436,7 @@ export default function Suma() {
     }
     const Juego15 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -1278,7 +1504,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1286,7 +1519,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1298,7 +1538,7 @@ export default function Suma() {
     }
     const Juego16 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -1380,7 +1620,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1388,7 +1635,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1400,7 +1654,7 @@ export default function Suma() {
     }
     const Juego17 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -1482,7 +1736,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1490,7 +1751,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1502,7 +1770,7 @@ export default function Suma() {
     }
     const Juego18 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -1590,7 +1858,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1598,7 +1873,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1610,8 +1892,8 @@ export default function Suma() {
     }
     const Juego19 = () => {
         return (
-            <div>
-                <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
+            <div className="Numerospi">
+                <h3>Completa correctamente la siguiente suma. </h3>
                 <div className="grid">
                     <div>
                         <div className="drop-suma-2">
@@ -1698,7 +1980,14 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -1706,7 +1995,14 @@ export default function Suma() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente suma con llevadas.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -1718,7 +2014,7 @@ export default function Suma() {
     }
     const Juego20 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
                 <div className="grid">
                     <div>
@@ -1791,7 +2087,7 @@ export default function Suma() {
         { image: "/img/ejercicios22.png", pregunta: "¿Cuánto dinero necesito para comprar la bicicleta y la cámara?", repuesta: [{ valor: "$8,750", validar: true }, { valor: "$1,325", validar: false }, { valor: "$8,100", validar: false }, { valor: "$7,750", validar: false }, { valor: "$1,150", validar: false }, { valor: "$2,150", validar: false }] },
         { image: "/img/ejercicios22.png", pregunta: "¿Cuánto dinero necesito para comprar los patines y la pelota?", repuesta: [{ valor: "$525", validar: false }, { valor: "$125", validar: false }, { valor: "$878", validar: false }, { valor: "$7,750", validar: false }, { valor: "$7,025", validar: false }, { valor: "$725", validar: true }] },
         { image: "/img/ejercicios22.png", pregunta: "¿Cuánto dinero necesito para comprar los patines y el abanico?", repuesta: [{ valor: "$5,500", validar: false }, { valor: "$500", validar: false }, { valor: "$7,000", validar: false }, { valor: "$8,500", validar: true }, { valor: "$7,200", validar: false }, { valor: "$4,850", validar: false }] },
-        { image: "/img/ejercicios23.png", pregunta: "El león en una mañana se comió 50kg de carne y en la tarde se comió 75kg, ¿Cuántos kg de carne se comió el león en el día entero?", repuesta: [{ valor: "325 kg", validar: false }, { valor: "50 kg", validar: false }, { valor: "$125 kg", validar: true }, { valor: "70 kg", validar: false }, { valor: "175 kg", validar: false }, { valor: "275 kg", validar: false }] },
+        { image: "/img/ejercicios23.png", pregunta: "El león en una mañana se comió 50kg de carne y en la tarde se comió 75kg, ¿Cuántos kg de carne se comió el león en el día entero?", repuesta: [{ valor: "325 kg", validar: false }, { valor: "150 kg", validar: false }, { valor: "$125 kg", validar: true }, { valor: "170 kg", validar: false }, { valor: "175 kg", validar: false }, { valor: "275 kg", validar: false }] },
         { image: "/img/ejercicios23.png", pregunta: "El león en una mañana se comió 100kg de carne y en la tarde se comió 275kg, ¿Cuántos kg de carne se comió el león en el día entero?", repuesta: [{ valor: "325 kg", validar: false }, { valor: "150 kg", validar: false }, { valor: "$125 kg", validar: false }, { valor: "375 kg", validar: true }, { valor: "325 kg", validar: false }, { valor: "275 kg", validar: false }] },
         { image: "/img/ejercicios21.png", pregunta: "¿Cuántas frutas se han cosechado de fresa y mango?", repuesta: [{ valor: "39", validar: false }, { valor: "21", validar: false }, { valor: "12", validar: false }, { valor: "19", validar: true }, { valor: "29", validar: false }, { valor: "22", validar: false }] },
         { image: "/img/ejercicios21.png", pregunta: "¿Cuántas frutas se han cosechado de manzana y mango?", repuesta: [{ valor: "39", validar: false }, { valor: "21", validar: true }, { valor: "12", validar: false }, { valor: "19", validar: false }, { valor: "29", validar: false }, { valor: "22", validar: false }] },
@@ -1805,12 +2101,26 @@ export default function Suma() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-                setCounter(counter + 1)
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve problemas a partir de la imagen.",
+                    3,
+                    counter
+
+                )
             }
             else {
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve problemas a partir de la imagen.",
+                    3,
+                    counter
 
+                )
             }
 
         }
@@ -1832,217 +2142,225 @@ export default function Suma() {
     }
     return (
         <div>
+            <div className="Contador-secuencia">{counter + 1}/30</div>
+
             {juegoActivo == false ?
                 <div>
                     {counter == 0 ?
                         <div>
                             <Juego />
                             {juegoSiguienActivo == true ?
-                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                <div className="siguiente-espacial"></div>
                                 : <span>.</span>}
                         </div>
                         : counter == 1 ?
                             <div>
-                                <Juego2 />
+                                 <Juego21 data={arrayDato[0]} />
                                 {juegoSiguienActivo == true ?
-                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                    <div className="siguiente-espacial"></div>
                                     : <span>.</span>}
                             </div>
                             : counter == 2 ?
                                 <div>
                                     <Juego3 />
                                     {juegoSiguienActivo == true ?
-                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                        <div className="siguiente-espacial"></div>
                                         : <span>.</span>}
                                 </div>
                                 : counter == 3 ?
                                     <div>
-                                        <Juego4 />
+                                        <Juego21 data={arrayDato[2]} />
                                         {juegoSiguienActivo == true ?
-                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                            <div className="siguiente-espacial"></div>
                                             : <span>.</span>}
                                     </div>
                                     : counter == 4 ?
                                         <div>
                                             <Juego5 />
                                             {juegoSiguienActivo == true ?
-                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                <div className="siguiente-espacial"></div>
                                                 : <span>.</span>}
                                         </div>
                                         : counter == 5 ?
                                             <div>
-                                                <Juego6 />
+                                                <Juego21 data={arrayDato[4]} />
                                                 {juegoSiguienActivo == true ?
-                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                    <div className="siguiente-espacial"></div>
                                                     : <span>.</span>}
                                             </div>
                                             : counter == 6 ?
                                                 <div>
                                                     <Juego7 />
                                                     {juegoSiguienActivo == true ?
-                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                        <div className="siguiente-espacial"></div>
                                                         : <span>.</span>}
                                                 </div>
                                                 : counter == 7 ?
                                                     <div>
-                                                        <Juego8 />
+                                                        <Juego21 data={arrayDato[6]} />
                                                         {juegoSiguienActivo == true ?
-                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                            <div className="siguiente-espacial"></div>
                                                             : <span>.</span>}
                                                     </div>
                                                     : counter == 8 ?
                                                         <div>
                                                             <Juego9 />
                                                             {juegoSiguienActivo == true ?
-                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                <div className="siguiente-espacial"></div>
                                                                 : <span>.</span>}
                                                         </div>
                                                         : counter == 9 ?
                                                             <div>
-                                                                <Juego10 />
+                                                                <Juego21 data={arrayDato[8]} />
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 10 ?
                                                                 <div>
                                                                     <Juego11 />
                                                                     {juegoSiguienActivo == true ?
-                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                        <div className="siguiente-espacial"></div>
                                                                         : <span>.</span>}
                                                                 </div>
                                                                 : counter == 11 ?
                                                                     <div>
-                                                                        <Juego12 />
+                                                                        <Juego19 />
                                                                         {juegoSiguienActivo == true ?
-                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                            <div className="siguiente-espacial"></div>
                                                                             : <span>.</span>}
                                                                     </div>
                                                                     : counter == 12 ?
                                                                         <div>
-                                                                            <Juego13 />
+                                                                            <Juego16 />
                                                                             {juegoSiguienActivo == true ?
-                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                <div className="siguiente-espacial"></div>
                                                                                 : <span>.</span>}
                                                                         </div>
                                                                         : counter == 13 ?
                                                                             <div>
                                                                                 <Juego14 />
                                                                                 {juegoSiguienActivo == true ?
-                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                    <div className="siguiente-espacial"></div>
                                                                                     : <span>.</span>}
                                                                             </div>
                                                                             : counter == 14 ?
                                                                                 <div>
-                                                                                    <Juego15 />
+                                                                                   <Juego18 />
                                                                                     {juegoSiguienActivo == true ?
-                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                        <div className="siguiente-espacial"></div>
                                                                                         : <span>.</span>}
                                                                                 </div>
                                                                                 : counter == 15 ?
                                                                                     <div>
-                                                                                        <Juego16 />
+                                                                                        <Juego13 />
+                                                                                        
                                                                                         {juegoSiguienActivo == true ?
-                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                            <div className="siguiente-espacial"></div>
                                                                                             : <span>.</span>}
                                                                                     </div>
                                                                                     : counter == 16 ?
                                                                                         <div>
                                                                                             <Juego17 />
                                                                                             {juegoSiguienActivo == true ?
-                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                <div className="siguiente-espacial"></div>
                                                                                                 : <span>.</span>}
                                                                                         </div>
 
                                                                                         : counter == 17 ?
                                                                                             <div>
-                                                                                                <Juego18 />
+                                                                                                 <Juego15 />
+                                                                                                
                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                     : <span>.</span>}
                                                                                             </div>
                                                                                             : counter == 18 ?
                                                                                                 <div>
-                                                                                                    <Juego19 />
+                                                                                                    <Juego12 />
+                                                                                                    
                                                                                                     {juegoSiguienActivo == true ?
-                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                        <div className="siguiente-espacial"></div>
                                                                                                         : <span>.</span>}
                                                                                                 </div>
                                                                                                 : counter == 19 ?
                                                                                                     <div>
                                                                                                         <Juego20 />
                                                                                                         {juegoSiguienActivo == true ?
-                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                            <div className="siguiente-espacial"></div>
                                                                                                             : <span>.</span>}
                                                                                                     </div>
                                                                                                     : counter == 20 ?
                                                                                                         <div>
-                                                                                                            <Juego21 data={arrayDato[0]} />
+                                                                                                            <Juego2 />
                                                                                                             {juegoSiguienActivo == true ?
-                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                <div className="siguiente-espacial"></div>
                                                                                                                 : <span>.</span>}
                                                                                                         </div>
                                                                                                         : counter == 21 ?
                                                                                                             <div>
                                                                                                                 <Juego21 data={arrayDato[1]} />
                                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                                     : <span>.</span>}
                                                                                                             </div>
                                                                                                             : counter == 22 ?
                                                                                                                 <div>
-                                                                                                                    <Juego21 data={arrayDato[2]} />
+                                                                                                                    <Juego4/>
                                                                                                                     {juegoSiguienActivo == true ?
-                                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                        <div className="siguiente-espacial"></div>
                                                                                                                         : <span>.</span>}
                                                                                                                 </div>
                                                                                                                 : counter == 23 ?
                                                                                                                     <div>
                                                                                                                         <Juego21 data={arrayDato[3]} />
                                                                                                                         {juegoSiguienActivo == true ?
-                                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                            <div className="siguiente-espacial"></div>
                                                                                                                             : <span>.</span>}
                                                                                                                     </div>
                                                                                                                     : counter == 24 ?
                                                                                                                         <div>
-                                                                                                                            <Juego21 data={arrayDato[4]} />
+                                                                                                                            <Juego6 />
+                                                                                                                            
                                                                                                                             {juegoSiguienActivo == true ?
-                                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                <div className="siguiente-espacial"></div>
                                                                                                                                 : <span>.</span>}
                                                                                                                         </div>
                                                                                                                         : counter == 25 ?
                                                                                                                             <div>
                                                                                                                                 <Juego21 data={arrayDato[5]} />
                                                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                                                     : <span>.</span>}
                                                                                                                             </div>
                                                                                                                             : counter == 26 ?
                                                                                                                                 <div>
-                                                                                                                                    <Juego21 data={arrayDato[6]} />
+                                                                                                                                    <Juego8 />
+                                                                                                                                    
                                                                                                                                     {juegoSiguienActivo == true ?
-                                                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                        <div className="siguiente-espacial"></div>
                                                                                                                                         : <span>.</span>}
                                                                                                                                 </div>
                                                                                                                                 : counter == 27 ?
                                                                                                                                     <div>
                                                                                                                                         <Juego21 data={arrayDato[7]} />
                                                                                                                                         {juegoSiguienActivo == true ?
-                                                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                            <div className="siguiente-espacial"></div>
                                                                                                                                             : <span>.</span>}
                                                                                                                                     </div>
                                                                                                                                     : counter == 28 ?
                                                                                                                                         <div>
-                                                                                                                                            <Juego21 data={arrayDato[8]} />
+                                                                                                                                            <Juego10 />
+                                                                                                                                            
                                                                                                                                             {juegoSiguienActivo == true ?
-                                                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                                <div className="siguiente-espacial"></div>
                                                                                                                                                 : <span>.</span>}
                                                                                                                                         </div>
                                                                                                                                         : counter == 29 ?
                                                                                                                                             <div>
                                                                                                                                                 <Juego21 data={arrayDato[9]} />
                                                                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                                                                     : <span>.</span>}
                                                                                                                                             </div>
                                                                                                                                             : <h1>Fin</h1>

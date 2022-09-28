@@ -1,10 +1,33 @@
-import { useState } from "react"
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { PreguntasAnalisis } from "../../Service/PreguntasAnalisis";
+import Feliciades from "../Feliciades";
+import Fin from "../Fin";
+import IntentaloDeNuevo from "../IntentaloDeNuevo";
 
 export default function Mulpiplicacion() {
     const [juegoActivo, setJuegoActivo] = useState(false)
     const [juegoSiguienActivo, setSiguienteJuegoActivo] = useState(false)
     const [juegoMensajeActivo, setMensajeJuegoActivo] = useState("")
     const [counter, setCounter] = useState(0)
+    const router = useRouter()
+    const Tiempo = () => {
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+            setTimeout(() => {
+                setJuegoActivo(false)
+                setCounter(counter + 1)
+                }, 3000)
+            :setTimeout(() => {
+                setJuegoActivo(false)
+                }, 3000)
+        return (
+            <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
+                <Feliciades />
+                : <IntentaloDeNuevo />
+            }</div>
+        )
+    }
+
     const numeros = () => {
         return (
             <div className="drag-mult">
@@ -62,12 +85,6 @@ export default function Mulpiplicacion() {
     const handleClick1 = () => {
         setCounter(counter + 1)
     }
-    const Tiempo = () => {
-        setTimeout(() => { setJuegoActivo(false) }, 2000)
-        return (
-            <h1>{juegoMensajeActivo}</h1>
-        )
-    }
     const allowdrop = (e) => {
         e.preventDefault()
     }
@@ -92,7 +109,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Relaciona las siguientes operaciones y sus resultados.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -101,7 +125,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
 
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Relaciona las siguientes operaciones y sus resultados.",
+                    2,
+                    counter
 
+                )
 
 
             }
@@ -109,7 +140,7 @@ export default function Mulpiplicacion() {
     }
     const Juego = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Relaciona las siguientes operaciones y sus resultados.</h3>
                 <div className="grid-multiplicacion">
                     <div>
@@ -179,7 +210,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Relaciona las siguientes operaciones y sus resultados.",
+                    2,
+                    counter
 
+                )
             }
             else {
 
@@ -187,7 +225,14 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Relaciona las siguientes operaciones y sus resultados.",
+                    2,
+                    counter
 
+                )
 
 
 
@@ -196,7 +241,7 @@ export default function Mulpiplicacion() {
     }
     const Juego2 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Relaciona las siguientes operaciones y sus resultados.</h3>
                 <div className="grid-multiplicacion">
                     <div>
@@ -266,7 +311,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -274,12 +326,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego3 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid">
                     <div>
@@ -328,7 +388,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -336,12 +403,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego4 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid">
                     <div>
@@ -390,7 +465,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -398,12 +480,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego5 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid">
                     <div>
@@ -454,7 +544,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -462,12 +559,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego6 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid">
                     <div>
@@ -518,7 +623,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -526,12 +638,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego7 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid">
                     <div>
@@ -582,7 +702,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -590,12 +717,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego8 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-m">
                     <div>
@@ -663,7 +798,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -671,12 +813,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego9 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-m">
                     <div>
@@ -744,7 +894,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -752,12 +909,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego10 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-m">
                     <div>
@@ -826,7 +991,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -834,12 +1006,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego11 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-mu">
                     <div>
@@ -910,7 +1090,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -918,12 +1105,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego12 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-mu">
                     <div>
@@ -995,7 +1190,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -1003,12 +1205,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego13 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-mu">
                     <div>
@@ -1081,7 +1291,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -1089,12 +1306,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego14 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-mu">
                     <div>
@@ -1167,7 +1392,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -1175,12 +1407,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego15 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-mu">
                     <div>
@@ -1254,7 +1494,14 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
 
+                )
             }
             else {
 
@@ -1262,12 +1509,20 @@ export default function Mulpiplicacion() {
 
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Completa correctamente la siguiente multiplicación.",
+                    1,
+                    counter
+
+                )
             }
         }
     }
     const Juego16 = () => {
         return (
-            <div>
+            <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-mu">
                     <div>
@@ -1322,8 +1577,8 @@ export default function Mulpiplicacion() {
 
         )
     }
-
-    //Numero 17 - 25
+ 
+    //Numero 17 - 26
 
     const arrayDato = [
         { image: "/img/problema1.png", pregunta: "Carlitos vende naranjas y manzanas todas las mañanas, María ha ido a comprar 20 naranjas, si cada naranja cuesta $8 pesos ¿Cuánto debe pagar María?", repuesta: [{ valor: "$28", validar: false }, { valor: "$160", validar: true }, { valor: "$16", validar: false }, { valor: "$12", validar: false }, { valor: "$70", validar: false }, { valor: "$120", validar: false }] },
@@ -1345,12 +1600,26 @@ export default function Mulpiplicacion() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-                setCounter(counter + 1)
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Resuelve problemas a partir de la imagen.",
+                    3,
+                    counter
+
+                )
             }
             else {
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Resuelve problemas a partir de la imagen.",
+                    3,
+                    counter
 
+                )
             }
 
         }
@@ -1372,188 +1641,195 @@ export default function Mulpiplicacion() {
     }
     return (
         <div>
+            <div className="Contador-secuencia">{counter + 1}/26</div>
+
             {juegoActivo == false ?
                 <div>
                     {counter == 0 ?
                         <div>
                             <Juego />
                             {juegoSiguienActivo == true ?
-                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                <div className="siguiente-espacial"></div>
                                 : <span>.</span>}
                         </div>
                         : counter == 1 ?
                             <div>
-                                <Juego2 />
+                                <Juego17 data={arrayDato[9]} />
                                 {juegoSiguienActivo == true ?
-                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                    <div className="siguiente-espacial"></div>
                                     : <span>.</span>}
                             </div>
                             : counter == 2 ?
                                 <div>
                                     <Juego3 />
                                     {juegoSiguienActivo == true ?
-                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                        <div className="siguiente-espacial"></div>
                                         : <span>.</span>}
                                 </div>
                                 : counter == 3 ?
                                     <div>
-                                        <Juego4 />
+                                        <Juego2 />
                                         {juegoSiguienActivo == true ?
-                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                            <div className="siguiente-espacial"></div>
                                             : <span>.</span>}
                                     </div>
                                     : counter == 4 ?
                                         <div>
-                                            <Juego5 />
+                                            <Juego17 data={arrayDato[7]} />
+                                            
                                             {juegoSiguienActivo == true ?
-                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                <div className="siguiente-espacial"></div>
                                                 : <span>.</span>}
                                         </div>
                                         : counter == 5 ?
                                             <div>
                                                 <Juego6 />
                                                 {juegoSiguienActivo == true ?
-                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                    <div className="siguiente-espacial"></div>
                                                     : <span>.</span>}
                                             </div>
                                             : counter == 6 ?
                                                 <div>
-                                                    <Juego7 />
+                                                      <Juego17 data={arrayDato[5]} />
+                                                   
                                                     {juegoSiguienActivo == true ?
-                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                        <div className="siguiente-espacial"></div>
                                                         : <span>.</span>}
                                                 </div>
                                                 : counter == 7 ?
                                                     <div>
                                                         <Juego8 />
                                                         {juegoSiguienActivo == true ?
-                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                            <div className="siguiente-espacial"></div>
                                                             : <span>.</span>}
                                                     </div>
                                                     : counter == 8 ?
                                                         <div>
                                                             <Juego9 />
                                                             {juegoSiguienActivo == true ?
-                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                <div className="siguiente-espacial"></div>
                                                                 : <span>.</span>}
                                                         </div>
                                                         : counter == 9 ?
                                                             <div>
-                                                                <Juego10 />
+                                                                   <Juego17 data={arrayDato[3]} />
+                                                                
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 10 ?
                                                                 <div>
-                                                                    <Juego11 />
+                                                                    <Juego14 />
                                                                     {juegoSiguienActivo == true ?
-                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                        <div className="siguiente-espacial"></div>
                                                                         : <span>.</span>}
                                                                 </div>
                                                                 : counter == 11 ?
                                                                     <div>
-                                                                        <Juego12 />
+                                                                        <Juego17 data={arrayDato[1]} />
+                                                                        
                                                                         {juegoSiguienActivo == true ?
-                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                            <div className="siguiente-espacial"></div>
                                                                             : <span>.</span>}
                                                                     </div>
                                                                     : counter == 12 ?
                                                                         <div>
                                                                             <Juego13 />
                                                                             {juegoSiguienActivo == true ?
-                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                <div className="siguiente-espacial"></div>
                                                                                 : <span>.</span>}
                                                                         </div>
                                                                         : counter == 13 ?
                                                                             <div>
-                                                                                <Juego14 />
+                                                                                <Juego11 />
                                                                                 {juegoSiguienActivo == true ?
-                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                    <div className="siguiente-espacial"></div>
                                                                                     : <span>.</span>}
                                                                             </div>
                                                                             : counter == 14 ?
                                                                                 <div>
                                                                                     <Juego15 />
                                                                                     {juegoSiguienActivo == true ?
-                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                        <div className="siguiente-espacial"></div>
                                                                                         : <span>.</span>}
                                                                                 </div>
                                                                                 : counter == 15 ?
                                                                                     <div>
-                                                                                        <Juego16 />
+                                                                                        <Juego10 />
                                                                                         {juegoSiguienActivo == true ?
-                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                            <div className="siguiente-espacial"></div>
                                                                                             : <span>.</span>}
                                                                                     </div>
                                                                                     : counter == 16 ?
                                                                                         <div>
                                                                                             <Juego17 data={arrayDato[0]} />
                                                                                             {juegoSiguienActivo == true ?
-                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                <div className="siguiente-espacial"></div>
                                                                                                 : <span>.</span>}
                                                                                         </div>
                                                                                         : counter == 17 ?
                                                                                             <div>
-                                                                                                <Juego17 data={arrayDato[1]} />
+                                                                                                <Juego12 />
                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                     : <span>.</span>}
                                                                                             </div>
                                                                                             : counter == 18 ?
                                                                                                 <div>
-                                                                                                    <Juego17 data={arrayDato[2]} />
+                                                                                                    <Juego17 data={arrayDato[4]} />
                                                                                                     {juegoSiguienActivo == true ?
-                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                        <div className="siguiente-espacial"></div>
                                                                                                         : <span>.</span>}
                                                                                                 </div>
                                                                                                 : counter == 19 ?
                                                                                                     <div>
-                                                                                                        <Juego17 data={arrayDato[3]} />
+                                                                                                     <Juego16 />
                                                                                                         {juegoSiguienActivo == true ?
-                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                            <div className="siguiente-espacial"></div>
                                                                                                             : <span>.</span>}
                                                                                                     </div>
                                                                                                     : counter == 20 ?
                                                                                                         <div>
-                                                                                                            <Juego17 data={arrayDato[4]} />
+                                                                                                            <Juego17 data={arrayDato[2]} />
                                                                                                             {juegoSiguienActivo == true ?
-                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                <div className="siguiente-espacial"></div>
                                                                                                                 : <span>.</span>}
                                                                                                         </div>
                                                                                                         : counter == 21 ?
                                                                                                             <div>
-                                                                                                                <Juego17 data={arrayDato[5]} />
+                                                                                                               <Juego7 />
                                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                                     : <span>.</span>}
                                                                                                             </div>
                                                                                                             : counter == 22 ?
                                                                                                                 <div>
-                                                                                                                    <Juego17 data={arrayDato[6]} />
+                                                                                                                    <Juego17 data={arrayDato[8]} />
                                                                                                                     {juegoSiguienActivo == true ?
-                                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                        <div className="siguiente-espacial"></div>
                                                                                                                         : <span>.</span>}
                                                                                                                 </div>
                                                                                                                 : counter == 23 ?
                                                                                                                     <div>
-                                                                                                                        <Juego17 data={arrayDato[7]} />
+                                                                                                                        <Juego5 />
                                                                                                                         {juegoSiguienActivo == true ?
-                                                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                            <div className="siguiente-espacial"></div>
                                                                                                                             : <span>.</span>}
                                                                                                                     </div>
                                                                                                                     : counter == 24 ?
                                                                                                                         <div>
-                                                                                                                            <Juego17 data={arrayDato[8]} />
+                                                                                                                            <Juego17 data={arrayDato[6]} />
                                                                                                                             {juegoSiguienActivo == true ?
-                                                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                <div className="siguiente-espacial"></div>
                                                                                                                                 : <span>.</span>}
                                                                                                                         </div>
                                                                                                                         : counter == 25 ?
                                                                                                                             <div>
-                                                                                                                                <Juego17 data={arrayDato[9]} />
+                                                                                                                              <Juego4 />
+                                                                                                                                
                                                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                                                     : <span>.</span>}
                                                                                                                             </div>
                                                                                                                             : <h1>Fin</h1>
