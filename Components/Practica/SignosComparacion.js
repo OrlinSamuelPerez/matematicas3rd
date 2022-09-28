@@ -996,70 +996,70 @@ export default function SignosComparacion() {
                         <div>
                             <Juego />
                             {juegoSiguienActivo == true ?
-                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                <div className="siguiente-espacial"></div>
                                 : <span>.</span>}
                         </div>
                         : counter == 1 ?
                             <div>
                                 <Juego2 />
                                 {juegoSiguienActivo == true ?
-                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                    <div className="siguiente-espacial"></div>
                                     : <span>.</span>}
                             </div>
                             : counter == 2 ?
                                 <div>
                                     <Juego3 />
                                     {juegoSiguienActivo == true ?
-                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                        <div className="siguiente-espacial"></div>
                                         : <span>.</span>}
                                 </div>
                                 : counter == 3 ?
                                     <div>
                                         <Juego4 />
                                         {juegoSiguienActivo == true ?
-                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                            <div className="siguiente-espacial"></div>
                                             : <span>.</span>}
                                     </div>
                                     : counter == 4 ?
                                         <div>
                                             <Juego5 />
                                             {juegoSiguienActivo == true ?
-                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                <div className="siguiente-espacial"></div>
                                                 : <span>.</span>}
                                         </div>
                                         : counter == 5 ?
                                             <div>
                                                 <Juego6 />
                                                 {juegoSiguienActivo == true ?
-                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                    <div className="siguiente-espacial"></div>
                                                     : <span>.</span>}
                                             </div>
                                             : counter == 6 ?
                                                 <div>
                                                     <Juego7 />
                                                     {juegoSiguienActivo == true ?
-                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                        <div className="siguiente-espacial"></div>
                                                         : <span>.</span>}
                                                 </div>
                                                 : counter == 7 ?
                                                     <div>
                                                         <Juego8 />
                                                         {juegoSiguienActivo == true ?
-                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                            <div className="siguiente-espacial"></div>
                                                             : <span>.</span>}
                                                     </div>
                                                     : counter == 8 ?
                                                         <div>
                                                             <Juego9 />
                                                             {juegoSiguienActivo == true ?
-                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                <div className="siguiente-espacial"></div>
                                                                 : <span>.</span>}
                                                         </div>
                                                         : counter == 9 ?
                                                             <div>
                                                                 <Juego10 />
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : <h1>Fin</h1>
