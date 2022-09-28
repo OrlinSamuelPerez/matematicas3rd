@@ -895,7 +895,7 @@ export default function Secuencias() {
                 <div>
                     {counter == 0 ?
                         <div>
-                            <Fin nombre={router.query.id}  numero={10}/>
+                            <Juego/>
                         </div>
                         : counter == 1 ?
                             <div>
@@ -942,7 +942,7 @@ export default function Secuencias() {
                                                                 <Juego10 />
                                                             </div>
 
-                                                            : <Fin nombre={router.query.id}/>
+                                                            : <Fin nombre={router.query.id}  numero={10}/>
                     }
 
                 </div>
