@@ -25,7 +25,7 @@ const handleClick2=()=>{
       counter == 0?
       <div className="HomeWork-monster">
               <div>
-                <h1 className='numeraciontitulo'>Numeracion</h1>
+                <h1 className='numeraciontitulo'>Numeración</h1>
 
                   <div className='centrar'>
                   <Link href="/Numeracion/Start">
@@ -33,20 +33,20 @@ const handleClick2=()=>{
                   </Link>
                   </div>
                   <div className='bosquedivertido'>
-                    <p>Explorar el espacio infinito de los numero</p>
+                    <p>Explora el espacio infinito de los números.</p>
                   </div>
               </div>
       </div>:counter == 1?
       <div className="geometria-fondo">
           <div>
-            <h1 className='geometriatitulo'>Geometria</h1>
+            <h1 className='geometriatitulo'>Geometría</h1>
               <div className='centrar'>
               <Link href="/Geometria/Start">
                   <a><button className='empezar-geomteria'>Empezar</button></a>
               </Link>
               </div>
               <div className='bosquedivertido'>
-                <p>Explorar el bosque de figuras es divertido</p>
+                <p>Explorar el bosque de figuras es divertido.</p>
               </div>
           </div>
     </div>
@@ -55,25 +55,25 @@ const handleClick2=()=>{
           <div>
             <h1 className='mediciontitulo'>Medición</h1>
               <div className='centrar'>
-              <Link href="/Geometria/Start">
+              <Link href="/Medicion/Start">
                   <a><button className='empezar-medicion'>Empezar</button></a>
               </Link>
               </div>
               <div className='bosquedivertido'>
-                <p>Explorar el oceano de las mediciones</p>
+                <p>Explora el océano de las mediciones.</p>
               </div>
           </div>
     </div>
       :<div className="estadistica-fondo">
       <div>
-        <h1 className='estadisticatitulo'>Estadistica Elemental</h1>
+        <h1 className='estadisticatitulo'>Estadística Elemental</h1>
           <div className='centrar'>
-          <Link href="/Geometria/Start">
+          <Link href="/EstadisticaElemental/Start">
               <a><button className='empezar-estadistica'>Empezar</button></a>
           </Link>
           </div>
           <div className='bosquedivertido'>
-                <p>El mundo de los piratas elementales</p>
+                <p>Explora el mundo de los piratas con la estadística elemental.</p>
               </div>
       </div>
 </div>

@@ -8,7 +8,7 @@ export default function IntentaloDeNuevo(){
                 <div class="emoji__mouth"></div>
             </div>
             </div>
-            <h1>Intentalo de nuevo se que tu puedes</h1>
+            <h1>Intentalo de nuevo.</h1>
         </div>
     )
 }

@@ -8,7 +8,7 @@ export default function Feliciades(){
                 <div class="emoji__mouth"></div>
             </div>
             </div>
-            <h1>Felicidades eres el mejor.</h1>
+            <h1>Lo has hecho muy bien.</h1>
         </div>
     )
 }
