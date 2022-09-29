@@ -1,6 +1,9 @@
 import { doc, getDoc } from "firebase/firestore";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { auth, db } from "../BD/Configuracion"
+import { ActualizarNivel } from "../Service/ActualizarNivel";
 
 export default function Fin(props){
     const [divisionResultado, setDivisionResultado] = useState(0)
@@ -25,19 +28,23 @@ export default function Fin(props){
 
               })
               const division = 100 - ((numeroDeVecesIncorrectas / intentoCorrecta) * 100) 
-              setDivisionResultado(division)
+              const numeroRedondeado = Math.round(division)
+              setDivisionResultado(numeroRedondeado)
+              ActualizarNivel(props.posicionNivelActual, props.nivel)
 
 
         }
     })
-    console.log(divisionResultado)
-
+    const router = useRouter()
+    const recargar =()=>{
+        router.reload()
+    }
     return(
-        <div>
+        <div className="fin">
       <style>
     {`
     .donut-segment-2 {
-        stroke: aqua;
+        stroke: #ed1e79;
         animation: donut1 3s;
         stroke-dasharray: 0, 100;
         animation-fill-mode:forwards;
@@ -57,7 +64,14 @@ export default function Fin(props){
     }
      </style>
  
-            <h1>Feliciades terminaste {props.nombre}</h1>
+            {divisionResultado >= 90?
+                <h1>Mira lo que has conseguido. ¡Es fantástico! </h1>
+            :divisionResultado >= 80 && divisionResultado < 90?
+                <h1>Te está saliendo muy bien sigue así. </h1>
+            :divisionResultado >= 70 && divisionResultado < 80?
+                <h1>Por supuesto que  puedes mejorar. Todavía puedes dar más de tí. </h1>
+            :<h1>Es cierto que puedes mejorar. Sigue practicando y lo conseguirás. </h1>
+         }
             <div class="donut-container">
             <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
                 <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
@@ -71,6 +85,11 @@ export default function Fin(props){
                 </text>
                 </g>
             </svg>
+            </div>
+
+            <div className="button-fin">
+                <div><button  onClick={recargar}>Repetir Tema</button></div>
+                <div><Link href={props.siguienteNivel}><button>Siguiente Tema</button></Link></div>
             </div>
         </div>
     )

@@ -1,4 +1,6 @@
 import '../styles/globals.css'
+import '../styles/Signoscomparacion.css'
+
 import '../styles/Login.css'
 import '../styles/Home.css'
 import '../styles/geometria.css'
@@ -6,7 +8,6 @@ import '../styles/medicion.css'
 import '../styles/multiplicacion.css'
 import '../styles/division.css'
 import '../styles/NumerosPI.css'
-import '../styles/Signoscomparacion.css'
 import '../styles/estadisticaelemental.css'
 import '../styles/AnimacionEmoji.css'
 import Head from 'next/head';

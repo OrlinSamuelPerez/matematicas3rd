@@ -2,7 +2,7 @@ import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { auth, db } from "../BD/Configuracion";
 
 
-export const ActualizarNivel = (posicionNivelActual,nivel, urlNuevaPagina, valor)=>{
+export const ActualizarNivel = (posicionNivelActual,nivel)=>{
     auth.onAuthStateChanged(async user=>{
         if(user != null){
             const docRef = doc(db, "11111", "Usuarios","Estudiantes",user.email)
@@ -16,10 +16,7 @@ export const ActualizarNivel = (posicionNivelActual,nivel, urlNuevaPagina, valor
                         })}
                 }
             }
-            if(valor == true){
-                console.log("hola")
-            }
-            else{location.href = urlNuevaPagina}
+            
 
         }
       })

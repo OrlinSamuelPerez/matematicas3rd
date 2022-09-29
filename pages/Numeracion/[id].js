@@ -129,8 +129,8 @@ export default function HomeNumeracion() {
                             rutaActual == "Secuencias" ?
                                 <div className='space-fondo'>
                                     <div className='juegoFondoSpace'>
+                                    <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
                                         <Secuencias />
-                                        <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
 
                                     </div>
                                 </div>
@@ -138,16 +138,15 @@ export default function HomeNumeracion() {
                                 : rutaActual == "SignosComparacion" ?
                                     <div className='space-fondo'>
                                         <div className='juegoFondoSpace'>
+                                        <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
                                             <SignosComparacion />
-                                            <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-
                                         </div>
                                     </div>
                                     : rutaActual == "Adicion" ?
                                         <div className='space-fondo'>
                                             <div className='juegoFondoSpace'>
-                                                <Suma />
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
+                                                <Suma />
 
                                             </div>
                                         </div>
@@ -155,24 +154,25 @@ export default function HomeNumeracion() {
                                         : rutaActual == "ValorPosicion" ?
                                             <div className='space-fondo'>
                                                 <div className='juegoFondoSpace'>
-                                                    <ValorPosicion />
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
+
+                                                    <ValorPosicion />
 
                                                 </div>
                                             </div>
                                             : rutaActual == "Numeros_pares_impares" ?
                                                 <div className='space-fondo'>
                                                     <div className='juegoFondoSpace'>
-                                                        <NumeroPares />
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
+                                                        <NumeroPares />
 
                                                     </div>
                                                 </div>
                                                 : rutaActual == "NumerosOrdinales" ?
                                                     <div className='space-fondo'>
                                                         <div className='juegoFondoSpace'>
-                                                            <NumerosOrdinales />
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
+                                                            <NumerosOrdinales />
 
                                                         </div>
                                                     </div>
@@ -180,22 +180,26 @@ export default function HomeNumeracion() {
                                                     : rutaActual == "Division" ?
                                                         <div className='space-fondo'>
                                                             <div className='juegoFondoSpace'>
+                                            <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
+
                                                                 <Division/>
                                                             </div>
                                                         </div>
                                                          : rutaActual == "Sustraccion" ?
                                                          <div className='space-fondo'>
                                                              <div className='juegoFondoSpace'>
-                                                                 <Resta/>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
+
+                                                                 <Resta/>
 
                                                              </div>
                                                          </div>
                                                          : rutaActual == "Multiplicacion" ?
                                                          <div className='space-fondo'>
                                                              <div className='juegoFondoSpace'>
-                                                                 <Mulpiplicacion/>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
+
+                                                                 <Mulpiplicacion/>
 
                                                              </div>
                                                          </div>

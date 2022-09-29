@@ -1832,7 +1832,7 @@ export default function Mulpiplicacion() {
                                                                                                                                     <div className="siguiente-espacial"></div>
                                                                                                                                     : <span>.</span>}
                                                                                                                             </div>
-                                                                                                                            : <h1>Fin</h1>
+                                                                                                                            : <Fin posicionNivelActual={9}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Division"  numero={26}/>
                     }
 
                 </div>

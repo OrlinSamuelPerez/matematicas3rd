@@ -2363,7 +2363,7 @@ export default function Suma() {
                                                                                                                                                     <div className="siguiente-espacial"></div>
                                                                                                                                                     : <span>.</span>}
                                                                                                                                             </div>
-                                                                                                                                            : <h1>Fin</h1>
+                                                                                                                                            : <Fin posicionNivelActual={7}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Sustraccion"  numero={30}/>
                     }
 
                 </div>

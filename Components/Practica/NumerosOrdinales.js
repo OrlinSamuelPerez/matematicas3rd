@@ -75,11 +75,12 @@ export default function NumerosOrdinales() {
             //agrego el arreglo del elemento al elmento soltado
             array[parseInt(e.target.id)] = data;
             //que se agregue al cuadro sleccioonad
-            e.target.appendChild(document.getElementById(data))
+            e.target.style.backgroundImage = `url(${data})`
             console.log(data)
+            console.log(array)
         }
         if (array[1] != "" && array[2] != "" && array[3] != "" && array[4] != "" && array[5] != "" && array[6] != "" && array[7] != "") {
-            if (array[1] == "gato" && array[2] == "perro" && array[3] == "pato" && array[4] == "elefante" && array[5] == "caballo" && array[6] == "mono" && array[7] == "tortuga") {
+            if (array[1] == "http://localhost:3000/img/gato.png" && array[2] == "http://localhost:3000/img/perro.png" && array[3] == "http://localhost:3000/img/pato.png" && array[4] == "http://localhost:3000/img/elefante.png" && array[5] == "http://localhost:3000/img/caballo.png" && array[6] == "http://localhost:3000/img/mono.png" && array[7] == "http://localhost:3000/img/tortuga.png") {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
@@ -100,14 +101,14 @@ export default function NumerosOrdinales() {
 
     const Juego7 = () => {
         return (
-            <div className="secuencia">
+            <div className="secuencia drop-numeroordinales">
                 <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
                 <p>Al terminar la carrera el caballo obtuvo el quinto lugar, el pato el tercer lugar, el perro el segundo lugar, el gato el primer lugar,
                     el elefante el cuarto lugar, el mono el sexto lugar y la tortuga el séptimo lugar.
                 </p>
 
 
-                <div className="drop">
+                <div className="drop imagen-drop">
                     <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop}></div>
                     <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop}></div>
                     <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop}></div>
@@ -120,13 +121,13 @@ export default function NumerosOrdinales() {
 
                 </div>
                 <div className="drag">
-                    <div className="drag-d" draggable="true" id="caballo" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
-                    <div className="drag-d" draggable="true" id="pato" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
-                    <div className="drag-d" draggable="true" id="tortuga" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
-                    <div className="drag-d" draggable="true" id="perro" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
-                    <div className="drag-d" draggable="true" id="elefante" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
-                    <div className="drag-d" draggable="true" id="gato" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
-                    <div className="drag-d" draggable="true" id="mono" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
 
 
                 </div>
@@ -870,7 +871,6 @@ export default function NumerosOrdinales() {
             array23[parseInt(e.target.id)] = data;
             //que se agregue al cuadro sleccioonad
             e.target.appendChild(document.getElementById(data))
-            console.log(data)
         }
         if (array23[1] != "" && array23[2] != "" && array23[3] != "" && array23[4] != "" && array23[5] != "" && array23[6] != "") {
             if (array23[1] == "C" && array23[2] == "U" && array23[3] == "A" && array23[4] == "R" && array23[5] == "T" && array23[6] == "O") {
@@ -1009,7 +1009,7 @@ export default function NumerosOrdinales() {
                 <div>
                     {counter == 0 ?
                         <div>
-                            <Juego1 data={arrayDato[0]} />
+                            <Juego7 />
                             {juegoSiguienActivo == true ?
                                 <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
                                 : <span>.</span>}

@@ -2,6 +2,7 @@ import { useRouter } from "next/router"
 import { useState } from "react"
 import { PreguntasAnalisis } from "../../Service/PreguntasAnalisis"
 import Feliciades from "../Feliciades"
+import Fin from "../Fin"
 import IntentaloDeNuevo from "../IntentaloDeNuevo"
 
 export default function SignosComparacion() {
@@ -875,7 +876,13 @@ export default function SignosComparacion() {
                     <div className="drag-d" draggable="true" id="543" onDragStart={drag9}>543</div>
                     <div className="drag-d" draggable="true" id="602" onDragStart={drag9}>602</div>
                     <div className="drag-d" draggable="true" id="520" onDragStart={drag9}>520</div>
-                    <div className="drag-d" draggable="true" id="255" onDragStart={drag9}>255</div>
+                <div className="drag-d" draggable="true" id="255" onDragStart={drag9}>255</div><br></br>
+                    
+
+
+
+                </div>
+                <div className="drag">
                     <div className="drag-d" draggable="true" id="1,000" onDragStart={drag9}>1,000</div>
                     <div className="drag-d" draggable="true" id="918" onDragStart={drag9}>918</div>
                     <div className="drag-d" draggable="true" id="524" onDragStart={drag9}>524</div>
@@ -883,9 +890,6 @@ export default function SignosComparacion() {
                     <div className="drag-d" draggable="true" id="742" onDragStart={drag9}>742</div>
                     <div className="drag-d" draggable="true" id="512" onDragStart={drag9}>512</div>
                     <div className="drag-d" draggable="true" id="320" onDragStart={drag9}>320</div>
-
-
-
                 </div>
 
             </div>
@@ -969,7 +973,12 @@ export default function SignosComparacion() {
                     <div className="drag-d" draggable="true" id="15,115" onDragStart={drag10}>15,115</div>
                     <div className="drag-d" draggable="true" id="16,000" onDragStart={drag10}>16,000</div>
                     <div className="drag-d" draggable="true" id="15,104" onDragStart={drag10}>15,104</div>
-                    <div className="drag-d" draggable="true" id="10,000" onDragStart={drag10}>10,000</div>
+                 
+
+
+                </div>
+                <div className="drag">
+                <div className="drag-d" draggable="true" id="10,000" onDragStart={drag10}>10,000</div>
                     <div className="drag-d" draggable="true" id="16,100" onDragStart={drag10}>16,100</div>
                     <div className="drag-d" draggable="true" id="15,100" onDragStart={drag10}>15,100</div>
                     <div className="drag-d" draggable="true" id="16,005" onDragStart={drag10}>16,005</div>
@@ -977,14 +986,12 @@ export default function SignosComparacion() {
                     <div className="drag-d" draggable="true" id="15,005" onDragStart={drag10}>15,005</div>
                     <div className="drag-d" draggable="true" id="18,000" onDragStart={drag10}>18,000</div>
 
-
-
                 </div>
 
             </div>
 
         )
-
+ 
     }
     return (
         <div>
@@ -1062,7 +1069,7 @@ export default function SignosComparacion() {
                                                                     <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
-                                                            : <h1>Fin</h1>
+                                                            : <Fin posicionNivelActual={5}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/NumerosOrdinales"  numero={10}/>
                     }
 
                 </div>

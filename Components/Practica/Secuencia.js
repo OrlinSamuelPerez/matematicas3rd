@@ -942,7 +942,7 @@ export default function Secuencias() {
                                                                 <Juego10 />
                                                             </div>
 
-                                                            : <Fin nombre={router.query.id}  numero={10}/>
+                                                            : <Fin posicionNivelActual={1}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/ValorPosicion"  numero={10}/>
                     }
 
                 </div>

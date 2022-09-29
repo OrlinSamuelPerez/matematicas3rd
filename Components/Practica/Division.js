@@ -132,12 +132,17 @@ export default function Division() {
         setCounter(counter + 1)
     }
     const Tiempo = () => {
+        console.log(juegoMensajeActivo)
         juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
             setTimeout(() => {
                 setJuegoActivo(false)
                 setCounter(counter + 1)
+                console.log(juegoMensajeActivo)
                 }, 3000)
+
             :setTimeout(() => {
+            console.log(juegoMensajeActivo)
+
                 setJuegoActivo(false)
                 }, 3000)
         return (
@@ -1352,7 +1357,7 @@ export default function Division() {
                                                                          <div className="siguiente-espacial"></div>
                                                                          : <span>.</span>}
                                                                  </div>
-                                                                 : <h1>Fin</h1>
+                                                                 :<Fin posicionNivelActual={10}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/"  numero={20}/>
 
 
                     }

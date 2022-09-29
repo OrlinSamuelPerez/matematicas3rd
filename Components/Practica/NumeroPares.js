@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { PreguntasAnalisis } from "../../Service/PreguntasAnalisis";
 import { useRouter } from "next/router";
+import Feliciades from "../Feliciades";
+import IntentaloDeNuevo from "../IntentaloDeNuevo";
+import Fin from "../Fin";
 export default function NumeroPares() {
     const [estadoJuego, setEstadoJuego] = useState(false)
     const [juegoMensajeActivo, setMensajeJuegoActivo] = useState("")
+    const [cambiar, setCambiar] = useState(false)
     const [counter, setCounter] = useState(0)
     const router = useRouter()
 
@@ -25,10 +29,13 @@ export default function NumeroPares() {
         for (var i = 1; i < cantidadDeImagenesPantalla + 1; i++) {
             array.push("")
         }
+       
         const validar = (valor) => {
             if (array.length % 2 == 0 && valor == "par") {
                 setEstadoJuego(true)
-                setMensajeJuegoActivo("FELICIDADES EL NUMERO ERA PAR")
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                setCambiar(true)
+
                 PreguntasAnalisis(
                     router.query.id,
                     true,
@@ -37,10 +44,11 @@ export default function NumeroPares() {
                     counter
 
                 )
-                setCounter(counter + 1)
             } else if (array.length % 2 != 0 && valor == "impar") {
                 setEstadoJuego(true)
-                setMensajeJuegoActivo("FELICIDADES EL NUMERO ERA IMPAR")
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                setCambiar(true)
+
                 PreguntasAnalisis(
                     router.query.id,
                     true,
@@ -49,13 +57,13 @@ export default function NumeroPares() {
                     counter
 
                 )
-                setCounter(counter + 1)
 
             }
             else {
                 if (array.length % 2 == 0) {
                     setEstadoJuego(true)
-                    setMensajeJuegoActivo("INCORRECTO EL NUMERO ERA PAR")
+                setCambiar(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
                     PreguntasAnalisis(
                         router.query.id,
                         false,
@@ -64,9 +72,11 @@ export default function NumeroPares() {
                         counter
     
                     )
+
                 } if (array.length % 2 != 0) {
                     setEstadoJuego(true)
-                    setMensajeJuegoActivo("INCORRECTO EL NUMERO ERA IMPAR")
+                setCambiar(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
                     PreguntasAnalisis(
                         router.query.id,
                         false,
@@ -75,6 +85,7 @@ export default function NumeroPares() {
                         counter
     
                     )
+
                 }
             }
         }
@@ -93,12 +104,8 @@ export default function NumeroPares() {
             </div>
         )
     }
-    const Tiempo = () => {
-        setTimeout(() => { setEstadoJuego(false) }, 2000)
-        return (
-            <h1 className="juegomensaje">{juegoMensajeActivo}</h1>
-        )
-    }
+  
+
     const Ejercicio11 = () => {
         const img = [{ numero: "8,627", validar: true }, { numero: "3,522", validar: false }, { numero: "6,222 ", validar: false },]
         const validar = (validar) => {
@@ -111,8 +118,11 @@ export default function NumeroPares() {
                     counter
 
                 )
-                setCounter(counter + 1)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                setCambiar(true)
+
             } else {
+                
                 PreguntasAnalisis(
                     router.query.id,
                     false,
@@ -121,7 +131,9 @@ export default function NumeroPares() {
                     counter
 
                 )
-                console.log("Falso")
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                setCambiar(true)
+                
             }
         }
         return (
@@ -141,6 +153,9 @@ export default function NumeroPares() {
         const img = [{ numero: "5,627", validar: false }, { numero: "3,545", validar: false }, { numero: "6,222 ", validar: true },]
         const validar = (validar) => {
             if (validar == true) {
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                setCambiar(true)
+
                 PreguntasAnalisis(
                     router.query.id,
                     true,
@@ -149,8 +164,9 @@ export default function NumeroPares() {
                     counter
 
                 )
-                setCounter(counter + 1)
             } else {
+                setCambiar(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
                 PreguntasAnalisis(
                     router.query.id,
                     false,
@@ -178,6 +194,9 @@ export default function NumeroPares() {
         const img = [{ numero: "359", validar: false }, { numero: "578", validar: true }, { numero: "325 ", validar: false },]
         const validar = (validar) => {
             if (validar == true) {
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                setCambiar(true)
+
                 PreguntasAnalisis(
                     router.query.id,
                     true,
@@ -186,8 +205,9 @@ export default function NumeroPares() {
                     counter
 
                 )
-                setCounter(counter + 1)
             } else {
+                setCambiar(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
                 PreguntasAnalisis(
                     router.query.id,
                     false,
@@ -216,6 +236,9 @@ export default function NumeroPares() {
         const img = [{ numero: "788", validar: false }, { numero: "247", validar: true }, { numero: "526 ", validar: false },]
         const validar = (validar) => {
             if (validar == true) {
+                setCambiar(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+
                 PreguntasAnalisis(
                     router.query.id,
                     true,
@@ -224,8 +247,9 @@ export default function NumeroPares() {
                     counter
 
                 )
-                setCounter(counter + 1)
             } else {
+                setCambiar(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
                 PreguntasAnalisis(
                     router.query.id,
                     false,
@@ -253,6 +277,9 @@ export default function NumeroPares() {
         const img = [{ numero: "788", validar: true }, { numero: "247", validar: false }, { numero: "529 ", validar: false },]
         const validar = (validar) => {
             if (validar == true) {
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                setCambiar(true)
+
                 PreguntasAnalisis(
                     router.query.id,
                     true,
@@ -261,8 +288,9 @@ export default function NumeroPares() {
                     counter
 
                 )
-                setCounter(counter + 1)
             } else {
+                setCambiar(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
                 PreguntasAnalisis(
                     router.query.id,
                     false,
@@ -290,6 +318,9 @@ export default function NumeroPares() {
         const img = [{ numero: "58,786", validar: false }, { numero: "24,852", validar: false }, { numero: "52,997 ", validar: true },]
         const validar = (validar) => {
             if (validar == true) {
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                setCambiar(true)
+
                 PreguntasAnalisis(
                     router.query.id,
                     true,
@@ -298,8 +329,9 @@ export default function NumeroPares() {
                     counter
 
                 )
-                setCounter(counter + 1)
             } else {
+                setCambiar(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
                 PreguntasAnalisis(
                     router.query.id,
                     false,
@@ -323,11 +355,36 @@ export default function NumeroPares() {
             </div>
         )
     }
+    const Tiempo = () => {
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+            setTimeout(() => {
+                if(estadoJuego == true){
+                    setEstadoJuego(false)
+                }
+                setCounter(counter + 1)
+                setCambiar(false)
+
+                }, 3000)
+            :setTimeout(() => {
+                if(estadoJuego == true){
+                    setEstadoJuego(false)
+                }
+                setCambiar(false)
+                setCounter(counter + 1)
+
+                }, 3000)
+        return (
+            <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
+                <Feliciades />
+                : <IntentaloDeNuevo />
+            }</div>
+        )
+    }
     return (
         <div >
             <div className="Contador-secuencia">{counter + 1}/16</div>
 
-            {
+            {cambiar == false?
                 counter == 2 ?
                     <Ejercicio11 /> :
                     counter == 5 ?
@@ -341,10 +398,11 @@ export default function NumeroPares() {
                                     : counter == 15 ?
                                         <Ejercicio16 />
                                         : counter == 16 ?
-                                            <h1>Fin</h1>
+                                            <Fin posicionNivelActual={4}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/SignosComparacion"  numero={16}/>
                                             : estadoJuego == false ?
                                                 <ImagenesDinamica />
-                                                : <Tiempo />
+                                                :<h1>s</h1>
+                :<Tiempo/>
 
             }
         </div>

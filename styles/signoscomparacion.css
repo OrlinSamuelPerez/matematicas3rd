@@ -1,6 +1,31 @@
 .SignosComp {
-  width: 100%;
-  height: 100%;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+align-content: center;
+
+}
+.SignosComp .drop{
+  justify-content: center;
+  justify-items: center;
+text-align: center;
+display: flex;
+align-items: center;
+align-content: center;
+
+
+}
+.SignosComp .drag{
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+text-align: center;
+align-items: center;
+align-content: center;
+
+
+
 }
 .SignosComp h3 {
   background-color: #f20875;

@@ -2359,7 +2359,7 @@ export default function Resta() {
                                                                                                                                                     <div className="siguiente-espacial"></div>
                                                                                                                                                     : <span>.</span>}
                                                                                                                                             </div>
-                                                                                                                                            : <h1>Fin</h1>
+                                                                                                                                            :  <Fin posicionNivelActual={8}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Multiplicacion"  numero={30}/>
                     }
 
                 </div>
