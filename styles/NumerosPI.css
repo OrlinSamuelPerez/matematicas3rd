@@ -40,3 +40,13 @@
     width: 100px;
     height: 60px;
 }
+.numor{
+  width: 125%;
+  height: 100%;
+  margin-top: 12%;
+ 
+}
+.numor img{
+  border-radius: 5%;
+  box-shadow: 0 4px 4px 12px rgba(0, 0, 0, 0.158), 2px 6px 20px 0 rgba(0, 0, 0, 0.616);
+}

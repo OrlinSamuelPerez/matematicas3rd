@@ -1,17 +1,32 @@
-import { useState } from "react"
-
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { PreguntasAnalisis } from "../../Service/PreguntasAnalisis";
+import Feliciades from "../Feliciades";
+import Fin from "../Fin";
+import IntentaloDeNuevo from "../IntentaloDeNuevo";
 export default function NumerosOrdinales() {
     const [counter, setCounter] = useState(0)
     const [juegoActivo, setJuegoActivo] = useState(false)
     const [juegoSiguienActivo, setSiguienteJuegoActivo] = useState(false)
     const [juegoMensajeActivo, setMensajeJuegoActivo] = useState("")
+    const router = useRouter()
     const handleClick1 = () => {
         setCounter(counter + 1)
     }
     const Tiempo = () => {
-        setTimeout(() => { setJuegoActivo(false) }, 2000)
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+            setTimeout(() => {
+                setJuegoActivo(false)
+                setCounter(counter + 1)
+                }, 3000)
+            :setTimeout(() => {
+                setJuegoActivo(false)
+                }, 3000)
         return (
-            <h1>{juegoMensajeActivo}</h1>
+            <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
+                <Feliciades />
+                : <IntentaloDeNuevo />
+            }</div>
         )
     }
     const drag = (e) => {
@@ -38,18 +53,32 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-                setCounter(counter + 1)
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Selecciona el orden que ocupa el animal.",
+                    0,
+                    counter
+
+                )
             }
             else {
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Selecciona el orden que ocupa el animal.",
+                    0,
+                    counter
 
+                )
             }
 
         }
         return (
             <div className="juego21-resta">
-                <div>
+                <div className="numor">
                     <img src={props.data.image} />
                 </div>
                 <div>
@@ -84,14 +113,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
 
+                )
 
             }
             else {
                 array = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
 
+                )
 
 
 
@@ -137,6 +180,443 @@ export default function NumerosOrdinales() {
         )
 
     }
+     // numero 8
+
+     let array8 = ["", "", "", "", "", "", "", ""]
+
+     const drop8 = (e) => {
+         //Para btener el id arrastrado
+         if (array8[parseInt(e.target.id)] == "") {
+             let data = e.dataTransfer.getData("text")
+             //agrego el arreglo del elemento al elmento soltado
+             array8[parseInt(e.target.id)] = data;
+             //que se agregue al cuadro sleccioonad
+             e.target.style.backgroundImage = `url(${data})`
+             console.log(data)
+             console.log(array8)
+         }
+         if (array8[1] != "" && array8[2] != "" && array8[3] != "" && array8[4] != "" && array8[5] != "" && array8[6] != "" && array8[7] != "") {
+             if (array8[1] == "http://localhost:3000/img/caballo.png" && array8[2] == "http://localhost:3000/img/tortuga.png" && array8[3] == "http://localhost:3000/img/mono.png" && array8[4] == "http://localhost:3000/img/gato.png" && array8[5] == "http://localhost:3000/img/pato.png" && array8[6] == "http://localhost:3000/img/perro.png" && array8[7] == "http://localhost:3000/img/elefante.png") {
+                 setJuegoActivo(true)
+                 setSiguienteJuegoActivo(true)
+                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                 PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
+
+                )
+ 
+             }
+             else {
+                 array8 = ["", "", "", "", "", "", "", ""]
+                 setJuegoActivo(true)
+                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                 PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
+
+                )
+ 
+ 
+ 
+             }
+         }
+     }
+ 
+     const Juego8 = () => {
+         return (
+             <div className="secuencia drop-numeroordinales">
+                 <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
+                 <p>Al terminar la carrera el caballo obtuvo el primer lugar, el pato el quinto lugar, el perro el sexto lugar, el gato el cuarto lugar,
+                     el elefante el séptimo lugar, el mono el tercer lugar y la tortuga el segundo lugar.
+                 </p>
+ 
+ 
+                 <div className="drop imagen-drop">
+                     <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop8}></div>
+                     <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop8}></div>
+                     <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop8}></div>
+                     <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop8}></div>
+                     <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop8}></div>
+                     <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop8}></div>
+                     <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop8}></div>
+ 
+ 
+ 
+                 </div>
+                 <div className="drag">
+                     <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                     <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                     <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                     <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                     <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                     <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                     <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
+ 
+ 
+                 </div>
+ 
+             </div>
+ 
+         )
+ 
+     }
+   // numero 9
+
+   let array9 = ["", "", "", "", "", "", "", ""]
+
+   const drop9 = (e) => {
+       //Para btener el id arrastrado
+       if (array9[parseInt(e.target.id)] == "") {
+           let data = e.dataTransfer.getData("text")
+           //agrego el arreglo del elemento al elmento soltado
+           array9[parseInt(e.target.id)] = data;
+           //que se agregue al cuadro sleccioonad
+           e.target.style.backgroundImage = `url(${data})`
+           console.log(data)
+           console.log(array9)
+       }
+       if (array9[1] != "" && array9[2] != "" && array9[3] != "" && array9[4] != "" && array9[5] != "" && array9[6] != "" && array9[7] != "") {
+           if (array9[1] == "http://localhost:3000/img/mono.png" && array9[2] == "http://localhost:3000/img/gato.png" && array9[3] == "http://localhost:3000/img/pato.png" && array9[4] == "http://localhost:3000/img/tortuga.png" && array9[5] == "http://localhost:3000/img/elefante.png" && array9[6] == "http://localhost:3000/img/caballo.png" && array9[7] == "http://localhost:3000/img/perro.png") {
+               setJuegoActivo(true)
+               setSiguienteJuegoActivo(true)
+               setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+               PreguntasAnalisis(
+                router.query.id,
+                true,
+                "Ordena los animales en la posicion correcta.",
+                0,
+                counter
+
+            )
+
+           }
+           else {
+               array9 = ["", "", "", "", "", "", "", ""]
+               setJuegoActivo(true)
+               setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+               PreguntasAnalisis(
+                router.query.id,
+                false,
+                "Ordena los animales en la posicion correcta.",
+                0,
+                counter
+
+            )
+
+
+
+           }
+       }
+   }
+
+   const Juego9 = () => {
+       return (
+           <div className="secuencia drop-numeroordinales">
+               <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
+               <p>Al terminar la carrera el mono obtuvo el primer lugar, el elefante el quinto lugar, el caballo el sexto lugar, la tortuga el cuarto lugar,
+                   el perro el séptimo lugar, el pato el tercer lugar y el gato el segundo lugar.
+               </p>
+
+
+               <div className="drop imagen-drop">
+                   <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop9}></div>
+                   <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop9}></div>
+                   <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop9}></div>
+                   <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop9}></div>
+                   <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop9}></div>
+                   <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop9}></div>
+                   <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop9}></div>
+
+
+
+               </div>
+               <div className="drag">
+                   <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
+
+
+               </div>
+
+           </div>
+
+       )
+
+   }
+
+   // numero 10
+
+   let array10 = ["", "", "", "", "", "", "", ""]
+
+   const drop10 = (e) => {
+       //Para btener el id arrastrado
+       if (array10[parseInt(e.target.id)] == "") {
+           let data = e.dataTransfer.getData("text")
+           //agrego el arreglo del elemento al elmento soltado
+           array10[parseInt(e.target.id)] = data;
+           //que se agregue al cuadro sleccioonad
+           e.target.style.backgroundImage = `url(${data})`
+           console.log(data)
+           console.log(array10)
+       }
+       if (array10[1] != "" && array10[2] != "" && array10[3] != "" && array10[4] != "" && array10[5] != "" && array10[6] != "" && array10[7] != "") {
+           if (array10[1] == "http://localhost:3000/img/perro.png" && array10[2] == "http://localhost:3000/img/mono.png" && array10[3] == "http://localhost:3000/img/elefante.png" && array10[4] == "http://localhost:3000/img/caballo.png" && array10[5] == "http://localhost:3000/img/pato.png" && array10[6] == "http://localhost:3000/img/gato.png" && array10[7] == "http://localhost:3000/img/tortuga.png") {
+               setJuegoActivo(true)
+               setSiguienteJuegoActivo(true)
+               setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+               PreguntasAnalisis(
+                router.query.id,
+                true,
+                "Ordena los animales en la posicion correcta.",
+                0,
+                counter
+
+            )
+
+           }
+           else {
+               array10 = ["", "", "", "", "", "", "", ""]
+               setJuegoActivo(true)
+               setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+               PreguntasAnalisis(
+                router.query.id,
+                false,
+                "Ordena los animales en la posicion correcta.",
+                0,
+                counter
+
+            )
+
+
+
+           }
+       }
+   }
+
+   const Juego10 = () => {
+       return (
+           <div className="secuencia drop-numeroordinales">
+               <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
+               <p>Al terminar la carrera el perro obtuvo el primer lugar, el pato el quinto lugar, el gato el sexto lugar, el caballo el cuarto lugar,
+                   la tortuga el séptimo lugar, el elefante el tercer lugar y el mono el segundo lugar.
+               </p>
+
+
+               <div className="drop imagen-drop">
+                   <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop10}></div>
+                   <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop10}></div>
+                   <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop10}></div>
+                   <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop10}></div>
+                   <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop10}></div>
+                   <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop10}></div>
+                   <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop10}></div>
+
+
+
+               </div>
+               <div className="drag">
+                   <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
+
+
+               </div>
+
+           </div>
+
+       )
+
+   }
+
+   //Numero 11
+   let array11 = ["", "", "", "", "", "", "", ""]
+
+   const drop11 = (e) => {
+       //Para btener el id arrastrado
+       if (array11[parseInt(e.target.id)] == "") {
+           let data = e.dataTransfer.getData("text")
+           //agrego el arreglo del elemento al elmento soltado
+           array11[parseInt(e.target.id)] = data;
+           //que se agregue al cuadro sleccioonad
+           e.target.style.backgroundImage = `url(${data})`
+           console.log(data)
+           console.log(array11)
+       }
+       if (array11[1] != "" && array11[2] != "" && array11[3] != "" && array11[4] != "" && array11[5] != "" && array11[6] != "" && array11[7] != "") {
+           if (array11[1] == "http://localhost:3000/img/elefante.png" && array11[2] == "http://localhost:3000/img/mono.png" && array11[3] == "http://localhost:3000/img/pato.png" && array11[4] == "http://localhost:3000/img/caballo.png" && array11[5] == "http://localhost:3000/img/gato.png" && array11[6] == "http://localhost:3000/img/perro.png" && array11[7] == "http://localhost:3000/img/tortuga.png") {
+               setJuegoActivo(true)
+               setSiguienteJuegoActivo(true)
+               setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+               PreguntasAnalisis(
+                router.query.id,
+                true,
+                "Ordena los animales en la posicion correcta.",
+                0,
+                counter
+
+            )
+
+           }
+           else {
+               array11 = ["", "", "", "", "", "", "", ""]
+               setJuegoActivo(true)
+               setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+               PreguntasAnalisis(
+                router.query.id,
+                false,
+                "Ordena los animales en la posicion correcta.",
+                0,
+                counter
+
+            )
+
+
+
+           }
+       }
+   }
+
+   const Juego11 = () => {
+       return (
+           <div className="secuencia drop-numeroordinales">
+               <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
+               <p>Al terminar la carrera el elefante obtuvo el primer lugar, el gato el quinto lugar, el perro el sexto lugar, el caballo el cuarto lugar,
+                   la tortuga el séptimo lugar, el pato el tercer lugar y el mono el segundo lugar.
+               </p>
+
+
+               <div className="drop imagen-drop">
+                   <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop11}></div>
+                   <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop11}></div>
+                   <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop11}></div>
+                   <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop11}></div>
+                   <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop11}></div>
+                   <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop11}></div>
+                   <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop11}></div>
+
+
+
+               </div>
+               <div className="drag">
+                   <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
+
+
+               </div>
+
+           </div>
+
+       )
+
+   }
+
+   // Numero 12
+
+   let array12 = ["", "", "", "", "", "", "", ""]
+
+   const drop12 = (e) => {
+       //Para btener el id arrastrado
+       if (array12[parseInt(e.target.id)] == "") {
+           let data = e.dataTransfer.getData("text")
+           //agrego el arreglo del elemento al elmento soltado
+           array12[parseInt(e.target.id)] = data;
+           //que se agregue al cuadro sleccioonad
+           e.target.style.backgroundImage = `url(${data})`
+           console.log(data)
+           console.log(array12)
+       }
+       if (array12[1] != "" && array12[2] != "" && array12[3] != "" && array12[4] != "" && array12[5] != "" && array12[6] != "" && array12[7] != "") {
+           if (array12[1] == "http://localhost:3000/img/mono.png" && array12[2] == "http://localhost:3000/img/caballo.png" && array12[3] == "http://localhost:3000/img/tortuga.png" && array12[4] == "http://localhost:3000/img/elefante.png" && array12[5] == "http://localhost:3000/img/perro.png" && array12[6] == "http://localhost:3000/img/pato.png" && array12[7] == "http://localhost:3000/img/gato.png") {
+               setJuegoActivo(true)
+               setSiguienteJuegoActivo(true)
+               setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+               PreguntasAnalisis(
+                router.query.id,
+                true,
+                "Ordena los animales en la posicion correcta.",
+                0,
+                counter
+
+            )
+
+           }
+           else {
+               array12 = ["", "", "", "", "", "", "", ""]
+               setJuegoActivo(true)
+               setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+               PreguntasAnalisis(
+                router.query.id,
+                false,
+                "Ordena los animales en la posicion correcta.",
+                0,
+                counter
+
+            )
+
+
+
+           }
+       }
+   }
+
+   const Juego12 = () => {
+       return (
+           <div className="secuencia drop-numeroordinales">
+               <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
+               <p>Al terminar la carrera el mono obtuvo el primer lugar, el perro el quinto lugar, el pato el sexto lugar, el elefante el cuarto lugar,
+                   el gato el séptimo lugar, la tortuga el tercer lugar y el caballo el segundo lugar.
+               </p>
+
+
+               <div className="drop imagen-drop">
+                   <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop12}></div>
+                   <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop12}></div>
+                   <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop12}></div>
+                   <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop12}></div>
+                   <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop12}></div>
+                   <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop12}></div>
+                   <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop12}></div>
+
+
+
+               </div>
+               <div className="drag">
+                   <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                   <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
+
+
+               </div>
+
+           </div>
+
+       )
+
+   }
 
     //juego 13
     let array13 = ["", "", "", "", "", "", "", ""]
@@ -156,14 +636,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 1°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array13 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 1°.",
+                    1,
+                    counter
 
+                )
 
 
 
@@ -235,14 +729,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 6°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array14 = ["", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 6°.",
+                    1,
+                    counter
 
+                )
 
 
 
@@ -308,14 +816,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 9°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array15 = ["", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 9°.",
+                    1,
+                    counter
 
+                )
             }
         }
     }
@@ -378,14 +900,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 10°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array16 = ["", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 10°.",
+                    1,
+                    counter
 
+                )
             }
         }
     }
@@ -448,14 +984,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 8°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array17 = ["", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 8°.",
+                    1,
+                    counter
 
+                )
             }
         }
     }
@@ -517,14 +1067,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 20°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array18 = ["", "", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 20°.",
+                    1,
+                    counter
 
+                )
             }
         }
     }
@@ -591,14 +1155,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 2°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array19 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 2°.",
+                    1,
+                    counter
 
+                )
             }
         }
     }
@@ -663,14 +1241,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 7°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array20 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 7°.",
+                    1,
+                    counter
 
+                )
             }
         }
     }
@@ -735,14 +1327,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 3°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array21 = ["", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 3°.",
+                    1,
+                    counter
 
+                )
             }
         }
     }
@@ -807,14 +1413,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 5°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array22 = ["", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 5°.",
+                    1,
+                    counter
 
+                )
             }
         }
     }
@@ -877,14 +1497,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 4°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array23 = ["", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 4°.",
+                    1,
+                    counter
 
+                )
             }
         }
     }
@@ -948,14 +1582,28 @@ export default function NumerosOrdinales() {
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Escribe correctamente el numero ordinal 30°.",
+                    1,
+                    counter
 
+                )
 
             }
             else {
                 array24 = ["", "", "", "", "", "", "", "", "", ""]
                 setJuegoActivo(true)
                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Escribe correctamente el numero ordinal 30°.",
+                    1,
+                    counter
 
+                )
             }
         }
     }
@@ -1005,142 +1653,179 @@ export default function NumerosOrdinales() {
     }
     return (
         <div>
+            <div className="Contador-secuencia">{counter + 1}/24</div>
+
             {juegoActivo == false ?
                 <div>
                     {counter == 0 ?
                         <div>
-                            <Juego7 />
+                            <Juego1 data={arrayDato[0]} />
                             {juegoSiguienActivo == true ?
-                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                <div className="siguiente-espacial"></div>
                                 : <span>.</span>}
                         </div>
                         : counter == 1 ?
                             <div>
-                                <Juego1 data={arrayDato[1]} />
+                                <Juego7/>
                                 {juegoSiguienActivo == true ?
-                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                    <div className="siguiente-espacial"></div>
                                     : <span>.</span>}
                             </div>
                             : counter == 2 ?
                                 <div>
-                                    <Juego1 data={arrayDato[2]} />
+                                    <Juego13/>
                                     {juegoSiguienActivo == true ?
-                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                        <div className="siguiente-espacial"></div>
                                         : <span>.</span>}
                                 </div>
                                 : counter == 3 ?
                                     <div>
-                                        <Juego1 data={arrayDato[3]} />
+                                        <Juego1 data={arrayDato[1]} />
                                         {juegoSiguienActivo == true ?
-                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                            <div className="siguiente-espacial"></div>
                                             : <span>.</span>}
                                     </div>
                                     : counter == 4 ?
                                         <div>
-                                            <Juego1 data={arrayDato[4]} />
+                                            <Juego24/>
                                             {juegoSiguienActivo == true ?
-                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                <div className="siguiente-espacial"></div>
                                                 : <span>.</span>}
                                         </div>
                                         : counter == 5 ?
                                             <div>
-                                                <Juego1 data={arrayDato[5]} />
+                                                <Juego8/>
                                                 {juegoSiguienActivo == true ?
-                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                    <div className="siguiente-espacial"></div>
                                                     : <span>.</span>}
                                             </div>
                                             : counter == 6 ?
                                                 <div>
-
+                                                    <Juego15/>
                                                     {juegoSiguienActivo == true ?
-                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                        <div className="siguiente-espacial"></div>
                                                         : <span>.</span>}
                                                 </div>
                                                 : counter == 7 ?
                                                     <div>
-                                                        <Juego13 />
+                                                        <Juego9 />
                                                         {juegoSiguienActivo == true ?
-                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                            <div className="siguiente-espacial"></div>
                                                             : <span>.</span>}
                                                     </div>
                                                     : counter == 8 ?
                                                         <div>
-                                                            <Juego14 />
+                                                             <Juego1 data={arrayDato[2]} />
                                                             {juegoSiguienActivo == true ?
-                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                <div className="siguiente-espacial"></div>
                                                                 : <span>.</span>}
                                                         </div>
                                                         : counter == 9 ?
                                                             <div>
-                                                                <Juego15 />
+                                                                <Juego10 />
                                                                 {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                    <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 10 ?
                                                                 <div>
-                                                                    <Juego16 />
+                                                                     <Juego1 data={arrayDato[3]} />
                                                                     {juegoSiguienActivo == true ?
-                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                        <div className="siguiente-espacial"></div>
                                                                         : <span>.</span>}
                                                                 </div>
                                                                 : counter == 11 ?
                                                                     <div>
-                                                                        <Juego17 />
+                                                                        <Juego16 />
                                                                         {juegoSiguienActivo == true ?
-                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                            <div className="siguiente-espacial"></div>
                                                                             : <span>.</span>}
                                                                     </div>
                                                                     : counter == 12 ?
                                                                         <div>
-                                                                            <Juego18 />
+                                                                             <Juego1 data={arrayDato[4]} />
                                                                             {juegoSiguienActivo == true ?
-                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                <div className="siguiente-espacial"></div>
                                                                                 : <span>.</span>}
                                                                         </div>
                                                                         : counter == 13 ?
                                                                             <div>
-                                                                                <Juego19 />
+                                                                                <Juego17 />
                                                                                 {juegoSiguienActivo == true ?
-                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                    <div className="siguiente-espacial"></div>
                                                                                     : <span>.</span>}
                                                                             </div>
                                                                             : counter == 14 ?
                                                                                 <div>
-                                                                                    <Juego20 />
+                                                                                    <Juego11 />
                                                                                     {juegoSiguienActivo == true ?
-                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                        <div className="siguiente-espacial"></div>
                                                                                         : <span>.</span>}
                                                                                 </div>
                                                                                 : counter == 15 ?
                                                                                     <div>
-                                                                                        <Juego21 />
+                                                                                        <Juego20 />
                                                                                         {juegoSiguienActivo == true ?
-                                                                                            <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                            <div className="siguiente-espacial"></div>
                                                                                             : <span>.</span>}
                                                                                     </div>
                                                                                     : counter == 16 ?
                                                                                         <div>
                                                                                             <Juego22 />
                                                                                             {juegoSiguienActivo == true ?
-                                                                                                <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                <div className="siguiente-espacial"></div>
                                                                                                 : <span>.</span>}
                                                                                         </div>
                                                                                         : counter == 17 ?
                                                                                             <div>
-                                                                                                <Juego23 />
+                                                                                                 <Juego1 data={arrayDato[5]} />
                                                                                                 {juegoSiguienActivo == true ?
-                                                                                                    <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                    <div className="siguiente-espacial"></div>
                                                                                                     : <span>.</span>}
                                                                                             </div>
                                                                                             : counter == 18 ?
                                                                                                 <div>
-                                                                                                    <Juego24 />
+                                                                                                    <Juego19 />
                                                                                                     {juegoSiguienActivo == true ?
-                                                                                                        <div className="siguiente-espacial"><button onClick={handleClick1} >Continuar</button></div>
+                                                                                                        <div className="siguiente-espacial"></div>
                                                                                                         : <span>.</span>}
                                                                                                 </div>
-                                                                                                : <h1>Fin</h1>
+                                                                                                : counter == 19 ?
+                                                                                                <div>
+                                                                                                    <Juego18 />
+                                                                                                    {juegoSiguienActivo == true ?
+                                                                                                        <div className="siguiente-espacial"></div>
+                                                                                                        : <span>.</span>}
+                                                                                                </div>
+                                                                                                : counter == 20 ?
+                                                                                                <div>
+                                                                                                    <Juego21 />
+                                                                                                    {juegoSiguienActivo == true ?
+                                                                                                        <div className="siguiente-espacial"></div>
+                                                                                                        : <span>.</span>}
+                                                                                                </div>
+                                                                                                : counter == 21 ?
+                                                                                                <div>
+                                                                                                    <Juego12 />
+                                                                                                    {juegoSiguienActivo == true ?
+                                                                                                        <div className="siguiente-espacial"></div>
+                                                                                                        : <span>.</span>}
+                                                                                                </div>
+                                                                                                : counter == 22 ?
+                                                                                                <div>
+                                                                                                    <Juego23 />
+                                                                                                    {juegoSiguienActivo == true ?
+                                                                                                        <div className="siguiente-espacial"></div>
+                                                                                                        : <span>.</span>}
+                                                                                                </div>
+                                                                                                : counter == 23 ?
+                                                                                                <div>
+                                                                                                    <Juego14 />
+                                                                                                    {juegoSiguienActivo == true ?
+                                                                                                        <div className="siguiente-espacial"></div>
+                                                                                                        : <span>.</span>}
+                                                                                                </div>
+                                                                                                : <Fin posicionNivelActual={6}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Adicion"  numero={24}/>
 
 
                     }
