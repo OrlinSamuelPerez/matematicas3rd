@@ -2,28 +2,34 @@ import { useState } from "react"
 
 export default function ValorPosicion() {
     const [counter, setCounter] = useState(0)
-    const comprobar = ()=>{
-        const centena = document.getElementById("centena").value
-        const  decena = document.getElementById("decena").value
-        const unidad = document.getElementById("unidad").value
-        const suma = document.getElementById("suma").value
-        if(centena == 1){
-            if(decena == 2){
-                if(unidad == 6){
-                    if(suma==  centena+decena+unidad ){
-                        console.log("Lo hiciste bien")
-                    }else{
-                        console.log("loquito")
+    const valorIncial = {decena:0,centena:0,unidad:0, suma:0}
+    const [valor, setValor] = useState(valorIncial)
+
+    const handleChange =(e)=>{
+        const {name, value}= e.target
+        setValor({...valor,[name]:value})
+
+   }
+    const comprobarPregunta = (centena, decena, unidad, suma) => {
+        
+        if(centena == valor.centena){
+            if(decena == valor.decena){
+                if(unidad == valor.unidad){
+                    if(suma == valor.suma){
+                        setCounter(counter + 1)
+                        console.log("correcto")
                     }
-                }else{
-                    console.log("loquito")
+            console.log("INCORRECTO")
+
                 }
-            }else{
-                console.log("loquito")
+            console.log("INCORRECTO")
+
             }
-        }else{
-            console.log("loquito")
+        console.log("INCORRECTO")
+
         }
+        console.log("INCORRECTO")
+        
     }
     const Ejercicio1 = () => {
         const img = [{ img: "/img/1.png", validar: true }, { img: "/img/2.png", validar: false }, { img: "/img/3.png", validar: false }]
@@ -329,14 +335,7 @@ export default function ValorPosicion() {
         )
     }
     const Ejercicio14 = () => {
-        const validar = (validar) => {
-            if (validar == true) {
-                console.log("verdadero")
-                setCounter(counter + 1)
-            } else {
-                console.log("Falso")
-            }
-        }
+        
         return (
             <div className="unidad">
                 <div>
@@ -346,11 +345,11 @@ export default function ValorPosicion() {
 
                     <div ><img src="/img/img1.png" /></div>
                     <div>
-                        <input type="number" id="centena" max={9} min={0} />C +
-                         <input type="number" id="decena" max={9} min={0} />D +
-                          <input type="number" id="unidad" max={9} min={0} />U <br></br>
-                        <input type="number" id="suma" min={0} /><br></br>
-                        <button onClick={comprobar} >Comprobar</button>
+                        <input type="number" onChange={handleChange} value={valor.centena} name="centena" max={9} min={0} />C +
+                         <input type="number" onChange={handleChange} value={valor.decena} name="decena" max={9} min={0} />D +
+                          <input type="number" onChange={handleChange} value={valor.unidad} name="unidad" max={9} min={0} />U <br></br>
+                        <input type="number" onChange={handleChange} value={valor.suma} name="suma" min={0} /><br></br>
+                        <button onClick={comprobarPregunta(1,2,6,126)} >Comprobar</button>
                     </div>
                 </div>
                 
@@ -504,7 +503,7 @@ export default function ValorPosicion() {
     return (
         <div className="valorposicion">
             {counter == 0 ?
-                <Ejercicio1 />
+                <Ejercicio14 />
                 : counter == 1 ?
                     <Ejercicio2 />
                     : counter == 2 ?
