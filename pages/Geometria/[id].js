@@ -93,11 +93,11 @@ export default function HomeNumeracion() {
     }
     return (
         counter == 0 ?
-            <div className="space-fondo">
+            <div className="geometria-fon">
                 <DialogoPersonaje
                     titulo={"Bienvenido a la " + data.Nombre}
                     dialogo={data.Definicion}
-                    img="/img/astronauta-pc.jpg"
+                    img="/img/ardilla.jpg"
                     color="#6418a1f7"
 
 
@@ -105,11 +105,11 @@ export default function HomeNumeracion() {
                 <div className="siguiente-espacial"><Link href="/Numeracion/Start"><button  >Atrás</button></Link><button onClick={handleClick1} >Continuar</button></div>
 
             </div> : counter == 1 ?
-                <div className="space-fondo">
+                <div className="geometria-fon">
                     <DialogoPersonaje
                         titulo="Objetivos"
                         dialogo={data.Objetivos[counter2].Objetivos}
-                        img="/img/astronauta-moto.jpg"
+                        img="/img/bosque-otono.jpg"
                         color="#6418a1f7"
 
 
@@ -117,17 +117,17 @@ export default function HomeNumeracion() {
                     <div className="siguiente-espacial"><button onClick={() => atras("objetivos")} >Atrás</button><button onClick={handleClick2} >Continuar</button></div>
 
                 </div> : counter == 2 ?
-                    <div className="space-fondo">
+                    <div className="geometria-fon">
                         <Video LinkVideo={data.Video} />
                         <div className="siguiente-espacial"><button onClick={() => atras("oivos")} >Atrás</button><button onClick={handleClick2} >Continuar</button></div>
 
                     </div> : counter == 3 ?
-                        <div className="space-fondo">
+                        <div className="geometria-fon">
                             <Ejemplo datos={data.Presentacion} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
                         </div>
                         : counter == 4 ?
-                            rutaActual == "Secuencias" ?
-                                <div className='space-fondo'>
+                            rutaActual == "Poligonos" ?
+                                <div className='geometria-fon'>
                                     <div className='juegoFondoSpace'>
                                     <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
                                         <Secuencias />
@@ -136,14 +136,14 @@ export default function HomeNumeracion() {
                                 </div>
 
                                 : rutaActual == "SignosComparacion" ?
-                                    <div className='space-fondo'>
+                                    <div className='geometria-fon'>
                                         <div className='juegoFondoSpace'>
                                         <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
                                             <SignosComparacion />
                                         </div>
                                     </div>
                                     : rutaActual == "Adicion" ?
-                                        <div className='space-fondo'>
+                                        <div className='geometria-fon'>
                                             <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
                                                 <Suma />
@@ -152,7 +152,7 @@ export default function HomeNumeracion() {
                                         </div>
 
                                         : rutaActual == "ValorPosicion" ?
-                                            <div className='space-fondo'>
+                                            <div className='geometria-fon'>
                                                 <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
 
@@ -161,7 +161,7 @@ export default function HomeNumeracion() {
                                                 </div>
                                             </div>
                                             : rutaActual == "Numeros_pares_impares" ?
-                                                <div className='space-fondo'>
+                                                <div className='geometria-fon'>
                                                     <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
                                                         <NumeroPares />
@@ -169,7 +169,7 @@ export default function HomeNumeracion() {
                                                     </div>
                                                 </div>
                                                 : rutaActual == "NumerosOrdinales" ?
-                                                    <div className='space-fondo'>
+                                                    <div className='geometria-fon'>
                                                         <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
                                                             <NumerosOrdinales />
@@ -178,7 +178,7 @@ export default function HomeNumeracion() {
                                                     </div>
 
                                                     : rutaActual == "Division" ?
-                                                        <div className='space-fondo'>
+                                                        <div className='geometria-fon'>
                                                             <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
 
@@ -186,7 +186,7 @@ export default function HomeNumeracion() {
                                                             </div>
                                                         </div>
                                                          : rutaActual == "Sustraccion" ?
-                                                         <div className='space-fondo'>
+                                                         <div className='geometria-fon'>
                                                              <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
 
@@ -195,7 +195,7 @@ export default function HomeNumeracion() {
                                                              </div>
                                                          </div>
                                                          : rutaActual == "Multiplicacion" ?
-                                                         <div className='space-fondo'>
+                                                         <div className='geometria-fon'>
                                                              <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
 
