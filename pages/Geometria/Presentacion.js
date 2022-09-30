@@ -15,7 +15,7 @@ export default function Presentacion(){
         setCounter(counter + 1)
     }
     useEffect(()=>{
-        const docRef = doc(db, "11111", "Niveles","Nivel_1", "Datos_Nivel1");
+        const docRef = doc(db, "11111", "Niveles","Nivel_2", "Datos_Nivel2");
         const docSnap =  getDoc(docRef)
         .then((docSnap)=>{
             if (docSnap.exists()) {
@@ -42,7 +42,7 @@ export default function Presentacion(){
     })
     const handleClick2 = () => {
         if(data.Objetivos.length == counter2 + 1){
-            ActualizarNivel(data.position, "nivel1")
+            ActualizarNivel(data.position, "nivel2")
             setActivo(true)
         }else{
             setCounter2(counter2 + 1)
@@ -87,7 +87,7 @@ export default function Presentacion(){
            {
             activo==false?
                     <div className="siguiente-espacial"><button onClick={atras} className="e">Atras</button> <button onClick={handleClick2} >Continuar</button></div>
-                :<div className="siguiente-espacial"><Link href="/Numeracion/Secuencias"><button>INICIAR CON EL TEMA 1</button></Link></div>
+                :<div className="siguiente-espacial"><Link href="/Geometria/Poligonos"><button>INICIAR CON EL TEMA 1</button></Link></div>
            }
             
         </div>:<h2>No deberian estar aqui</h2>

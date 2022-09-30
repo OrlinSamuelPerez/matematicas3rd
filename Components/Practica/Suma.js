@@ -1038,15 +1038,15 @@ export default function Suma() {
         return (
             <div className="Numerospi">
                 <h3>Completa correctamente la siguiente suma. Nota: Esta suma tiene llevadas.</h3>
-                <div className="grid">
-                    <div>
+                <div className="grid-suma">
+                    <div >
                         <div className="drop-suma">
                             <div className="box-drop-suma" >4</div>
                             <div className="box-drop-suma" >6</div>
                             <div className="box-drop-suma" >4</div>
 
                         </div>
-                        <div className="drop-suma-1">
+                        <div className="drop-suma">
                             <div className="box-drop-suma" >+</div>
                             <div className="box-drop-suma" >2</div>
                             <div className="box-drop-suma" >4</div>
@@ -1067,7 +1067,7 @@ export default function Suma() {
                             <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag11}>1</div>
                             <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag11}>3</div>
                             <div className="drag-d-suma" draggable="true" id="seis" onDragStart={drag11}>6</div>
-                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag11}>5</div>
+                            <div className="drag-d-suma" draggable="true" id="cinco" onDragStart={drag11}>5</div><br></br>
                             <div className="drag-d-suma" draggable="true" id="cuatro" onDragStart={drag11}>4</div>
                             <div className="drag-d-suma" draggable="true" id="ocho" onDragStart={drag11}>8</div>
                             <div className="drag-d-suma" draggable="true" id="nueve" onDragStart={drag11}>9</div>
@@ -2368,7 +2368,7 @@ export default function Suma() {
 
                 </div>
 
-                : <Tiempo />
+                : <Tiempo /> 
             }
         </div>
     )

@@ -733,7 +733,7 @@ export default function Mulpiplicacion() {
             <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-m">
-                    <div>
+                    <div className="grid-m-1">
                         <div className="drop-mult">
                             <div className="box-drop-mult" >4</div>
                             <div className="box-drop-mult" >0</div>
@@ -829,7 +829,7 @@ export default function Mulpiplicacion() {
             <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-m">
-                    <div>
+                    <div className="grid-m-1">
                         <div className="drop-mult">
                             <div className="box-drop-mult" >4</div>
                             <div className="box-drop-mult" >6</div>

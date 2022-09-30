@@ -608,7 +608,7 @@ export default function ValorPosicion() {
                         <input type="number" onChange={handleChange} value={valor.decena} name="decena" max={9} min={0} />D +
                         <input type="number" onChange={handleChange} value={valor.unidad} name="unidad" max={9} min={0} />U <br></br>
                         <input type="number" onChange={handleChange} value={valor.suma} name="suma" min={0} /><br></br>
-                        <button onClick={comprobarPregunta(1, 2, 6, 126)} >Comprobar</button>
+                        <button onClick={()=>comprobarPregunta(1, 2, 6, 126)} >Comprobar</button>
                     </div>
                 </div>
 
@@ -828,7 +828,7 @@ export default function ValorPosicion() {
             {juegoActivo == false ?
                 <div className="valorposicion">
                     {counter == 0 ?
-                        <Ejercicio14 />
+                        <Ejercicio1 />
                         : counter == 1 ?
                             <Ejercicio2 />
                             : counter == 2 ?
@@ -870,7 +870,7 @@ export default function ValorPosicion() {
                                                                                                     : <h1>Fin</h1>
                     }
                 </div>
-                : <h1>..</h1>
+                : <Tiempo/>
             }
         </div>
     )

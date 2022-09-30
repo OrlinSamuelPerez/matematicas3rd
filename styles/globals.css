@@ -561,28 +561,28 @@ nav button {
   text-align: center;
   justify-content: center;
   align-items: center;
+  justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
 }
 .raya {
   height: 10px;
-  background-color: black;
+  background-color: #09ffb1;
   border: none;
-  width: 34%;
-  margin-right: 53%;
+  width: 400px;
+
+
 }
 .raya1 {
   height: 10px;
   background-color: black;
   border: none;
-  width: 43%;
-  margin-right: 42%;
+  width: 50%;
 }
 .raya2 {
   height: 10px;
   background-color: black;
   border: none;
-  width: 67%;
-  margin-right: 42%;
+  width: 50%;
 }
 .drop-suma {
   display: grid;
@@ -592,17 +592,23 @@ nav button {
   text-align: center;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  display: flex;
+  font-family: "fredoka one";
+}
+.drop-suma{
+  font-family: "fredoka one";
+
 }
 .drop-suma-1 {
   display: grid;
   gap: 10px;
+  display: flex;
+
   width: auto;
   padding-left: 15%;
   text-align: center;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
 }
 .drop-suma-2 {
   display: grid;
@@ -694,7 +700,7 @@ nav button {
   justify-content: center;
   align-items: center;
   margin-top: 25px;
-  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .drag-d-suma {
   width: 80px;
@@ -702,11 +708,12 @@ nav button {
   border: 4px solid #161616;
   border-radius: 10px;
   font-size: 50px;
+  justify-content: center;
   text-align: center;
-  font-family: "roboto";
+  font-family: "fredoka one";
   font-weight: 900;
   color: #ffffff;
-  background-color: #005f7b;
+  background-color: #00bdf7;
   height: 80px;
   cursor: pointer;
 }
@@ -1210,6 +1217,7 @@ canvas {
  width: 130px;
  position: absolute;
  top: 500px;
+ right: 30px;
  
 }
 .house-start{
@@ -1437,4 +1445,8 @@ canvas {
   font-weight: 400;
   text-align: center;
   font-size: 20px;
+}
+.grid-suma{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
