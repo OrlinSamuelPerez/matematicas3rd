@@ -12,8 +12,8 @@ import Division from '../../Components/Practica/Division';
 import Mulpiplicacion from '../../Components/Practica/Multiplicacion';
 import NumeroPares from '../../Components/Practica/NumeroPares';
 import NumerosOrdinales from '../../Components/Practica/NumerosOrdinales';
+import Poligonos from '../../Components/Practica/Poligonos';
 import Resta from '../../Components/Practica/Resta';
-import Secuencias from '../../Components/Practica/Secuencia';
 
 import SignosComparacion from '../../Components/Practica/SignosComparacion';
 import Suma from '../../Components/Practica/Suma';
@@ -130,7 +130,7 @@ export default function HomeNumeracion() {
                                 <div className='geometria-fon'>
                                     <div className='juegoFondoSpace'>
                                     <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-                                        <Secuencias />
+                                        <Poligonos/>
 
                                     </div>
                                 </div>
