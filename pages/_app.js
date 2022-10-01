@@ -3,6 +3,7 @@ import '../styles/Signoscomparacion.css'
 
 import '../styles/Login.css'
 import '../styles/Home.css'
+import '../styles/poligonos.css'
 import '../styles/geometria.css'
 import '../styles/medicion.css'
 import '../styles/multiplicacion.css'
