@@ -37,10 +37,10 @@ export default function Start(){
     const arrayMostrar = totalNivel.slice(0,data.posicionActual.nivel1 - 1)
     const arrayDeshabilitado = totalNivel.slice(data.posicionActual.nivel1 - 1)
     return(
-        <div className="space-fondo">
+        <div className="geometria-fon">
             <div className="grid-cardlevel">
-                <CardLevel color="#6A35BF" level="Numeracion" id="Presentacion" nombre="Presentacion" numero="1" img="astronauta-music.png"/>
-                {arrayMostrar.map(e=><CardLevel color="#6A35BF" level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="astronauta-music.png"/>)}
+                <CardLevel color="#2D5764" level="Numeracion" id="Presentacion" nombre="Presentacion" numero="1" img="leon.png"/>
+                {arrayMostrar.map(e=><CardLevel color="#2D5764" level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="leon.png"/>)}
                 {arrayDeshabilitado.map(e=><CardLevel clasDesabilitar="not-active" color="#202121"  level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="candado.png"/>)}
             </div>
             

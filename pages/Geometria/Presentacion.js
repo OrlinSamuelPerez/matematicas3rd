@@ -59,27 +59,27 @@ export default function Presentacion(){
     }
     return(
         counter == 0?
-        <div className="space-fondo">
+        <div className="geometria-fon">
             <DialogoPersonaje 
                 titulo={"Bienvenido a la "+data.Nombre }
                 dialogo={data.Definicion}
-                img="/img/astronauta-lapiz.png"
+                img="/img/bosque-otono.jpg"
                 color="#6418a1f7"
             />
             <div className="siguiente-espacial"><button onClick={atras} className="e">Atras</button>    <button onClick={handleClick1} >Continuar</button></div>
             
 
         </div>:counter == 1?
-        <div className="space-fondo">
+        <div className="geometria-fon">
             <Video LinkVideo={data.video}/>
             <div className="siguiente-espacial"><button onClick={atras} className="e">Atras</button>    <button onClick={handleClick1} >Continuar</button></div>
 
         </div>:counter == 2?
-        <div className="space-fondo">
+        <div className="geometria-fon">
             <DialogoPersonaje
                     titulo="Objetivos"
                     dialogo={data.Objetivos[counter2].Objetivos}
-                    img="/img/astronauta-marciano.jpg"
+                    img="/img/ardilla.jpg"
                     color="#6418a1f7"
 
 
