@@ -2,8 +2,8 @@
 export default function Video(props) {
     const LinkVideo = props.LinkVideo.substr((props.LinkVideo.length - 11), props.LinkVideo.length)  ;
     return (
-      <>
-        <div className="video-space">
+      <div>
+        <div style="display:none;" className="video-space">
             <iframe
               src={"https://www.youtube.com/embed/"+LinkVideo+"?autoplay=1&origin"}
               title="YouTube video player"
@@ -11,6 +11,7 @@ export default function Video(props) {
               allowfullscreen>
             </iframe>
         </div>
-      </>
+
+      </div>
     )
   }

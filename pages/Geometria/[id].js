@@ -194,7 +194,7 @@ export default function HomeNumeracion() {
 
                                                              </div>
                                                          </div>
-                                                         : rutaActual == "Multiplicacion" ?
+                                                         : rutaActual == "Congruencia" ?
                                                          <div className='geometria-fon'>
                                                              <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
