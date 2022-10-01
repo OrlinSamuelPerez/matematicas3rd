@@ -63,6 +63,35 @@ export default function ValorPosicion() {
 
 
     }
+    const comprobarPregunta2 = (unidadMillar, centena, decena, unidad, suma) => {
+
+        if (unidadMillar == valor.unidadMillar && centena == valor.centena && decena == valor.decena && unidad == valor.unidad && suma == valor.suma) {
+            setJuegoActivo(true)
+            setSiguienteJuegoActivo(true)
+            setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+            PreguntasAnalisis(
+                router.query.id,
+                true,
+                "Completa con la descomposicion y composicion correcta.",
+                1,
+                counter
+
+            )
+        } else {
+            setJuegoActivo(true)
+            setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+            PreguntasAnalisis(
+                router.query.id,
+                false,
+                "Completa con la descomposicion y composicion correcta.",
+                1,
+                counter
+
+            )
+        }
+
+
+    }
     const Ejercicio1 = () => {
         const img = [{ img: "/img/1.png", validar: true }, { img: "/img/2.png", validar: false }, { img: "/img/3.png", validar: false }]
         const validar = (validar) => {
@@ -92,11 +121,11 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <p>La unidad es el elemento entero más pequeño que se utiliza para contar y para representar cifras.</p>
-                <div>
+                
                     <h4>Elige la imagen que tiene 1 unidad.</h4>
-                </div>
+                
                 <div className="grid-unidad">
                     {img.map(e =>
                         <div ><img onClick={() => validar(e.validar)} src={e.img} /></div>
@@ -134,7 +163,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>Elige la imagen que tiene 4 unidades</h4>
                 </div>
@@ -175,7 +204,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>En el número 5,782; ¿Qué valor posicional ocupa el dígito 7?</h4>
                 </div>
@@ -216,7 +245,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>En el número 15,783; el dígito 5 ocupa el lugar posicional de la: </h4>
                 </div>
@@ -256,7 +285,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>¿Cuántos dígitos posee el número 3,525?</h4>
                 </div>
@@ -296,7 +325,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>En el número 15,783; ¿Cuál dígito ocupa el lugar posicional de la decena de millar? </h4>
                 </div>
@@ -336,7 +365,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>¿Cuántos dígitos posee el número 15,875?</h4>
                 </div>
@@ -376,7 +405,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>Elige el número que está formado por 2 centenas y 3 decenas.</h4>
                 </div>
@@ -416,7 +445,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>Elige el número que está formado por 7 centenas y 5 decenas.</h4>
                 </div>
@@ -456,7 +485,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>En el número 326, ¿Cuál dígito ocupa el valor posicional de la centena?</h4>
                 </div>
@@ -496,7 +525,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>En el número 78,524; el dígito 5 ocupa el valor posicional de la: </h4>
 
@@ -538,7 +567,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>Elige el número formado por 2 decenas de millar, 5 unidades de millar y 2 decenas.</h4>
                 </div>
@@ -578,7 +607,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>Elige el número formado por 3 centenas y 2 unidades.</h4>
 
@@ -596,7 +625,7 @@ export default function ValorPosicion() {
     const Ejercicio14 = () => {
 
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>Escribe el número representado y su composición</h4>
                 </div>
@@ -623,18 +652,23 @@ export default function ValorPosicion() {
     const Ejercicio15 = () => {
 
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>Escribe el número representado y su composición</h4>
                 </div>
-                <div className="grid-unidad">
+                <div className="grid-valorposicion2">
 
-                    <div ><img onClick={() => validar(e.validar)} src="/img/img2.png" /></div>
-
+                    <div ><img src="/img/img2.png" /></div>
+                    <div>
+                        <input type="number" onChange={handleChange} value={valor.unidadMillar} name="unidadMillar" max={9} min={0} />UM +
+                        <input type="number" onChange={handleChange} value={valor.centena} name="centena" max={9} min={0} />C +
+                        <input type="number" onChange={handleChange} value={valor.decena} name="decena" max={9} min={0} />D +
+                        <input type="number" onChange={handleChange} value={valor.unidad} name="unidad" max={9} min={0} />U <br></br>
+                        <input type="number" onChange={handleChange} value={valor.suma} name="suma" min={0} /><br></br>
+                        <button onClick={()=>comprobarPregunta2(1,2,5, 6, 1256)} >Comprobar</button>
+                    </div>
                 </div>
-                <input type="number" max={9} min={0} />UM +<input type="number" max={9} min={0} />C + <input type="number" max={9} min={0} />D + <input type="number" max={9} min={0} />U <br></br>
-                <input type="number" min={0} />
-                <button onClick={comprobarPregunta(1, 2, 6, 126)} >Comprobar</button>
+
 
 
             </div>
@@ -643,20 +677,25 @@ export default function ValorPosicion() {
     const Ejercicio16 = () => {
 
         return (
-            <div className="unidad">
-                <div>
-                    <h4>Escribe el número representado y su composición</h4>
-                </div>
-                <div className="grid-unidad">
-
-                    <div ><img onClick={() => validar(e.validar)} src="/img/img3.png" /></div>
-
-                </div>
-                <input type="number" max={9} min={0} />UM +<input type="number" max={9} min={0} />C + <input type="number" max={9} min={0} />D  <br></br>
-                <input type="number" min={0} />
-                <button onClick={comprobarPregunta(1, 2, 6, 126)} >Comprobar</button>
-
+            <div className="unidad2">
+            <div>
+                <h4>Escribe el número representado y su composición</h4>
             </div>
+            <div className="grid-valorposicion">
+
+                <div ><img src="/img/img3.png" /></div>
+                <div>
+                    <input type="number" onChange={handleChange} value={valor.centena} name="centena" max={9} min={0} />UM +
+                    <input type="number" onChange={handleChange} value={valor.decena} name="decena" max={9} min={0} />C +
+                    <input type="number" onChange={handleChange} value={valor.unidad} name="unidad" max={9} min={0} />D <br></br>
+                    <input type="number" onChange={handleChange} value={valor.suma} name="suma" min={0} /><br></br>
+                    <button onClick={()=>comprobarPregunta(1, 1, 3, 1130)} >Comprobar</button>
+                </div>
+            </div>
+
+
+
+        </div>
         )
     }
     //rev hasta aqui 
@@ -689,7 +728,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>La descomposición del número 532 es:</h4>
                 </div>
@@ -729,7 +768,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>La descomposición del número 5,032 es:</h4>
                 </div>
@@ -769,7 +808,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>La descomposición del número 5,302 es:</h4>
                 </div>
@@ -809,7 +848,7 @@ export default function ValorPosicion() {
             }
         }
         return (
-            <div className="unidad">
+            <div className="unidad2">
                 <div>
                     <h4>La descomposición del número 75,528 es:</h4>
                 </div>
@@ -830,44 +869,44 @@ export default function ValorPosicion() {
                     {counter == 0 ?
                         <Ejercicio1 />
                         : counter == 1 ?
-                            <Ejercicio2 />
+                            <Ejercicio12 />
                             : counter == 2 ?
                                 <Ejercicio3 />
                                 : counter == 3 ?
-                                    <Ejercicio4 />
+                                    <Ejercicio14 />
                                     : counter == 4 ?
                                         <Ejercicio5 />
                                         : counter == 5 ?
-                                            <Ejercicio6 />
+                                            <Ejercicio16 />
                                             : counter == 6 ?
                                                 <Ejercicio7 />
                                                 : counter == 7 ?
-                                                    <Ejercicio8 />
+                                                    <Ejercicio18 />
                                                     : counter == 8 ?
                                                         <Ejercicio9 />
                                                         : counter == 9 ?
-                                                            <Ejercicio10 />
+                                                            <Ejercicio20 />
                                                             : counter == 10 ?
                                                                 <Ejercicio11 />
                                                                 : counter == 11 ?
-                                                                    <Ejercicio12 />
+                                                                    <Ejercicio2 />
                                                                     : counter == 12 ?
                                                                         <Ejercicio13 />
                                                                         : counter == 13 ?
-                                                                            <Ejercicio14 />
+                                                                            <Ejercicio4 />
                                                                             : counter == 14 ?
                                                                                 <Ejercicio15 />
                                                                                 : counter == 15 ?
-                                                                                    <Ejercicio16 />
+                                                                                    <Ejercicio6 />
                                                                                     : counter == 16 ?
                                                                                         <Ejercicio17 />
                                                                                         : counter == 17 ?
-                                                                                            <Ejercicio18 />
+                                                                                            <Ejercicio8 />
                                                                                             : counter == 18 ?
                                                                                                 <Ejercicio19 />
                                                                                                 : counter == 19 ?
-                                                                                                    <Ejercicio20 />
-                                                                                                    : <h1>Fin</h1>
+                                                                                                    <Ejercicio10 />
+                                                                                                    : <Fin posicionNivelActual={3}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Numeros_pares_impares"  numero={20}/>
                     }
                 </div>
                 : <Tiempo/>
