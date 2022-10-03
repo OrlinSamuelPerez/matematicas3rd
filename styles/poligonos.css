@@ -44,9 +44,10 @@
     align-items: center;
     margin-left:38%;
 }
-#poligonos-img{
+#poligonos-img, #poligonos-img2{
     width: 400px;
 }
+
 .poligonos-drop{
     width: 200px;
     height: 60px;
@@ -105,7 +106,21 @@
     top: 37%;
     left: 70%;
 }
-
+.poligonos-drop10{
+    position: absolute;
+    top: 26%;
+    left: 22%;
+}
+.poligonos-drop11{
+    position: absolute;
+    top: 55%;
+    left: 70%;
+}
+.poligonos-drop12{
+    position: absolute;
+    top: 32%;
+    left: 70%;
+}
 .poligonos-drag{
   margin: 4%;
   width: 200px;
@@ -138,4 +153,179 @@
  position: absolute;
  top: 500px;
  right: 30px;
+}
+.grid-poligono{
+   
+    display: grid;
+    grid-template-columns: 40% 60%
+  }
+  
+  .grid-poligono2{
+    
+    display: grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .drag-poligono{
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  .drag-poligono1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+ .drop-poligono{
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  } 
+  .img-orden1{
+    width: 90px;
+    height: 90px;
+    
+  }
+  
+  .drop-poligono1{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  } 
+  .box-drop-poligono1 {
+    
+     width: 180px;
+     height: 152px;
+     background-color: white;
+     border-radius: 10px;
+     border: 4px solid #161616;
+     border-radius: 10px;
+     font-size: 22px;
+     text-align: justify;
+     font-family: "fredoka one";
+     font-weight: 50;
+     color: black;
+   }
+  .box-drop-poligono {
+    padding: 5px;
+     width: 500px;
+     height: 70px;
+     background-color: white;
+     border-radius: 10px;
+     border: 4px solid #161616;
+     border-radius: 10px;
+     font-size: 22px;
+     text-align: justify;
+     font-family: "fredoka one";
+     font-weight: 50;
+     color: black;
+   }
+   .drag-d-poligono {
+    padding: 15px;
+    width: 260px;
+    border: 4px solid #161616;
+    border-radius: 10px;
+    font-size: 22px;
+    text-align: center;
+    font-family: "fredoka one";
+    font-weight: 50;
+    color: black;
+    background-color: #4d9647c0;
+    height: 70px;
+    cursor: pointer;
+  }
+  .drag-d-poligono1 {
+    
+    width: 260px;
+    border: 4px solid #161616;
+    border-radius: 10px;
+    font-size: 22px;
+    text-align: center;
+    font-family: "fredoka one";
+    font-weight: 50;
+    color: black;
+    background-color: white;
+    height: 70px;
+    cursor: pointer;
+  }
+ 
+  
+  .grid-poligono01{
+   
+    display: grid;
+    grid-template-columns:1fr;
+  }
+  .poligonos-img img{
+    width: 150px;
+   height: 170px;
+    
+  }
+ 
+  .grid-img{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .grid-cla{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    text-align: center;
+    font-family: "fredoka one";
+    font-weight: 50;
+    font-size: 30px;
+    padding: 5px;
+    color: white;
+  }
+.juego7-poligono{
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+}
+.juego7-poligono-repuesta{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+}
+.juego7-poligono img{
+  width: 80%;
+  height: 100%;
+  display: block;
+  
+}
+.juego7-poligono h4{
+  width: 95%;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #ffdba5;
+  text-align: center;
+}
+.juego7-poligono button{
+  background-color: #4d9647c0;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  border: none;
+  border-radius: 20px;
+  font-size: 23px;
+  padding: 10px 60px;
+  width: 250px;
+  
+  margin:10px ;
+}
+.juego7-poligono button:hover{
+  background-color: #40c434;
+  color: black;
+
+}
+.img-poli{
+  width: 590px;
+  height: 405px;
+  margin-top: 6%;
 }
