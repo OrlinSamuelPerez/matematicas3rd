@@ -322,8 +322,8 @@ export default function Poligonos(){
                 PreguntasAnalisis(
                     router.query.id,
                     true,
-                    "Relaciona las siguientes operaciones y sus resultados.",
-                    2,
+                    "Relaciona cada polígono de acuerdo con sus atributos.",
+                    1,
                     counter
 
                 )
@@ -338,8 +338,8 @@ export default function Poligonos(){
                 PreguntasAnalisis(
                     router.query.id,
                     false,
-                    "Relaciona las siguientes operaciones y sus resultados.",
-                    2,
+                    "Relaciona cada polígono de acuerdo con sus atributos.",
+                    1,
                     counter
 
                 )
@@ -415,8 +415,8 @@ export default function Poligonos(){
                 PreguntasAnalisis(
                     router.query.id,
                     true,
-                    "Ordena los animales en la posicion correcta.",
-                    0,
+                    "Clasifica los siguientes polígonos.",
+                    1,
                     counter
 
                 )
@@ -429,8 +429,8 @@ export default function Poligonos(){
                 PreguntasAnalisis(
                     router.query.id,
                     false,
-                    "Ordena los animales en la posicion correcta.",
-                    0,
+                    "Clasifica los siguientes polígonos.",
+                    1,
                     counter
 
                 )
@@ -488,9 +488,9 @@ export default function Poligonos(){
 
     }
 
-    //Numero 7 -16
+    //Numero 7 -13
     const arrayDato = [
-        { image: "/img/hexagono.png", pregunta: "De acuerdo con la cantidad de lados, ¿A qué clasificación de polígonos pertenece?", repuesta: [{ valor: "Cuadrilátero", validar: false }, { valor: "Pentágono", validar: false }, { valor: "Triángulo", validar: false }, { valor: "Hexágono", validar: false }, { valor: "Octágono", validar: false }, { valor: "Heptágono", validar: false }] },
+        { image: "/img/hexagono.png", pregunta: "De acuerdo con la cantidad de lados, ¿A qué clasificación de polígonos pertenece?", repuesta: [{ valor: "Cuadrilátero", validar: false }, { valor: "Pentágono", validar: false }, { valor: "Triángulo", validar: false }, { valor: "Hexágono", validar: true }, { valor: "Octágono", validar: false }, { valor: "Heptágono", validar: false }] },
         { image: "/img/triangulo2.png", pregunta: "De acuerdo con la cantidad de lados, ¿A qué clasificación de polígonos pertenece?", repuesta: [{ valor: "Cuadrilátero", validar: false }, { valor: "Pentágono", validar: false }, { valor: "Triángulo", validar: true }, { valor: "Hexágono", validar: false }, { valor: "Octágono", validar: false }, { valor: "Heptágono", validar: false }] },
         { image: "/img/heptagono.png", pregunta: "De acuerdo con la cantidad de lados, ¿A qué clasificación de polígonos pertenece?", repuesta: [{ valor: "Cuadrilátero", validar: false }, { valor: "Pentágono", validar: false }, { valor: "Triángulo", validar: false }, { valor: "Hexágono", validar: false }, { valor: "Octágono", validar: false }, { valor: "Heptágono", validar: true }] },
         { image: "/img/cuadrilatero.png", pregunta: "De acuerdo con la cantidad de lados, ¿A qué clasificación de polígonos pertenece?", repuesta: [{ valor: "Cuadrilátero", validar: true }, { valor: "Pentágono", validar: false }, { valor: "Triángulo", validar: false }, { valor: "Hexágono", validar: false }, { valor: "Octágono", validar: false }, { valor: "Heptágono", validar: false }] },
@@ -509,8 +509,8 @@ export default function Poligonos(){
                 PreguntasAnalisis(
                     router.query.id,
                     true,
-                    "Selecciona el orden que ocupa el animal.",
-                    0,
+                    "Clasifica los siguientes polígonos.",
+                    1,
                     counter
 
                 )
@@ -521,8 +521,8 @@ export default function Poligonos(){
                 PreguntasAnalisis(
                     router.query.id,
                     false,
-                    "Selecciona el orden que ocupa el animal.",
-                    0,
+                    "Clasifica los siguientes polígonos.",
+                    1,
                     counter
 
                 )
@@ -546,7 +546,17 @@ export default function Poligonos(){
         )
     }
 
-    //Numero 12-16
+    //Numero 14 -17
+    const arrayDato2 = [
+        { image: "/img/hexagono.png", pregunta: "Observa la figura y responde, ¿Cuántos vértices tiene la figura?", repuesta: [{ valor: "4", validar: false }, { valor: "5", validar: false }, { valor: "3", validar: false }, { valor: "6", validar: true }, { valor: "8", validar: false }, { valor: "7", validar: false }] },
+        { image: "/img/triangulo2.png", pregunta: "Observa la figura y responde, ¿Cuántos vértices tiene la figura?", repuesta: [{ valor: "5", validar: false }, { valor: "4", validar: false }, { valor: "3", validar: true }, { valor: "8", validar: false }, { valor: "7", validar: false }, { valor: "6", validar: false }] },
+        { image: "/img/heptagono.png", pregunta: "Observa la figura y responde, ¿Cuántos vértices tiene la figura?", repuesta: [{ valor: "3", validar: false }, { valor: "6", validar: false }, { valor: "4", validar: false }, { valor: "8", validar: false }, { valor: "5", validar: false }, { valor: "7", validar: true }] },
+        { image: "/img/cuadrilatero.png", pregunta: "Observa la figura y responde, ¿Cuántos vértices tiene la figura?", repuesta: [{ valor: "4", validar: true }, { valor: "8", validar: false }, { valor: "7", validar: false }, { valor: "5", validar: false }, { valor: "3", validar: false }, { valor: "6", validar: false }] },
+        { image: "/img/pentagono.png",pregunta: "Observa la figura y responde, ¿Cuántos lados tiene la figura?", repuesta: [{ valor: "4", validar: false },  { valor: "3", validar: false }, { valor: "6", validar: false },{ valor: "5", validar: true }, { valor: "8", validar: false }, { valor: "7", validar: false }] },
+        { image: "/img/triangulo.png",pregunta: "Observa la figura y responde, ¿Cuántos lados tiene la figura?", repuesta: [{ valor: "8", validar: false }, { valor: "3", validar: true }, { valor: "5", validar: false }, { valor: "4", validar: false }, { valor: "7", validar: false }, { valor: "6", validar: false }] },
+        { image: "/img/cuadrilatero2.png",pregunta:  "Observa la figura y responde, ¿Cuántos lados tiene la figura?", repuesta: [{ valor: "5", validar: false }, { valor: "3", validar: false }, { valor: "6", validar: false }, { valor: "8", validar: false }, { valor: "7", validar: false } , {valor: "4", validar: true }] },
+
+    ]
     
     return (
         <div>
@@ -559,23 +569,27 @@ export default function Poligonos(){
                         </div>
                         :counter == 1 ?
                         <div>
-                            <Juego2/>
+                            <Juego7 data={arrayDato2[6]} />
+                            
                         </div>
                         :counter == 2 ?
                         <div>
-                            <Juego3/>
+                            
+                            <Juego6/>
                         </div>
                         :counter == 3 ?
                         <div>
-                            <Juego4/>
+                            <Juego7 data={arrayDato[4]} />
+                           
                         </div>
                         :counter == 4 ?
                         <div>
-                            <Juego5/>
+                             <Juego7 data={arrayDato2[2]} />
+                           
                         </div>
                         :counter == 5 ?
                         <div>
-                            <Juego6/>
+                            <Juego3/>
                         </div>
                         :counter == 6 ?
                         <div>
@@ -583,11 +597,12 @@ export default function Poligonos(){
                         </div>
                         :counter == 7 ?
                         <div>
-                            <Juego7 data={arrayDato[1]} />
+                          <Juego7 data={arrayDato2[3]} />
                         </div>
                         :counter == 8 ?
                         <div>
-                            <Juego7 data={arrayDato[2]} />
+                         <Juego7 data={arrayDato[1]} />
+                           
                         </div>
                          :counter == 9 ?
                          <div>
@@ -595,7 +610,7 @@ export default function Poligonos(){
                          </div>
                          :counter == 10 ?
                          <div>
-                             <Juego7 data={arrayDato[4]} />
+                              <Juego4/>
                          </div>
                          :counter == 11 ?
                          <div>
@@ -603,9 +618,38 @@ export default function Poligonos(){
                          </div>
                          :counter == 12 ?
                          <div>
-                             <Juego7 data={arrayDato[6]} />
+                             <Juego5/>
                          </div>
-                         : <h1>Fin</h1>
+                          :counter == 13 ?
+                          <div>
+                              <Juego7 data={arrayDato2[0]} />
+                          </div>
+                           :counter == 14 ?
+                           <div>
+                               <Juego7 data={arrayDato2[1]} />
+                           </div>
+                           :counter == 15 ?
+                           <div>
+                               <Juego7 data={arrayDato2[5]} />
+                               
+                           </div>
+                           :counter == 16 ?
+                           <div>
+                               <Juego7 data={arrayDato[2]} />
+                           </div>
+                           :counter == 17 ?
+                           <div>
+                               <Juego7 data={arrayDato2[4]} />
+                           </div>
+                           :counter == 18 ?
+                           <div>
+                             <Juego7 data={arrayDato[6]} />
+                           </div>
+                           :counter == 19 ?
+                           <div>
+                              <Juego2/>
+                           </div>
+                        :  <Fin posicionNivelActual={2}  nivel={"nivel2"} nombre={router.query.id} siguienteNivel="/Geometria/Congruencia"  numero={20}/>
                     }
 
                 </div>
