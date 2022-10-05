@@ -8,6 +8,7 @@ import DialogoPersonaje from '../../Components/DialogoPersonaje';
 import DialogoPregunta from '../../Components/DialogoPregunta';
 import Ejemplo from '../../Components/Ejemplo';
 import Felicitaciones from '../../Components/Felicitaciones';
+import Congruencia from '../../Components/Practica/Congruencia';
 import Division from '../../Components/Practica/Division';
 import Mulpiplicacion from '../../Components/Practica/Multiplicacion';
 import NumeroPares from '../../Components/Practica/NumeroPares';
@@ -199,7 +200,7 @@ export default function HomeNumeracion() {
                                                              <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
 
-                                                                 <Mulpiplicacion/>
+                                                                 <Congruencia/>
 
                                                              </div>
                                                          </div>

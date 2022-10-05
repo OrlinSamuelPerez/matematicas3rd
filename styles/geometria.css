@@ -62,3 +62,99 @@
     overflow-x: hidden;
     height: 100vh;
 }
+.igual{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    border-radius: 30px;
+    background-color: #363869;
+    background-color: #023e87;
+    gap: 20px;
+}
+.aleatoria{
+    background-color: rgb(255, 255, 255);
+    background-color: #080d69;
+    background-color: #023e87;
+    display: grid;
+    border-radius: 30px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.igual:hover {
+    cursor: pointer;
+    background-color: rgb(255, 1, 153);
+}
+.aleatoria:hover {
+    cursor: pointer;
+    background-color: rgb(255, 1, 153);
+}
+.congruencia img{
+    width: 100%;
+   
+}
+.congruencia{ 
+    padding: 30px;
+     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+
+.congruencia-main h3{
+    background-color: #f20875;
+    text-align: center;
+    font-size: 33px;
+    color: white;
+    font-family: "fredoka one";
+
+}
+.congruencia-grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr ;
+}
+.congruencia-grid img{
+    width: 48%;
+    margin-left: 80px;
+    
+    
+}
+.grid-congruencia-main{
+    display: grid;
+    margin-bottom: 30px;
+
+    grid-template-columns: 1fr 30px 1fr ;
+}
+.grid-congruencia-main hr{
+    background-color: rgb(135, 222, 213);
+    border-radius: 30px;
+    height: 100%;
+    width: 3px;
+    border: 8px solid rgb(255, 255, 255);
+}
+.grid-congru{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 70px;
+}
+.grid-congru div{
+    height: 150px;
+
+
+}
+.box-drop{
+    border-color: #f20875;
+    
+}
+.drag-congruencia{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+}
+.drag-congruencia div{
+    margin: 25px;
+
+}
+.drag-congruencia img{
+    width: 100%;
+}
