@@ -5,7 +5,7 @@ import CardLevel from "../../Components/CardLevel"
 export default function Start(){
     const [data, setData] = useState({
         posicionActual:{
-            nivel2:{posicionNivel:1}
+            nivel3:{posicionNivel:1}
         }
         })
     const [totalNivel, setTotalNivel] = useState([])
@@ -24,7 +24,7 @@ export default function Start(){
     },[])
     const Datos = []
     useEffect(()=>{
-        getDocs(query(collection(db, "11111", "Niveles", "Nivel_2"), orderBy("position", "asc")))
+        getDocs(query(collection(db, "11111", "Niveles", "Nivel_3"), orderBy("position", "asc")))
         .then((querySnapshot)=>{
             querySnapshot.forEach((doc) => {
                 if(doc.data().position != "1"){
@@ -34,13 +34,13 @@ export default function Start(){
               setTotalNivel(Datos)
         })
     },[])
-    const arrayMostrar = totalNivel.slice(0,data.posicionActual.nivel2 - 1)
-    const arrayDeshabilitado = totalNivel.slice(data.posicionActual.nivel2 - 1)
+    const arrayMostrar = totalNivel.slice(0,data.posicionActual.nivel3 - 1)
+    const arrayDeshabilitado = totalNivel.slice(data.posicionActual.nivel3 - 1)
     return(
-        <div className="geometria-fon">
+        <div className="fondo-med">
             <div className="grid-cardlevel">
-                <CardLevel color="#2D5764" level="Numeracion" id="Presentacion" nombre="Presentacion" numero="1" img="leon.png"/>
-                {arrayMostrar.map(e=><CardLevel color="#2D5764" level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="leon.png"/>)}
+                <CardLevel color="#e64d00" level="Medicion" id="Presentacion" nombre="Presentacion" numero="1" img="estrella-de-mar.png"/>
+                {arrayMostrar.map(e=><CardLevel color="#e64d00" level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="estrella-de-mar.png"/>)}
                 {arrayDeshabilitado.map(e=><CardLevel clasDesabilitar="not-active" color="#202121"  level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="candado.png"/>)}
             </div>
             

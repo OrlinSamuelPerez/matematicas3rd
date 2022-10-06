@@ -10,6 +10,19 @@
     top: 0;
     left: 0;
 }
+.fondo-med{
+    background: #00b887;
+    background-image: url("/img/fondos-mar.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+}
 .mediciontitulo{
     font-family: "roboto";
     font-size: 129px;
@@ -21,7 +34,7 @@
 .empezar-medicion{
     background-color: #6052FF;
     color: white;
-    font-weight: 900;
+    font-weight: 900; 
     font-family: "roboto";
     font-size: 39px;
     border: none;

@@ -10,6 +10,19 @@
     top: 0;
     left: 0;
 }
+.fondo-pirata{
+    background: #2c5e79;
+    background-image: url("/img/fondo-pirata.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+}
 .estadisticatitulo{
     font-family: "roboto";
     font-size: 90px;

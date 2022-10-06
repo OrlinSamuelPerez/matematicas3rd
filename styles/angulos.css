@@ -1,0 +1,63 @@
+.box-drop-angulo{
+    width: 1px;
+    height: 140px;
+    background-color: white;
+    border-radius: 10px;
+    border: 4px solid #161616;
+    border-radius: 10px;
+    font-size: 22px;
+    text-align: justify;
+    font-family: "fredoka one";
+    font-weight: 50;
+    color: black;
+}
+.box-drop-angulo img{
+    width: 132px;
+    height: 132px;
+}
+.drop-angulo{
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  } 
+  .drag-d-angulo {
+    padding: 15px;
+    width: 302px;
+    border: 4px solid #161616;
+    border-radius: 10px;
+    font-size: 22px;
+    text-align: center;
+    font-family: "fredoka one";
+    font-weight: 50;
+    color: black;
+    background-color: #4d9647c0;
+    height: 70px;
+    cursor: pointer;
+  }
+  .drag-d-angulo2 {
+   
+    width: 302px;
+    border: 4px solid #161616;
+    border-radius: 10px;
+    font-size: 22px;
+    text-align: center;
+    font-family: "fredoka one";
+    font-weight: 50;
+    color: black;
+    background-color: white;
+    height: 70px;
+    cursor: pointer;
+  }
+  .grid-angulos2{
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+  }
+  .grid-angulos2 img{
+    padding: 0px;
+    margin: 0px;
+  }

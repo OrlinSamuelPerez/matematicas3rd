@@ -9,6 +9,8 @@ import DialogoPregunta from '../../Components/DialogoPregunta';
 import Ejemplo from '../../Components/Ejemplo';
 import Felicitaciones from '../../Components/Felicitaciones';
 import Congruencia from '../../Components/Practica/Congruencia';
+import Angulos from '../../Components/Practica/Angulos';
+import CuerposGeometricos from '../../Components/Practica/CuerposGeometricos';
 import Division from '../../Components/Practica/Division';
 import Mulpiplicacion from '../../Components/Practica/Multiplicacion';
 import NumeroPares from '../../Components/Practica/NumeroPares';
@@ -23,6 +25,7 @@ import ValorPosicion from '../../Components/Practica/ValorPosicion';
 
 import Video from '../../Components/Video';
 import { ActualizarNivel } from '../../Service/ActualizarNivel';
+import Simetria from '../../Components/Practica/Simetria';
 export default function HomeNumeracion() {
     const [counter, setCounter] = useState(0)
     const [counter2, setCounter2] = useState(0)
@@ -143,11 +146,11 @@ export default function HomeNumeracion() {
                                             <SignosComparacion />
                                         </div>
                                     </div>
-                                    : rutaActual == "Adicion" ?
+                                    : rutaActual == "Angulos" ?
                                         <div className='geometria-fon'>
                                             <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-                                                <Suma />
+                                                <Angulos/>
 
                                             </div>
                                         </div>
@@ -161,11 +164,11 @@ export default function HomeNumeracion() {
 
                                                 </div>
                                             </div>
-                                            : rutaActual == "Numeros_pares_impares" ?
+                                            : rutaActual == "CuerposGeometricos" ?
                                                 <div className='geometria-fon'>
                                                     <div className='juegoFondoSpace'>
                                             <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-                                                        <NumeroPares />
+                                                        <CuerposGeometricos/>
 
                                                     </div>
                                                 </div>
@@ -186,12 +189,12 @@ export default function HomeNumeracion() {
                                                                 <Division/>
                                                             </div>
                                                         </div>
-                                                         : rutaActual == "Sustraccion" ?
+                                                         : rutaActual == "Simetria" ?
                                                          <div className='geometria-fon'>
                                                              <div className='juegoFondoSpace'>
-                                            <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
+                                                            <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
 
-                                                                 <Resta/>
+                                                                 <Simetria/>
 
                                                              </div>
                                                          </div>

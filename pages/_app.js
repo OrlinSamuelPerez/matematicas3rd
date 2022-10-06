@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import '../styles/Signoscomparacion.css'
-
+import '../styles/angulos.css'
+import '../styles/cuerposgeometricos.css'
 import '../styles/Login.css'
 import '../styles/Home.css'
 import '../styles/poligonos.css'
