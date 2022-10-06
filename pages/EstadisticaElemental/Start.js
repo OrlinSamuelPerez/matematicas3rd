@@ -18,7 +18,7 @@ export default function Start(){
                     setData(docSnap.data())
                   } else {
                     console.log("No such document!");
-                  }
+                   }
               };
           })
     },[])
@@ -35,7 +35,7 @@ export default function Start(){
         })
     },[])
     const arrayMostrar = totalNivel.slice(0,data.posicionActual.nivel4 - 1)
-    const arrayDeshabilitado = totalNivel.slice(data.posicionActual.nivel4 - 1)
+    const arrayDeshabilitado = totalNivel.slice(arrayMostrar.length, 1)
     return(
         <div className="fondo-pirata">
             <div className="grid-cardlevel">

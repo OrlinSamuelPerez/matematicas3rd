@@ -35,7 +35,7 @@ export default function Start(){
         })
     },[])
     const arrayMostrar = totalNivel.slice(0,data.posicionActual.nivel1 - 1)
-    const arrayDeshabilitado = totalNivel.slice(data.posicionActual.nivel1 - 1)
+    const arrayDeshabilitado = totalNivel.slice(arrayMostrar.length, 9)
     return(
         <div className="space-fondo">
             <div className="grid-cardlevel">

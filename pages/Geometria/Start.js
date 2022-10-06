@@ -35,7 +35,7 @@ export default function Start(){
         })
     },[])
     const arrayMostrar = totalNivel.slice(0,data.posicionActual.nivel2 - 1)
-    const arrayDeshabilitado = totalNivel.slice(data.posicionActual.nivel2 - 1)
+    const arrayDeshabilitado = totalNivel.slice(arrayMostrar.length, 5)
     return(
         <div className="geometria-fon">
             <div className="grid-cardlevel">
