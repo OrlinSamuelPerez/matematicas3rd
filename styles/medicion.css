@@ -305,3 +305,51 @@
    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
+.juego-perimetro-repuesta{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr  ;
+}
+.box-drop-perimetro {
+  width: 125px;
+  height: 80px;
+  background-color: white;
+  border-radius: 10px;
+  border: 4px solid #161616;
+  border-radius: 10px;
+  padding-top: 10px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "roboto";
+  font-weight: 900;
+  color: black;
+}
+.box-drop-perimetro1 {
+  width: 125px;
+  height: 80px;
+  background-color: #4d9647c0;
+  border-radius: 10px;
+  border: 4px solid #161616;
+  border-radius: 10px;
+  padding-top: 10px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "roboto";
+  font-weight: 900;
+  color: black;
+}
+.perimetro-drag{
+  margin-top: 50px;
+  padding-top: 12px;
+  width: 125px;
+  border: 4px solid #161616;
+  border-radius: 10px;
+  font-size: 34px;
+  justify-content: center;
+  text-align: center;
+  font-family: "fredoka one";
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #4d9647c0;
+  height: 80px;
+  cursor: pointer;
+}
