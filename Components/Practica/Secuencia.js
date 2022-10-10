@@ -892,7 +892,7 @@ export default function Secuencias() {
         <div>
             <div className="Contador-secuencia">{counter + 1}/10</div>
             {juegoActivo == false ?
-                <div>
+                <div> 
                     {counter == 0 ?
                         <div>
                             <Juego/>

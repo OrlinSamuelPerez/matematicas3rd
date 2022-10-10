@@ -36,7 +36,7 @@ export default function CuerposGeometricos(){
     }
     //numero 1
     let array = ["", "", "", "", "", "", ""]
-
+ 
     const drop = (e) => {
         //Para btener el id arrastrado
         if (array[parseInt(e.target.id)] == "") {

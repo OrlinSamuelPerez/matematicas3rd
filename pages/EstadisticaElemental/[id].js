@@ -6,12 +6,11 @@ import { auth, db } from '../../BD/Configuracion';
 import DialogoPersonaje from '../../Components/DialogoPersonaje';
 import Ejemplo from '../../Components/Ejemplo';
 import Felicitaciones from '../../Components/Felicitaciones';
-import Poligonos from '../../Components/Practica/Poligonos';
-import SignosComparacion from '../../Components/Practica/SignosComparacion';
+import DatosEstadisticos from '../../Components/Practica/DatosEstadisticos.js';
 import Video from '../../Components/Video';
 import { ActualizarNivel } from '../../Service/ActualizarNivel';
 export default function HomeNumeracion() {
-    const [counter, setCounter] = useState(0)
+    const [counter, setCounter] = useState(4)
     const [counter2, setCounter2] = useState(0)
     const [data, setData] = useState({});
     const [idPage, setId] = useState({ id: "" })
@@ -114,23 +113,16 @@ export default function HomeNumeracion() {
                             <Ejemplo datos={data.Presentacion} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
                         </div>
                         : counter == 4 ?
-                            rutaActual == "Poligonos" ?
+                            rutaActual == "DatosEstadisticos" ?
                                 <div className='fondo-pirata'>
                                     <div className='juegoFondoSpace'>
                                     <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-                                        <Poligonos/>
+                                        <DatosEstadisticos/>
 
                                     </div>
                                 </div>
 
-                                : rutaActual == "SignosComparacion" ?
-                                    <div className='fondo-pirata'>
-                                        <div className='juegoFondoSpace'>
-                                        <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-                                            <SignosComparacion />
-                                        </div>
-                                    </div>
-                                    
+                               
                                     :<h1></h1>
                                                         : counter == 5 ? Actualiza() : <div><Felicitaciones Link="/Numeracion/Start" /></div>
     )
