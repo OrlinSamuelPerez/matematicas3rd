@@ -6,6 +6,8 @@ import { auth, db } from '../../BD/Configuracion';
 import DialogoPersonaje from '../../Components/DialogoPersonaje';
 import Ejemplo from '../../Components/Ejemplo';
 import Felicitaciones from '../../Components/Felicitaciones';
+import Longitud from '../../Components/Practica/Longitud';
+import Perimetro from '../../Components/Practica/Perimetro';
 import Poligonos from '../../Components/Practica/Poligonos';
 import SignosComparacion from '../../Components/Practica/SignosComparacion';
 import Video from '../../Components/Video';
@@ -16,6 +18,8 @@ export default function HomeNumeracion() {
     const [data, setData] = useState({});
     const [idPage, setId] = useState({ id: "" })
     const rutaActual = useRouter().query.id
+    const dataEjemplo=["/img/L1.png", "/img/L2.png", "/img/L3.png", "/img/L4.png", "/img/L5.png", "/img/L6.png", "/img/L7.png", "/img/L8.png", "/img/L9.png", "/img/L10.png", "/img/L11.png", "/img/L12.png", "/img/L13.png", "/img/L14.png", "/img/L15.png", "/img/L16.png"]
+    const dataEjemplo2=["/img/P1.png", "/img/P2.png", "/img/P3.png", "/img/P4.png", "/img/P5.png", "/img/P6.png"]
     const handleClick1 = () => {
         setCounter(counter + 1)
     }
@@ -110,24 +114,31 @@ export default function HomeNumeracion() {
                         <div className="siguiente-espacial"><button onClick={() => atras("oivos")} >Atrás</button><button onClick={handleClick2} >Continuar</button></div>
 
                     </div> : counter == 3 ?
+                     rutaActual == "Longitud"?
+                        
                         <div className="fondo-med">
-                            <Ejemplo datos={data.Presentacion} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
+
+                            <Ejemplo datos={dataEjemplo} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
                         </div>
+                        :<div className="fondo-med">
+
+                        <Ejemplo datos={dataEjemplo2} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
+                    </div>
                         : counter == 4 ?
-                            rutaActual == "Poligonos" ?
+                            rutaActual == "Longitud" ?
                                 <div className='fondo-med'>
                                     <div className='juegoFondoSpace'>
                                     <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-                                        <Poligonos/>
+                                        <Longitud/>
 
                                     </div>
                                 </div>
 
-                                : rutaActual == "SignosComparacion" ?
+                                : rutaActual == "Perimetro" ?
                                     <div className='fondo-med'>
                                         <div className='juegoFondoSpace'>
                                         <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-                                            <SignosComparacion />
+                                            <Perimetro/>
                                         </div>
                                     </div>
                                     
