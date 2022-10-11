@@ -2,7 +2,7 @@ import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { auth, db } from "../BD/Configuracion";
 
 export  function PreguntasAnalisis(subTema,validar, pregunta,idobjetivo, numero){
-    console.log(subTema)
+   
     auth.onAuthStateChanged(async user=>{
         const data = []
         if(user != null){
@@ -13,7 +13,7 @@ export  function PreguntasAnalisis(subTema,validar, pregunta,idobjetivo, numero)
               } else {
                 data.push("No such document!")
               }
-              console.log(data[0][numero])
+             
             if(validar==false){
                     if(data[0] == "No such document!"){
                         await setDoc(doc(db, "11111", "Usuarios", "Estudiantes", user.email, "Progeso-Estudiante",subTema  ), {

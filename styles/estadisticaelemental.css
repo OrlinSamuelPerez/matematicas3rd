@@ -9,7 +9,7 @@
     position: absolute;
     top: 0;
     left: 0;
-}
+} 
 .fondo-pirata{
     background: #2c5e79;
     background-image: url("/img/fondo-pirata.jpg");
@@ -68,7 +68,7 @@
     
 }
 @keyframes juego1{
-    0%{ background-image: url("/img/grafica2.gif");}
+    0%{ background-image: url("/img/grafica1.gif");}
 }
 .juego2-estadistica{
     animation: juego2 5s ;
@@ -100,7 +100,55 @@
     
 }
 @keyframes juego3{
-    0%{ background-image: url("/img/grafica1.gif");}
+    0%{ background-image: url("/img/grafi.gif");}
+}
+.juego4-estadistica{
+    animation: juego4 5s ;
+    background-image: url("/img/grafica4.png");
+    background-position: center;
+    background-size: cover;
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    transition: 1s;
+
+    
+}
+@keyframes juego4{
+    0%{ background-image: url("/img/grafica4.gif");}
+}
+.juego5-estadistica{
+    animation: juego5 5s ;
+    background-image: url("/img/grafica5.png");
+    background-position: center;
+    background-size: cover;
+    width: 485px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 358px;
+    transition: 1s;
+
+    
+}
+@keyframes juego5{
+    0%{ background-image: url("/img/grafica5.gif");}
+}
+.juego7-estadistica{
+    background-image: url("/img/tabla1.png");
+    background-position: center;
+    background-size: cover;
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    transition: 1s;
+
+    
+}
+.estadistico-juego{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .estadistico-juego h3{
     background-color: rgb(0, 160, 115);
@@ -112,17 +160,45 @@
     text-align: center;
     color: rgb(255, 255, 255);
 }
+.title{
+    background-color: #fdd9e5;
+    margin-left: 65px;
+  width: 520px;
+    text-align: justify;
+    font-size: 25px;
+    font-family: "fredoka one";
+    letter-spacing: 1px;
+    text-align: center;
+    color: black;
+}
 .estadistico-juego button{
     border: none;
-    padding: 5px 10px;font-family: "fredoka one";
+    font-family: "fredoka one";
     font-size: 26px;
+    width: 250px;
+    height: 100px;
     color: white;
-    margin: 5px;
+    margin: 25px;
     border-radius: 10px;
     background-color: #f20875;
     justify-content: center;
     align-items: center;
 }.estadistico-juego button:hover{
+    background-color: #08f2d7;
+}
+.es button{
+    border: none;
+    font-family: "fredoka one";
+    font-size: 26px;
+    width: 250px;
+    height: 83px;
+    color: white;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #f20875;
+    justify-content: center;
+    align-items: center;
+}.es button:hover{
     background-color: #08f2d7;
 }
 
@@ -137,7 +213,18 @@
 .drop-table{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 10px;
+    margin: 0px 0px 0px 20px;
+    height: 78%;
+}
+.drop-table2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0px 0px 0px 20px;
+    height: 78%;
+}
+.drop-table2 div{
+    border-radius: 0px;
+    border-color: 2px solid rgb(255, 30, 30);
 }
 .drop-table div{
     border-radius: 0px;
@@ -148,27 +235,61 @@
     color: rgb(0, 0, 0);
     font-weight: bolder;
     font-size: 25px;
-    padding-top: 15px;
+    padding-top: 0px;
     border: 1px solid #f20875;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
+    margin: 0px;
     text-align: center;
     font-family: "roboto";
+    width: 200px;
+    height: 47px;
 }
 
 .grid-table-estadisitca{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.grid-table-estadisitca2{
+    display: grid;
+    grid-template-columns: 65% 30%;
+   
+}
+.grid-table-estadisitca3{
+    display: grid;
+    grid-template-columns: 52% 46%;
+   
+}
 .drag-table{
-    margin: 10px;
+    position: relative;
+    top: -100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    height: 47px;
+}
+.drag-table2{
+    position: relative;
+    top: -50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    height: 47px;
+}
+.drag-table3{
+    position: relative;
+    top: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    height: 47px;
 }
 .drag-d-table{
+    width: 200px;
+    height: 47px;
     text-align: center;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     font-weight: bolder;
     font-size: 25px;
-    padding-top: 15px;
+    padding-top: 0px;
+    margin-bottom: 10px;
     border: 1px solid #f20875;
     padding-bottom: 15px;
     text-align: center;
@@ -178,4 +299,40 @@
     background-color: #f20875;
     color: white;
     font-size: 30px;
+    
+}
+.tabla-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+   
+}
+.tabla-grid2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+.titlep{
+    width: 100%;
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+    background-color: azure;
+    font-family: "roboto";
+    text-align: justify;
+    font-size: 18px;
+    font-style: oblique;
+    font-weight: bolder;
+}
+.titlep2{
+    width: 96%;
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+    background-color: azure;
+    font-family: "roboto";
+    text-align: justify;
+    font-size: 18px;
+    font-style: oblique;
+    font-weight: bolder;
+}
+.img-es{
+    width: 440px;
 }
