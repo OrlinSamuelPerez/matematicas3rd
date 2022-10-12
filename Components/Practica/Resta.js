@@ -15,14 +15,14 @@ export default function Resta() {
         setCounter(counter + 1)
     }
     const Tiempo = () => {
-        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
             setTimeout(() => {
                 setJuegoActivo(false)
                 setCounter(counter + 1)
-                }, 3000)
-            :setTimeout(() => {
+            }, 3000)
+            : setTimeout(() => {
                 setJuegoActivo(false)
-                }, 3000)
+            }, 3000)
         return (
             <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
                 <Feliciades />
@@ -98,7 +98,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >7</div>
                             <div className="box-drop-resta" >2</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j0"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop} onDrop={drop}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop} onDrop={drop}></div>
@@ -192,7 +192,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >5</div>
                             <div className="box-drop-resta" >3</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j0"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop2} onDrop={drop2}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop2} onDrop={drop2}></div>
@@ -286,7 +286,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >2</div>
                             <div className="box-drop-resta" >0</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j0"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop3} onDrop={drop3}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop3} onDrop={drop3}></div>
@@ -380,7 +380,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >2</div>
                             <div className="box-drop-resta" >2</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j0"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop4} onDrop={drop4}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop4} onDrop={drop4}></div>
@@ -474,7 +474,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >2</div>
                             <div className="box-drop-resta" >1</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j0"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop5} onDrop={drop5}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop5} onDrop={drop5}></div>
@@ -568,7 +568,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >1</div>
                             <div className="box-drop-resta" >5</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j0"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop6} onDrop={drop6}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop6} onDrop={drop6}></div>
@@ -610,8 +610,8 @@ export default function Resta() {
             //que se agregue al cuadro sleccioonad
             e.target.appendChild(document.getElementById(data))
         }
-        if (array7[1] != "" && array7[2] != "" ) {
-            if (array7[1] == "uno" && array7[2] == "ocho" ) {
+        if (array7[1] != "" && array7[2] != "") {
+            if (array7[1] == "uno" && array7[2] == "ocho") {
 
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
@@ -663,7 +663,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >2</div>
                             <div className="box-drop-resta" >7</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j0"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop7} onDrop={drop7}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop7} onDrop={drop7}></div>
@@ -705,8 +705,8 @@ export default function Resta() {
             //que se agregue al cuadro sleccioonad
             e.target.appendChild(document.getElementById(data))
         }
-        if (array8[1] != "" && array8[2] != "" ) {
-            if (array8[1] == "dos" && array8[2] == "ocho" ) {
+        if (array8[1] != "" && array8[2] != "") {
+            if (array8[1] == "dos" && array8[2] == "ocho") {
 
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
@@ -758,7 +758,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >6</div>
                             <div className="box-drop-resta" >9</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j0"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop8} onDrop={drop8}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop8} onDrop={drop8}></div>
@@ -801,7 +801,7 @@ export default function Resta() {
             e.target.appendChild(document.getElementById(data))
         }
         if (array9[1] != "" && array9[2] != "") {
-            if (array9[1] == "tres" && array9[2] == "siete" ) {
+            if (array9[1] == "tres" && array9[2] == "siete") {
 
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
@@ -853,7 +853,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >4</div>
                             <div className="box-drop-resta" >9</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j0"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop9} onDrop={drop9}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop9} onDrop={drop9}></div>
@@ -895,8 +895,8 @@ export default function Resta() {
             //que se agregue al cuadro sleccioonad
             e.target.appendChild(document.getElementById(data))
         }
-        if (array10[1] != "" && array10[2] != "" ) {
-            if (array10[1] == "uno" && array10[2] == "nueve" ) {
+        if (array10[1] != "" && array10[2] != "") {
+            if (array10[1] == "uno" && array10[2] == "nueve") {
 
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
@@ -948,7 +948,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >4</div>
                             <div className="box-drop-resta" >8</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j0"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop10} onDrop={drop10}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop10} onDrop={drop10}></div>
@@ -1047,7 +1047,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >8</div>
 
                         </div>
-                        <hr className="raya1"></hr>
+                        <hr className="raya-j15"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop11} onDrop={drop11}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop11} onDrop={drop11}></div>
@@ -1147,7 +1147,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >9</div>
 
                         </div>
-                        <hr className="raya1"></hr>
+                        <hr className="raya-j15"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop12} onDrop={drop12}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop12} onDrop={drop12}></div>
@@ -1247,7 +1247,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >8</div>
 
                         </div>
-                        <hr className="raya1"></hr>
+                        <hr className="raya-j15"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop13} onDrop={drop13}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop13} onDrop={drop13}></div>
@@ -1347,7 +1347,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >4</div>
 
                         </div>
-                        <hr className="raya1"></hr>
+                        <hr className="raya-j15"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop14} onDrop={drop14}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop14} onDrop={drop14}></div>
@@ -1390,8 +1390,8 @@ export default function Resta() {
             //que se agregue al cuadro sleccioonad
             e.target.appendChild(document.getElementById(data))
         }
-        if (array15[1] != "" && array15[2] != "" && array15[3] != "" ) {
-            if (array15[1] == "dos" && array15[2] == "ocho" && array15[3] == "nueve" ) {
+        if (array15[1] != "" && array15[2] != "" && array15[3] != "") {
+            if (array15[1] == "dos" && array15[2] == "ocho" && array15[3] == "nueve") {
 
                 setJuegoActivo(true)
                 setSiguienteJuegoActivo(true)
@@ -1447,7 +1447,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >6</div>
 
                         </div>
-                        <hr className="raya1"></hr>
+                        <hr className="raya-j15"></hr>
                         <div className="drop-resta">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop15} onDrop={drop15}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop15} onDrop={drop15}></div>
@@ -1507,7 +1507,7 @@ export default function Resta() {
                 )
             }
             else {
- 
+
                 array16 = ["", "", "", "", "", ""]
 
                 setJuegoActivo(true)
@@ -1560,7 +1560,7 @@ export default function Resta() {
                             <div className="box-drop-resta" >4</div>
 
                         </div>
-                        <hr className="raya2"></hr>
+                        <hr className="raya-j19"></hr>
                         <div className="drop-resta-2">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop16} onDrop={drop16}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop16} onDrop={drop16}></div>
@@ -1680,7 +1680,7 @@ export default function Resta() {
 
 
                         </div>
-                        <hr className="raya2"></hr>
+                        <hr className="raya-j19"></hr>
                         <div className="drop-resta-2">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop17} onDrop={drop17}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop17} onDrop={drop17}></div>
@@ -1802,7 +1802,7 @@ export default function Resta() {
 
 
                         </div>
-                        <hr className="raya2"></hr>
+                        <hr className="raya-j19"></hr>
                         <div className="drop-resta-2">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop18} onDrop={drop18}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop18} onDrop={drop18}></div>
@@ -1924,7 +1924,7 @@ export default function Resta() {
 
 
                         </div>
-                        <hr className="raya2"></hr>
+                        <hr className="raya-j19"></hr>
                         <div className="drop-resta-2">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop19} onDrop={drop19}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop19} onDrop={drop19}></div>
@@ -2046,7 +2046,7 @@ export default function Resta() {
 
 
                         </div>
-                        <hr className="raya2"></hr>
+                        <hr className="raya-j19"></hr>
                         <div className="drop-resta-2">
                             <div className="box-drop-resta" id="1" onDragOver={allowdrop20} onDrop={drop20}></div>
                             <div className="box-drop-resta" id="2" onDragOver={allowdrop20} onDrop={drop20}></div>
@@ -2158,8 +2158,8 @@ export default function Resta() {
                             </div>
                             : counter == 2 ?
                                 <div>
-                                      <Juego21 data={arrayDato[9]} />
-                                    
+                                    <Juego21 data={arrayDato[9]} />
+
                                     {juegoSiguienActivo == true ?
                                         <div className="siguiente-espacial"></div>
                                         : <span>.</span>}
@@ -2181,7 +2181,7 @@ export default function Resta() {
                                         : counter == 5 ?
                                             <div>
                                                 <Juego21 data={arrayDato[7]} />
-                                                
+
                                                 {juegoSiguienActivo == true ?
                                                     <div className="siguiente-espacial"></div>
                                                     : <span>.</span>}
@@ -2223,7 +2223,7 @@ export default function Resta() {
                                                                 </div>
                                                                 : counter == 11 ?
                                                                     <div>
-                                                                      <Juego21 data={arrayDato[3]} />
+                                                                        <Juego21 data={arrayDato[3]} />
                                                                         {juegoSiguienActivo == true ?
                                                                             <div className="siguiente-espacial"></div>
                                                                             : <span>.</span>}
@@ -2244,7 +2244,7 @@ export default function Resta() {
                                                                             </div>
                                                                             : counter == 14 ?
                                                                                 <div>
-                                                                                      <Juego21 data={arrayDato[1]} />
+                                                                                    <Juego21 data={arrayDato[1]} />
                                                                                     {juegoSiguienActivo == true ?
                                                                                         <div className="siguiente-espacial"></div>
                                                                                         : <span>.</span>}
@@ -2266,7 +2266,7 @@ export default function Resta() {
 
                                                                                         : counter == 17 ?
                                                                                             <div>
-                                                                                                  <Juego21 data={arrayDato[0]} />
+                                                                                                <Juego21 data={arrayDato[0]} />
                                                                                                 {juegoSiguienActivo == true ?
                                                                                                     <div className="siguiente-espacial"></div>
                                                                                                     : <span>.</span>}
@@ -2288,7 +2288,7 @@ export default function Resta() {
                                                                                                     : counter == 20 ?
                                                                                                         <div>
                                                                                                             <Juego18 />
-                                                                                                          
+
                                                                                                             {juegoSiguienActivo == true ?
                                                                                                                 <div className="siguiente-espacial"></div>
                                                                                                                 : <span>.</span>}
@@ -2296,7 +2296,7 @@ export default function Resta() {
                                                                                                         : counter == 21 ?
                                                                                                             <div>
                                                                                                                 <Juego11 />
-                                                                                                              
+
                                                                                                                 {juegoSiguienActivo == true ?
                                                                                                                     <div className="siguiente-espacial"></div>
                                                                                                                     : <span>.</span>}
@@ -2310,8 +2310,8 @@ export default function Resta() {
                                                                                                                 </div>
                                                                                                                 : counter == 23 ?
                                                                                                                     <div>
-                                                                                                                           <Juego12 />
-                                                                                                                       
+                                                                                                                        <Juego12 />
+
                                                                                                                         {juegoSiguienActivo == true ?
                                                                                                                             <div className="siguiente-espacial"></div>
                                                                                                                             : <span>.</span>}
@@ -2325,8 +2325,8 @@ export default function Resta() {
                                                                                                                         </div>
                                                                                                                         : counter == 25 ?
                                                                                                                             <div>
-                                                                                                                                  <Juego9 />
-                                                                                                                              
+                                                                                                                                <Juego9 />
+
                                                                                                                                 {juegoSiguienActivo == true ?
                                                                                                                                     <div className="siguiente-espacial"></div>
                                                                                                                                     : <span>.</span>}
@@ -2354,12 +2354,12 @@ export default function Resta() {
                                                                                                                                         </div>
                                                                                                                                         : counter == 29 ?
                                                                                                                                             <div>
-                                                                                                                                              <Juego3 />
+                                                                                                                                                <Juego3 />
                                                                                                                                                 {juegoSiguienActivo == true ?
                                                                                                                                                     <div className="siguiente-espacial"></div>
                                                                                                                                                     : <span>.</span>}
                                                                                                                                             </div>
-                                                                                                                                            :  <Fin posicionNivelActual={8}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Multiplicacion"  numero={30}/>
+                                                                                                                                            : <Fin posicionNivelActual={8} nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Multiplicacion" numero={30} />
                     }
 
                 </div>

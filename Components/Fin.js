@@ -34,7 +34,7 @@ export default function Fin(props){
 
 
         }
-    })
+    }) 
     const router = useRouter()
     const recargar =()=>{
         router.reload()

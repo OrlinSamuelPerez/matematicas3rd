@@ -40,6 +40,7 @@ export default function ValorPosicion() {
             setJuegoActivo(true)
             setSiguienteJuegoActivo(true)
             setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+            setValor(valorIncial)
             PreguntasAnalisis(
                 router.query.id,
                 true,
@@ -48,9 +49,11 @@ export default function ValorPosicion() {
                 counter
 
             )
+
         } else {
             setJuegoActivo(true)
             setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+            setValor(valorIncial)
             PreguntasAnalisis(
                 router.query.id,
                 false,
@@ -123,9 +126,9 @@ export default function ValorPosicion() {
         return (
             <div className="unidad2">
                 <p>La unidad es el elemento entero más pequeño que se utiliza para contar y para representar cifras.</p>
-                
-                    <h4>Elige la imagen que tiene 1 unidad.</h4>
-                
+
+                <h4>Elige la imagen que tiene 1 unidad.</h4>
+
                 <div className="grid-unidad">
                     {img.map(e =>
                         <div ><img onClick={() => validar(e.validar)} src={e.img} /></div>
@@ -637,7 +640,7 @@ export default function ValorPosicion() {
                         <input type="number" onChange={handleChange} value={valor.decena} name="decena" max={9} min={0} />D +
                         <input type="number" onChange={handleChange} value={valor.unidad} name="unidad" max={9} min={0} />U <br></br>
                         <input type="number" onChange={handleChange} value={valor.suma} name="suma" min={0} /><br></br>
-                        <button onClick={()=>comprobarPregunta(1, 2, 6, 126)} >Comprobar</button>
+                        <button onClick={() => comprobarPregunta(1, 2, 6, 126)} >Comprobar</button>
                     </div>
                 </div>
 
@@ -646,9 +649,6 @@ export default function ValorPosicion() {
             </div>
         )
     }
-
-
-
     const Ejercicio15 = () => {
 
         return (
@@ -665,7 +665,7 @@ export default function ValorPosicion() {
                         <input type="number" onChange={handleChange} value={valor.decena} name="decena" max={9} min={0} />D +
                         <input type="number" onChange={handleChange} value={valor.unidad} name="unidad" max={9} min={0} />U <br></br>
                         <input type="number" onChange={handleChange} value={valor.suma} name="suma" min={0} /><br></br>
-                        <button onClick={()=>comprobarPregunta2(1,2,5, 6, 1256)} >Comprobar</button>
+                        <button onClick={() => comprobarPregunta2(1, 2, 5, 6, 1256)} >Comprobar</button>
                     </div>
                 </div>
 
@@ -678,24 +678,24 @@ export default function ValorPosicion() {
 
         return (
             <div className="unidad2">
-            <div>
-                <h4>Escribe el número representado y su composición</h4>
-            </div>
-            <div className="grid-valorposicion">
-
-                <div ><img src="/img/img3.png" /></div>
                 <div>
-                    <input type="number" onChange={handleChange} value={valor.centena} name="centena" max={9} min={0} />UM +
-                    <input type="number" onChange={handleChange} value={valor.decena} name="decena" max={9} min={0} />C +
-                    <input type="number" onChange={handleChange} value={valor.unidad} name="unidad" max={9} min={0} />D <br></br>
-                    <input type="number" onChange={handleChange} value={valor.suma} name="suma" min={0} /><br></br>
-                    <button onClick={()=>comprobarPregunta(1, 1, 3, 1130)} >Comprobar</button>
+                    <h4>Escribe el número representado y su composición</h4>
                 </div>
+                <div className="grid-valorposicion">
+
+                    <div ><img src="/img/img3.png" /></div>
+                    <div>
+                        <input type="number" onChange={handleChange} value={valor.centena} name="centena" max={9} min={0} />UM +
+                        <input type="number" onChange={handleChange} value={valor.decena} name="decena" max={9} min={0} />C +
+                        <input type="number" onChange={handleChange} value={valor.unidad} name="unidad" max={9} min={0} />D <br></br>
+                        <input type="number" onChange={handleChange} value={valor.suma} name="suma" min={0} /><br></br>
+                        <button onClick={() => comprobarPregunta(1, 1, 3, 1130)} >Comprobar</button>
+                    </div>
+                </div>
+
+
+
             </div>
-
-
-
-        </div>
         )
     }
     //rev hasta aqui 
@@ -906,10 +906,10 @@ export default function ValorPosicion() {
                                                                                                 <Ejercicio19 />
                                                                                                 : counter == 19 ?
                                                                                                     <Ejercicio10 />
-                                                                                                    : <Fin posicionNivelActual={3}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Numeros_pares_impares"  numero={20}/>
+                                                                                                    : <Fin posicionNivelActual={3} nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Numeros_pares_impares" numero={20} />
                     }
                 </div>
-                : <Tiempo/>
+                : <Tiempo />
             }
         </div>
     )

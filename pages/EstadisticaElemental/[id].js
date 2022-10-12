@@ -10,11 +10,12 @@ import DatosEstadisticos from '../../Components/Practica/DatosEstadisticos.js';
 import Video from '../../Components/Video';
 import { ActualizarNivel } from '../../Service/ActualizarNivel';
 export default function HomeNumeracion() {
-    const [counter, setCounter] = useState(4)
+    const [counter, setCounter] = useState(0)
     const [counter2, setCounter2] = useState(0)
     const [data, setData] = useState({});
     const [idPage, setId] = useState({ id: "" })
     const rutaActual = useRouter().query.id
+    const dataEjemplo = ["/img/DE1.png","/img/DE2.png","/img/DE3.png","/img/DE4.png","/img/DE5.png","/img/DE6.png","/img/DE7.png"]
     const handleClick1 = () => {
         setCounter(counter + 1)
     }
@@ -109,8 +110,8 @@ export default function HomeNumeracion() {
                         <div className="siguiente-espacial"><button onClick={() => atras("oivos")} >Atrás</button><button onClick={handleClick2} >Continuar</button></div>
 
                     </div> : counter == 3 ?
-                        <div className="fondo-pirata">
-                            <Ejemplo datos={data.Presentacion} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
+                         <div className="fondo-pirata">
+                            <Ejemplo datos={dataEjemplo} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
                         </div>
                         : counter == 4 ?
                             rutaActual == "DatosEstadisticos" ?

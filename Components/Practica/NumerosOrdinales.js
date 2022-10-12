@@ -14,14 +14,14 @@ export default function NumerosOrdinales() {
         setCounter(counter + 1)
     }
     const Tiempo = () => {
-        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
             setTimeout(() => {
                 setJuegoActivo(false)
                 setCounter(counter + 1)
-                }, 3000)
-            :setTimeout(() => {
+            }, 3000)
+            : setTimeout(() => {
                 setJuegoActivo(false)
-                }, 3000)
+            }, 3000)
         return (
             <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
                 <Feliciades />
@@ -147,7 +147,7 @@ export default function NumerosOrdinales() {
             <div className="secuencia drop-numeroordinales">
                 <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
                 <p>Al terminar la carrera el caballo obtuvo el quinto lugar, el pato el tercer lugar, el perro el segundo lugar, el gato el primer lugar,
-                    el elefante el cuarto lugar, el mono el sexto lugar y la tortuga el séptimo lugar.
+                    el elefante el cuarto lugar, el mono el sexto lugar y la tortuga el séptimo lugar. <br></br> Nota: Inicie organizando de izquierda a derecha
                 </p>
 
 
@@ -180,27 +180,27 @@ export default function NumerosOrdinales() {
         )
 
     }
-     // numero 8
+    // numero 8
 
-     let array8 = ["", "", "", "", "", "", "", ""]
+    let array8 = ["", "", "", "", "", "", "", ""]
 
-     const drop8 = (e) => {
-         //Para btener el id arrastrado
-         if (array8[parseInt(e.target.id)] == "") {
-             let data = e.dataTransfer.getData("text")
-             //agrego el arreglo del elemento al elmento soltado
-             array8[parseInt(e.target.id)] = data;
-             //que se agregue al cuadro sleccioonad
-             e.target.style.backgroundImage = `url(${data})`
-             console.log(data)
-             console.log(array8)
-         }
-         if (array8[1] != "" && array8[2] != "" && array8[3] != "" && array8[4] != "" && array8[5] != "" && array8[6] != "" && array8[7] != "") {
-             if (array8[1] == "http://localhost:3000/img/caballo.png" && array8[2] == "http://localhost:3000/img/tortuga.png" && array8[3] == "http://localhost:3000/img/mono.png" && array8[4] == "http://localhost:3000/img/gato.png" && array8[5] == "http://localhost:3000/img/pato.png" && array8[6] == "http://localhost:3000/img/perro.png" && array8[7] == "http://localhost:3000/img/elefante.png") {
-                 setJuegoActivo(true)
-                 setSiguienteJuegoActivo(true)
-                 setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-                 PreguntasAnalisis(
+    const drop8 = (e) => {
+        //Para btener el id arrastrado
+        if (array8[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array8[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.style.backgroundImage = `url(${data})`
+            console.log(data)
+            console.log(array8)
+        }
+        if (array8[1] != "" && array8[2] != "" && array8[3] != "" && array8[4] != "" && array8[5] != "" && array8[6] != "" && array8[7] != "") {
+            if (array8[1] == "http://localhost:3000/img/caballo.png" && array8[2] == "http://localhost:3000/img/tortuga.png" && array8[3] == "http://localhost:3000/img/mono.png" && array8[4] == "http://localhost:3000/img/gato.png" && array8[5] == "http://localhost:3000/img/pato.png" && array8[6] == "http://localhost:3000/img/perro.png" && array8[7] == "http://localhost:3000/img/elefante.png") {
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
                     router.query.id,
                     true,
                     "Ordena los animales en la posicion correcta.",
@@ -208,13 +208,13 @@ export default function NumerosOrdinales() {
                     counter
 
                 )
- 
-             }
-             else {
-                 array8 = ["", "", "", "", "", "", "", ""]
-                 setJuegoActivo(true)
-                 setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-                 PreguntasAnalisis(
+
+            }
+            else {
+                array8 = ["", "", "", "", "", "", "", ""]
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
                     router.query.id,
                     false,
                     "Ordena los animales en la posicion correcta.",
@@ -222,401 +222,409 @@ export default function NumerosOrdinales() {
                     counter
 
                 )
- 
- 
- 
-             }
-         }
-     }
- 
-     const Juego8 = () => {
-         return (
-             <div className="secuencia drop-numeroordinales">
-                 <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
-                 <p>Al terminar la carrera el caballo obtuvo el primer lugar, el pato el quinto lugar, el perro el sexto lugar, el gato el cuarto lugar,
-                     el elefante el séptimo lugar, el mono el tercer lugar y la tortuga el segundo lugar.
-                 </p>
- 
- 
-                 <div className="drop imagen-drop">
-                     <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop8}></div>
-                     <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop8}></div>
-                     <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop8}></div>
-                     <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop8}></div>
-                     <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop8}></div>
-                     <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop8}></div>
-                     <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop8}></div>
- 
- 
- 
-                 </div>
-                 <div className="drag">
-                     <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
-                     <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
-                     <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
-                     <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
-                     <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
-                     <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
-                     <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
- 
- 
-                 </div>
- 
-             </div>
- 
-         )
- 
-     }
-   // numero 9
-
-   let array9 = ["", "", "", "", "", "", "", ""]
-
-   const drop9 = (e) => {
-       //Para btener el id arrastrado
-       if (array9[parseInt(e.target.id)] == "") {
-           let data = e.dataTransfer.getData("text")
-           //agrego el arreglo del elemento al elmento soltado
-           array9[parseInt(e.target.id)] = data;
-           //que se agregue al cuadro sleccioonad
-           e.target.style.backgroundImage = `url(${data})`
-           console.log(data)
-           console.log(array9)
-       }
-       if (array9[1] != "" && array9[2] != "" && array9[3] != "" && array9[4] != "" && array9[5] != "" && array9[6] != "" && array9[7] != "") {
-           if (array9[1] == "http://localhost:3000/img/mono.png" && array9[2] == "http://localhost:3000/img/gato.png" && array9[3] == "http://localhost:3000/img/pato.png" && array9[4] == "http://localhost:3000/img/tortuga.png" && array9[5] == "http://localhost:3000/img/elefante.png" && array9[6] == "http://localhost:3000/img/caballo.png" && array9[7] == "http://localhost:3000/img/perro.png") {
-               setJuegoActivo(true)
-               setSiguienteJuegoActivo(true)
-               setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-               PreguntasAnalisis(
-                router.query.id,
-                true,
-                "Ordena los animales en la posicion correcta.",
-                0,
-                counter
-
-            )
-
-           }
-           else {
-               array9 = ["", "", "", "", "", "", "", ""]
-               setJuegoActivo(true)
-               setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-               PreguntasAnalisis(
-                router.query.id,
-                false,
-                "Ordena los animales en la posicion correcta.",
-                0,
-                counter
-
-            )
-
-
-
-           }
-       }
-   }
-
-   const Juego9 = () => {
-       return (
-           <div className="secuencia drop-numeroordinales">
-               <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
-               <p>Al terminar la carrera el mono obtuvo el primer lugar, el elefante el quinto lugar, el caballo el sexto lugar, la tortuga el cuarto lugar,
-                   el perro el séptimo lugar, el pato el tercer lugar y el gato el segundo lugar.
-               </p>
-
-
-               <div className="drop imagen-drop">
-                   <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop9}></div>
-                   <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop9}></div>
-                   <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop9}></div>
-                   <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop9}></div>
-                   <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop9}></div>
-                   <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop9}></div>
-                   <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop9}></div>
-
-
-
-               </div>
-               <div className="drag">
-                   <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
 
 
-               </div>
 
-           </div>
+            }
+        }
+    }
+
+    const Juego8 = () => {
+        return (
+            <div className="secuencia drop-numeroordinales">
+                <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
+                <p>Al terminar la carrera el caballo obtuvo el primer lugar, el pato el quinto lugar, el perro el sexto lugar, el gato el cuarto lugar,
+                    el elefante el séptimo lugar, el mono el tercer lugar y la tortuga el segundo lugar.
+                    <br></br>Nota: Empieze a organizarlos de izquierda a derecha.
+                </p>
+
+
+                <div className="drop imagen-drop">
+                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop8}></div>
+                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop8}></div>
+                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop8}></div>
+                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop8}></div>
+                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop8}></div>
+                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop8}></div>
+                    <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop8}></div>
+
+
+
+                </div>
+                <div className="drag">
+                    <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
 
-       )
-
-   }
-
-   // numero 10
-
-   let array10 = ["", "", "", "", "", "", "", ""]
-
-   const drop10 = (e) => {
-       //Para btener el id arrastrado
-       if (array10[parseInt(e.target.id)] == "") {
-           let data = e.dataTransfer.getData("text")
-           //agrego el arreglo del elemento al elmento soltado
-           array10[parseInt(e.target.id)] = data;
-           //que se agregue al cuadro sleccioonad
-           e.target.style.backgroundImage = `url(${data})`
-           console.log(data)
-           console.log(array10)
-       }
-       if (array10[1] != "" && array10[2] != "" && array10[3] != "" && array10[4] != "" && array10[5] != "" && array10[6] != "" && array10[7] != "") {
-           if (array10[1] == "http://localhost:3000/img/perro.png" && array10[2] == "http://localhost:3000/img/mono.png" && array10[3] == "http://localhost:3000/img/elefante.png" && array10[4] == "http://localhost:3000/img/caballo.png" && array10[5] == "http://localhost:3000/img/pato.png" && array10[6] == "http://localhost:3000/img/gato.png" && array10[7] == "http://localhost:3000/img/tortuga.png") {
-               setJuegoActivo(true)
-               setSiguienteJuegoActivo(true)
-               setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-               PreguntasAnalisis(
-                router.query.id,
-                true,
-                "Ordena los animales en la posicion correcta.",
-                0,
-                counter
-
-            )
-
-           }
-           else {
-               array10 = ["", "", "", "", "", "", "", ""]
-               setJuegoActivo(true)
-               setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-               PreguntasAnalisis(
-                router.query.id,
-                false,
-                "Ordena los animales en la posicion correcta.",
-                0,
-                counter
-
-            )
-
-
-
-           }
-       }
-   }
-
-   const Juego10 = () => {
-       return (
-           <div className="secuencia drop-numeroordinales">
-               <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
-               <p>Al terminar la carrera el perro obtuvo el primer lugar, el pato el quinto lugar, el gato el sexto lugar, el caballo el cuarto lugar,
-                   la tortuga el séptimo lugar, el elefante el tercer lugar y el mono el segundo lugar.
-               </p>
-
-
-               <div className="drop imagen-drop">
-                   <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop10}></div>
-                   <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop10}></div>
-                   <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop10}></div>
-                   <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop10}></div>
-                   <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop10}></div>
-                   <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop10}></div>
-                   <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop10}></div>
-
-
-
-               </div>
-               <div className="drag">
-                   <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
-
-
-               </div>
-
-           </div>
-
-       )
-
-   }
-
-   //Numero 11
-   let array11 = ["", "", "", "", "", "", "", ""]
-
-   const drop11 = (e) => {
-       //Para btener el id arrastrado
-       if (array11[parseInt(e.target.id)] == "") {
-           let data = e.dataTransfer.getData("text")
-           //agrego el arreglo del elemento al elmento soltado
-           array11[parseInt(e.target.id)] = data;
-           //que se agregue al cuadro sleccioonad
-           e.target.style.backgroundImage = `url(${data})`
-           console.log(data)
-           console.log(array11)
-       }
-       if (array11[1] != "" && array11[2] != "" && array11[3] != "" && array11[4] != "" && array11[5] != "" && array11[6] != "" && array11[7] != "") {
-           if (array11[1] == "http://localhost:3000/img/elefante.png" && array11[2] == "http://localhost:3000/img/mono.png" && array11[3] == "http://localhost:3000/img/pato.png" && array11[4] == "http://localhost:3000/img/caballo.png" && array11[5] == "http://localhost:3000/img/gato.png" && array11[6] == "http://localhost:3000/img/perro.png" && array11[7] == "http://localhost:3000/img/tortuga.png") {
-               setJuegoActivo(true)
-               setSiguienteJuegoActivo(true)
-               setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-               PreguntasAnalisis(
-                router.query.id,
-                true,
-                "Ordena los animales en la posicion correcta.",
-                0,
-                counter
-
-            )
-
-           }
-           else {
-               array11 = ["", "", "", "", "", "", "", ""]
-               setJuegoActivo(true)
-               setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-               PreguntasAnalisis(
-                router.query.id,
-                false,
-                "Ordena los animales en la posicion correcta.",
-                0,
-                counter
-
-            )
-
-
-
-           }
-       }
-   }
-
-   const Juego11 = () => {
-       return (
-           <div className="secuencia drop-numeroordinales">
-               <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
-               <p>Al terminar la carrera el elefante obtuvo el primer lugar, el gato el quinto lugar, el perro el sexto lugar, el caballo el cuarto lugar,
-                   la tortuga el séptimo lugar, el pato el tercer lugar y el mono el segundo lugar.
-               </p>
-
-
-               <div className="drop imagen-drop">
-                   <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop11}></div>
-                   <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop11}></div>
-                   <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop11}></div>
-                   <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop11}></div>
-                   <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop11}></div>
-                   <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop11}></div>
-                   <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop11}></div>
-
-
-
-               </div>
-               <div className="drag">
-                   <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
-
-
-               </div>
-
-           </div>
-
-       )
-
-   }
-
-   // Numero 12
-
-   let array12 = ["", "", "", "", "", "", "", ""]
-
-   const drop12 = (e) => {
-       //Para btener el id arrastrado
-       if (array12[parseInt(e.target.id)] == "") {
-           let data = e.dataTransfer.getData("text")
-           //agrego el arreglo del elemento al elmento soltado
-           array12[parseInt(e.target.id)] = data;
-           //que se agregue al cuadro sleccioonad
-           e.target.style.backgroundImage = `url(${data})`
-           console.log(data)
-           console.log(array12)
-       }
-       if (array12[1] != "" && array12[2] != "" && array12[3] != "" && array12[4] != "" && array12[5] != "" && array12[6] != "" && array12[7] != "") {
-           if (array12[1] == "http://localhost:3000/img/mono.png" && array12[2] == "http://localhost:3000/img/caballo.png" && array12[3] == "http://localhost:3000/img/tortuga.png" && array12[4] == "http://localhost:3000/img/elefante.png" && array12[5] == "http://localhost:3000/img/perro.png" && array12[6] == "http://localhost:3000/img/pato.png" && array12[7] == "http://localhost:3000/img/gato.png") {
-               setJuegoActivo(true)
-               setSiguienteJuegoActivo(true)
-               setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
-               PreguntasAnalisis(
-                router.query.id,
-                true,
-                "Ordena los animales en la posicion correcta.",
-                0,
-                counter
-
-            )
-
-           }
-           else {
-               array12 = ["", "", "", "", "", "", "", ""]
-               setJuegoActivo(true)
-               setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
-               PreguntasAnalisis(
-                router.query.id,
-                false,
-                "Ordena los animales en la posicion correcta.",
-                0,
-                counter
-
-            )
-
-
-
-           }
-       }
-   }
-
-   const Juego12 = () => {
-       return (
-           <div className="secuencia drop-numeroordinales">
-               <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
-               <p>Al terminar la carrera el mono obtuvo el primer lugar, el perro el quinto lugar, el pato el sexto lugar, el elefante el cuarto lugar,
-                   el gato el séptimo lugar, la tortuga el tercer lugar y el caballo el segundo lugar.
-               </p>
-
-
-               <div className="drop imagen-drop">
-                   <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop12}></div>
-                   <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop12}></div>
-                   <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop12}></div>
-                   <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop12}></div>
-                   <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop12}></div>
-                   <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop12}></div>
-                   <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop12}></div>
-
-
-
-               </div>
-               <div className="drag">
-                   <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
-                   <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
-
-
-               </div>
-
-           </div>
-
-       )
-
-   }
+
+                </div>
+
+            </div>
+
+        )
+
+    }
+    // numero 9
+
+    let array9 = ["", "", "", "", "", "", "", ""]
+
+    const drop9 = (e) => {
+        //Para btener el id arrastrado
+        if (array9[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array9[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.style.backgroundImage = `url(${data})`
+            console.log(data)
+            console.log(array9)
+        }
+        if (array9[1] != "" && array9[2] != "" && array9[3] != "" && array9[4] != "" && array9[5] != "" && array9[6] != "" && array9[7] != "") {
+            if (array9[1] == "http://localhost:3000/img/mono.png" && array9[2] == "http://localhost:3000/img/gato.png" && array9[3] == "http://localhost:3000/img/pato.png" && array9[4] == "http://localhost:3000/img/tortuga.png" && array9[5] == "http://localhost:3000/img/elefante.png" && array9[6] == "http://localhost:3000/img/caballo.png" && array9[7] == "http://localhost:3000/img/perro.png") {
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
+
+                )
+
+            }
+            else {
+                array9 = ["", "", "", "", "", "", "", ""]
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
+
+                )
+
+
+
+            }
+        }
+    }
+
+    const Juego9 = () => {
+        return (
+            <div className="secuencia drop-numeroordinales">
+                <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
+                <p>Al terminar la carrera el mono obtuvo el primer lugar, el elefante el quinto lugar, el caballo el sexto lugar, la tortuga el cuarto lugar,
+                    el perro el séptimo lugar, el pato el tercer lugar y el gato el segundo lugar.
+                    <br></br>Nota: Empieza a organizarlos de izquierda a derecha.
+
+                </p>
+
+
+                <div className="drop imagen-drop">
+                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop9}></div>
+                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop9}></div>
+                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop9}></div>
+                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop9}></div>
+                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop9}></div>
+                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop9}></div>
+                    <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop9}></div>
+
+
+
+                </div>
+                <div className="drag">
+                    <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
+
+
+                </div>
+
+            </div>
+
+        )
+
+    }
+
+    // numero 10
+
+    let array10 = ["", "", "", "", "", "", "", ""]
+
+    const drop10 = (e) => {
+        //Para btener el id arrastrado
+        if (array10[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array10[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.style.backgroundImage = `url(${data})`
+            console.log(data)
+            console.log(array10)
+        }
+        if (array10[1] != "" && array10[2] != "" && array10[3] != "" && array10[4] != "" && array10[5] != "" && array10[6] != "" && array10[7] != "") {
+            if (array10[1] == "http://localhost:3000/img/perro.png" && array10[2] == "http://localhost:3000/img/mono.png" && array10[3] == "http://localhost:3000/img/elefante.png" && array10[4] == "http://localhost:3000/img/caballo.png" && array10[5] == "http://localhost:3000/img/pato.png" && array10[6] == "http://localhost:3000/img/gato.png" && array10[7] == "http://localhost:3000/img/tortuga.png") {
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
+
+                )
+
+            }
+            else {
+                array10 = ["", "", "", "", "", "", "", ""]
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
+
+                )
+
+
+
+            }
+        }
+    }
+
+    const Juego10 = () => {
+        return (
+            <div className="secuencia drop-numeroordinales">
+                <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
+                <p>Al terminar la carrera el perro obtuvo el primer lugar, el pato el quinto lugar, el gato el sexto lugar, el caballo el cuarto lugar,
+                    la tortuga el séptimo lugar, el elefante el tercer lugar y el mono el segundo lugar.
+                    <br></br>Nota: Empieza a organizarlos de izquierda a derecha.
+                </p>
+
+
+                <div className="drop imagen-drop">
+                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop10}></div>
+                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop10}></div>
+                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop10}></div>
+                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop10}></div>
+                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop10}></div>
+                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop10}></div>
+                    <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop10}></div>
+
+
+
+                </div>
+                <div className="drag">
+                    <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
+
+
+                </div>
+
+            </div>
+
+        )
+
+    }
+
+    //Numero 11
+    let array11 = ["", "", "", "", "", "", "", ""]
+
+    const drop11 = (e) => {
+        //Para btener el id arrastrado
+        if (array11[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array11[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.style.backgroundImage = `url(${data})`
+            console.log(data)
+            console.log(array11)
+        }
+        if (array11[1] != "" && array11[2] != "" && array11[3] != "" && array11[4] != "" && array11[5] != "" && array11[6] != "" && array11[7] != "") {
+            if (array11[1] == "http://localhost:3000/img/elefante.png" && array11[2] == "http://localhost:3000/img/mono.png" && array11[3] == "http://localhost:3000/img/pato.png" && array11[4] == "http://localhost:3000/img/caballo.png" && array11[5] == "http://localhost:3000/img/gato.png" && array11[6] == "http://localhost:3000/img/perro.png" && array11[7] == "http://localhost:3000/img/tortuga.png") {
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
+
+                )
+
+            }
+            else {
+                array11 = ["", "", "", "", "", "", "", ""]
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
+
+                )
+
+
+
+            }
+        }
+    }
+
+    const Juego11 = () => {
+        return (
+            <div className="secuencia drop-numeroordinales">
+                <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
+                <p>Al terminar la carrera el elefante obtuvo el primer lugar, el gato el quinto lugar, el perro el sexto lugar, el caballo el cuarto lugar,
+                    la tortuga el séptimo lugar, el pato el tercer lugar y el mono el segundo lugar.
+                    <br></br>Nota: Empieza a organizarlos de izquierda a derecha.
+
+                </p>
+
+
+                <div className="drop imagen-drop">
+                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop11}></div>
+                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop11}></div>
+                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop11}></div>
+                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop11}></div>
+                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop11}></div>
+                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop11}></div>
+                    <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop11}></div>
+
+
+
+                </div>
+                <div className="drag">
+                    <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
+
+
+                </div>
+
+            </div>
+
+        )
+
+    }
+
+    // Numero 12
+
+    let array12 = ["", "", "", "", "", "", "", ""]
+
+    const drop12 = (e) => {
+        //Para btener el id arrastrado
+        if (array12[parseInt(e.target.id)] == "") {
+            let data = e.dataTransfer.getData("text")
+            //agrego el arreglo del elemento al elmento soltado
+            array12[parseInt(e.target.id)] = data;
+            //que se agregue al cuadro sleccioonad
+            e.target.style.backgroundImage = `url(${data})`
+            console.log(data)
+            console.log(array12)
+        }
+        if (array12[1] != "" && array12[2] != "" && array12[3] != "" && array12[4] != "" && array12[5] != "" && array12[6] != "" && array12[7] != "") {
+            if (array12[1] == "http://localhost:3000/img/mono.png" && array12[2] == "http://localhost:3000/img/caballo.png" && array12[3] == "http://localhost:3000/img/tortuga.png" && array12[4] == "http://localhost:3000/img/elefante.png" && array12[5] == "http://localhost:3000/img/perro.png" && array12[6] == "http://localhost:3000/img/pato.png" && array12[7] == "http://localhost:3000/img/gato.png") {
+                setJuegoActivo(true)
+                setSiguienteJuegoActivo(true)
+                setMensajeJuegoActivo("HAZ HECHO UN BUEN TRABAJO ")
+                PreguntasAnalisis(
+                    router.query.id,
+                    true,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
+
+                )
+
+            }
+            else {
+                array12 = ["", "", "", "", "", "", "", ""]
+                setJuegoActivo(true)
+                setMensajeJuegoActivo("INTENTALO NUEVAMENTE")
+                PreguntasAnalisis(
+                    router.query.id,
+                    false,
+                    "Ordena los animales en la posicion correcta.",
+                    0,
+                    counter
+
+                )
+
+
+
+            }
+        }
+    }
+
+    const Juego12 = () => {
+        return (
+            <div className="secuencia drop-numeroordinales">
+                <h3>Lee el siguiente párrafo y ordena los animales siguiendo el orden que dice.</h3>
+                <p>Al terminar la carrera el mono obtuvo el primer lugar, el perro el quinto lugar, el pato el sexto lugar, el elefante el cuarto lugar,
+                    el gato el séptimo lugar, la tortuga el tercer lugar y el caballo el segundo lugar.
+                    <br></br>Nota: Empieza a organizarlos de izquierda a derecha.
+
+                </p>
+
+
+                <div className="drop imagen-drop">
+                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop12}></div>
+                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop12}></div>
+                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop12}></div>
+                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop12}></div>
+                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop12}></div>
+                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop12}></div>
+                    <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop12}></div>
+
+
+
+                </div>
+                <div className="drag">
+                    <div className="drag-d" draggable="true" id="/img/caballo.png" onDragStart={drag}><img className="img-orden" src="/img/caballo.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/pato.png" onDragStart={drag}><img className="img-orden" src="/img/pato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/tortuga.png" onDragStart={drag}><img className="img-orden" src="/img/tortuga.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/perro.png" onDragStart={drag}><img className="img-orden" src="/img/perro.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/elefante.png" onDragStart={drag}><img className="img-orden" src="/img/elefante.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/gato.png" onDragStart={drag}><img className="img-orden" src="/img/gato.png" /></div>
+                    <div className="drag-d" draggable="true" id="/img/mono.png" onDragStart={drag}><img className="img-orden" src="/img/mono.png" /></div>
+
+
+                </div>
+
+            </div>
+
+        )
+
+    }
 
     //juego 13
     let array13 = ["", "", "", "", "", "", "", ""]
@@ -763,29 +771,29 @@ export default function NumerosOrdinales() {
             <div className="secuencia">
                 <h3>Utilice las letras necesarias para escribir en letras el número ordinal 6°.</h3>
 
-                <div className="drop">
-                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop14}></div>
-                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop14}></div>
-                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop14}></div>
-                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop14}></div>
-                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop14}></div>
+                <div className="drop-no4">
+                    <div className="box-drop-no4" id="1" onDragOver={allowdrop} onDrop={drop14}></div>
+                    <div className="box-drop-no4" id="2" onDragOver={allowdrop} onDrop={drop14}></div>
+                    <div className="box-drop-no4" id="3" onDragOver={allowdrop} onDrop={drop14}></div>
+                    <div className="box-drop-no4" id="4" onDragOver={allowdrop} onDrop={drop14}></div>
+                    <div className="box-drop-no4" id="5" onDragOver={allowdrop} onDrop={drop14}></div>
 
                 </div>
                 <div className="drag">
-                    <div className="drag-d" draggable="true" id="T" onDragStart={drag}>T</div>
-                    <div className="drag-d" draggable="true" id="M" onDragStart={drag}>M</div>
-                    <div className="drag-d" draggable="true" id="R" onDragStart={drag}>R</div>
-                    <div className="drag-d" draggable="true" id="C" onDragStart={drag}>C</div>
-                    <div className="drag-d" draggable="true" id="O" onDragStart={drag}>O</div>
-                    <div className="drag-d" draggable="true" id="U" onDragStart={drag}>U</div>
-                    <div className="drag-d" draggable="true" id="P" onDragStart={drag}>P</div>
-                    <div className="drag-d" draggable="true" id="X" onDragStart={drag}>X</div>
-                    <div className="drag-d" draggable="true" id="S" onDragStart={drag}>S</div>
-                    <div className="drag-d" draggable="true" id="V" onDragStart={drag}>V</div>
-                    <div className="drag-d" draggable="true" id="I" onDragStart={drag}>I</div>
-                    <div className="drag-d" draggable="true" id="E" onDragStart={drag}>E</div>
-                    <div className="drag-d" draggable="true" id="D" onDragStart={drag}>D</div>
-                    <div className="drag-d" draggable="true" id="N" onDragStart={drag}>N</div>
+                    <div className="drag-d-no4" draggable="true" id="T" onDragStart={drag}>T</div>
+                    <div className="drag-d-no4" draggable="true" id="M" onDragStart={drag}>M</div>
+                    <div className="drag-d-no4" draggable="true" id="R" onDragStart={drag}>R</div>
+                    <div className="drag-d-no4" draggable="true" id="C" onDragStart={drag}>C</div>
+                    <div className="drag-d-no4" draggable="true" id="O" onDragStart={drag}>O</div>
+                    <div className="drag-d-no4" draggable="true" id="U" onDragStart={drag}>U</div>
+                    <div className="drag-d-no4" draggable="true" id="P" onDragStart={drag}>P</div>
+                    <div className="drag-d-no4" draggable="true" id="X" onDragStart={drag}>X</div>
+                    <div className="drag-d-no4" draggable="true" id="S" onDragStart={drag}>S</div>
+                    <div className="drag-d-no4" draggable="true" id="V" onDragStart={drag}>V</div>
+                    <div className="drag-d-no4" draggable="true" id="I" onDragStart={drag}>I</div>
+                    <div className="drag-d-no4" draggable="true" id="E" onDragStart={drag}>E</div>
+                    <div className="drag-d-no4" draggable="true" id="D" onDragStart={drag}>D</div>
+                    <div className="drag-d-no4" draggable="true" id="N" onDragStart={drag}>N</div>
 
 
 
@@ -847,29 +855,29 @@ export default function NumerosOrdinales() {
             <div className="secuencia">
                 <h3>Utilice las letras necesarias para escribir en letras el número ordinal 9°.</h3>
 
-                <div className="drop">
-                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop15}></div>
-                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop15}></div>
-                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop15}></div>
-                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop15}></div>
-                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop15}></div>
-                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop15}></div>
+                <div className="drop-no2">
+                    <div className="box-drop-no2" id="1" onDragOver={allowdrop} onDrop={drop15}></div>
+                    <div className="box-drop-no2" id="2" onDragOver={allowdrop} onDrop={drop15}></div>
+                    <div className="box-drop-no2" id="3" onDragOver={allowdrop} onDrop={drop15}></div>
+                    <div className="box-drop-no2" id="4" onDragOver={allowdrop} onDrop={drop15}></div>
+                    <div className="box-drop-no2" id="5" onDragOver={allowdrop} onDrop={drop15}></div>
+                    <div className="box-drop-no2" id="6" onDragOver={allowdrop} onDrop={drop15}></div>
                 </div>
                 <div className="drag">
-                    <div className="drag-d" draggable="true" id="T" onDragStart={drag}>T</div>
-                    <div className="drag-d" draggable="true" id="N2" onDragStart={drag}>N</div>
-                    <div className="drag-d" draggable="true" id="R" onDragStart={drag}>R</div>
-                    <div className="drag-d" draggable="true" id="C" onDragStart={drag}>C</div>
-                    <div className="drag-d" draggable="true" id="O" onDragStart={drag}>O</div>
-                    <div className="drag-d" draggable="true" id="U" onDragStart={drag}>U</div>
-                    <div className="drag-d" draggable="true" id="O2" onDragStart={drag}>O</div>
-                    <div className="drag-d" draggable="true" id="R2" onDragStart={drag}>R</div>
-                    <div className="drag-d" draggable="true" id="S" onDragStart={drag}>S</div>
-                    <div className="drag-d" draggable="true" id="V" onDragStart={drag}>V</div>
-                    <div className="drag-d" draggable="true" id="I" onDragStart={drag}>I</div>
-                    <div className="drag-d" draggable="true" id="E" onDragStart={drag}>E</div>
-                    <div className="drag-d" draggable="true" id="D" onDragStart={drag}>D</div>
-                    <div className="drag-d" draggable="true" id="N" onDragStart={drag}>N</div>
+                    <div className="drag-d-no2" draggable="true" id="T" onDragStart={drag}>T</div>
+                    <div className="drag-d-no2" draggable="true" id="N2" onDragStart={drag}>N</div>
+                    <div className="drag-d-no2" draggable="true" id="R" onDragStart={drag}>R</div>
+                    <div className="drag-d-no2" draggable="true" id="C" onDragStart={drag}>C</div>
+                    <div className="drag-d-no2" draggable="true" id="O" onDragStart={drag}>O</div>
+                    <div className="drag-d-no2" draggable="true" id="U" onDragStart={drag}>U</div>
+                    <div className="drag-d-no2" draggable="true" id="O2" onDragStart={drag}>O</div>
+                    <div className="drag-d-no2" draggable="true" id="R2" onDragStart={drag}>R</div>
+                    <div className="drag-d-no2" draggable="true" id="S" onDragStart={drag}>S</div>
+                    <div className="drag-d-no2" draggable="true" id="V" onDragStart={drag}>V</div>
+                    <div className="drag-d-no2" draggable="true" id="I" onDragStart={drag}>I</div>
+                    <div className="drag-d-no2" draggable="true" id="E" onDragStart={drag}>E</div>
+                    <div className="drag-d-no2" draggable="true" id="D" onDragStart={drag}>D</div>
+                    <div className="drag-d-no2" draggable="true" id="N" onDragStart={drag}>N</div>
 
 
 
@@ -931,29 +939,29 @@ export default function NumerosOrdinales() {
             <div className="secuencia">
                 <h3>Utilice las letras necesarias para escribir en letras el número ordinal 10°.</h3>
 
-                <div className="drop">
-                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop16}></div>
-                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop16}></div>
-                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop16}></div>
-                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop16}></div>
-                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop16}></div>
-                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop16}></div>
+                <div className="drop-no2">
+                    <div className="box-drop-no2" id="1" onDragOver={allowdrop} onDrop={drop16}></div>
+                    <div className="box-drop-no2" id="2" onDragOver={allowdrop} onDrop={drop16}></div>
+                    <div className="box-drop-no2" id="3" onDragOver={allowdrop} onDrop={drop16}></div>
+                    <div className="box-drop-no2" id="4" onDragOver={allowdrop} onDrop={drop16}></div>
+                    <div className="box-drop-no2" id="5" onDragOver={allowdrop} onDrop={drop16}></div>
+                    <div className="box-drop-no2" id="6" onDragOver={allowdrop} onDrop={drop16}></div>
                 </div>
                 <div className="drag">
-                    <div className="drag-d" draggable="true" id="T" onDragStart={drag}>T</div>
-                    <div className="drag-d" draggable="true" id="M" onDragStart={drag}>M</div>
-                    <div className="drag-d" draggable="true" id="R" onDragStart={drag}>R</div>
-                    <div className="drag-d" draggable="true" id="C" onDragStart={drag}>C</div>
-                    <div className="drag-d" draggable="true" id="O" onDragStart={drag}>O</div>
-                    <div className="drag-d" draggable="true" id="U" onDragStart={drag}>U</div>
-                    <div className="drag-d" draggable="true" id="O2" onDragStart={drag}>O</div>
-                    <div className="drag-d" draggable="true" id="R2" onDragStart={drag}>R</div>
-                    <div className="drag-d" draggable="true" id="S" onDragStart={drag}>S</div>
-                    <div className="drag-d" draggable="true" id="V" onDragStart={drag}>V</div>
-                    <div className="drag-d" draggable="true" id="I" onDragStart={drag}>I</div>
-                    <div className="drag-d" draggable="true" id="E" onDragStart={drag}>É</div>
-                    <div className="drag-d" draggable="true" id="D" onDragStart={drag}>D</div>
-                    <div className="drag-d" draggable="true" id="N" onDragStart={drag}>N</div>
+                    <div className="drag-d-no2" draggable="true" id="T" onDragStart={drag}>T</div>
+                    <div className="drag-d-no2" draggable="true" id="M" onDragStart={drag}>M</div>
+                    <div className="drag-d-no2" draggable="true" id="R" onDragStart={drag}>R</div>
+                    <div className="drag-d-no2" draggable="true" id="C" onDragStart={drag}>C</div>
+                    <div className="drag-d-no2" draggable="true" id="O" onDragStart={drag}>O</div>
+                    <div className="drag-d-no2" draggable="true" id="U" onDragStart={drag}>U</div>
+                    <div className="drag-d-no2" draggable="true" id="O2" onDragStart={drag}>O</div>
+                    <div className="drag-d-no2" draggable="true" id="R2" onDragStart={drag}>R</div>
+                    <div className="drag-d-no2" draggable="true" id="S" onDragStart={drag}>S</div>
+                    <div className="drag-d-no2" draggable="true" id="V" onDragStart={drag}>V</div>
+                    <div className="drag-d-no2" draggable="true" id="I" onDragStart={drag}>I</div>
+                    <div className="drag-d-no2" draggable="true" id="E" onDragStart={drag}>É</div>
+                    <div className="drag-d-no2" draggable="true" id="D" onDragStart={drag}>D</div>
+                    <div className="drag-d-no2" draggable="true" id="N" onDragStart={drag}>N</div>
 
 
 
@@ -1015,29 +1023,29 @@ export default function NumerosOrdinales() {
             <div className="secuencia">
                 <h3>Utilice las letras necesarias para escribir en letras el número ordinal 8°.</h3>
 
-                <div className="drop">
-                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop17}></div>
-                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop17}></div>
-                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop17}></div>
-                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop17}></div>
-                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop17}></div>
-                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop17}></div>
+                <div className="drop-no2">
+                    <div className="box-drop-no2" id="1" onDragOver={allowdrop} onDrop={drop17}></div>
+                    <div className="box-drop-no2" id="2" onDragOver={allowdrop} onDrop={drop17}></div>
+                    <div className="box-drop-no2" id="3" onDragOver={allowdrop} onDrop={drop17}></div>
+                    <div className="box-drop-no2" id="4" onDragOver={allowdrop} onDrop={drop17}></div>
+                    <div className="box-drop-no2" id="5" onDragOver={allowdrop} onDrop={drop17}></div>
+                    <div className="box-drop-no2" id="6" onDragOver={allowdrop} onDrop={drop17}></div>
                 </div>
                 <div className="drag">
-                    <div className="drag-d" draggable="true" id="T" onDragStart={drag}>T</div>
-                    <div className="drag-d" draggable="true" id="M" onDragStart={drag}>M</div>
-                    <div className="drag-d" draggable="true" id="R" onDragStart={drag}>R</div>
-                    <div className="drag-d" draggable="true" id="C" onDragStart={drag}>C</div>
-                    <div className="drag-d" draggable="true" id="O" onDragStart={drag}>O</div>
-                    <div className="drag-d" draggable="true" id="U" onDragStart={drag}>U</div>
-                    <div className="drag-d" draggable="true" id="O2" onDragStart={drag}>O</div>
-                    <div className="drag-d" draggable="true" id="R2" onDragStart={drag}>R</div>
-                    <div className="drag-d" draggable="true" id="S" onDragStart={drag}>S</div>
-                    <div className="drag-d" draggable="true" id="V" onDragStart={drag}>V</div>
-                    <div className="drag-d" draggable="true" id="I" onDragStart={drag}>I</div>
-                    <div className="drag-d" draggable="true" id="A" onDragStart={drag}>A</div>
-                    <div className="drag-d" draggable="true" id="D" onDragStart={drag}>D</div>
-                    <div className="drag-d" draggable="true" id="N" onDragStart={drag}>N</div>
+                    <div className="drag-d-no2" draggable="true" id="T" onDragStart={drag}>T</div>
+                    <div className="drag-d-no2" draggable="true" id="M" onDragStart={drag}>M</div>
+                    <div className="drag-d-no2" draggable="true" id="R" onDragStart={drag}>R</div>
+                    <div className="drag-d-no2" draggable="true" id="C" onDragStart={drag}>C</div>
+                    <div className="drag-d-no2" draggable="true" id="O" onDragStart={drag}>O</div>
+                    <div className="drag-d-no2" draggable="true" id="U" onDragStart={drag}>U</div>
+                    <div className="drag-d-no2" draggable="true" id="O2" onDragStart={drag}>O</div>
+                    <div className="drag-d-no2" draggable="true" id="R2" onDragStart={drag}>R</div>
+                    <div className="drag-d-no2" draggable="true" id="S" onDragStart={drag}>S</div>
+                    <div className="drag-d-no2" draggable="true" id="V" onDragStart={drag}>V</div>
+                    <div className="drag-d-no2" draggable="true" id="I" onDragStart={drag}>I</div>
+                    <div className="drag-d-no2" draggable="true" id="A" onDragStart={drag}>A</div>
+                    <div className="drag-d-no2" draggable="true" id="D" onDragStart={drag}>D</div>
+                    <div className="drag-d-no2" draggable="true" id="N" onDragStart={drag}>N</div>
 
 
 
@@ -1098,33 +1106,33 @@ export default function NumerosOrdinales() {
             <div className="secuencia">
                 <h3>Utilice las letras necesarias para escribir en letras el número ordinal 20°.</h3>
 
-                <div className="drop">
-                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop18}></div>
-                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop18}></div>
-                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop18}></div>
-                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop18}></div>
-                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop18}></div>
-                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop18}></div>
-                    <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop18}></div>
-                    <div className="box-drop" id="8" onDragOver={allowdrop} onDrop={drop18}></div>
+                <div className="drop-no3">
+                    <div className="box-drop-no3" id="1" onDragOver={allowdrop} onDrop={drop18}></div>
+                    <div className="box-drop-no3" id="2" onDragOver={allowdrop} onDrop={drop18}></div>
+                    <div className="box-drop-no3" id="3" onDragOver={allowdrop} onDrop={drop18}></div>
+                    <div className="box-drop-no3" id="4" onDragOver={allowdrop} onDrop={drop18}></div>
+                    <div className="box-drop-no3" id="5" onDragOver={allowdrop} onDrop={drop18}></div>
+                    <div className="box-drop-no3" id="6" onDragOver={allowdrop} onDrop={drop18}></div>
+                    <div className="box-drop-no3" id="7" onDragOver={allowdrop} onDrop={drop18}></div>
+                    <div className="box-drop-no3" id="8" onDragOver={allowdrop} onDrop={drop18}></div>
 
 
                 </div>
-                <div className="drag">
-                    <div className="drag-d" draggable="true" id="T" onDragStart={drag}>T</div>
-                    <div className="drag-d" draggable="true" id="M" onDragStart={drag}>M</div>
-                    <div className="drag-d" draggable="true" id="G" onDragStart={drag}>G</div>
-                    <div className="drag-d" draggable="true" id="C" onDragStart={drag}>C</div>
-                    <div className="drag-d" draggable="true" id="O" onDragStart={drag}>O</div>
-                    <div className="drag-d" draggable="true" id="U" onDragStart={drag}>U</div>
-                    <div className="drag-d" draggable="true" id="I2" onDragStart={drag}>I</div>
-                    <div className="drag-d" draggable="true" id="E" onDragStart={drag}>É</div>
-                    <div className="drag-d" draggable="true" id="S" onDragStart={drag}>S</div>
-                    <div className="drag-d" draggable="true" id="V" onDragStart={drag}>V</div>
-                    <div className="drag-d" draggable="true" id="I" onDragStart={drag}>I</div>
-                    <div className="drag-d" draggable="true" id="A" onDragStart={drag}>A</div>
-                    <div className="drag-d" draggable="true" id="D" onDragStart={drag}>D</div>
-                    <div className="drag-d" draggable="true" id="R" onDragStart={drag}>R</div>
+                <div className="drag-no3">
+                    <div className="drag-d-no3" draggable="true" id="T" onDragStart={drag}>T</div>
+                    <div className="drag-d-no3" draggable="true" id="M" onDragStart={drag}>M</div>
+                    <div className="drag-d-no3" draggable="true" id="G" onDragStart={drag}>G</div>
+                    <div className="drag-d-no3" draggable="true" id="C" onDragStart={drag}>C</div>
+                    <div className="drag-d-no3" draggable="true" id="O" onDragStart={drag}>O</div>
+                    <div className="drag-d-no3" draggable="true" id="U" onDragStart={drag}>U</div>
+                    <div className="drag-d-no3" draggable="true" id="I2" onDragStart={drag}>I</div>
+                    <div className="drag-d-no3" draggable="true" id="E" onDragStart={drag}>É</div>
+                    <div className="drag-d-no3" draggable="true" id="S" onDragStart={drag}>S</div>
+                    <div className="drag-d-no3" draggable="true" id="V" onDragStart={drag}>V</div>
+                    <div className="drag-d-no3" draggable="true" id="I" onDragStart={drag}>I</div>
+                    <div className="drag-d-no3" draggable="true" id="A" onDragStart={drag}>A</div>
+                    <div className="drag-d-no3" draggable="true" id="D" onDragStart={drag}>D</div>
+                    <div className="drag-d-no3" draggable="true" id="R" onDragStart={drag}>R</div>
 
 
 
@@ -1444,30 +1452,30 @@ export default function NumerosOrdinales() {
             <div className="secuencia">
                 <h3>Utilice las letras necesarias para escribir en letras el número ordinal 5°.</h3>
 
-                <div className="drop">
-                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop22}></div>
-                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop22}></div>
-                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop22}></div>
-                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop22}></div>
-                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop22}></div>
-                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop22}></div>
+                <div className="drop-no2">
+                    <div className="box-drop-no2" id="1" onDragOver={allowdrop} onDrop={drop22}></div>
+                    <div className="box-drop-no2" id="2" onDragOver={allowdrop} onDrop={drop22}></div>
+                    <div className="box-drop-no2" id="3" onDragOver={allowdrop} onDrop={drop22}></div>
+                    <div className="box-drop-no2" id="4" onDragOver={allowdrop} onDrop={drop22}></div>
+                    <div className="box-drop-no2" id="5" onDragOver={allowdrop} onDrop={drop22}></div>
+                    <div className="box-drop-no2" id="6" onDragOver={allowdrop} onDrop={drop22}></div>
 
                 </div>
                 <div className="drag">
-                    <div className="drag-d" draggable="true" id="T" onDragStart={drag}>T</div>
-                    <div className="drag-d" draggable="true" id="M" onDragStart={drag}>M</div>
-                    <div className="drag-d" draggable="true" id="Q" onDragStart={drag}>Q</div>
-                    <div className="drag-d" draggable="true" id="C" onDragStart={drag}>C</div>
-                    <div className="drag-d" draggable="true" id="O" onDragStart={drag}>O</div>
-                    <div className="drag-d" draggable="true" id="U" onDragStart={drag}>U</div>
-                    <div className="drag-d" draggable="true" id="P" onDragStart={drag}>P</div>
-                    <div className="drag-d" draggable="true" id="R" onDragStart={drag}>R</div>
-                    <div className="drag-d" draggable="true" id="S" onDragStart={drag}>S</div>
-                    <div className="drag-d" draggable="true" id="V" onDragStart={drag}>V</div>
-                    <div className="drag-d" draggable="true" id="I" onDragStart={drag}>I</div>
-                    <div className="drag-d" draggable="true" id="E" onDragStart={drag}>E</div>
-                    <div className="drag-d" draggable="true" id="D" onDragStart={drag}>D</div>
-                    <div className="drag-d" draggable="true" id="N" onDragStart={drag}>N</div>
+                    <div className="drag-d-no2" draggable="true" id="T" onDragStart={drag}>T</div>
+                    <div className="drag-d-no2" draggable="true" id="M" onDragStart={drag}>M</div>
+                    <div className="drag-d-no2" draggable="true" id="Q" onDragStart={drag}>Q</div>
+                    <div className="drag-d-no2" draggable="true" id="C" onDragStart={drag}>C</div>
+                    <div className="drag-d-no2" draggable="true" id="O" onDragStart={drag}>O</div>
+                    <div className="drag-d-no2" draggable="true" id="U" onDragStart={drag}>U</div>
+                    <div className="drag-d-no2" draggable="true" id="P" onDragStart={drag}>P</div>
+                    <div className="drag-d-no2" draggable="true" id="R" onDragStart={drag}>R</div>
+                    <div className="drag-d-no2" draggable="true" id="S" onDragStart={drag}>S</div>
+                    <div className="drag-d-no2" draggable="true" id="V" onDragStart={drag}>V</div>
+                    <div className="drag-d-no2" draggable="true" id="I" onDragStart={drag}>I</div>
+                    <div className="drag-d-no2" draggable="true" id="E" onDragStart={drag}>E</div>
+                    <div className="drag-d-no2" draggable="true" id="D" onDragStart={drag}>D</div>
+                    <div className="drag-d-no2" draggable="true" id="N" onDragStart={drag}>N</div>
 
 
 
@@ -1528,30 +1536,30 @@ export default function NumerosOrdinales() {
             <div className="secuencia">
                 <h3>Utilice las letras necesarias para escribir en letras el número ordinal 4°.</h3>
 
-                <div className="drop">
-                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop23}></div>
-                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop23}></div>
-                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop23}></div>
-                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop23}></div>
-                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop23}></div>
-                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop23}></div>
+                <div className="drop-no2">
+                    <div className="box-drop-no2" id="1" onDragOver={allowdrop} onDrop={drop23}></div>
+                    <div className="box-drop-no2" id="2" onDragOver={allowdrop} onDrop={drop23}></div>
+                    <div className="box-drop-no2" id="3" onDragOver={allowdrop} onDrop={drop23}></div>
+                    <div className="box-drop-no2" id="4" onDragOver={allowdrop} onDrop={drop23}></div>
+                    <div className="box-drop-no2" id="5" onDragOver={allowdrop} onDrop={drop23}></div>
+                    <div className="box-drop-no2" id="6" onDragOver={allowdrop} onDrop={drop23}></div>
 
                 </div>
                 <div className="drag">
-                    <div className="drag-d" draggable="true" id="T" onDragStart={drag}>T</div>
-                    <div className="drag-d" draggable="true" id="M" onDragStart={drag}>M</div>
-                    <div className="drag-d" draggable="true" id="Q" onDragStart={drag}>Q</div>
-                    <div className="drag-d" draggable="true" id="C" onDragStart={drag}>C</div>
-                    <div className="drag-d" draggable="true" id="O" onDragStart={drag}>O</div>
-                    <div className="drag-d" draggable="true" id="U" onDragStart={drag}>U</div>
-                    <div className="drag-d" draggable="true" id="P" onDragStart={drag}>P</div>
-                    <div className="drag-d" draggable="true" id="R" onDragStart={drag}>R</div>
-                    <div className="drag-d" draggable="true" id="A" onDragStart={drag}>A</div>
-                    <div className="drag-d" draggable="true" id="V" onDragStart={drag}>V</div>
-                    <div className="drag-d" draggable="true" id="I" onDragStart={drag}>I</div>
-                    <div className="drag-d" draggable="true" id="E" onDragStart={drag}>E</div>
-                    <div className="drag-d" draggable="true" id="D" onDragStart={drag}>D</div>
-                    <div className="drag-d" draggable="true" id="N" onDragStart={drag}>N</div>
+                    <div className="drag-d-no2" draggable="true" id="T" onDragStart={drag}>T</div>
+                    <div className="drag-d-no2" draggable="true" id="M" onDragStart={drag}>M</div>
+                    <div className="drag-d-no2" draggable="true" id="Q" onDragStart={drag}>Q</div>
+                    <div className="drag-d-no2" draggable="true" id="C" onDragStart={drag}>C</div>
+                    <div className="drag-d-no2" draggable="true" id="O" onDragStart={drag}>O</div>
+                    <div className="drag-d-no2" draggable="true" id="U" onDragStart={drag}>U</div>
+                    <div className="drag-d-no2" draggable="true" id="P" onDragStart={drag}>P</div>
+                    <div className="drag-d-no2" draggable="true" id="R" onDragStart={drag}>R</div>
+                    <div className="drag-d-no2" draggable="true" id="A" onDragStart={drag}>A</div>
+                    <div className="drag-d-no2" draggable="true" id="V" onDragStart={drag}>V</div>
+                    <div className="drag-d-no2" draggable="true" id="I" onDragStart={drag}>I</div>
+                    <div className="drag-d-no2" draggable="true" id="E" onDragStart={drag}>E</div>
+                    <div className="drag-d-no2" draggable="true" id="D" onDragStart={drag}>D</div>
+                    <div className="drag-d-no2" draggable="true" id="N" onDragStart={drag}>N</div>
 
 
 
@@ -1612,16 +1620,16 @@ export default function NumerosOrdinales() {
             <div className="secuencia">
                 <h3>Utilice las letras necesarias para escribir en letras el número ordinal 30°.</h3>
 
-                <div className="drop">
-                    <div className="box-drop" id="1" onDragOver={allowdrop} onDrop={drop24}></div>
-                    <div className="box-drop" id="2" onDragOver={allowdrop} onDrop={drop24}></div>
-                    <div className="box-drop" id="3" onDragOver={allowdrop} onDrop={drop24}></div>
-                    <div className="box-drop" id="4" onDragOver={allowdrop} onDrop={drop24}></div>
-                    <div className="box-drop" id="5" onDragOver={allowdrop} onDrop={drop24}></div>
-                    <div className="box-drop" id="6" onDragOver={allowdrop} onDrop={drop24}></div>
-                    <div className="box-drop" id="7" onDragOver={allowdrop} onDrop={drop24}></div>
-                    <div className="box-drop" id="8" onDragOver={allowdrop} onDrop={drop24}></div>
-                    <div className="box-drop" id="9" onDragOver={allowdrop} onDrop={drop24}></div>
+                <div className="drop-no">
+                    <div className="box-drop-no" id="1" onDragOver={allowdrop} onDrop={drop24}></div>
+                    <div className="box-drop-no" id="2" onDragOver={allowdrop} onDrop={drop24}></div>
+                    <div className="box-drop-no" id="3" onDragOver={allowdrop} onDrop={drop24}></div>
+                    <div className="box-drop-no" id="4" onDragOver={allowdrop} onDrop={drop24}></div>
+                    <div className="box-drop-no" id="5" onDragOver={allowdrop} onDrop={drop24}></div>
+                    <div className="box-drop-no" id="6" onDragOver={allowdrop} onDrop={drop24}></div>
+                    <div className="box-drop-no" id="7" onDragOver={allowdrop} onDrop={drop24}></div>
+                    <div className="box-drop-no" id="8" onDragOver={allowdrop} onDrop={drop24}></div>
+                    <div className="box-drop-no" id="9" onDragOver={allowdrop} onDrop={drop24}></div>
 
 
                 </div>
@@ -1666,14 +1674,14 @@ export default function NumerosOrdinales() {
                         </div>
                         : counter == 1 ?
                             <div>
-                                <Juego7/>
+                                <Juego7 />
                                 {juegoSiguienActivo == true ?
                                     <div className="siguiente-espacial"></div>
                                     : <span>.</span>}
                             </div>
                             : counter == 2 ?
                                 <div>
-                                    <Juego13/>
+                                    <Juego13 />
                                     {juegoSiguienActivo == true ?
                                         <div className="siguiente-espacial"></div>
                                         : <span>.</span>}
@@ -1687,21 +1695,21 @@ export default function NumerosOrdinales() {
                                     </div>
                                     : counter == 4 ?
                                         <div>
-                                            <Juego24/>
+                                            <Juego24 />
                                             {juegoSiguienActivo == true ?
                                                 <div className="siguiente-espacial"></div>
                                                 : <span>.</span>}
                                         </div>
                                         : counter == 5 ?
                                             <div>
-                                                <Juego8/>
+                                                <Juego8 />
                                                 {juegoSiguienActivo == true ?
                                                     <div className="siguiente-espacial"></div>
                                                     : <span>.</span>}
                                             </div>
                                             : counter == 6 ?
                                                 <div>
-                                                    <Juego15/>
+                                                    <Juego15 />
                                                     {juegoSiguienActivo == true ?
                                                         <div className="siguiente-espacial"></div>
                                                         : <span>.</span>}
@@ -1715,7 +1723,7 @@ export default function NumerosOrdinales() {
                                                     </div>
                                                     : counter == 8 ?
                                                         <div>
-                                                             <Juego1 data={arrayDato[2]} />
+                                                            <Juego1 data={arrayDato[2]} />
                                                             {juegoSiguienActivo == true ?
                                                                 <div className="siguiente-espacial"></div>
                                                                 : <span>.</span>}
@@ -1729,7 +1737,7 @@ export default function NumerosOrdinales() {
                                                             </div>
                                                             : counter == 10 ?
                                                                 <div>
-                                                                     <Juego1 data={arrayDato[3]} />
+                                                                    <Juego1 data={arrayDato[3]} />
                                                                     {juegoSiguienActivo == true ?
                                                                         <div className="siguiente-espacial"></div>
                                                                         : <span>.</span>}
@@ -1743,7 +1751,7 @@ export default function NumerosOrdinales() {
                                                                     </div>
                                                                     : counter == 12 ?
                                                                         <div>
-                                                                             <Juego1 data={arrayDato[4]} />
+                                                                            <Juego1 data={arrayDato[4]} />
                                                                             {juegoSiguienActivo == true ?
                                                                                 <div className="siguiente-espacial"></div>
                                                                                 : <span>.</span>}
@@ -1778,7 +1786,7 @@ export default function NumerosOrdinales() {
                                                                                         </div>
                                                                                         : counter == 17 ?
                                                                                             <div>
-                                                                                                 <Juego1 data={arrayDato[5]} />
+                                                                                                <Juego1 data={arrayDato[5]} />
                                                                                                 {juegoSiguienActivo == true ?
                                                                                                     <div className="siguiente-espacial"></div>
                                                                                                     : <span>.</span>}
@@ -1791,41 +1799,41 @@ export default function NumerosOrdinales() {
                                                                                                         : <span>.</span>}
                                                                                                 </div>
                                                                                                 : counter == 19 ?
-                                                                                                <div>
-                                                                                                    <Juego18 />
-                                                                                                    {juegoSiguienActivo == true ?
-                                                                                                        <div className="siguiente-espacial"></div>
-                                                                                                        : <span>.</span>}
-                                                                                                </div>
-                                                                                                : counter == 20 ?
-                                                                                                <div>
-                                                                                                    <Juego21 />
-                                                                                                    {juegoSiguienActivo == true ?
-                                                                                                        <div className="siguiente-espacial"></div>
-                                                                                                        : <span>.</span>}
-                                                                                                </div>
-                                                                                                : counter == 21 ?
-                                                                                                <div>
-                                                                                                    <Juego12 />
-                                                                                                    {juegoSiguienActivo == true ?
-                                                                                                        <div className="siguiente-espacial"></div>
-                                                                                                        : <span>.</span>}
-                                                                                                </div>
-                                                                                                : counter == 22 ?
-                                                                                                <div>
-                                                                                                    <Juego23 />
-                                                                                                    {juegoSiguienActivo == true ?
-                                                                                                        <div className="siguiente-espacial"></div>
-                                                                                                        : <span>.</span>}
-                                                                                                </div>
-                                                                                                : counter == 23 ?
-                                                                                                <div>
-                                                                                                    <Juego14 />
-                                                                                                    {juegoSiguienActivo == true ?
-                                                                                                        <div className="siguiente-espacial"></div>
-                                                                                                        : <span>.</span>}
-                                                                                                </div>
-                                                                                                : <Fin posicionNivelActual={6}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Adicion"  numero={24}/>
+                                                                                                    <div>
+                                                                                                        <Juego18 />
+                                                                                                        {juegoSiguienActivo == true ?
+                                                                                                            <div className="siguiente-espacial"></div>
+                                                                                                            : <span>.</span>}
+                                                                                                    </div>
+                                                                                                    : counter == 20 ?
+                                                                                                        <div>
+                                                                                                            <Juego21 />
+                                                                                                            {juegoSiguienActivo == true ?
+                                                                                                                <div className="siguiente-espacial"></div>
+                                                                                                                : <span>.</span>}
+                                                                                                        </div>
+                                                                                                        : counter == 21 ?
+                                                                                                            <div>
+                                                                                                                <Juego12 />
+                                                                                                                {juegoSiguienActivo == true ?
+                                                                                                                    <div className="siguiente-espacial"></div>
+                                                                                                                    : <span>.</span>}
+                                                                                                            </div>
+                                                                                                            : counter == 22 ?
+                                                                                                                <div>
+                                                                                                                    <Juego23 />
+                                                                                                                    {juegoSiguienActivo == true ?
+                                                                                                                        <div className="siguiente-espacial"></div>
+                                                                                                                        : <span>.</span>}
+                                                                                                                </div>
+                                                                                                                : counter == 23 ?
+                                                                                                                    <div>
+                                                                                                                        <Juego14 />
+                                                                                                                        {juegoSiguienActivo == true ?
+                                                                                                                            <div className="siguiente-espacial"></div>
+                                                                                                                            : <span>.</span>}
+                                                                                                                    </div>
+                                                                                                                    : <Fin posicionNivelActual={6} nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/Adicion" numero={24} />
 
 
                     }

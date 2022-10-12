@@ -5,7 +5,7 @@ import Feliciades from "../Feliciades";
 import Fin from "../Fin";
 import IntentaloDeNuevo from "../IntentaloDeNuevo";
 
- 
+
 export default function Secuencias() {
     const [juegoActivo, setJuegoActivo] = useState(false)
     const [juegoSiguienActivo, setSiguienteJuegoActivo] = useState(false)
@@ -61,7 +61,7 @@ export default function Secuencias() {
     }
     const allowdrop = (e) => {
         e.preventDefault()
-    } 
+    }
     const Juego = () => {
         return (
             <div className="secuencia">
@@ -99,14 +99,14 @@ export default function Secuencias() {
         setSiguienteJuegoActivo(false)
     }
     const Tiempo = () => {
-        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
             setTimeout(() => {
                 setJuegoActivo(false)
                 setCounter(counter + 1)
-                }, 3000)
-            :setTimeout(() => {
+            }, 3000)
+            : setTimeout(() => {
                 setJuegoActivo(false)
-                }, 3000)
+            }, 3000)
         return (
             <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
                 <Feliciades />
@@ -166,7 +166,7 @@ export default function Secuencias() {
     const Juego2 = () => {
         return (
             <div className="secuencia">
-                <h3>Ordena los siguientes números siguiendo una secuencia en ritmo descendente tomando como patrón el número 20.</h3>
+                <h3>Ordena los siguientes números siguiendo una secuencia en ritmo descendente tomando como patrón el número 20. <br></br> Nota: La secuencia icia en 140.</h3>
                 <div className="drop">
                     <div className="box-drop" id="1" onDragOver={allowdrop2} onDrop={drop2}></div>
                     <div className="box-drop" id="2" onDragOver={allowdrop2} onDrop={drop2}></div>
@@ -209,7 +209,7 @@ export default function Secuencias() {
             //que se agregue al cuadro sleccioonad
             e.target.appendChild(document.getElementById(data))
         }
-        console.log(array3)
+
         if (array3[1] == "" && array3[2] != "" && array3[3] == "" && array3[4] != "" && array3[5] == "" && array3[6] != "" && array3[7] != "") {
             if (array3[1] == "" && array3[2] == "cientoveinticinco" && array3[3] == "" && array3[4] == "cientosetentaycinco" && array3[5] == "" && array3[6] == "docientosveinticinco" && array3[7] == "doscientoscincuenta") {
                 setJuegoActivo(true)
@@ -266,6 +266,12 @@ export default function Secuencias() {
                     <div className="drag-d" draggable="true" id="cientosetentaycinco" onDragStart={drag3}>175</div>
                     <div className="drag-d" draggable="true" id="cientoveinticinco" onDragStart={drag3}>125</div>
                     <div className="drag-d" draggable="true" id="docientosveinticinco" onDragStart={drag3}>225</div>
+                    <div className="drag-d" draggable="true" id="docientosquince" onDragStart={drag3}>215</div>
+                    <div className="drag-d" draggable="true" id="setentaycinco" onDragStart={drag3}>75</div>
+                    <div className="drag-d" draggable="true" id="cientodiez" onDragStart={drag3}>110</div>
+                    <div className="drag-d" draggable="true" id="cientoquince" onDragStart={drag3}>115</div>
+
+
 
 
                 </div>
@@ -348,6 +354,13 @@ export default function Secuencias() {
                     <div className="drag-d" draggable="true" id="45mil" onDragStart={drag4}>45,000</div>
                     <div className="drag-d" draggable="true" id="35mil" onDragStart={drag4}>35,000</div>
                     <div className="drag-d" draggable="true" id="20mil" onDragStart={drag4}>20,000</div>
+                    <div className="drag-d" draggable="true" id="55mil" onDragStart={drag4}>55,000</div>
+                    <div className="drag-d" draggable="true" id="49mil" onDragStart={drag4}>49,000</div>
+                    <div className="drag-d" draggable="true" id="36mil" onDragStart={drag4}>36,000</div>
+                    <div className="drag-d" draggable="true" id="21mil" onDragStart={drag4}>21,000</div>
+
+
+
 
 
                 </div>
@@ -429,6 +442,11 @@ export default function Secuencias() {
                     <div className="drag-d" draggable="true" id="80mil" onDragStart={drag5}>80,000</div>
                     <div className="drag-d" draggable="true" id="30mil" onDragStart={drag5}>30,000</div>
                     <div className="drag-d" draggable="true" id="60mil" onDragStart={drag5}>60,000</div>
+                    <div className="drag-d" draggable="true" id="95mil" onDragStart={drag5}>95,000</div>
+                    <div className="drag-d" draggable="true" id="6" onDragStart={drag5}>6,000</div>
+                    <div className="drag-d" draggable="true" id="8mil" onDragStart={drag5}>8,000</div>
+
+
 
 
                 </div>
@@ -794,8 +812,10 @@ export default function Secuencias() {
                 <div className="drag">
                     <div className="drag-d" draggable="true" id="17mil" onDragStart={drag9}>17,000</div>
                     <div className="drag-d" draggable="true" id="14mil" onDragStart={drag9}>14,000</div>
+                    <div className="drag-d" draggable="true" id="18mil500" onDragStart={drag9}>18,500</div>
                     <div className="drag-d" draggable="true" id="19mil" onDragStart={drag9}>19,000</div>
                     <div className="drag-d" draggable="true" id="15mil" onDragStart={drag9}>15,000</div>
+                    <div className="drag-d" draggable="true" id="15mil50" onDragStart={drag9}>15,050</div>
                     <div className="drag-d" draggable="true" id="21mil" onDragStart={drag9}>21,000</div>
 
 
@@ -875,10 +895,14 @@ export default function Secuencias() {
                 </div>
                 <div className="drag">
                     <div className="drag-d" draggable="true" id="40mil" onDragStart={drag10}>40,000</div>
+                    <div className="drag-d" draggable="true" id="4mil" onDragStart={drag10}>4,000</div>
                     <div className="drag-d" draggable="true" id="60mil" onDragStart={drag10}>60,000</div>
+                    <div className="drag-d" draggable="true" id="6mil" onDragStart={drag10}>6,000</div>
                     <div className="drag-d" draggable="true" id="8mil" onDragStart={drag10}>8,000</div>
                     <div className="drag-d" draggable="true" id="80mil" onDragStart={drag10}>80,000</div>
                     <div className="drag-d" draggable="true" id="30mil" onDragStart={drag10}>30,000</div>
+                    <div className="drag-d" draggable="true" id="3mil" onDragStart={drag10}>3,000</div>
+
 
 
                 </div>
@@ -892,10 +916,10 @@ export default function Secuencias() {
         <div>
             <div className="Contador-secuencia">{counter + 1}/10</div>
             {juegoActivo == false ?
-                <div> 
+                <div>
                     {counter == 0 ?
                         <div>
-                            <Juego/>
+                            <Juego />
                         </div>
                         : counter == 1 ?
                             <div>
@@ -942,7 +966,7 @@ export default function Secuencias() {
                                                                 <Juego10 />
                                                             </div>
 
-                                                            : <Fin posicionNivelActual={1}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/ValorPosicion"  numero={10}/>
+                                                            : <Fin posicionNivelActual={1} nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Numeracion/ValorPosicion" numero={10} />
                     }
 
                 </div>
@@ -954,3 +978,4 @@ export default function Secuencias() {
 
 
 }
+ 

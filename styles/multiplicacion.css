@@ -123,6 +123,16 @@
     padding-right: 10px;
    
   }
+  .drop-mult-j8 {
+    display: flex;
+    margin-left: -10px;
+   
+  }
+  .drop-mult-j8-2 {
+    display: flex;
+    margin-left: 70px;
+   
+  }
   .drop-mult-f12 {
     display: grid;
    
@@ -142,6 +152,126 @@
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .drop-mult-j14{
+    display: grid;
+    width: 80px;
+    margin-left: 400px;
+    margin-top: -20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .drop-mult-j16{
+    display: grid;
+    width: 80px;
+    margin-left: 360px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .drop-mult-1j16{
+    display: grid;
+    width: 80px;
+    margin-left: 280px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .drop-mult-1j14{
+    display: grid;
+    width: 80px;
+    margin-left: 400px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .drop-mult-j12{
+    display: grid;
+    width: 80px;
+    margin-left: 240px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .drop-mult-j11{
+    display: grid;
+    width: 80px;
+    margin-top: -15px;
+    margin-left: 440px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .drop-mult-j10{
+    display: grid;
+    width: 80px;
+    margin-top: -20px;
+    margin-left: 200px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr ;
+  }
+  .drop-mult-1j10{
+    display: grid;
+    width: 80px;
+    margin-left: 160px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .drop-mult-1j11{
+    display: grid;
+    width: 80px;
+    margin-left: 360px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .drop-mult-1j12{
+    display: grid;
+    width: 80px;
+    margin-left: 320px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .drop-mult-2j11{
+    display: grid;
+    width: 80px;
+    margin-left: 280px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .drop-mult-2j14{
+    display: grid;
+    width: 80px;
+    margin-left: 280px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .drop-mult-3j14{
+    display: grid;
+    width: 80px;
+    margin-left: 360px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .drop-mult-f112{
     display: grid;
@@ -222,6 +352,34 @@
     width: 52%;
     margin-right: 45%;
   }
+  .raya-mult-1j11 {
+    height: 10px;
+    background-color: black;
+    border: none;
+    width: 45%;
+    margin-left: 220px;
+  }
+  .raya-mult-j11 {
+    height: 10px;
+    background-color: black;
+    border: none;
+    width: 40%;
+    margin-left: 270px;
+  }
+  .raya-mult-j14 {
+    height: 10px;
+    background-color: black;
+    border: none;
+    width: 43%;
+    margin-right: 220px;
+  }
+  .raya-mult-2j14 {
+    height: 10px;
+    background-color: black;
+    border: none;
+    width: 55%;
+    margin-right: 210px;
+  }
   .az{
     background-color: rgb(45, 224, 248);
 
@@ -271,6 +429,12 @@
     padding: 0;
     display: grid;
     grid-template-columns: 75% 25%;
+  }
+  .grid-mu-j14{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 61% 45%;
   }
   .drag-mult-1 {
     display: grid;

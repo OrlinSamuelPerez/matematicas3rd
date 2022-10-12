@@ -39,7 +39,7 @@ export default function Start(){
     return(
         <div className="space-fondo">
             <div className="grid-cardlevel">
-                <CardLevel color="#6A35BF" level="Numeracion" id="Presentacion" nombre="Presentacion" numero="1" img="astronauta-music.png"/>
+                <CardLevel color="#6A35BF" level="Numeracion" id="Presentacion" nombre="Presentación" numero="1" img="astronauta-music.png"/>
                 {arrayMostrar.map(e=><CardLevel color="#6A35BF" level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="astronauta-music.png"/>)}
                 {arrayDeshabilitado.map(e=><CardLevel clasDesabilitar="not-active" color="#202121"  level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="candado.png"/>)}
             </div>

@@ -30,7 +30,7 @@ export default function Suma() {
                 : <IntentaloDeNuevo />
             }</div>
         )
-    }
+    } 
     // numero 1
     let array = ["", "", ""]
     const drag = (e) => {
@@ -193,7 +193,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >1</div>
                             <div className="box-drop-suma" >3</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j14"></hr>
                         <div className="drop-suma">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop2} onDrop={drop2}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop2} onDrop={drop2}></div>
@@ -381,7 +381,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >2</div>
                             <div className="box-drop-suma" >3</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j14"></hr>
                         <div className="drop-suma">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop4} onDrop={drop4}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop4} onDrop={drop4}></div>
@@ -569,7 +569,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >4</div>
                             <div className="box-drop-suma" >5</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j14"></hr>
                         <div className="drop-suma-1">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop6} onDrop={drop6}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop6} onDrop={drop6}></div>
@@ -761,7 +761,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >7</div>
                             <div className="box-drop-suma" >9</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j14"></hr>
                         <div className="drop-suma-1">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop8} onDrop={drop8}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop8} onDrop={drop8}></div>
@@ -953,7 +953,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >8</div>
                             <div className="box-drop-suma" >6</div>
                         </div>
-                        <hr className="raya"></hr>
+                        <hr className="raya-j14"></hr>
                         <div className="drop-suma-1">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop10} onDrop={drop10}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop10} onDrop={drop10}></div>
@@ -1046,14 +1046,14 @@ export default function Suma() {
                             <div className="box-drop-suma" >4</div>
 
                         </div>
-                        <div className="drop-suma">
+                        <div className="drop-suma-j11">
                             <div className="box-drop-suma" >+</div>
                             <div className="box-drop-suma" >2</div>
                             <div className="box-drop-suma" >4</div>
                             <div className="box-drop-suma" >8</div>
 
                         </div>
-                        <hr className="raya1"></hr>
+                        <hr className="raya-j11"></hr>
                         <div className="drop-suma">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop11} onDrop={drop11}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop11} onDrop={drop11}></div>
@@ -1062,7 +1062,7 @@ export default function Suma() {
                         </div>
                     </div>
                     <div>
-                        <div className="drag-suma">
+                        <div className="drag-suma-j11">
                             <div className="drag-d-suma" draggable="true" id="dos" onDragStart={drag11}>2</div>
                             <div className="drag-d-suma" draggable="true" id="uno" onDragStart={drag11}>1</div>
                             <div className="drag-d-suma" draggable="true" id="tres" onDragStart={drag11}>3</div>
@@ -1153,7 +1153,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >7</div>
 
                         </div>
-                        <hr className="raya1"></hr>
+                        <hr className="raya-j14"></hr>
                         <div className="drop-suma">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop12} onDrop={drop12}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop12} onDrop={drop12}></div>
@@ -1253,7 +1253,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >5</div>
 
                         </div>
-                        <hr className="raya1"></hr>
+                        <hr className="raya-j14"></hr>
                         <div className="drop-suma">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop13} onDrop={drop13}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop13} onDrop={drop13}></div>
@@ -1353,7 +1353,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >8</div>
 
                         </div>
-                        <hr className="raya1"></hr>
+                        <hr className="raya-j14"></hr>
                         <div className="drop-suma">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop14} onDrop={drop14}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop14} onDrop={drop14}></div>
@@ -1453,7 +1453,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >2</div>
 
                         </div>
-                        <hr className="raya1"></hr>
+                        <hr className="raya-j14"></hr>
                         <div className="drop-suma-1">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop15} onDrop={drop15}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop15} onDrop={drop15}></div>
@@ -1567,7 +1567,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >0</div>
 
                         </div>
-                        <hr className="raya2"></hr>
+                        <hr className="raya-j19"></hr>
                         <div className="drop-suma-2">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop16} onDrop={drop16}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop16} onDrop={drop16}></div>
@@ -1683,7 +1683,7 @@ export default function Suma() {
                             <div className="box-drop-suma" >3</div>
 
                         </div>
-                        <hr className="raya2"></hr>
+                        <hr className="raya-j19"></hr>
                         <div className="drop-suma-2">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop17} onDrop={drop17}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop17} onDrop={drop17}></div>
@@ -1805,7 +1805,7 @@ export default function Suma() {
 
 
                         </div>
-                        <hr className="raya2"></hr>
+                        <hr className="raya-j19"></hr>
                         <div className="drop-suma-2">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop18} onDrop={drop18}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop18} onDrop={drop18}></div>
@@ -1927,7 +1927,7 @@ export default function Suma() {
 
 
                         </div>
-                        <hr className="raya2"></hr>
+                        <hr className="raya-j19"></hr>
                         <div className="drop-suma-2">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop19} onDrop={drop19}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop19} onDrop={drop19}></div>
@@ -2049,7 +2049,7 @@ export default function Suma() {
 
 
                         </div>
-                        <hr className="raya2"></hr>
+                        <hr className="raya-j19"></hr>
                         <div className="drop-suma-2">
                             <div className="box-drop-suma" id="1" onDragOver={allowdrop20} onDrop={drop20}></div>
                             <div className="box-drop-suma" id="2" onDragOver={allowdrop20} onDrop={drop20}></div>

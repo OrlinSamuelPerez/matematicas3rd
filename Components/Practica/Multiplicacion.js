@@ -746,7 +746,7 @@ export default function Mulpiplicacion() {
                             <div className="box-drop-mult" >2</div>
                             <div className="box-drop-mult" >1</div>
 
-
+ 
                         </div>
                         <hr className="raya-mult"></hr>
                         <div className="drop-mult">
@@ -754,7 +754,7 @@ export default function Mulpiplicacion() {
                             <div className="box-drop-mult" id="2" onDragOver={allowdrop} onDrop={drop8}></div>
 
                         </div>
-                        <div className="drop-mult-f2">
+                        <div className="drop-mult-j8">
                             <div className="box-drop-mult az">+</div>
                             <div className="box-drop-mult" id="3" onDragOver={allowdrop} onDrop={drop8}></div>
                             <div className="box-drop-mult" id="4" onDragOver={allowdrop} onDrop={drop8}></div>
@@ -762,7 +762,7 @@ export default function Mulpiplicacion() {
                         </div>
                         <hr className="raya-mult"></hr>
 
-                        <div className="drop-mult-f1">
+                        <div className="drop-mult-j8-2">
                             <div className="box-drop-mult" id="5" onDragOver={allowdrop} onDrop={drop8}></div>
                             <div className="box-drop-mult" id="6" onDragOver={allowdrop} onDrop={drop8}></div>
                             <div className="box-drop-mult" id="7" onDragOver={allowdrop} onDrop={drop8}></div>
@@ -850,7 +850,7 @@ export default function Mulpiplicacion() {
                             <div className="box-drop-mult" id="2" onDragOver={allowdrop} onDrop={drop9}></div>
 
                         </div>
-                        <div className="drop-mult-f2">
+                        <div className="drop-mult-j8">
                             <div className="box-drop-mult az">+</div>
                             <div className="box-drop-mult" id="3" onDragOver={allowdrop} onDrop={drop9}></div>
                             <div className="box-drop-mult" id="4" onDragOver={allowdrop} onDrop={drop9}></div>
@@ -858,7 +858,7 @@ export default function Mulpiplicacion() {
                         </div>
                         <hr className="raya-mult"></hr>
 
-                        <div className="drop-mult-f1">
+                        <div className="drop-mult-j8-2">
                             <div className="box-drop-mult" id="5" onDragOver={allowdrop} onDrop={drop9}></div>
                             <div className="box-drop-mult" id="6" onDragOver={allowdrop} onDrop={drop9}></div>
                             <div className="box-drop-mult" id="7" onDragOver={allowdrop} onDrop={drop9}></div>
@@ -926,14 +926,13 @@ export default function Mulpiplicacion() {
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-mult">
+                        <div className="drop-mult-j10">
                             <div className="box-drop-mult" >6</div>
                             <div className="box-drop-mult" >2</div>
                         </div>
-                        <div>
-                            <div className="box-drop-mult-s" >x</div>
-                        </div>
-                        <div className="drop-mult">
+                        
+                        <div className="drop-mult-1j10">
+                        <div className="box-drop-mult az" >x</div>
 
                             <div className="box-drop-mult" >1</div>
                             <div className="box-drop-mult" >3</div>
@@ -941,7 +940,7 @@ export default function Mulpiplicacion() {
 
                         </div>
                         <hr className="raya-mult"></hr>
-                        <div className="drop-mult-f1">
+                        <div className="drop-mult-1j10">
                             <div className="box-drop-mult" id="1" onDragOver={allowdrop} onDrop={drop10}></div>
                             <div className="box-drop-mult" id="2" onDragOver={allowdrop} onDrop={drop10}></div>
                             <div className="box-drop-mult" id="3" onDragOver={allowdrop} onDrop={drop10}></div>
@@ -955,7 +954,7 @@ export default function Mulpiplicacion() {
                         </div>
                         <hr className="raya-mult"></hr>
 
-                        <div className="drop-mult-f1">
+                        <div className="drop-mult-1j10">
                             <div className="box-drop-mult" id="6" onDragOver={allowdrop} onDrop={drop10}></div>
                             <div className="box-drop-mult" id="7" onDragOver={allowdrop} onDrop={drop10}></div>
                             <div className="box-drop-mult" id="8" onDragOver={allowdrop} onDrop={drop10}></div>
@@ -1021,38 +1020,37 @@ export default function Mulpiplicacion() {
         return (
             <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
-                <div className="grid-mu">
+                <div className="grid-mu-j14">
                     <div>
-                        <div className="drop-mult">
+                        <div className="drop-mult-j11">
                             <div className="box-drop-mult" >3</div>
                             <div className="box-drop-mult" >8</div>
                         </div>
-                        <div>
-                            <div className="box-drop-mult-s" >x</div>
-                        </div>
-                        <div className="drop-mult">
+                       
+                        <div className="drop-mult-1j14">
+                        <div className="box-drop-mult az" >x</div>
 
                             <div className="box-drop-mult" >3</div>
                             <div className="box-drop-mult" >0</div>
 
 
                         </div>
-                        <hr className="raya-mult"></hr>
-                        <div className="drop-mult">
+                        <hr className="raya-mult-j11"></hr>
+                        <div className="drop-mult-j11">
                             <div className="box-drop-mult" id="1" onDragOver={allowdrop} onDrop={drop11}></div>
                             <div className="box-drop-mult" id="2" onDragOver={allowdrop} onDrop={drop11}></div>
 
                         </div>
-                        <div className="drop-mult-f12">
+                        <div className="drop-mult-2j11">
                             <div className="box-drop-mult az">+</div>
                             <div className="box-drop-mult" id="3" onDragOver={allowdrop} onDrop={drop11}></div>
                             <div className="box-drop-mult" id="4" onDragOver={allowdrop} onDrop={drop11}></div>
                             <div className="box-drop-mult" id="5" onDragOver={allowdrop} onDrop={drop11}></div>
 
                         </div>
-                        <hr className="raya-mult"></hr>
+                        <hr className="raya-mult-1j11"></hr>
 
-                        <div className="drop-mult-f112">
+                        <div className="drop-mult-1j11">
                             <div className="box-drop-mult" id="6" onDragOver={allowdrop} onDrop={drop11}></div>
                             <div className="box-drop-mult" id="7" onDragOver={allowdrop} onDrop={drop11}></div>
                             <div className="box-drop-mult" id="8" onDragOver={allowdrop} onDrop={drop11}></div>
@@ -1120,39 +1118,38 @@ export default function Mulpiplicacion() {
         return (
             <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
-                <div className="grid-mu">
+                <div className="grid-mu-j14">
                     <div>
-                        <div className="drop-mult">
+                        <div className="drop-mult-j14">
                             <div className="box-drop-mult" >7</div>
                             <div className="box-drop-mult" >4</div>
                         </div>
-                        <div>
-                            <div className="box-drop-mult-s" >x</div>
-                        </div>
-                        <div className="drop-mult">
+                        
+                        <div className="drop-mult-1j11">
+                        <div className="box-drop-mult az" >x</div>
 
                             <div className="box-drop-mult" >2</div>
                             <div className="box-drop-mult" >2</div>
 
 
                         </div>
-                        <hr className="raya-mult"></hr>
-                        <div className="drop-mult-f111">
+                        <hr className="raya-mult-j11"></hr>
+                        <div className="drop-mult-1j11">
                             <div className="box-drop-mult" id="1" onDragOver={allowdrop} onDrop={drop12}></div>
                             <div className="box-drop-mult" id="2" onDragOver={allowdrop} onDrop={drop12}></div>
                             <div className="box-drop-mult" id="3" onDragOver={allowdrop} onDrop={drop12}></div>
 
                         </div>
-                        <div className="drop-mult-f12">
+                        <div className="drop-mult-j12">
                             <div className="box-drop-mult az">+</div>
                             <div className="box-drop-mult" id="4" onDragOver={allowdrop} onDrop={drop12}></div>
                             <div className="box-drop-mult" id="5" onDragOver={allowdrop} onDrop={drop12}></div>
                             <div className="box-drop-mult" id="6" onDragOver={allowdrop} onDrop={drop12}></div>
 
                         </div>
-                        <hr className="raya-mult"></hr>
+                        <hr className="raya-mult-2j14"></hr>
 
-                        <div className="drop-mult-f112">
+                        <div className="drop-mult-1j12">
                             <div className="box-drop-mult" id="7" onDragOver={allowdrop} onDrop={drop12}></div>
                             <div className="box-drop-mult" id="8" onDragOver={allowdrop} onDrop={drop12}></div>
                             <div className="box-drop-mult" id="9" onDragOver={allowdrop} onDrop={drop12}></div>
@@ -1220,40 +1217,39 @@ export default function Mulpiplicacion() {
         return (
             <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
-                <div className="grid-mu">
+                <div className="grid-mu-j14">
                     <div>
-                        <div className="drop-mult-f111">
+                        <div className="drop-mult-j14">
                             <div className="box-drop-mult" >4</div>
                             <div className="box-drop-mult" >2</div>
                             <div className="box-drop-mult" >1</div>
                         </div>
-                        <div>
-                            <div className="box-drop-mult-s" >x</div>
-                        </div>
-                        <div className="drop-mult">
+                        
+                        <div className="drop-mult-1j14">
+                        <div className="box-drop-mult az" >x</div>
 
                             <div className="box-drop-mult" >2</div>
                             <div className="box-drop-mult" >0</div>
 
 
                         </div>
-                        <hr className="raya-mult"></hr>
-                        <div className="drop-mult-f111">
+                        <hr className="raya-mult-j14"></hr>
+                        <div className="drop-mult-1j14">
                             <div className="box-drop-mult" id="1" onDragOver={allowdrop} onDrop={drop13}></div>
                             <div className="box-drop-mult" id="2" onDragOver={allowdrop} onDrop={drop13}></div>
                             <div className="box-drop-mult" id="3" onDragOver={allowdrop} onDrop={drop13}></div>
 
                         </div>
-                        <div className="drop-mult-f12">
+                        <div className="drop-mult-2j14">
                             <div className="box-drop-mult az">+</div>
                             <div className="box-drop-mult" id="4" onDragOver={allowdrop} onDrop={drop13}></div>
                             <div className="box-drop-mult" id="5" onDragOver={allowdrop} onDrop={drop13}></div>
                             <div className="box-drop-mult" id="6" onDragOver={allowdrop} onDrop={drop13}></div>
 
                         </div>
-                        <hr className="raya-mult"></hr>
+                        <hr className="raya-mult-2j14"></hr>
 
-                        <div className="drop-mult-f112">
+                        <div className="drop-mult-3j14">
                             <div className="box-drop-mult" id="7" onDragOver={allowdrop} onDrop={drop13}></div>
                             <div className="box-drop-mult" id="8" onDragOver={allowdrop} onDrop={drop13}></div>
                             <div className="box-drop-mult" id="9" onDragOver={allowdrop} onDrop={drop13}></div>
@@ -1321,40 +1317,39 @@ export default function Mulpiplicacion() {
         return (
             <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
-                <div className="grid-mu">
+                <div className="grid-mu-j14">
                     <div>
-                        <div className="drop-mult-f111">
+                        <div className="drop-mult-j14">
                             <div className="box-drop-mult" >5</div>
                             <div className="box-drop-mult" >5</div>
                             <div className="box-drop-mult" >0</div>
                         </div>
-                        <div>
-                            <div className="box-drop-mult-s" >x</div>
-                        </div>
-                        <div className="drop-mult">
+                       
+                        <div className="drop-mult-1j14">
+                        <div className="box-drop-mult az" >x</div>
 
                             <div className="box-drop-mult" >1</div>
                             <div className="box-drop-mult" >1</div>
 
 
                         </div>
-                        <hr className="raya-mult"></hr>
-                        <div className="drop-mult-f111">
+                        <hr className="raya-mult-j14"></hr>
+                        <div className="drop-mult-1j14">
                             <div className="box-drop-mult" id="1" onDragOver={allowdrop} onDrop={drop14}></div>
                             <div className="box-drop-mult" id="2" onDragOver={allowdrop} onDrop={drop14}></div>
                             <div className="box-drop-mult" id="3" onDragOver={allowdrop} onDrop={drop14}></div>
 
                         </div>
-                        <div className="drop-mult-f12">
+                        <div className="drop-mult-2j14">
                             <div className="box-drop-mult az">+</div>
                             <div className="box-drop-mult" id="4" onDragOver={allowdrop} onDrop={drop14}></div>
                             <div className="box-drop-mult" id="5" onDragOver={allowdrop} onDrop={drop14}></div>
                             <div className="box-drop-mult" id="6" onDragOver={allowdrop} onDrop={drop14}></div>
 
                         </div>
-                        <hr className="raya-mult"></hr>
+                        <hr className="raya-mult-2j14"></hr>
 
-                        <div className="drop-mult-f112">
+                        <div className="drop-mult-3j14">
                             <div className="box-drop-mult" id="7" onDragOver={allowdrop} onDrop={drop14}></div>
                             <div className="box-drop-mult" id="8" onDragOver={allowdrop} onDrop={drop14}></div>
                             <div className="box-drop-mult" id="9" onDragOver={allowdrop} onDrop={drop14}></div>
@@ -1422,41 +1417,40 @@ export default function Mulpiplicacion() {
         return (
             <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
-                <div className="grid-mu">
+                <div className="grid-mu-j14">
                     <div>
-                        <div className="drop-mult-f111">
+                        <div className="drop-mult-j14">
                             <div className="box-drop-mult" >4</div>
                             <div className="box-drop-mult" >8</div>
                             <div className="box-drop-mult" >1</div>
                         </div>
-                        <div>
-                            <div className="box-drop-mult-s" >x</div>
-                        </div>
-                        <div className="drop-mult">
+                        
+                        <div className="drop-mult-1j14">
+                        <div className="box-drop-mult az" >x</div>
 
                             <div className="box-drop-mult" >1</div>
                             <div className="box-drop-mult" >6</div>
 
 
                         </div>
-                        <hr className="raya-mult"></hr>
-                        <div className="drop-mult-f112">
+                        <hr className="raya-mult-j14"></hr>
+                        <div className="drop-mult-3j14">
                             <div className="box-drop-mult" id="1" onDragOver={allowdrop} onDrop={drop15}></div>
                             <div className="box-drop-mult" id="2" onDragOver={allowdrop} onDrop={drop15}></div>
                             <div className="box-drop-mult" id="3" onDragOver={allowdrop} onDrop={drop15}></div>
                             <div className="box-drop-mult" id="4" onDragOver={allowdrop} onDrop={drop15}></div>
 
                         </div>
-                        <div className="drop-mult-f12">
+                        <div className="drop-mult-2j14">
                             <div className="box-drop-mult az">+</div>
                             <div className="box-drop-mult" id="5" onDragOver={allowdrop} onDrop={drop15}></div>
                             <div className="box-drop-mult" id="6" onDragOver={allowdrop} onDrop={drop15}></div>
                             <div className="box-drop-mult" id="7" onDragOver={allowdrop} onDrop={drop15}></div>
 
                         </div>
-                        <hr className="raya-mult"></hr>
+                        <hr className="raya-mult-j14"></hr>
 
-                        <div className="drop-mult-f112">
+                        <div className="drop-mult-3j14">
                             <div className="box-drop-mult" id="8" onDragOver={allowdrop} onDrop={drop15}></div>
                             <div className="box-drop-mult" id="9" onDragOver={allowdrop} onDrop={drop15}></div>
                             <div className="box-drop-mult" id="10" onDragOver={allowdrop} onDrop={drop15}></div>
@@ -1524,41 +1518,40 @@ export default function Mulpiplicacion() {
         return (
             <div className="Numerospi">
                 <h3>Completa correctamente la siguiente multiplicación.</h3>
-                <div className="grid-mu">
+                <div className="grid-mu-j14">
                     <div>
-                        <div className="drop-mult-f111">
+                        <div className="drop-mult-j14">
                             <div className="box-drop-mult" >3</div>
                             <div className="box-drop-mult" >6</div>
                             <div className="box-drop-mult" >5</div>
                         </div>
-                        <div>
-                            <div className="box-drop-mult-s" >x</div>
-                        </div>
-                        <div className="drop-mult">
+                        
+                        <div className="drop-mult-1j14">
+                        <div className="box-drop-mult az" >x</div>
 
                             <div className="box-drop-mult" >2</div>
                             <div className="box-drop-mult" >5</div>
 
 
                         </div>
-                        <hr className="raya-mult"></hr>
-                        <div className="drop-mult-f112">
+                        <hr className="raya-mult-j14"></hr>
+                        <div className="drop-mult-j16">
                             <div className="box-drop-mult" id="1" onDragOver={allowdrop} onDrop={drop16}></div>
                             <div className="box-drop-mult" id="2" onDragOver={allowdrop} onDrop={drop16}></div>
                             <div className="box-drop-mult" id="3" onDragOver={allowdrop} onDrop={drop16}></div>
                             <div className="box-drop-mult" id="4" onDragOver={allowdrop} onDrop={drop16}></div>
 
                         </div>
-                        <div className="drop-mult-f12">
+                        <div className="drop-mult-1j16">
                             <div className="box-drop-mult az">+</div>
                             <div className="box-drop-mult" id="5" onDragOver={allowdrop} onDrop={drop16}></div>
                             <div className="box-drop-mult" id="6" onDragOver={allowdrop} onDrop={drop16}></div>
                             <div className="box-drop-mult" id="7" onDragOver={allowdrop} onDrop={drop16}></div>
 
                         </div>
-                        <hr className="raya-mult"></hr>
+                        <hr className="raya-mult-2j14"></hr>
 
-                        <div className="drop-mult-f112">
+                        <div className="drop-mult-j16">
                             <div className="box-drop-mult" id="8" onDragOver={allowdrop} onDrop={drop16}></div>
                             <div className="box-drop-mult" id="9" onDragOver={allowdrop} onDrop={drop16}></div>
                             <div className="box-drop-mult" id="10" onDragOver={allowdrop} onDrop={drop16}></div>
@@ -1587,7 +1580,7 @@ export default function Mulpiplicacion() {
         { image: "/img/problema4.png", pregunta: "Don Pedrito lleva en su camión 250 cajas con 12 piñas cada una. ¿Cuántas piñas llevará en total?", repuesta: [{ valor: "2,300", validar: false }, { valor: "3,000", validar: true }, { valor: "262", validar: false }, { valor: "3,796", validar: false }, { valor: "3,769", validar: false }, { valor: "3,967", validar: false }] },
         { image: "/img/problema5.png", pregunta: "En un cine hay 25 filas cada fila con 12 asientos, ¿Cuántos asientos en total hay en el cine?", repuesta: [{ valor: "37", validar: false }, { valor: "125", validar: false }, { valor: "200", validar: false }, { valor: "300", validar: true }, { valor: "325", validar: false }, { valor: "400", validar: false }] },
         { image: "/img/problema1.png", pregunta: "Carlitos vende naranjas y manzanas todas las mañanas, Juana ha ido a comprar 60 naranjas, si cada naranja cuesta $5 pesos ¿Cuánto debe pagar María?", repuesta: [{ valor: "$280", validar: false }, { valor: "$300", validar: true }, { valor: "$106", validar: false }, { valor: "$120", validar: false }, { valor: "$370", validar: false }, { valor: "$220", validar: false }] },
-        { image: "/img/problema2.png", pregunta: "A Pedro le toca sacar la basura los lunes y jueves; su papá le da $10.00 cada vez que lo hace. Si Pedro ahorra lo que le dan, ¿cuánto juntará al paso de 5 semanas?", repuesta: [{ valor: "$75", validar: false }, { valor: "$60", validar: false }, { valor: "$20", validar: false }, { valor: "$100", validar: true }, { valor: "$40", validar: false }, { valor: "$25", validar: false }] },
+        { image: "/img/problema2.png", pregunta: "A Pedro le toca sacar la basura los lunes y jueves; su papá le da $10.00 cada vez que lo hace. Si Pedro ahorra lo que le dan, ¿cuánto juntará al paso de 5 semanas?", repuesta: [{ valor: "$75", validar: false }, { valor: "$60", validar: false }, { valor: "$50", validar: false }, { valor: "$100", validar: true }, { valor: "$40", validar: false }, { valor: "$25", validar: false }] },
         { image: "/img/problema3.png", pregunta: "Miguel gasta $50 todos los días en el autobús que lo lleva a la escuela y lo trae a la casa, ¿Cuánto gasta a la semana?, Recuerda que se va a la escuela sólo de lunes a viernes.", repuesta: [{ valor: "$250", validar: true }, { valor: "$205", validar: false }, { valor: "$240", validar: false }, { valor: "$190", validar: false }, { valor: "$120", validar: false }, { valor: "$300", validar: false }] },
         { image: "/img/problema4.png", pregunta: "Don Pedrito lleva en su camión 500 cajas con 15 piñas cada una. ¿Cuántas piñas llevará en total?", repuesta: [{ valor: "7,300", validar: false }, { valor: "7,500", validar: true }, { valor: "3,262", validar: false }, { valor: "7,796", validar: false }, { valor: "7,769", validar: false }, { valor: "7,505", validar: false }] },
         { image: "/img/problema5.png", pregunta: "En un cine hay 30 filas cada fila con 10 asientos, ¿Cuántos asientos en total hay en el cine?", repuesta: [{ valor: "370", validar: false }, { valor: "150", validar: false }, { valor: "200", validar: false }, { valor: "300", validar: true }, { valor: "325", validar: false }, { valor: "400", validar: false }] },
