@@ -1452,16 +1452,16 @@ canvas {
 }
 .house-start{
  display: flex; 
- position: absolute;
- top: 6px;
+ position: fixed;
+ top: 5px;
  left:6px;
- gap: 20px;
+ gap: 15px;
 }
 .house-start div{
   background-color: #ffdba5;
-  width: 65px;
+  width: 55px;
  border-radius: 30px;
-  height: 65px;
+  height: 55px;
   padding: 10px;
   cursor: pointer;
 

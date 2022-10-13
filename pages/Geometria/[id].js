@@ -32,6 +32,9 @@ export default function HomeNumeracion() {
     const [data, setData] = useState({});
     const [idPage, setId] = useState({ id: "" })
     const rutaActual = useRouter().query.id
+    const arrayP = ["/img/PO1.png", "/img/PO2.png","/img/PO3.png","/img/PO4.png","/img/PO5.png","/img/PO6.png","/img/PO7.png","/img/PO8.png","/img/PO9.png","/img/PO10.png","/img/PO11.png","/img/PO12.png","/img/PO13.png","/img/PO14.png"]
+    const arrayC = ["/img/C1.png", "/img/C2.png","/img/C3.png","/img/C4.png"]
+    
     const handleClick1 = () => {
         setCounter(counter + 1)
     }
@@ -126,9 +129,15 @@ export default function HomeNumeracion() {
                         <div className="siguiente-espacial"><button onClick={() => atras("oivos")} >Atrás</button><button onClick={handleClick2} >Continuar</button></div>
 
                     </div> : counter == 3 ?
-                        <div className="geometria-fon">
-                            <Ejemplo datos={data.Presentacion} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
-                        </div>
+                                rutaActual == "Poligonos" ?
+                                <div className="geometria-fon">
+                                    <Ejemplo datos={arrayP} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
+                                </div>
+                                : rutaActual == "Congruencia" ?
+                                <div className="geometria-fon">
+                                    <Ejemplo datos={arrayC} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
+                                </div>
+                                :<h1></h1>
                         : counter == 4 ?
                             rutaActual == "Poligonos" ?
                                 <div className='geometria-fon'>
@@ -138,14 +147,6 @@ export default function HomeNumeracion() {
 
                                     </div>
                                 </div>
-
-                                : rutaActual == "SignosComparacion" ?
-                                    <div className='geometria-fon'>
-                                        <div className='juegoFondoSpace'>
-                                        <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-                                            <SignosComparacion />
-                                        </div>
-                                    </div>
                                     : rutaActual == "Angulos" ?
                                         <div className='geometria-fon'>
                                             <div className='juegoFondoSpace'>
@@ -154,16 +155,6 @@ export default function HomeNumeracion() {
 
                                             </div>
                                         </div>
-
-                                        : rutaActual == "ValorPosicion" ?
-                                            <div className='geometria-fon'>
-                                                <div className='juegoFondoSpace'>
-                                            <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-
-                                                    <ValorPosicion />
-
-                                                </div>
-                                            </div>
                                             : rutaActual == "CuerposGeometricos" ?
                                                 <div className='geometria-fon'>
                                                     <div className='juegoFondoSpace'>
@@ -172,23 +163,6 @@ export default function HomeNumeracion() {
 
                                                     </div>
                                                 </div>
-                                                : rutaActual == "NumerosOrdinales" ?
-                                                    <div className='geometria-fon'>
-                                                        <div className='juegoFondoSpace'>
-                                            <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-                                                            <NumerosOrdinales />
-
-                                                        </div>
-                                                    </div>
-
-                                                    : rutaActual == "Division" ?
-                                                        <div className='geometria-fon'>
-                                                            <div className='juegoFondoSpace'>
-                                            <div className="atras-practica" onClick={()=>setCounter(3) }><button><img src="/img/libro-abierto.png"/></button></div>
-
-                                                                <Division/>
-                                                            </div>
-                                                        </div>
                                                          : rutaActual == "Simetria" ?
                                                          <div className='geometria-fon'>
                                                              <div className='juegoFondoSpace'>

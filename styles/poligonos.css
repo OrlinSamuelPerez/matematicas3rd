@@ -49,6 +49,7 @@
 }
 
 .poligonos-drop{
+  margin: 3px;
     width: 200px;
     height: 60px;
     background-color: white;
@@ -62,67 +63,67 @@
     color: black;
 }
 .poligonos-drop1{
-    position: absolute;
+    position: fixed;
     top: 47%;
     left: 22%;
 }
 .poligonos-drop2{
-    position: absolute;
+    position: fixed;
     top: 62%;
     left: 43%;
 }
 .poligonos-drop3{
-    position: absolute;
+    position: fixed;
     top: 19%;
     left: 62%;
 }
 .poligonos-drop4{
-    position: absolute;
+    position: fixed;
     top: 42%;
     left: 22%;
 }
 .poligonos-drop5{
-    position: absolute;
+    position: fixed;
     top: 62%;
     left: 45%;
 }
 .poligonos-drop6{
-    position: absolute;
+    position: fixed;
     top: 26%;
     left: 62%;
 }
 .poligonos-drop7{
-    position: absolute;
+    position: fixed;
     top: 20%;
     left: 22%;
 }
 .poligonos-drop8{
-    position: absolute;
+    position: fixed;
     top: 57%;
     left: 22%;
 }
 .poligonos-drop9{
-    position: absolute;
+    position: fixed;
     top: 37%;
     left: 70%;
 }
 .poligonos-drop10{
-    position: absolute;
+    position: fixed;
     top: 26%;
     left: 22%;
 }
 .poligonos-drop11{
-    position: absolute;
+    position: fixed;
     top: 55%;
     left: 70%;
 }
 .poligonos-drop12{
-    position: absolute;
+    position: fixed;
     top: 32%;
     left: 70%;
 }
 .poligonos-drag{
-  margin: 4%;
+  
   width: 200px;
   border: 4px solid #161616;
   border-radius: 10px;

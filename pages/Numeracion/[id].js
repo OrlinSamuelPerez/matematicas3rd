@@ -33,6 +33,7 @@ export default function HomeNumeracion() {
     const ArrayA = ["/img/A1.png","/img/A2.png","/img/A3.png","/img/A4.png","/img/A5.png","/img/A6.png","/img/A7.png","/img/A8.png","/img/A9.png","/img/A10.png","/img/A11.png","/img/A12.png","/img/A13.png","/img/A14.png","/img/A15.png","/img/A16.png","/img/A17.png"]
     const ArrayR = ["/img/R1.png","/img/R2.png","/img/R3.png","/img/R4.png","/img/R5.png","/img/R6.png","/img/R7.png","/img/R8.png","/img/R9.png","/img/R10.png","/img/R11.png","/img/R12.png","/img/R13.png","/img/R14.png","/img/R15.png","/img/R16.png","/img/R17.png"]
     const ArrayM = ["/img/M1.png","/img/M2.png","/img/M3.png","/img/M4.png","/img/M5.png","/img/M6.png","/img/M7.png","/img/M8.png","/img/M9.png","/img/M10.png","/img/M11.png","/img/M12.png","/img/M13.png","/img/M14.png","/img/M15.png","/img/M16.png","/img/M17.png","/img/M18.png","/img/M19.png","/img/M20.png","/img/M21.png","/img/M22.png"]
+    const ArrayD = ["/img/D1.png","/img/D2.png","/img/D3.png","/img/D4.png","/img/D5.png","/img/D6.png","/img/D7.png","/img/D8.png","/img/D9.png","/img/D10.png","/img/D11.png","/img/D12.png","/img/D13.png","/img/D14.png","/img/D15.png","/img/D16.png"]
     
     const handleClick1 = () => {
         setCounter(counter + 1)
@@ -160,7 +161,9 @@ export default function HomeNumeracion() {
                                 <div className="space-fondo">
                                     <Ejemplo datos={ArrayM} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
                                 </div>
-                            :<h1>jj</h1>
+                                :<div className="space-fondo">
+                                <Ejemplo datos={ArrayD} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
+                                </div>
 
                         : counter == 4 ?
                             rutaActual == "Secuencias" ?
@@ -184,7 +187,7 @@ export default function HomeNumeracion() {
                                             <div className='juegoFondoSpace'>
                                                 <div className="atras-practica" onClick={() => setCounter(3)}><button><img src="/img/libro-abierto.png" /></button></div>
                                                 <Suma />
-
+ 
                                             </div>
                                         </div>
 

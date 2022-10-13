@@ -490,7 +490,7 @@ export default function Poligonos(){
 
     //Numero 7 -16
     const arrayDato = [
-        { image: "/img/hexagono.png", pregunta: "De acuerdo con la cantidad de lados, ¿A qué clasificación de polígonos pertenece?", repuesta: [{ valor: "Cuadrilátero", validar: false }, { valor: "Pentágono", validar: false }, { valor: "Triángulo", validar: false }, { valor: "Hexágono", validar: false }, { valor: "Octágono", validar: false }, { valor: "Heptágono", validar: false }] },
+        { image: "/img/hexagono.png", pregunta: "De acuerdo con la cantidad de lados, ¿A qué clasificación de polígonos pertenece?", repuesta: [{ valor: "Cuadrilátero", validar: false }, { valor: "Pentágono", validar: false }, { valor: "Triángulo", validar: false }, { valor: "Hexágono", validar: true }, { valor: "Octágono", validar: false }, { valor: "Heptágono", validar: false }] },
         { image: "/img/triangulo2.png", pregunta: "De acuerdo con la cantidad de lados, ¿A qué clasificación de polígonos pertenece?", repuesta: [{ valor: "Cuadrilátero", validar: false }, { valor: "Pentágono", validar: false }, { valor: "Triángulo", validar: true }, { valor: "Hexágono", validar: false }, { valor: "Octágono", validar: false }, { valor: "Heptágono", validar: false }] },
         { image: "/img/heptagono.png", pregunta: "De acuerdo con la cantidad de lados, ¿A qué clasificación de polígonos pertenece?", repuesta: [{ valor: "Cuadrilátero", validar: false }, { valor: "Pentágono", validar: false }, { valor: "Triángulo", validar: false }, { valor: "Hexágono", validar: false }, { valor: "Octágono", validar: false }, { valor: "Heptágono", validar: true }] },
         { image: "/img/cuadrilatero.png", pregunta: "De acuerdo con la cantidad de lados, ¿A qué clasificación de polígonos pertenece?", repuesta: [{ valor: "Cuadrilátero", validar: true }, { valor: "Pentágono", validar: false }, { valor: "Triángulo", validar: false }, { valor: "Hexágono", validar: false }, { valor: "Octágono", validar: false }, { valor: "Heptágono", validar: false }] },
@@ -547,7 +547,7 @@ export default function Poligonos(){
     }
 
     //Numero 12-16
-    
+     
     return (
         <div>
             <div className="Contador-poligonos">{counter + 1}/20</div>
@@ -605,7 +605,8 @@ export default function Poligonos(){
                          <div>
                              <Juego7 data={arrayDato[6]} />
                          </div>
-                         : <h1>Fin</h1>
+                         : <Fin posicionNivelActual={2} nivel={"nivel2"} nombre={router.query.id} siguienteNivel="/Geometria/Congruencia" numero={13} />
+                        
                     }
 
                 </div>

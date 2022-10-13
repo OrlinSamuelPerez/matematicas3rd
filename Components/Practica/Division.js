@@ -14,36 +14,36 @@ export default function Division() {
     const numeros = () => {
         return (
             <div className="drag-mult-1">
-                <div className="drag-d-mult" draggable="true" id="dos" onDragStart={drag}>2</div>
-                <div className="drag-d-mult" draggable="true" id="ocho2" onDragStart={drag}>8</div>
-                <div className="drag-d-mult" draggable="true" id="seis3" onDragStart={drag}>6</div>
-                <div className="drag-d-mult" draggable="true" id="ocho3" onDragStart={drag}>8</div>
-                <div className="drag-d-mult" draggable="true" id="dos2" onDragStart={drag}>2</div>
-                <div className="drag-d-mult" draggable="true" id="uno" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="cinco4" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="tres2" onDragStart={drag}>3</div>
-                <div className="drag-d-mult" draggable="true" id="uno2" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="tres" onDragStart={drag}>3</div>
-                <div className="drag-d-mult" draggable="true" id="seis" onDragStart={drag}>6</div>
-                <div className="drag-d-mult" draggable="true" id="cinco5" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="seis2" onDragStart={drag}>6</div>
-                <div className="drag-d-mult" draggable="true" id="cinco" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="cero3" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="cero5" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="uno3" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="nueve2" onDragStart={drag}>9</div>
-                <div className="drag-d-mult" draggable="true" id="uno4" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="cero4" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="cinco2" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="cuatro" onDragStart={drag}>4</div>
-                <div className="drag-d-mult" draggable="true" id="siete2" onDragStart={drag}>7</div>
-                <div className="drag-d-mult" draggable="true" id="cuatro2" onDragStart={drag}>4</div>
-                <div className="drag-d-mult" draggable="true" id="ocho" onDragStart={drag}>8</div>
-                <div className="drag-d-mult" draggable="true" id="nueve" onDragStart={drag}>9</div>
-                <div className="drag-d-mult" draggable="true" id="siete" onDragStart={drag}>7</div>
-                <div className="drag-d-mult" draggable="true" id="cero" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="cero2" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="cinco3" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="dos" onDragStart={drag}>2</div>
+                <div className="drag-d-division" draggable="true" id="ocho2" onDragStart={drag}>8</div>
+                <div className="drag-d-division" draggable="true" id="seis3" onDragStart={drag}>6</div>
+                <div className="drag-d-division" draggable="true" id="ocho3" onDragStart={drag}>8</div>
+                <div className="drag-d-division" draggable="true" id="dos2" onDragStart={drag}>2</div>
+                <div className="drag-d-division" draggable="true" id="uno" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="cinco4" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="tres2" onDragStart={drag}>3</div>
+                <div className="drag-d-division" draggable="true" id="uno2" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="tres" onDragStart={drag}>3</div>
+                <div className="drag-d-division" draggable="true" id="seis" onDragStart={drag}>6</div>
+                <div className="drag-d-division" draggable="true" id="cinco5" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="seis2" onDragStart={drag}>6</div>
+                <div className="drag-d-division" draggable="true" id="cinco" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="cero3" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="cero5" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="uno3" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="nueve2" onDragStart={drag}>9</div>
+                <div className="drag-d-division" draggable="true" id="uno4" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="cero4" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="cinco2" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="cuatro" onDragStart={drag}>4</div>
+                <div className="drag-d-division" draggable="true" id="siete2" onDragStart={drag}>7</div>
+                <div className="drag-d-division" draggable="true" id="cuatro2" onDragStart={drag}>4</div>
+                <div className="drag-d-division" draggable="true" id="ocho" onDragStart={drag}>8</div>
+                <div className="drag-d-division" draggable="true" id="nueve" onDragStart={drag}>9</div>
+                <div className="drag-d-division" draggable="true" id="siete" onDragStart={drag}>7</div>
+                <div className="drag-d-division" draggable="true" id="cero" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="cero2" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="cinco3" onDragStart={drag}>5</div>
 
 
 
@@ -53,36 +53,36 @@ export default function Division() {
     const numeros2 = () => {
         return (
             <div className="drag-mult-1">
-                <div className="drag-d-mult" draggable="true" id="cuatro3" onDragStart={drag}>4</div>
-                <div className="drag-d-mult" draggable="true" id="dos" onDragStart={drag}>2</div>
-                <div className="drag-d-mult" draggable="true" id="ocho2" onDragStart={drag}>8</div>
-                <div className="drag-d-mult" draggable="true" id="seis3" onDragStart={drag}>6</div>
-                <div className="drag-d-mult" draggable="true" id="ocho3" onDragStart={drag}>8</div>
-                <div className="drag-d-mult" draggable="true" id="dos2" onDragStart={drag}>2</div>
-                <div className="drag-d-mult" draggable="true" id="uno" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="cinco4" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="tres2" onDragStart={drag}>3</div>
-                <div className="drag-d-mult" draggable="true" id="uno2" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="tres" onDragStart={drag}>3</div>
-                <div className="drag-d-mult" draggable="true" id="seis" onDragStart={drag}>6</div>
-                <div className="drag-d-mult" draggable="true" id="cinco5" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="seis2" onDragStart={drag}>6</div>
-                <div className="drag-d-mult" draggable="true" id="cinco" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="cero3" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="uno3" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="nueve2" onDragStart={drag}>9</div>
-                <div className="drag-d-mult" draggable="true" id="uno4" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="cero4" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="cinco2" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="cuatro" onDragStart={drag}>4</div>
-                <div className="drag-d-mult" draggable="true" id="siete2" onDragStart={drag}>7</div>
-                <div className="drag-d-mult" draggable="true" id="cuatro2" onDragStart={drag}>4</div>
-                <div className="drag-d-mult" draggable="true" id="ocho" onDragStart={drag}>8</div>
-                <div className="drag-d-mult" draggable="true" id="nueve" onDragStart={drag}>9</div>
-                <div className="drag-d-mult" draggable="true" id="siete" onDragStart={drag}>7</div>
-                <div className="drag-d-mult" draggable="true" id="cero" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="cero2" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="cinco3" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="cuatro3" onDragStart={drag}>4</div>
+                <div className="drag-d-division" draggable="true" id="dos" onDragStart={drag}>2</div>
+                <div className="drag-d-division" draggable="true" id="ocho2" onDragStart={drag}>8</div>
+                <div className="drag-d-division" draggable="true" id="seis3" onDragStart={drag}>6</div>
+                <div className="drag-d-division" draggable="true" id="ocho3" onDragStart={drag}>8</div>
+                <div className="drag-d-division" draggable="true" id="dos2" onDragStart={drag}>2</div>
+                <div className="drag-d-division" draggable="true" id="uno" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="cinco4" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="tres2" onDragStart={drag}>3</div>
+                <div className="drag-d-division" draggable="true" id="uno2" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="tres" onDragStart={drag}>3</div>
+                <div className="drag-d-division" draggable="true" id="seis" onDragStart={drag}>6</div>
+                <div className="drag-d-division" draggable="true" id="cinco5" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="seis2" onDragStart={drag}>6</div>
+                <div className="drag-d-division" draggable="true" id="cinco" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="cero3" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="uno3" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="nueve2" onDragStart={drag}>9</div>
+                <div className="drag-d-division" draggable="true" id="uno4" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="cero4" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="cinco2" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="cuatro" onDragStart={drag}>4</div>
+                <div className="drag-d-division" draggable="true" id="siete2" onDragStart={drag}>7</div>
+                <div className="drag-d-division" draggable="true" id="cuatro2" onDragStart={drag}>4</div>
+                <div className="drag-d-division" draggable="true" id="ocho" onDragStart={drag}>8</div>
+                <div className="drag-d-division" draggable="true" id="nueve" onDragStart={drag}>9</div>
+                <div className="drag-d-division" draggable="true" id="siete" onDragStart={drag}>7</div>
+                <div className="drag-d-division" draggable="true" id="cero" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="cero2" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="cinco3" onDragStart={drag}>5</div>
 
 
 
@@ -92,36 +92,36 @@ export default function Division() {
     const numeros3 = () => {
         return (
             <div className="drag-mult-1">
-                <div className="drag-d-mult" draggable="true" id="cuatro3" onDragStart={drag}>4</div>
-                <div className="drag-d-mult" draggable="true" id="dos" onDragStart={drag}>2</div>
-                <div className="drag-d-mult" draggable="true" id="ocho2" onDragStart={drag}>8</div>
-                <div className="drag-d-mult" draggable="true" id="seis3" onDragStart={drag}>6</div>
-                <div className="drag-d-mult" draggable="true" id="ocho3" onDragStart={drag}>8</div>
-                <div className="drag-d-mult" draggable="true" id="dos2" onDragStart={drag}>2</div>
-                <div className="drag-d-mult" draggable="true" id="uno" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="cinco4" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="tres2" onDragStart={drag}>3</div>
-                <div className="drag-d-mult" draggable="true" id="uno2" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="tres" onDragStart={drag}>3</div>
-                <div className="drag-d-mult" draggable="true" id="seis" onDragStart={drag}>6</div>
-                <div className="drag-d-mult" draggable="true" id="cinco5" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="seis2" onDragStart={drag}>6</div>
-                <div className="drag-d-mult" draggable="true" id="cinco" onDragStart={drag}>5</div>
-                <div className="drag-d-mult" draggable="true" id="cero3" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="uno3" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="nueve2" onDragStart={drag}>9</div>
-                <div className="drag-d-mult" draggable="true" id="uno4" onDragStart={drag}>1</div>
-                <div className="drag-d-mult" draggable="true" id="cero4" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="dos3" onDragStart={drag}>2</div>
-                <div className="drag-d-mult" draggable="true" id="cuatro" onDragStart={drag}>4</div>
-                <div className="drag-d-mult" draggable="true" id="siete2" onDragStart={drag}>7</div>
-                <div className="drag-d-mult" draggable="true" id="cuatro2" onDragStart={drag}>4</div>
-                <div className="drag-d-mult" draggable="true" id="ocho" onDragStart={drag}>8</div>
-                <div className="drag-d-mult" draggable="true" id="nueve" onDragStart={drag}>9</div>
-                <div className="drag-d-mult" draggable="true" id="siete" onDragStart={drag}>7</div>
-                <div className="drag-d-mult" draggable="true" id="cero" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="cero2" onDragStart={drag}>0</div>
-                <div className="drag-d-mult" draggable="true" id="cinco3" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="cuatro3" onDragStart={drag}>4</div>
+                <div className="drag-d-division" draggable="true" id="dos" onDragStart={drag}>2</div>
+                <div className="drag-d-division" draggable="true" id="ocho2" onDragStart={drag}>8</div>
+                <div className="drag-d-division" draggable="true" id="seis3" onDragStart={drag}>6</div>
+                <div className="drag-d-division" draggable="true" id="ocho3" onDragStart={drag}>8</div>
+                <div className="drag-d-division" draggable="true" id="dos2" onDragStart={drag}>2</div>
+                <div className="drag-d-division" draggable="true" id="uno" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="cinco4" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="tres2" onDragStart={drag}>3</div>
+                <div className="drag-d-division" draggable="true" id="uno2" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="tres" onDragStart={drag}>3</div>
+                <div className="drag-d-division" draggable="true" id="seis" onDragStart={drag}>6</div>
+                <div className="drag-d-division" draggable="true" id="cinco5" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="seis2" onDragStart={drag}>6</div>
+                <div className="drag-d-division" draggable="true" id="cinco" onDragStart={drag}>5</div>
+                <div className="drag-d-division" draggable="true" id="cero3" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="uno3" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="nueve2" onDragStart={drag}>9</div>
+                <div className="drag-d-division" draggable="true" id="uno4" onDragStart={drag}>1</div>
+                <div className="drag-d-division" draggable="true" id="cero4" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="dos3" onDragStart={drag}>2</div>
+                <div className="drag-d-division" draggable="true" id="cuatro" onDragStart={drag}>4</div>
+                <div className="drag-d-division" draggable="true" id="siete2" onDragStart={drag}>7</div>
+                <div className="drag-d-division" draggable="true" id="cuatro2" onDragStart={drag}>4</div>
+                <div className="drag-d-division" draggable="true" id="ocho" onDragStart={drag}>8</div>
+                <div className="drag-d-division" draggable="true" id="nueve" onDragStart={drag}>9</div>
+                <div className="drag-d-division" draggable="true" id="siete" onDragStart={drag}>7</div>
+                <div className="drag-d-division" draggable="true" id="cero" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="cero2" onDragStart={drag}>0</div>
+                <div className="drag-d-division" draggable="true" id="cinco3" onDragStart={drag}>5</div>
 
 
 
@@ -133,18 +133,18 @@ export default function Division() {
     }
     const Tiempo = () => {
         console.log(juegoMensajeActivo)
-        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO "?
+        juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
             setTimeout(() => {
                 setJuegoActivo(false)
                 setCounter(counter + 1)
                 console.log(juegoMensajeActivo)
-                }, 3000)
+            }, 3000)
 
-            :setTimeout(() => {
-            console.log(juegoMensajeActivo)
+            : setTimeout(() => {
+                console.log(juegoMensajeActivo)
 
                 setJuegoActivo(false)
-                }, 3000)
+            }, 3000)
         return (
             <div>{juegoMensajeActivo == "HAZ HECHO UN BUEN TRABAJO " ?
                 <Feliciades />
@@ -212,19 +212,19 @@ export default function Division() {
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-div">
+                        <div className="drop-div-j0">
                             <div className="box-drop-div" >6</div>
                             <div className="box-drop-div" >3</div>
-                            <hr className="raya-div-v"></hr>
+                            <hr className="raya-div-v-j0"></hr>
                             <div className="box-drop-div" >3</div>
 
 
                         </div>
 
 
-                        <hr className="raya-div-h"></hr>
-                        <div grid-d>
-                            <div className="drop-div-1">
+                        <hr className="raya-div-h-j0"></hr>
+                        <div className="grid-d">
+                            <div className="drop-div-1-j0">
                                 <div className="box-drop-div az">-</div>
                                 <div className="box-drop-div" id="1" onDragOver={allowdrop} onDrop={drop}></div>
 
@@ -312,17 +312,17 @@ export default function Division() {
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-div">
+                        <div className="drop-div-j0">
                             <div className="box-drop-div" >9</div>
                             <div className="box-drop-div" >0</div>
-                            <hr className="raya-div-v"></hr>
+                            <hr className="raya-div-v-j0"></hr>
                             <div className="box-drop-div" >9</div>
 
 
                         </div>
 
 
-                        <hr className="raya-div-h"></hr>
+                        <hr className="raya-div-h-j0"></hr>
                         <div grid-d>
                             <div className="drop-div-1">
                                 <div className="box-drop-div az">-</div>
@@ -409,17 +409,17 @@ export default function Division() {
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-div">
+                        <div className="drop-div-j0">
                             <div className="box-drop-div" >2</div>
                             <div className="box-drop-div" >4</div>
-                            <hr className="raya-div-v"></hr>
+                            <hr className="raya-div-v-j0"></hr>
                             <div className="box-drop-div" >2</div>
 
 
                         </div>
 
 
-                        <hr className="raya-div-h"></hr>
+                        <hr className="raya-div-h-j0"></hr>
                         <div grid-d>
                             <div className="drop-div-1">
                                 <div className="box-drop-div az">-</div>
@@ -506,17 +506,17 @@ export default function Division() {
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-div">
+                        <div className="drop-div-j0">
                             <div className="box-drop-div" >6</div>
                             <div className="box-drop-div" >4</div>
-                            <hr className="raya-div-v"></hr>
+                            <hr className="raya-div-v-j0"></hr>
                             <div className="box-drop-div" >2</div>
 
 
                         </div>
 
 
-                        <hr className="raya-div-h"></hr>
+                        <hr className="raya-div-h-j0"></hr>
                         <div grid-d>
                             <div className="drop-div-1">
                                 <div className="box-drop-div az">-</div>
@@ -603,17 +603,17 @@ export default function Division() {
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-div">
+                        <div className="drop-div-j0">
                             <div className="box-drop-div" >8</div>
                             <div className="box-drop-div" >4</div>
-                            <hr className="raya-div-v"></hr>
+                            <hr className="raya-div-v-j0"></hr>
                             <div className="box-drop-div" >4</div>
 
 
                         </div>
 
 
-                        <hr className="raya-div-h"></hr>
+                        <hr className="raya-div-h-j0"></hr>
                         <div grid-d>
                             <div className="drop-div-1">
                                 <div className="box-drop-div az">-</div>
@@ -700,25 +700,25 @@ export default function Division() {
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-div">
+                        <div className="drop-div-j7">
                             <div className="box-drop-div" >1</div>
                             <div className="box-drop-div" >6</div>
                             <div className="box-drop-div" >4</div>
-                            <hr className="raya-div-v"></hr>
+                            <hr className="raya-div-v-j0"></hr>
                             <div className="box-drop-div" >4</div>
 
 
                         </div>
 
 
-                        <hr className="raya-div-h-2"></hr>
+                        <hr className="raya-div-h-2j7"></hr>
                         <div grid-d>
                             <div className="drop-div-1">
                                 <div className="box-drop-div az">-</div>
                                 <div className="box-drop-div" id="1" onDragOver={allowdrop} onDrop={drop6}></div>
                                 <div className="box-drop-div" id="2" onDragOver={allowdrop} onDrop={drop6}></div>
-                                <div className="box-drop-div n" id="3" onDragOver={allowdrop} onDrop={drop6}></div>
-                                <div className="box-drop-div n" id="4" onDragOver={allowdrop} onDrop={drop6}></div>
+                                <div className="box-drop-div t" id="3" onDragOver={allowdrop} onDrop={drop6}></div>
+                                <div className="box-drop-div t" id="4" onDragOver={allowdrop} onDrop={drop6}></div>
 
                             </div>
                         </div>
@@ -732,7 +732,7 @@ export default function Division() {
                         </div>
                         <div className="box-drop-div az f">-</div>
 
-                        <div className="drop-div-f4">
+                        <div className="drop-div-f4-j7">
 
                             <div className="box-drop-div" id="8" onDragOver={allowdrop} onDrop={drop6}></div>
                             <hr className="raya-d-s"></hr>
@@ -798,25 +798,25 @@ export default function Division() {
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-div">
+                        <div className="drop-div-j7">
                             <div className="box-drop-div" >4</div>
                             <div className="box-drop-div" >8</div>
                             <div className="box-drop-div" >6</div>
-                            <hr className="raya-div-v"></hr>
+                            <hr className="raya-div-v-j0"></hr>
                             <div className="box-drop-div" >6</div>
 
 
                         </div>
 
 
-                        <hr className="raya-div-h-2"></hr>
+                        <hr className="raya-div-h-2j7"></hr>
                         <div grid-d>
                             <div className="drop-div-1">
                                 <div className="box-drop-div az">-</div>
                                 <div className="box-drop-div" id="1" onDragOver={allowdrop} onDrop={drop7}></div>
                                 <div className="box-drop-div" id="2" onDragOver={allowdrop} onDrop={drop7}></div>
-                                <div className="box-drop-div n" id="3" onDragOver={allowdrop} onDrop={drop7}></div>
-                                <div className="box-drop-div n" id="4" onDragOver={allowdrop} onDrop={drop7}></div>
+                                <div className="box-drop-div t" id="3" onDragOver={allowdrop} onDrop={drop7}></div>
+                                <div className="box-drop-div t" id="4" onDragOver={allowdrop} onDrop={drop7}></div>
 
                             </div>
                         </div>
@@ -830,7 +830,7 @@ export default function Division() {
                         </div>
                         <div className="box-drop-div az f">-</div>
 
-                        <div className="drop-div-f4">
+                        <div className="drop-div-f4-j7">
 
                             <div className="box-drop-div" id="8" onDragOver={allowdrop} onDrop={drop7}></div>
                             <hr className="raya-d-s"></hr>
@@ -896,25 +896,25 @@ export default function Division() {
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-div">
+                        <div className="drop-div-j7">
                             <div className="box-drop-div" >1</div>
                             <div className="box-drop-div" >2</div>
                             <div className="box-drop-div" >8</div>
-                            <hr className="raya-div-v"></hr>
+                            <hr className="raya-div-v-j0"></hr>
                             <div className="box-drop-div" >4</div>
 
 
                         </div>
 
 
-                        <hr className="raya-div-h-2"></hr>
+                        <hr className="raya-div-h-2j7"></hr>
                         <div grid-d>
                             <div className="drop-div-1">
                                 <div className="box-drop-div az">-</div>
                                 <div className="box-drop-div" id="1" onDragOver={allowdrop} onDrop={drop8}></div>
                                 <div className="box-drop-div" id="2" onDragOver={allowdrop} onDrop={drop8}></div>
-                                <div className="box-drop-div n" id="3" onDragOver={allowdrop} onDrop={drop8}></div>
-                                <div className="box-drop-div n" id="4" onDragOver={allowdrop} onDrop={drop8}></div>
+                                <div className="box-drop-div t" id="3" onDragOver={allowdrop} onDrop={drop8}></div>
+                                <div className="box-drop-div t" id="4" onDragOver={allowdrop} onDrop={drop8}></div>
 
                             </div>
                         </div>
@@ -928,7 +928,7 @@ export default function Division() {
                         </div>
                         <div className="box-drop-div az f">-</div>
 
-                        <div className="drop-div-f4">
+                        <div className="drop-div-f4-j7">
 
                             <div className="box-drop-div" id="8" onDragOver={allowdrop} onDrop={drop8}></div>
                             <hr className="raya-d-s"></hr>
@@ -994,17 +994,17 @@ export default function Division() {
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-div">
+                        <div className="drop-div-j0">
                             <div className="box-drop-div" >7</div>
                             <div className="box-drop-div" >5</div>
-                            <hr className="raya-div-v"></hr>
+                            <hr className="raya-div-v-j0"></hr>
                             <div className="box-drop-div" >5</div>
 
 
                         </div>
 
 
-                        <hr className="raya-div-h"></hr>
+                        <hr className="raya-div-h-j0"></hr>
                         <div grid-d>
                             <div className="drop-div-1">
                                 <div className="box-drop-div az">-</div>
@@ -1027,7 +1027,7 @@ export default function Division() {
                             <div className="box-drop-div" id="7" onDragOver={allowdrop} onDrop={drop9}></div>
                         </div>
 
-                        <div className="box-drop-div az ar">-</div>
+                        <div className="box-drop-div az at">-</div>
                         <hr className="raya-d"></hr>
                         <div className="drop-div-f2">
 
@@ -1095,17 +1095,17 @@ export default function Division() {
                 <h3>Resuelve correctamente la división.</h3>
                 <div className="grid-m">
                     <div>
-                        <div className="drop-div">
+                        <div className="drop-div-j0">
                             <div className="box-drop-div" >9</div>
                             <div className="box-drop-div" >2</div>
-                            <hr className="raya-div-v"></hr>
+                            <hr className="raya-div-v-j0"></hr>
                             <div className="box-drop-div" >4</div>
 
 
                         </div>
 
 
-                        <hr className="raya-div-h"></hr>
+                        <hr className="raya-div-h-j0"></hr>
                         <div grid-d>
                             <div className="drop-div-1">
                                 <div className="box-drop-div az">-</div>
@@ -1128,7 +1128,7 @@ export default function Division() {
                             <div className="box-drop-div" id="7" onDragOver={allowdrop} onDrop={drop10}></div>
                         </div>
 
-                        <div className="box-drop-div az ar">-</div>
+                        <div className="box-drop-div az at">-</div>
                         <hr className="raya-d"></hr>
                         <div className="drop-div-f2">
 
@@ -1205,7 +1205,7 @@ export default function Division() {
                 </div>
             </div>
         )
-    } 
+    }
     return (
         <div>
             <div className="Contador-secuencia">{counter + 1}/20</div>
@@ -1222,7 +1222,7 @@ export default function Division() {
                         : counter == 1 ?
                             <div>
                                 <Juego11 data={arrayDato[9]} />
-                               
+
                                 {juegoSiguienActivo == true ?
                                     <div className="siguiente-espacial"></div>
                                     : <span>.</span>}
@@ -1236,8 +1236,8 @@ export default function Division() {
                                 </div>
                                 : counter == 3 ?
                                     <div>
-                                          <Juego11 data={arrayDato[7]} />
-                                       
+                                        <Juego11 data={arrayDato[7]} />
+
                                         {juegoSiguienActivo == true ?
                                             <div className="siguiente-espacial"></div>
                                             : <span>.</span>}
@@ -1252,7 +1252,7 @@ export default function Division() {
                                         : counter == 5 ?
                                             <div>
                                                 <Juego11 data={arrayDato[5]} />
-                                              
+
                                                 {juegoSiguienActivo == true ?
                                                     <div className="siguiente-espacial"></div>
                                                     : <span>.</span>}
@@ -1266,8 +1266,8 @@ export default function Division() {
                                                 </div>
                                                 : counter == 7 ?
                                                     <div>
-                                                          <Juego11 data={arrayDato[3]} />
-                                                        
+                                                        <Juego11 data={arrayDato[3]} />
+
                                                         {juegoSiguienActivo == true ?
                                                             <div className="siguiente-espacial"></div>
                                                             : <span>.</span>}
@@ -1281,83 +1281,83 @@ export default function Division() {
                                                         </div>
                                                         : counter == 9 ?
                                                             <div>
-                                                                 <Juego11 data={arrayDato[1]} />
-                                                                
+                                                                <Juego11 data={arrayDato[1]} />
+
                                                                 {juegoSiguienActivo == true ?
                                                                     <div className="siguiente-espacial"></div>
                                                                     : <span>.</span>}
                                                             </div>
                                                             : counter == 10 ?
-                                                            <div>
-                                                                <Juego11 data={arrayDato[0]} />
-                                                                {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"></div>
-                                                                    : <span>.</span>}
-                                                            </div>
-                                                            : counter == 11 ?
-                                                            <div>
-                                                               <Juego10 />
-                                                                {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"></div>
-                                                                    : <span>.</span>}
-                                                            </div>
-                                                            : counter == 12 ?
-                                                            <div>
-                                                                <Juego11 data={arrayDato[2]} />
-                                                                {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"></div>
-                                                                    : <span>.</span>}
-                                                            </div>
-                                                            : counter == 13 ?
-                                                            <div>
-                                                              <Juego8 />
-                                                                {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"></div>
-                                                                    : <span>.</span>}
-                                                            </div>
-                                                            : counter == 14 ?
-                                                            <div>
-                                                                <Juego11 data={arrayDato[4]} />
-                                                                {juegoSiguienActivo == true ?
-                                                                    <div className="siguiente-espacial"></div>
-                                                                    : <span>.</span>}
-                                                            </div>
-                                                             : counter == 15 ?
-                                                             <div>
-                                                                   <Juego6 />
-                                                                 {juegoSiguienActivo == true ?
-                                                                     <div className="siguiente-espacial"></div>
-                                                                     : <span>.</span>}
-                                                             </div>
-                                                              : counter == 16 ?
-                                                              <div>
-                                                                  <Juego11 data={arrayDato[8]} />
-                                                                  {juegoSiguienActivo == true ?
-                                                                      <div className="siguiente-espacial"></div>
-                                                                      : <span>.</span>}
-                                                              </div>
-                                                               : counter == 17 ?
-                                                               <div>
-                                                                  <Juego4 />
-                                                                   {juegoSiguienActivo == true ?
-                                                                       <div className="siguiente-espacial"></div>
-                                                                       : <span>.</span>}
-                                                               </div>
-                                                                : counter == 18 ?
                                                                 <div>
-                                                                    <Juego11 data={arrayDato[6]} />
+                                                                    <Juego11 data={arrayDato[0]} />
                                                                     {juegoSiguienActivo == true ?
                                                                         <div className="siguiente-espacial"></div>
                                                                         : <span>.</span>}
                                                                 </div>
-                                                                 : counter == 19 ?
-                                                                 <div>
-                                                                      <Juego2 />
-                                                                     {juegoSiguienActivo == true ?
-                                                                         <div className="siguiente-espacial"></div>
-                                                                         : <span>.</span>}
-                                                                 </div>
-                                                                 :<Fin posicionNivelActual={10}  nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/"  numero={20}/>
+                                                                : counter == 11 ?
+                                                                    <div>
+                                                                        <Juego10 />
+                                                                        {juegoSiguienActivo == true ?
+                                                                            <div className="siguiente-espacial"></div>
+                                                                            : <span>.</span>}
+                                                                    </div>
+                                                                    : counter == 12 ?
+                                                                        <div>
+                                                                            <Juego11 data={arrayDato[2]} />
+                                                                            {juegoSiguienActivo == true ?
+                                                                                <div className="siguiente-espacial"></div>
+                                                                                : <span>.</span>}
+                                                                        </div>
+                                                                        : counter == 13 ?
+                                                                            <div>
+                                                                                <Juego8 />
+                                                                                {juegoSiguienActivo == true ?
+                                                                                    <div className="siguiente-espacial"></div>
+                                                                                    : <span>.</span>}
+                                                                            </div>
+                                                                            : counter == 14 ?
+                                                                                <div>
+                                                                                    <Juego11 data={arrayDato[4]} />
+                                                                                    {juegoSiguienActivo == true ?
+                                                                                        <div className="siguiente-espacial"></div>
+                                                                                        : <span>.</span>}
+                                                                                </div>
+                                                                                : counter == 15 ?
+                                                                                    <div>
+                                                                                        <Juego6 />
+                                                                                        {juegoSiguienActivo == true ?
+                                                                                            <div className="siguiente-espacial"></div>
+                                                                                            : <span>.</span>}
+                                                                                    </div>
+                                                                                    : counter == 16 ?
+                                                                                        <div>
+                                                                                            <Juego11 data={arrayDato[8]} />
+                                                                                            {juegoSiguienActivo == true ?
+                                                                                                <div className="siguiente-espacial"></div>
+                                                                                                : <span>.</span>}
+                                                                                        </div>
+                                                                                        : counter == 17 ?
+                                                                                            <div>
+                                                                                                <Juego4 />
+                                                                                                {juegoSiguienActivo == true ?
+                                                                                                    <div className="siguiente-espacial"></div>
+                                                                                                    : <span>.</span>}
+                                                                                            </div>
+                                                                                            : counter == 18 ?
+                                                                                                <div>
+                                                                                                    <Juego11 data={arrayDato[6]} />
+                                                                                                    {juegoSiguienActivo == true ?
+                                                                                                        <div className="siguiente-espacial"></div>
+                                                                                                        : <span>.</span>}
+                                                                                                </div>
+                                                                                                : counter == 19 ?
+                                                                                                    <div>
+                                                                                                        <Juego2 />
+                                                                                                        {juegoSiguienActivo == true ?
+                                                                                                            <div className="siguiente-espacial"></div>
+                                                                                                            : <span>.</span>}
+                                                                                                    </div>
+                                                                                                    : <Fin posicionNivelActual={10} nivel={"nivel1"} nombre={router.query.id} siguienteNivel="/Geometria/Start" numero={20} />
 
 
                     }

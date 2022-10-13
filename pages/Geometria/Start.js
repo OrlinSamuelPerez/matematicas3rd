@@ -39,7 +39,7 @@ export default function Start(){
     return(
         <div className="geometria-fon">
             <div className="grid-cardlevel">
-                <CardLevel color="#2D5764" level="Numeracion" id="Presentacion" nombre="Presentacion" numero="1" img="leon.png"/>
+                <CardLevel color="#2D5764" level="Numeracion" id="Presentacion" nombre="Presentación" numero="1" img="leon.png"/>
                 {arrayMostrar.map(e=><CardLevel color="#2D5764" level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="leon.png"/>)}
                 {arrayDeshabilitado.map(e=><CardLevel clasDesabilitar="not-active" color="#202121"  level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="candado.png"/>)}
             </div>
