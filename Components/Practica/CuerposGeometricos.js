@@ -45,7 +45,7 @@ export default function CuerposGeometricos(){
             array[parseInt(e.target.id)] = data;
             //que se agregue al cuadro sleccioonad
             e.target.style.backgroundImage = `url(${data})`
-            e.target.style.backgroundSize = "80%"
+            e.target.style.backgroundSize = "70%"
             e.target.style.backgroundPosition = "center"
             e.target.style.backgroundRepeat = "no-repeat"
 

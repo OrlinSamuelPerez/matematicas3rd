@@ -34,6 +34,9 @@ export default function HomeNumeracion() {
     const rutaActual = useRouter().query.id
     const arrayP = ["/img/PO1.png", "/img/PO2.png","/img/PO3.png","/img/PO4.png","/img/PO5.png","/img/PO6.png","/img/PO7.png","/img/PO8.png","/img/PO9.png","/img/PO10.png","/img/PO11.png","/img/PO12.png","/img/PO13.png","/img/PO14.png"]
     const arrayC = ["/img/C1.png", "/img/C2.png","/img/C3.png","/img/C4.png"]
+    const arrayAN = ["/img/AN1.png", "/img/AN2.png","/img/AN3.png","/img/AN4.png","/img/AN5.png","/img/AN6.png","/img/AN7.png","/img/AN8.png","/img/AN9.png","/img/AN10.png"]
+    const arrayS = ["/img/SI1.png", "/img/SI2.png","/img/SI3.png","/img/SI4.png"]
+    const arrayCG = ["/img/CG1.png", "/img/CG2.png","/img/CG3.png","/img/CG4.png","/img/CG5.png","/img/CG6.png","/img/CG7.png","/img/CG8.png","/img/CG9.png"]
     
     const handleClick1 = () => {
         setCounter(counter + 1)
@@ -137,7 +140,17 @@ export default function HomeNumeracion() {
                                 <div className="geometria-fon">
                                     <Ejemplo datos={arrayC} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
                                 </div>
-                                :<h1></h1>
+                                 : rutaActual == "Angulos" ?
+                                 <div className="geometria-fon">
+                                 <Ejemplo datos={arrayAN} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
+                                 </div>
+                                 : rutaActual == "Simetria" ?
+                                 <div className="geometria-fon">
+                                 <Ejemplo datos={arrayS} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
+                                 </div>
+                                 :<div className="geometria-fon">
+                                 <Ejemplo datos={arrayCG} atras={() => atras("dd")} buttonSiguiente={handleClick1} />
+                                 </div>
                         : counter == 4 ?
                             rutaActual == "Poligonos" ?
                                 <div className='geometria-fon'>

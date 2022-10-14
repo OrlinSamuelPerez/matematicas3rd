@@ -86,7 +86,7 @@ export default function Presentacion(){
            {
             activo==false?
                     <div className="siguiente-espacial"><button onClick={atras} className="e">Atras</button> <button onClick={handleClick2} >Continuar</button></div>
-                :<div className="siguiente-espacial"><Link href="/Medicion/Longitud"><button>INICIAR CON EL TEMA 1</button></Link></div>
+                :<div className="siguiente-espacial"><Link href="/EstadisticaElemental/DatosEstadisticos"><button>INICIAR CON EL TEMA 1</button></Link></div>
            }
             
         </div>:<h2>No deberian estar aqui</h2>

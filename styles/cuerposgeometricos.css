@@ -141,45 +141,45 @@
 }
    #img-cg{
     width: 550px;
-    position: absolute;
+    position: fixed;
     top: 50px;
     right: 515px;
    }
    .poligonos-drop01{
-    position: absolute;
+    position: fixed;
     top: 115px;
     left: 102px;
 }
 .poligonos-drop02{
-    position: absolute;
+    position: fixed;
     top: 205px;
     left: 850px;
 } .poligonos-drop03{
-    position: absolute;
+    position: fixed;
     top: 420px;
     left: 850px;
 }
 .poligonos-drop04{
-    position: absolute;
+    position: fixed;
     top: 140px;
     left: 150px;
 }
 .poligonos-drop05{
-    position: absolute;
+    position: fixed;
     top: 305px;
     left: 100px;
 } .poligonos-drop06{
-    position: absolute;
+    position: fixed;
     top: 230px;
     left: 830px;
 }
 .poligonos-drop07{
-    position: absolute;
+    position: fixed;
     top: 420px;
     left: 850px;
 }
 .drag-cg{
-    position: absolute;
+    position: fixed;
     top: 130px;
     left: 1100px;
 }

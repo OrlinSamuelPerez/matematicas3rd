@@ -78,7 +78,7 @@ export default function Angulos(){
 
 
             }
-        }
+        } 
     }
     const Juego = () => {
         return (
@@ -316,7 +316,7 @@ export default function Angulos(){
                 PreguntasAnalisis(
                     router.query.id,
                     true,
-                    "Relaciona de acuerdo al tipo de ángulo al que pertenece.",
+                    "Relaciona de acuerdo al tipo de ángulo al que pertenece y su complemento.",
                     0,
                     counter
 
@@ -328,7 +328,7 @@ export default function Angulos(){
                 PreguntasAnalisis(
                     router.query.id,
                     false,
-                    "Relaciona de acuerdo al tipo de ángulo al que pertenece.",
+                    "Relaciona de acuerdo al tipo de ángulo al que pertenece y su complemento.",
                     0,
                     counter
 

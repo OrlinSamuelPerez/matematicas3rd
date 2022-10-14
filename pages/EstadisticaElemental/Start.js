@@ -39,7 +39,7 @@ export default function Start(){
     return(
         <div className="fondo-pirata">
             <div className="grid-cardlevel">
-                <CardLevel color="#2c5e79" level="Estadistica Elemental" id="Presentacion" nombre="Presentacion" numero="1" img="loro.png"/>
+                <CardLevel color="#2c5e79" level="Estadistica Elemental" id="Presentacion" nombre="Presentación" numero="1" img="loro.png"/>
                 {arrayMostrar.map(e=><CardLevel color="#2c5e79" level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="loro.png"/>)}
                 {arrayDeshabilitado.map(e=><CardLevel clasDesabilitar="not-active" color="#202121"  level="Numeracion" id={e.id} nombre={e.Nombre} numero={e.position} img="candado.png"/>)}
             </div>

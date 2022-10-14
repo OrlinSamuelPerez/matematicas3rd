@@ -68,6 +68,7 @@
     border-radius: 30px;
     background-color: #363869;
     background-color: #023e87;
+    height: 120px;
     gap: 20px;
 }
 .aleatoria{
@@ -77,6 +78,7 @@
     display: grid;
     border-radius: 30px;
     gap: 20px;
+    height: 120px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .igual:hover {
@@ -94,6 +96,8 @@
 .congruencia{ 
     padding: 30px;
      display: grid;
+     width: 1300px;
+     
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 
@@ -138,23 +142,75 @@
     row-gap: 70px;
 }
 .grid-congru div{
-    height: 150px;
+    height: 170px;
+    width: 170px;
+   margin-bottom: 15px;
+    
 
 
+}
+.grid-congru img{
+    height: 170px;
+    width: 170px;
+   padding-bottom: 5px;
+}
+.grid-congruj5{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 70px;
+}
+.grid-congruj5 div{
+    height: 180px;
+    width: 200px;
+   margin-bottom: 15px;
+    
+
+
+}
+.grid-congruj5 img{
+    height: 180px;
+    width: 200px;
+   padding-bottom: 5px;
 }
 .box-drop{
     border-color: #f20875;
-    
+ 
 }
+
+
 .drag-congruencia{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 7px;
 }
 .drag-congruencia div{
-    margin: 25px;
+    height: 170px;
+    width: 170px;
+   margin-bottom: 25px;
+    
 
 }
 .drag-congruencia img{
-    width: 100%;
+    height: 165px;
+    width: 165px;
+   margin-bottom: 25px;
+    
+}
+.drag-congruenciaj5{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+}
+.drag-congruenciaj5 div{
+    height: 180px;
+    width: 200px;
+   margin-bottom: 25px;
+    
+
+}
+.drag-congruenciaj5 img{
+    height: 180px;
+    width: 200px;
+   margin-bottom: 25px;
+    
 }
